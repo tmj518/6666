@@ -79,10 +79,10 @@ function generateGameUrls() {
         
         gamesData.forEach(game => {
             if (game.id && game.title) {
-                // 处理多语言标题，优先使用英文
-                const title = typeof game.title === 'object' ? (game.title.en || game.title.zh || Object.values(game.title)[0]) : game.title;
+                // 使用游戏的实际URL，如果没有则使用ID
+                const gameUrl = game.url || `/games/${game.id}.html`;
                 gameUrls += `    <url>
-        <loc>${CONFIG.siteUrl}/games/${game.id}.html</loc>
+        <loc>${CONFIG.siteUrl}${gameUrl}</loc>
         <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
