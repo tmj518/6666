@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>British Museum Puzzle Game Free | UK HTML5 Game</title>
+  <meta name="description" content="Play British Museum Puzzle Game Free! Rearrange pieces to complete famous British Museum exhibits. Educational, fun, and free for all ages. GDPR compliant.">
+  <meta name="keywords" content="British Museum, puzzle game, UK, free, educational, HTML5, kids, family, British culture, museum exhibits">
+  <meta name="author" content="UK HTML5 Games Team">
+  <meta property="og:title" content="Card British-Museum-Puzzle-Game-Free Game - PlayHTML5">
+  <meta property="og:description" content="Play Card-British-Museum-Puzzle-Game-Free online. This card game features: card, solitaire, classic, puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.">
+  <meta property="og:type" content="game">
+  <meta property="og:url" content="https://www.ukhtml5games.com/british-museum-puzzle-game-free">
+  <meta property="og:image" content="https://www.ukhtml5games.com/images/games/card-british-museum-puzzle-game-free.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="British Museum Puzzle Game Free">
+  <meta name="twitter:description" content="Rearrange pieces to complete famous British Museum exhibits. Educational, fun, and free for all ages.">
+  <meta name="twitter:image" content="https://www.ukhtml5games.com/icon/british-museum-puzzle.png">
+  <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Card British-Museum-Puzzle-Game-Free Game",
+  "description": "Play Card-British-Museum-Puzzle-Game-Free online. This card game features: card, solitaire, classic, puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
+  "image": "https://www.ukhtml5games.com/images/games/card-british-museum-puzzle-game-free.webp",
+  "url": "https://www.ukhtml5games.com/games/card-british-museum-puzzle-game-free.html",
+  "genre": "card",
+  "gamePlatform": "HTML5",
+  "applicationCategory": "Game",
+  "operatingSystem": "Web Browser",
+  "author": {
+    "@type": "Organization",
+    "name": "AutoSync"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PlayHTML5"
+  },
+  "datePublished": "2025-07-15",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 4.8,
+    "ratingCount": "0+"
+  }
+}
+    </script>
+  <link rel="icon" href="/icon/british-museum-puzzle.png">
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; background: #f7f7f7; margin: 0; color: #222; }
+    header { background: #222; color: #fff; padding: 1rem; text-align: center; }
+    main { max-width: 600px; margin: 2rem auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px #0001; padding: 2rem; }
+    .puzzle-board { display: grid; grid-template-columns: repeat(3, 100px); grid-template-rows: repeat(3, 100px); gap: 2px; margin: 2rem auto; }
+    .piece { width: 100px; height: 100px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; font-size: 2rem; cursor: pointer; user-select: none; }
+    .piece.empty { background: #fff; border: 1px dashed #bbb; cursor: default; }
+    .instructions { margin: 1rem 0; font-size: 1.1rem; }
+    .gdpr { font-size: 0.9rem; color: #666; margin-top: 2rem; }
+    .related { margin-top: 2rem; }
+    .related a { color: #0057b8; text-decoration: none; margin-right: 1rem; }
+    .related a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+<nav class="w-full bg-white shadow mb-4 flex items-center px-4 py-2">
+  <div class="flex items-center gap-4">
+    <a href="https://www.ukhtml5games.com/" class="flex items-center" title="PlayHTML5 Home">
+      <picture>
+        <source srcset="/images/games/logo.webp" type="image/webp">
+        <img src="/images/games/logo.png" alt="PlayHTML5 Logo" height="32" loading="lazy">
+      </picture>
+    </a>
+    <a href="https://www.ukhtml5games.com/" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+    <a href="https://www.ukhtml5games.com/" class="text-gray-700 hover:text-blue-600 font-medium">All Games</a>
+  </div>
+  <div class="flex-1"></div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <header>
+    <h1>British Museum Puzzle Game Free</h1>
+    <p>Rearrange the pieces to complete a famous British Museum exhibit!</p>
+  </header>
+  <main>
+    <div class="instructions">
+      <strong>How to Play:</strong> Click or tap two pieces to swap them. Complete the image to win!<br>
+      <em>Theme: British Museum - Rosetta Stone</em>
+    </div>
+    <div class="puzzle-board" id="board"></div>
+    <button id="restart">Restart</button>
+    <div id="message" style="margin-top:1rem;font-weight:bold;"></div>
+    <section class="gdpr">
+      This game is free, does not collect personal data, and is fully GDPR compliant. <a href="/privacy.html">Learn more</a>.
+    </section>
+    <section class="related">
+      <strong>Related Games:</strong>
+      <a href="/Ocean-Keeper-Survival-Game-Free.html">Ocean Keeper Survival Game</a>
+      <a href="/London-Arcade-Games-Free.html">London Arcade Games Free</a>
+      <a href="/UK-Counties-Crossword-Challenge-Free.html">UK Counties Crossword Challenge</a>
+    </section>
+  </main>
+  <script>
+    // 3x3 puzzle, Rosetta Stone image split into 9 pieces (for demo, use numbers)
+    const solution = [1,2,3,4,5,6,7,8,0]; // 0 is empty
+    let board = [];
+    function shuffle(arr) {
+      let a = arr.slice();
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+    function isSolvable(arr) {
+      let inv = 0;
+      for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+          if (arr[i] && arr[j] && arr[i] > arr[j]) inv++;
+        }
+      }
+      return inv % 2 === 0;
+    }
+    function newBoard() {
+      let arr;
+      do {
+        arr = shuffle(solution);
+      } while (!isSolvable(arr) || arr.join() === solution.join());
+      board = arr;
+      render();
+      document.getElementById('message').textContent = '';
+    }
+    function render() {
+      const boardDiv = document.getElementById('board');
+      boardDiv.innerHTML = '';
+      board.forEach((val, idx) => {
+        const div = document.createElement('div');
+        div.className = 'piece' + (val === 0 ? ' empty' : '');
+        div.dataset.idx = idx;
+        div.textContent = val === 0 ? '' : val;
+        boardDiv.appendChild(div);
+      });
+    }
+    let first = null;
+    document.getElementById('board').addEventListener('click', e => {
+      if (!e.target.classList.contains('piece') || e.target.classList.contains('empty')) return;
+      const idx = +e.target.dataset.idx;
+      if (first === null) {
+        first = idx;
+        e.target.style.background = '#cce5ff';
+      } else {
+        if (first !== idx) {
+          [board[first], board[idx]] = [board[idx], board[first]];
+          render();
+          if (board.join() === solution.join()) {
+            document.getElementById('message').textContent = 'Congratulations! You completed the puzzle!';
+          }
+        }
+        document.querySelectorAll('.piece').forEach(d => d.style.background = '');
+        first = null;
+      }
+    });
+    document.getElementById('restart').onclick = newBoard;
+    newBoard();
+  </script>
+
+  <footer style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+    <section style="background: #fff; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <h2 style="font-size: 1.25rem; font-weight: bold; color: #222; margin-bottom: 1rem; text-align: center;">More Card Games</h2>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+        <a href="card-free-uk-puzzle-games-online.html" style="background: #fff; border-radius: 8px; padding: 0.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center; transition: box-shadow 0.2s; width: 160px; max-width: 160px;">
+          <picture>
+            <source srcset="/images/games/card-free-uk-puzzle-games-online.webp" type="image/webp">
+            <img src="/images/games/card-free-uk-puzzle-games-online.jpg" alt="card free-uk-puzzle-games-online html5 game, free-uk-puzzle-games-online online play, free card game" title="card free-uk-puzzle-games-online html5 game, free-uk-puzzle-games-online online play, free card game" loading="lazy" style="width: 100%; height: 120px; object-fit: cover; border-radius: 4px;">
+          </picture>
+          <h4 style="font-weight: bold; color: #222; font-size: 0.875rem; margin-bottom: 0.25rem; text-align: center;">Card Free-Uk-Puzzle-Games-Online Game</h4>
+          <p style="color: #666; font-size: 0.75rem; text-align: center;">Play Card-Free-Uk-Puzzle-Games-Online online. This card game features: card, solitaire, classic, puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.</p>
+        </a>
+      </div>
+    </section>
+  </footer>
+
+
+
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto">
+  <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">More Card Games</h3>
+  <div class="flex flex-wrap justify-center gap-2">
+    <a href="card-free-uk-puzzle-games-online.html" class="bg-white rounded-lg shadow p-2 w-40 hover:shadow-lg transition flex flex-col items-center">
+      <picture>
+        <source srcset="/images/games/card-free-uk-puzzle-games-online.webp" type="image/webp">
+        <img src="/images/games/card-free-uk-puzzle-games-online.webp" alt="card free-uk-puzzle-games-online html5 game, free-uk-puzzle-games-online online play, free card game" title="card free-uk-puzzle-games-online html5 game, free-uk-puzzle-games-online online play, free card game" class="rounded mb-1 w-28 h-20 object-cover mx-auto" loading="lazy">
+      </picture>
+      <h4 class="font-bold text-gray-800 text-sm mb-1 text-center">Card Free-Uk-Puzzle-Games-Online Game</h4>
+      <p class="text-gray-600 text-xs text-center">Play Card-Free-Uk-Puzzle-Games-Online online. This card game features: card, solitaire, classic, puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.</p>
+    </a>
+  </div>
+</div>
+
+</body>
+</html> 

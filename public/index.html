@@ -1,0 +1,3064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta property="og:image" content="https://www.ukhtml5games.com/images/og-image.jpg">
+    <meta property="og:url" content="https://www.ukhtml5games.com/C:/Users/zfz123/Desktop/7月4.11版本/public/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Free HTML5 Games Platform">
+    <meta property="og:title" content="PlayHTML5 - Free HTML5 Games">
+    <link rel="canonical" href="https://www.ukhtml5games.com/C:/Users/zfz123/Desktop/7月4.11版本/public/index.html">
+    <meta name="keywords" content="HTML5 games, free games, online games, PlayHTML5">
+    <meta name="description" content="Free HTML5 Games Platform">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayHTML5 - Free HTML5 Games</title>
+    <!-- 谷歌统计代码开始（Google Analytics） -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D6HWXDZW6N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-D6HWXDZW6N');
+    </script>
+    <!-- 谷歌统计代码结束 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- 结构化数据 - 帮助搜索引擎更好地理解网站内容 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "PlayHTML5",
+      "description": "Free HTML5 Games Platform",
+      "url": "https://www.ukhtml5games.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.ukhtml5games.com/?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "game": [
+        {
+          "@type": "Game",
+          "name": "IN33 Action Game",
+          "description": "A fun HTML5 action game you can play directly!",
+          "image": "https://www.ukhtml5games.com/images/games/in33.jpg",
+          "url": "https://www.ukhtml5games.com/games/in33.html",
+          "genre": "action"
+        },
+        {
+          "@type": "Game",
+          "name": "IN1 Action Game",
+          "description": "A brand new HTML5 action game!",
+          "image": "https://www.ukhtml5games.com/images/games/in1.png",
+          "url": "https://www.ukhtml5games.com/games/in1.html",
+          "genre": "action"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Tailwind配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#FF7D00',
+                        success: '#00B42A',
+                        warning: '#FF7D00',
+                        danger: '#F53F3F',
+                        dark: '#1D2129',
+                        light: '#F2F3F5'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- 自定义工具类 -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .game-card-hover {
+                @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+            }
+            .btn-primary {
+                @apply bg-primary text-white font-medium rounded-lg px-4 py-2 transition-all duration-300 hover:bg-primary/90 hover:shadow-md;
+            }
+            .badge {
+                @apply text-xs font-semibold px-2.5 py-0.5 rounded-full;
+            }
+            .nav-active {
+                @apply text-primary font-semibold;
+            }
+            .card-scale {
+                @apply transition-transform duration-300 hover:scale-105;
+            }
+            .category-active {
+                @apply bg-primary/10 text-primary;
+            }
+        }
+    </style>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .game-grid {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                gap: 1rem;
+            }
+        }
+        
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+        
+        /* 骨架屏动画 */
+        @keyframes shimmer {
+            0% { background-position: -1000px 0 }
+            100% { background-position: 1000px 0 }
+        }
+        
+        .skeleton {
+            background: linear-gradient(to right, #f3f3f3 4%, #f0f0f0 25%, #f3f3f3 36%);
+            background-size: 1000px 100%;
+            animation: shimmer 2s infinite linear;
+        }
+        
+        /* 模态框动画 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        
+        .modal-animate {
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+        
+        .backdrop-blur {
+            backdrop-filter: blur(4px);
+        }
+        
+        /* 游戏卡片淡入动画 */
+        @keyframes fadeInGameCard {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .game-card-enter {
+            animation: fadeInGameCard 0.3s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-dark scroll-smooth">
+    <!-- 导航栏 -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="https://www.ukhtml5games.com" class="flex items-center space-x-2" style="text-decoration: none;">
+                <i class="fa fa-gamepad text-primary text-2xl"></i>
+                <h1 class="text-xl font-bold text-primary">PlayHTML5</h1>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#home" class="nav-link font-medium hover:text-primary transition-colors">Home</a>
+                <a href="#categories" class="nav-link font-medium hover:text-primary transition-colors">Categories</a>
+                <a href="#featured" class="nav-link font-medium hover:text-primary transition-colors">Featured Games</a>
+                <a href="#popular" class="nav-link font-medium hover:text-primary transition-colors">Popular</a>
+                <a href="#about" class="nav-link font-medium hover:text-primary transition-colors">About</a>
+            </nav>
+            
+            <div class="flex items-center space-x-3">
+                <button class="hidden md:block btn-primary" id="addGameBtn" type="button">
+                    <i class="fa fa-plus mr-1"></i> Add Game
+                </button>
+                <button class="md:hidden text-gray-600" id="mobileMenuBtn">
+                    <i class="fa fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 移动端菜单 -->
+        <div id="mobileMenu" class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 md:hidden">
+            <div class="p-4 flex justify-end">
+                <button id="closeMobileMenu" class="text-gray-500">
+                    <i class="fa fa-times text-2xl"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col items-center space-y-6 pt-10">
+                <a href="#home" class="mobile-nav-link text-xl font-medium">Home</a>
+                <a href="#categories" class="mobile-nav-link text-xl font-medium">Categories</a>
+                <a href="#featured" class="mobile-nav-link text-xl font-medium">Featured Games</a>
+                <a href="#popular" class="mobile-nav-link text-xl font-medium">Popular</a>
+                <a href="#about" class="mobile-nav-link text-xl font-medium">About</a>
+                <button class="btn-primary mt-4" id="mobileAddGameBtn">
+                    <i class="fa fa-plus mr-1"></i> Add Game
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主横幅 (添加ID: home) -->
+    <section id="home" class="bg-gradient-to-r from-primary/90 to-primary py-12 md:py-20 cursor-pointer hover:bg-gradient-to-r hover:from-primary hover:to-primary transition-all duration-300" onclick="handleHeroClick(event)">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-white mb-4">Play Free HTML5 Games</h2>
+                <p class="text-[clamp(1rem,2vw,1.25rem)] text-white/90 mb-8">Discover and play thousands of HTML5 games directly in your browser. No downloads, no installs, just pure gaming fun!</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <div class="relative w-full sm:w-96" onclick="event.stopPropagation()">
+                        <input type="text" placeholder="Search for games..." class="w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary/50">
+                        <button class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa fa-search text-lg"></i>
+                        </button>
+                    </div>
+                    <button class="btn-primary bg-secondary hover:bg-secondary/90" onclick="event.stopPropagation()">
+                        <i class="fa fa-compass mr-1"></i> Browse Games
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 游戏分类标签 (添加ID: categories) -->
+    <section id="categories" class="py-8 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-semibold">Browse by Category</h3>
+                <a href="#" class="text-primary hover:underline text-sm font-medium">View All Categories</a>
+            </div>
+            
+            <div class="flex flex-wrap gap-2 overflow-x-auto pb-2" id="categoryButtons">
+                <button class="badge bg-primary/10 text-primary category-btn category-active" data-category="all">All Games</button>
+                <button class="badge bg-gray-100 text-gray-800 hover:bg-primary/10 hover:text-primary transition-colors category-btn" data-category="new">New</button>
+                <button class="badge bg-gray-100 text-gray-800 hover:bg-primary/10 hover:text-primary transition-colors category-btn" data-category="popular">Popular</button>
+                <button class="badge bg-gray-100 text-gray-800 hover:bg-primary/10 hover:text-primary transition-colors category-btn" data-category="puzzle">Puzzle</button>
+                <button class="badge bg-gray-100 text-gray-800 hover:bg-primary/10 hover:text-primary transition-colors category-btn" data-category="action">Action</button>
+                <button class="badge bg-gray-100 text-gray-800 hover:bg-primary/10 hover:text-primary transition-colors category-btn" data-category="arcade">Arcade</button>
+                <button class="badge bg-gray-100 text-gray-800 hover:bg-primary/10 hover:text-primary transition-colors category-btn" data-category="strategy">Strategy</button>
+                <button class="badge bg-gray-100 text-gray-800 hover:bg-primary/10 hover:text-primary transition-colors category-btn" data-category="adventure">Adventure</button>
+                <button class="badge bg-gray-100 text-gray-800 hover:bg-primary/10 hover:text-primary transition-colors category-btn" data-category="card">Card</button>
+                <button class="badge bg-gray-100 text-gray-800 hover:bg-primary/10 hover:text-primary transition-colors category-btn" data-category="sports">Sports</button>
+                <button class="badge bg-gray-100 text-gray-800 hover:bg-primary/10 hover:text-primary transition-colors category-btn" data-category="educational">Educational</button>
+                <button class="badge bg-gray-100 text-gray-800 hover:bg-primary/10 hover:text-primary transition-colors category-btn" data-category="other">Other</button>
+            </div>
+            
+            <!-- 游戏卡片网格 -->
+            <div class="game-grid mt-8" id="gameGrid">
+                <!-- 游戏卡片将通过JavaScript动态生成 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 游戏列表 (添加ID: featured) -->
+    <section id="featured" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-semibold">Featured Games</h3>
+                <div class="flex items-center space-x-2">
+                    <span class="text-sm text-gray-600">Sort by:</span>
+                    <select class="text-sm bg-white border border-gray-200 rounded-md px-2 py-1 focus:outline-none focus:ring-1 focus:ring-primary">
+                        <option>Recommended</option>
+                        <option>Newest</option>
+                        <option>Most Played</option>
+                        <option>Top Rated</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="game-grid">
+                <!-- 游戏卡片保持不变 -->
+                <!-- ... 其余游戏卡片省略 ... -->
+            </div>
+            
+            <div class="mt-10 text-center">
+                <button class="btn-primary">
+                    Load More Games <i class="fa fa-refresh ml-1"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 新增Popular Games区域 (添加ID: popular) -->
+    <section id="popular" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h3 class="text-xl font-semibold mb-6">Most Popular Games</h3>
+            <div class="game-grid">
+                <!-- 复制几个游戏卡片作为示例 -->
+                <div class="game-card-hover bg-white rounded-xl overflow-hidden shadow-md cursor-pointer" data-game-id="5">
+                    <div class="relative h-48 bg-gray-200">
+                        <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
+      <img src="/https://picsum.photos/seed/popular1/400/300" alt="HTML5 Game" title="HTML5 Game" loading="lazy">
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+                        <div class="absolute top-3 left-3">
+                            <span class="badge bg-warning text-white category-badge" data-category="popular" style="cursor:pointer;">Popular</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-semibold text-lg mb-1">Racing Master</h4>
+                        <p class="text-gray-600 text-sm mb-3 line-clamp-2">Race against the clock and other players in this high-speed racing game.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <span class="text-sm ml-1">4.9</span>
+                            </div>
+                            <button class="play-game-btn text-primary hover:text-primary/80 text-sm font-medium flex items-center" data-game-url="#">
+                                Play Now <i class="fa fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 其他Popular游戏卡片 -->
+                <div class="game-card-hover bg-white rounded-xl overflow-hidden shadow-md cursor-pointer" data-game-id="6">
+                    <div class="relative h-48 bg-gray-200">
+                        <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
+      <img src="/https://picsum.photos/seed/popular2/400/300" alt="HTML5 Game" title="HTML5 Game" loading="lazy">
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+                        <div class="absolute top-3 left-3">
+                            <span class="badge bg-warning text-white category-badge" data-category="popular" style="cursor:pointer;">Popular</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-semibold text-lg mb-1">Tower Defense</h4>
+                        <p class="text-gray-600 text-sm mb-3 line-clamp-2">Defend your base from waves of enemies in this strategic tower defense game.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <span class="text-sm ml-1">4.8</span>
+                            </div>
+                            <button class="play-game-btn text-primary hover:text-primary/80 text-sm font-medium flex items-center" data-game-url="#">
+                                Play Now <i class="fa fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 新增About区域 (添加ID: about) -->
+    <section id="about" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h3 class="text-xl font-semibold mb-4">About Us</h3>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <p class="text-gray-600 mb-4">
+                        PlayHTML5 is the best platform for playing HTML5 games directly in your browser. We offer thousands of free games across all genres, from action and adventure to puzzle and strategy.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        Our mission is to provide a high-quality gaming experience without the need for downloads or installations. All games are optimized for performance and compatibility across all modern browsers.
+                    </p>
+                    <div class="mt-6">
+                        <h4 class="font-medium mb-2">Our Stats</h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <p class="text-3xl font-bold text-primary">5,000+</p>
+                                <p class="text-gray-600 text-sm">Games</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <p class="text-3xl font-bold text-primary">10M+</p>
+                                <p class="text-gray-600 text-sm">Monthly Players</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <p class="text-3xl font-bold text-primary">200+</p>
+                                <p class="text-gray-600 text-sm">Developers</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <p class="text-3xl font-bold text-primary">99%</p>
+                                <p class="text-gray-600 text-sm">Uptime</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
+      <img src="/https://picsum.photos/seed/about/600/400" alt="HTML5 Game" title="HTML5 Game" loading="lazy">
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 游戏详情模态框 -->
+    <div id="gameModal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
+        <div class="absolute inset-0 bg-black/50 backdrop-blur"></div>
+        <div class="relative bg-white rounded-xl shadow-2xl w-full max-w-3xl mx-4 overflow-hidden modal-animate">
+            <div class="flex justify-end p-4">
+                <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+                    <i class="fa fa-times text-xl"></i>
+                </button>
+            </div>
+            <div class="p-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <div class="rounded-lg overflow-hidden h-64 mb-4">
+                            <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
+      <img src="/https://picsum.photos/seed/game/600/400" alt="HTML5 Game" title="HTML5 Game" loading="lazy">
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span id="modalGameCategory" class="badge bg-primary text-white">Action</span>
+                            <span class="badge bg-gray-100 text-gray-800">HTML5</span>
+                            <span class="badge bg-gray-100 text-gray-800">Free</span>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <div class="flex">
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star-half-o text-yellow-400"></i>
+                            </div>
+                            <span class="ml-2 text-sm text-gray-600">4.7 (1,234 ratings)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm text-gray-600">Developer</p>
+                                <p class="font-medium">Game Studio</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-600">Published</p>
+                                <p class="font-medium">June 15, 2023</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-600">Plays</p>
+                                <p class="font-medium">2.4M+</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 id="modalGameTitle" class="text-2xl font-bold mb-3">Super Adventure Boy</h3>
+                        <p id="modalGameDescription" class="text-gray-600 mb-4">
+                            Embark on an epic journey through dangerous worlds filled with challenges, puzzles, and enemies. Collect coins, power-ups, and unlock new levels as you progress through this exciting adventure game.
+                        </p>
+                        <h4 class="font-medium mb-2">Game Controls</h4>
+                        <ul class="text-gray-600 mb-4">
+                            <li class="flex items-center mb-1"><i class="fa fa-keyboard-o mr-2"></i> Arrow Keys: Move Character</li>
+                            <li class="flex items-center mb-1"><i class="fa fa-keyboard-o mr-2"></i> Space: Jump</li>
+                            <li class="flex items-center mb-1"><i class="fa fa-keyboard-o mr-2"></i> X: Attack</li>
+                            <li class="flex items-center"><i class="fa fa-keyboard-o mr-2"></i> P: Pause Game</li>
+                        </ul>
+                        <button class="btn-primary w-full py-3 flex items-center justify-center" id="modalPlayBtn">
+                            <i class="fa fa-gamepad mr-2"></i> Play Now
+                        </button>
+                    </div>
+                </div>
+                <!-- 相关推荐区域 -->
+                <div id="recommendation-section" class="mt-8">
+                    <h4 class="text-lg font-semibold mb-3">You May Also Like</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="recommendationGrid">
+                        <!-- 推荐游戏卡片 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加游戏表单模态框 -->
+    <div id="addGameModal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
+        <div class="absolute inset-0 bg-black/50 backdrop-blur"></div>
+        <div class="relative bg-white rounded-xl shadow-2xl w-full max-w-2xl mx-4 overflow-hidden modal-animate">
+            <div class="bg-primary p-4">
+                <h3 class="text-white text-xl font-semibold">Add New Game</h3>
+            </div>
+            <div class="p-6">
+                <form id="addGameForm">
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1" for="gameTitle">Game Title</label>
+                            <input type="text" id="gameTitle" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1" for="gameCategory">Category</label>
+                            <select id="gameCategory" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50" required>
+                                <option value="">Select Category</option>
+                                <option value="action">Action</option>
+                                <option value="puzzle">Puzzle</option>
+                                <option value="strategy">Strategy</option>
+                                <option value="adventure">Adventure</option>
+                                <option value="arcade">Arcade</option>
+                                <option value="casual">Casual</option>
+                                <option value="card">Card</option>
+                                <option value="sports">Sports</option>
+                                <option value="educational">Educational</option>
+                                <option value="new">New</option>
+                                <option value="popular">Popular</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-1" for="gameDescription">Description</label>
+                        <textarea id="gameDescription" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50" required></textarea>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1" for="gameImageFile">Game Image</label>
+                            <input type="file" id="gameImageFile" accept="image/*" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1" for="gameUrl">Game URL</label>
+                            <input type="url" id="gameUrl" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50" placeholder="https://example.com/play-game" required>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-700 mb-1" for="gameDeveloper">Developer</label>
+                        <input type="text" id="gameDeveloper" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50" required>
+                    </div>
+                    <div class="flex justify-end space-x-3">
+                        <button type="button" id="cancelAddGame" class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50">Cancel</button>
+                        <button type="submit" class="btn-primary">Submit Game</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主横幅点击处理函数 -->
+    <script>
+        function handleHeroClick(event) {
+            // 检查点击的元素是否是搜索框或其子元素
+            const searchContainer = event.target.closest('.relative');
+            if (searchContainer && searchContainer.querySelector('input[type="text"]')) {
+                return; // 如果是搜索框区域，不执行跳转
+            }
+            
+            // 其他区域点击跳转到谷歌
+            window.open('https://www.google.com', '_blank', 'noopener,noreferrer');
+        }
+
+
+    </script>
+
+    <!-- 移除原有模拟数据和JS渲染逻辑，改为引入真实功能JS -->
+    <script src="/js/i18n.js"></script>
+    <script src="/js/games.js"></script>
+    <script src="/js/main.js"></script>
+    
+    <!-- 页脚协议区域 -->
+    <footer class="bg-gray-100 py-8 mt-12 border-t">
+        <div class="container mx-auto px-4 text-center text-sm text-gray-600">
+            <div class="mb-4 flex flex-wrap justify-center gap-4">
+                <a href="/terms.html" class="hover:underline font-medium">利用規約 / Terms of Service</a>
+                <a href="/privacy.html" class="hover:underline">プライバシーポリシー / Privacy Policy</a>
+                <a href="/copyright.html" class="hover:underline">著作権表示 / Copyright Notice</a>
+                <a href="/robots.txt" class="hover:underline">Robotsポリシー / Robots Policy</a>
+            </div>
+            <div class="mb-2">
+                <strong>Disclaimer：</strong>
+                All HTML5 games on this site are collected from the Internet and are for learning and communication purposes only. All copyrights belong to their respective owners. If you believe your rights have been infringed, please contact us and we will promptly remove the relevant content upon notification.<br>
+                当サイトのすべてのHTML5ゲームはインターネットから収集されており、学習および交流のみを目的としています。著作権は各権利者に帰属します。権利侵害がある場合はご連絡ください。通知を受け次第、速やかに対応・削除いたします。
+            </div>
+            <div class="mb-2">
+                <strong>Copyright © 2024 PlayHTML5.com. All Rights Reserved.</strong>
+            </div>
+            <div class="text-xs text-gray-400">
+                This site complies with the robots protocol. Crawling of user privacy and admin pages is prohibited. Major search engines are welcome to index public content.
+            </div>
+        </div>
+    </footer>
+    
+    <!-- 只保留最简洁的弹窗交互JS -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // 桌面端按钮
+        var addGameBtn = document.getElementById('addGameBtn');
+        // 移动端按钮
+        var mobileAddGameBtn = document.getElementById('mobileAddGameBtn');
+        // 弹窗
+        var addGameModal = document.getElementById('addGameModal');
+        // 取消按钮
+        var cancelAddGame = document.getElementById('cancelAddGame');
+
+        // 打开弹窗
+        function openModal() {
+            if (addGameModal) {
+                addGameModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        // 关闭弹窗
+        function closeModal() {
+            if (addGameModal) {
+                addGameModal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        if (addGameBtn) addGameBtn.onclick = openModal;
+        if (mobileAddGameBtn) mobileAddGameBtn.onclick = openModal;
+        if (cancelAddGame) cancelAddGame.onclick = closeModal;
+
+        // 点击弹窗背景关闭
+        if (addGameModal) {
+            addGameModal.addEventListener('click', function(e) {
+                if (e.target === addGameModal) closeModal();
+            });
+        }
+        // ESC键关闭
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && addGameModal && !addGameModal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+    });
+    </script>
+</body>
+</html>

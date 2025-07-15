@@ -1,0 +1,46 @@
+{
+  "name": "playhtml5-games",
+  "version": "1.0.0",
+  "description": "出海游戏导航平台 - 多语言静态网站",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node scripts/dev-server.js",
+    "start": "node scripts/start-dev.js",
+    "sync-js": "mkdir -p public/js && copy src/assets/js/*.js public/js/",
+    "smart-sync": "mkdir -p public/data public/js && copy src/data/*.json public/data/ && copy src/assets/js/*.js public/js/",
+    "build": "npm run smart-sync && node scripts/build.js",
+    "deploy": "node scripts/deploy.js",
+    "generate-pages": "node scripts/generate-pages.js",
+    "generate-seo": "node scripts/generate-seo-files.js",
+    "generate-i18n": "node scripts/i18n-generator.js",
+    "watch-sync": "node scripts/watch-sync.js",
+    "auto-generate-games": "node scripts/auto-generate-games.js",
+    "full-auto": "node scripts/full-auto.js",
+    "ai": "node scripts/ai-assistant.js",
+    "command": "node scripts/auto-command.js",
+    "seo": "npm run generate-seo",
+    "clean-backups": "node scripts/clean-backups.js",
+    "scheduled-cleanup": "node scripts/scheduled-cleanup.js"
+  },
+  "keywords": [
+    "html5-games",
+    "static-site",
+    "multilingual",
+    "cloudflare-pages"
+  ],
+  "author": "PlayHTML5 Team",
+  "license": "MIT",
+  "devDependencies": {
+    "chokidar": "^4.0.3",
+    "cross-env": "^7.0.3",
+    "fs-extra": "^11.3.0",
+    "glob": "^10.3.10",
+    "minify": "^9.2.0",
+    "nodemon": "^3.1.10",
+    "sharp": "^0.33.5",
+    "sitemap": "^7.1.1"
+  },
+  "dependencies": {
+    "alpinejs": "^3.13.3"
+  }
+}

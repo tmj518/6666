@@ -1,0 +1,76 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "search": "Search",
+    "viewAll": "View All",
+    "loadMore": "Load More",
+    "play": "Play Now",
+    "rating": "Rating",
+    "developer": "Developer",
+    "published": "Published",
+    "plays": "Plays",
+    "submit": "Submit",
+    "cancel": "Cancel"
+  },
+  "nav": {
+    "home": "Home",
+    "categories": "Categories",
+    "featured": "Featured Games",
+    "popular": "Popular",
+    "about": "About",
+    "addGame": "Add Game"
+  },
+  "home": {
+    "title": "Play Free HTML5 Games",
+    "subtitle": "Discover and play thousands of HTML5 games directly in your browser. No downloads, no installs, just pure gaming fun!",
+    "searchPlaceholder": "Search for games...",
+    "browseGames": "Browse Games"
+  },
+  "categories": {
+    "title": "Browse by Category",
+    "viewAll": "View All Categories"
+  },
+  "featured": {
+    "title": "Featured Games",
+    "sortBy": "Sort by"
+  },
+  "popular": {
+    "title": "Most Popular Games"
+  },
+  "about": {
+    "title": "About Us",
+    "description1": "PlayHTML5 is the best platform for playing HTML5 games directly in your browser. We offer thousands of free games across all genres, from action and adventure to puzzle and strategy.",
+    "description2": "Our mission is to provide a high-quality gaming experience without the need for downloads or installations. All games are optimized for performance and compatibility across all modern browsers.",
+    "stats": "Our Stats",
+    "games": "Games",
+    "players": "Monthly Players",
+    "developers": "Developers",
+    "uptime": "Uptime"
+  },
+  "gameModal": {
+    "controls": "Game Controls",
+    "move": "Arrow Keys: Move Character",
+    "jump": "Space: Jump",
+    "attack": "X: Attack",
+    "pause": "P: Pause Game",
+    "recommendations": "You May Also Like"
+  },
+  "addGame": {
+    "title": "Add New Game",
+    "gameTitle": "Game Title",
+    "category": "Category",
+    "selectCategory": "Select Category",
+    "description": "Description",
+    "imageUrl": "Image URL",
+    "gameUrl": "Game URL",
+    "developer": "Developer",
+    "rating": "Rating (1-5)"
+  },
+  "games": {
+    "new": "New",
+    "popular": "Popular",
+    "playNow": "Play Now",
+    "noGames": "No games found",
+    "noGamesDesc": "Try selecting a different category or check back later."
+  }
+} 

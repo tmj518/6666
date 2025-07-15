@@ -1,0 +1,10 @@
+{
+  "title": "超级马里奥冒险",
+  "description": "经典的平台跳跃游戏，控制马里奥收集金币，击败敌人，拯救公主。",
+  "category": "action",
+  "rating": 4.8,
+  "developer": "任天堂",
+  "gameFilePath": "C:/Users/YourName/Desktop/games/mario.html",
+  "imageFilePath": "C:/Users/YourName/Desktop/images/mario.jpg",
+  "externalUrl": "https://example.com/mario-game"
+} 

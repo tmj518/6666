@@ -1,0 +1,76 @@
+{
+  "common": {
+    "loading": "加载中...",
+    "search": "搜索",
+    "viewAll": "查看全部",
+    "loadMore": "加载更多",
+    "play": "开始游戏",
+    "rating": "评分",
+    "developer": "开发者",
+    "published": "发布日期",
+    "plays": "游玩次数",
+    "submit": "提交",
+    "cancel": "取消"
+  },
+  "nav": {
+    "home": "首页",
+    "categories": "分类",
+    "featured": "精选游戏",
+    "popular": "热门",
+    "about": "关于我们",
+    "addGame": "添加游戏"
+  },
+  "home": {
+    "title": "免费HTML5游戏",
+    "subtitle": "在浏览器中发现并游玩数千款HTML5游戏。无需下载，无需安装，纯粹的游戏乐趣！",
+    "searchPlaceholder": "搜索游戏...",
+    "browseGames": "浏览游戏"
+  },
+  "categories": {
+    "title": "按分类浏览",
+    "viewAll": "查看所有分类"
+  },
+  "featured": {
+    "title": "精选游戏",
+    "sortBy": "排序方式"
+  },
+  "popular": {
+    "title": "最热门游戏"
+  },
+  "about": {
+    "title": "关于我们",
+    "description1": "PlayHTML5是在浏览器中玩HTML5游戏的最佳平台。我们提供数千款免费游戏，涵盖所有类型，从动作冒险到益智策略。",
+    "description2": "我们的使命是提供高质量的游戏体验，无需下载或安装。所有游戏都针对所有现代浏览器的性能和兼容性进行了优化。",
+    "stats": "我们的数据",
+    "games": "游戏数量",
+    "players": "月活用户",
+    "developers": "开发者",
+    "uptime": "运行时间"
+  },
+  "gameModal": {
+    "controls": "游戏控制",
+    "move": "方向键：移动角色",
+    "jump": "空格键：跳跃",
+    "attack": "X键：攻击",
+    "pause": "P键：暂停游戏",
+    "recommendations": "你可能还喜欢"
+  },
+  "addGame": {
+    "title": "添加新游戏",
+    "gameTitle": "游戏标题",
+    "category": "分类",
+    "selectCategory": "选择分类",
+    "description": "描述",
+    "imageUrl": "图片URL",
+    "gameUrl": "游戏URL",
+    "developer": "开发者",
+    "rating": "评分(1-5)"
+  },
+  "games": {
+    "new": "新游戏",
+    "popular": "热门",
+    "playNow": "立即游戏",
+    "noGames": "未找到游戏",
+    "noGamesDesc": "尝试选择不同的分类或稍后再试。"
+  }
+} 

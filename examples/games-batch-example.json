@@ -1,0 +1,32 @@
+[
+  {
+    "title": "超级马里奥冒险",
+    "description": "经典的平台跳跃游戏，控制马里奥收集金币，击败敌人，拯救公主。",
+    "category": "action",
+    "rating": 4.8,
+    "developer": "任天堂",
+    "gameFilePath": "C:/Users/YourName/Desktop/games/mario.html",
+    "imageFilePath": "C:/Users/YourName/Desktop/images/mario.jpg",
+    "externalUrl": "https://example.com/mario-game"
+  },
+  {
+    "title": "俄罗斯方块大师",
+    "description": "经典的益智游戏，旋转和移动方块，消除完整的行来获得分数。",
+    "category": "puzzle",
+    "rating": 4.6,
+    "developer": "俄罗斯方块公司",
+    "gameFilePath": "C:/Users/YourName/Desktop/games/tetris.html",
+    "imageFilePath": "C:/Users/YourName/Desktop/images/tetris.jpg",
+    "externalUrl": "https://example.com/tetris-game"
+  },
+  {
+    "title": "赛车竞速",
+    "description": "高速赛车游戏，选择不同的车辆，在多个赛道上竞速。",
+    "category": "sports",
+    "rating": 4.5,
+    "developer": "赛车游戏工作室",
+    "gameFilePath": "C:/Users/YourName/Desktop/games/racing.html",
+    "imageFilePath": "C:/Users/YourName/Desktop/images/racing.jpg",
+    "externalUrl": "https://example.com/racing-game"
+  }
+] 

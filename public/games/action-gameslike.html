@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta property="og:image" content="https://www.ukhtml5games.com/images/games/action-gameslike.webp">
+    <meta property="og:url" content="https://www.ukhtml5games.com/games/adventure_uk-weather-word-puzzle-free.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://www.ukhtml5games.com/games/adventure_uk-weather-word-puzzle-free.html">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UK Weather Word Puzzle Free – British Weather Vocabulary Game Online</title>
+  <meta name="description" content="Learn British weather vocabulary with our free UK weather word puzzle game. Practice English weather terms like drizzle, fog, and sunny spells in this educational puzzle.">
+  <meta name="keywords" content="UK Weather Word Puzzle Free, British weather vocabulary game, UK weather terms puzzle, English weather words game, British climate vocabulary free">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="Action Gameslike Game - PlayHTML5">
+  <meta property="og:description" content="Play Action-Gameslike online. This action game features: action, fast, exciting. Free HTML5 game, mobile-friendly, no download.">
+  <!-- Schema.org 标记 -->
+  <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Action Gameslike Game",
+  "description": "Play Action-Gameslike online. This action game features: action, fast, exciting. Free HTML5 game, mobile-friendly, no download.",
+  "image": "https://www.ukhtml5games.com/images/games/action-gameslike.webp",
+  "url": "https://www.ukhtml5games.com/games/action-gameslike.html",
+  "genre": "action",
+  "gamePlatform": "HTML5",
+  "applicationCategory": "Game",
+  "operatingSystem": "Web Browser",
+  "author": {
+    "@type": "Organization",
+    "name": "AutoSync"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PlayHTML5"
+  },
+  "datePublished": "2025-07-15",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 4.8,
+    "ratingCount": "0+"
+  }
+}
+    </script>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0EA5E9',
+            secondary: '#10B981',
+            accent: '#F59E0B',
+            dark: '#1E293B',
+            weather: '#0284C7',
+          },
+        },
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto { content-visibility: auto; }
+      .game-shadow { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3); }
+      .weather-gradient { background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 50%, #0369A1 100%); }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-cyan-50 font-sans min-h-screen">
+<nav class="w-full bg-white shadow mb-4 flex items-center px-4 py-2">
+  <div class="flex items-center gap-4">
+    <a href="https://www.ukhtml5games.com/" class="flex items-center" title="PlayHTML5 Home">
+      <picture>
+        <source srcset="/images/games/logo.webp" type="image/webp">
+        <img src="/images/games/logo.png" alt="PlayHTML5 Logo" height="32" loading="lazy">
+      </picture>
+    </a>
+    <a href="https://www.ukhtml5games.com/" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+    <a href="https://www.ukhtml5games.com/" class="text-gray-700 hover:text-blue-600 font-medium">All Games</a>
+  </div>
+  <div class="flex-1"></div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- 导航栏 -->
+  
+
+  <!-- GDPR 合规弹窗 -->
+  <div id="gdpr-modal" class="fixed inset-0 flex items-center justify-center z-50 bg-black/50" style="display:flex;">
+    <div class="bg-white rounded-lg p-6 max-w-md w-full mx-4 text-center shadow-lg">
+      <h2 class="text-xl font-bold mb-2 text-weather">GDPR Notice</h2>
+      <p class="mb-4">This weather puzzle game collects data for gameplay stats – learn more.</p>
+      <button id="gdpr-accept" class="px-4 py-2 bg-weather text-white rounded hover:bg-blue-700 transition-colors" aria-label="Accept GDPR policy">Accept</button>
+    </div>
+  </div>
+
+  <div id="game-container" class="w-full max-w-4xl mx-auto flex flex-col items-center p-4">
+    <header class="text-center mb-8">
+      <h1 class="text-4xl md:text-5xl font-bold text-weather mb-4">🌦️ UK Weather Word Puzzle</h1>
+      <p class="text-lg text-gray-700 max-w-2xl">Learn British weather vocabulary! Solve puzzles with authentic UK weather terms like drizzle, fog, and sunny spells.</p>
+    </header>
+
+    <!-- 游戏状态显示 -->
+    <div class="w-full max-w-2xl mb-6">
+      <div class="flex justify-between items-center bg-white rounded-lg p-4 shadow-md">
+        <div class="text-center">
+          <div class="text-2xl font-bold text-weather" id="score">0</div>
+          <div class="text-sm text-gray-600">Score</div>
+        </div>
+        <div class="text-center">
+          <div class="text-2xl font-bold text-primary" id="level">1</div>
+          <div class="text-sm text-gray-600">Level</div>
+        </div>
+        <div class="text-center">
+          <div class="text-2xl font-bold text-accent" id="timer">60</div>
+          <div class="text-sm text-gray-600">Seconds</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 游戏区域 -->
+    <div class="w-full max-w-2xl">
+      <div id="start-screen" class="bg-white rounded-lg p-8 text-center shadow-lg">
+        <div class="text-6xl mb-4">🌦️</div>
+        <h2 class="text-3xl font-bold text-weather mb-4">UK Weather Word Puzzle</h2>
+        <p class="text-gray-600 mb-6">Learn authentic British weather vocabulary through fun word puzzles!</p>
+        <button id="start-btn" class="px-8 py-4 bg-weather text-white rounded-lg text-xl font-bold hover:bg-blue-700 transition-all transform hover:scale-105">
+          Start Puzzle
+        </button>
+      </div>
+
+      <div id="game-screen" class="bg-white rounded-lg p-8 shadow-lg hidden">
+        <div class="mb-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-4" id="puzzle-hint">Weather hint will appear here</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <div class="bg-gray-100 p-4 rounded-lg">
+              <h4 class="font-bold text-gray-700 mb-2">Word to Find:</h4>
+              <div class="text-2xl font-mono text-weather" id="target-word">_ _ _ _ _</div>
+            </div>
+            <div class="bg-gray-100 p-4 rounded-lg">
+              <h4 class="font-bold text-gray-700 mb-2">Your Answer:</h4>
+              <input type="text" id="answer-input" class="w-full p-2 text-xl font-mono border-2 border-gray-300 rounded focus:border-weather focus:outline-none" placeholder="Type here...">
+            </div>
+          </div>
+          <div class="flex justify-between items-center">
+            <button id="hint-btn" class="px-4 py-2 bg-accent text-white rounded hover:bg-yellow-600 transition-colors">
+              Get Hint
+            </button>
+            <button id="skip-btn" class="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 transition-colors">
+              Skip
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="result-screen" class="bg-white rounded-lg p-8 text-center shadow-lg hidden">
+        <div class="text-6xl mb-4" id="result-emoji">🌦️</div>
+        <h2 class="text-3xl font-bold text-weather mb-4" id="result-title">Puzzle Complete!</h2>
+        <div class="text-2xl font-bold text-primary mb-4">
+          Your Score: <span id="final-score">0</span>
+        </div>
+        <div class="text-gray-600 mb-6" id="result-message">Great job learning British weather terms!</div>
+        <div class="space-y-3">
+          <button id="restart-btn" class="w-full px-6 py-3 bg-weather text-white rounded-lg font-bold hover:bg-blue-700 transition-colors">
+            Play Again
+          </button>
+          <button id="share-btn" class="w-full px-6 py-3 bg-primary text-white rounded-lg font-bold hover:bg-blue-700 transition-colors">
+            Share Score
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 相关游戏推荐 -->
+    
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+  </div>
+
+  <!-- 游戏逻辑 -->
+  <script>
+    // 英国天气词汇题库
+    const weatherWords = [
+      {
+        word: "DRIZZLE",
+        hint: "Light rain with very small drops",
+        definition: "Light rain with very small drops, typical of British weather",
+        level: 1
+      },
+      {
+        word: "FOG",
+        hint: "Thick cloud of tiny water droplets near the ground",
+        definition: "A thick cloud of tiny water droplets near the ground, common in UK mornings",
+        level: 1
+      },
+      {
+        word: "MIST",
+        hint: "Light fog, often seen in valleys",
+        definition: "Light fog, often seen in valleys and low-lying areas",
+        level: 1
+      },
+      {
+        word: "SHOWER",
+        hint: "Brief period of rain",
+        definition: "A brief period of rain, common in British summers",
+        level: 2
+      },
+      {
+        word: "OVERCAST",
+        hint: "Sky covered with clouds",
+        definition: "Sky covered with clouds, typical British weather condition",
+        level: 2
+      },
+      {
+        word: "DAMP",
+        hint: "Slightly wet, not completely dry",
+        definition: "Slightly wet, not completely dry, common in UK climate",
+        level: 2
+      },
+      {
+        word: "BREEZE",
+        hint: "Gentle wind",
+        definition: "A gentle wind, pleasant on a warm day",
+        level: 2
+      },
+      {
+        word: "DULL",
+        hint: "Not bright or sunny",
+        definition: "Not bright or sunny, overcast weather",
+        level: 3
+      },
+      {
+        word: "CHILLY",
+        hint: "Unpleasantly cold",
+        definition: "Unpleasantly cold, typical of British autumn",
+        level: 3
+      },
+      {
+        word: "MUGGY",
+        hint: "Warm and humid, uncomfortable",
+        definition: "Warm and humid, uncomfortable weather",
+        level: 3
+      },
+      {
+        word: "BLUSTERY",
+        hint: "Windy with strong gusts",
+        definition: "Windy with strong gusts, common in coastal areas",
+        level: 3
+      },
+      {
+        word: "DRIZZLY",
+        hint: "Characterized by light rain",
+        definition: "Characterized by light rain, typical British weather",
+        level: 4
+      },
+      {
+        word: "OVERCAST",
+        hint: "Sky covered with clouds",
+        definition: "Sky covered with clouds, no sunshine",
+        level: 4
+      },
+      {
+        word: "CHILLY",
+        hint: "Unpleasantly cold",
+        definition: "Unpleasantly cold, need a jacket",
+        level: 4
+      },
+      {
+        word: "BREEZY",
+        hint: "Characterized by light wind",
+        definition: "Characterized by light wind, pleasant weather",
+        level: 4
+      }
+    ];
+
+    // 游戏状态
+    let currentLevel = 1;
+    let score = 0;
+    let timer = 60;
+    let timerInterval;
+    let currentWordIndex = 0;
+    let usedWords = [];
+
+    // DOM 元素
+    const startScreen = document.getElementById('start-screen');
+    const gameScreen = document.getElementById('game-screen');
+    const resultScreen = document.getElementById('result-screen');
+    const startBtn = document.getElementById('start-btn');
+    const hintBtn = document.getElementById('hint-btn');
+    const skipBtn = document.getElementById('skip-btn');
+    const restartBtn = document.getElementById('restart-btn');
+    const shareBtn = document.getElementById('share-btn');
+    const answerInput = document.getElementById('answer-input');
+
+    // GDPR 处理
+    document.addEventListener('DOMContentLoaded', () => {
+      const gdprModal = document.getElementById('gdpr-modal');
+      const gdprAccept = document.getElementById('gdpr-accept');
+      
+      if (!localStorage.getItem('gdprAccepted')) {
+        gdprModal.style.display = 'flex';
+      } else {
+        gdprModal.style.display = 'none';
+      }
+      
+      gdprAccept.onclick = () => {
+        localStorage.setItem('gdprAccepted', 'yes');
+        gdprModal.style.display = 'none';
+      };
+    });
+
+    // 开始游戏
+    startBtn.addEventListener('click', startGame);
+
+    function startGame() {
+      currentLevel = 1;
+      score = 0;
+      usedWords = [];
+      updateScore();
+      updateLevel();
+      startScreen.classList.add('hidden');
+      gameScreen.classList.remove('hidden');
+      showNewWord();
+      startTimer();
+    }
+
+    // 显示新单词
+    function showNewWord() {
+      const levelWords = weatherWords.filter(word => word.level <= currentLevel);
+      const availableWords = levelWords.filter(word => !usedWords.includes(word.word));
+      
+      if (availableWords.length === 0) {
+        // 升级或结束游戏
+        if (currentLevel < 4) {
+          currentLevel++;
+          usedWords = [];
+          showNewWord();
+          return;
+        } else {
+          endGame();
+          return;
+        }
+      }
+
+      const randomIndex = Math.floor(Math.random() * availableWords.length);
+      const currentWord = availableWords[randomIndex];
+      usedWords.push(currentWord.word);
+
+      document.getElementById('puzzle-hint').textContent = currentWord.hint;
+      document.getElementById('target-word').textContent = currentWord.word.split('').map(() => '_').join(' ');
+      answerInput.value = '';
+      answerInput.focus();
+
+      // 存储当前单词信息
+      answerInput.dataset.currentWord = currentWord.word;
+      answerInput.dataset.currentDefinition = currentWord.definition;
+    }
+
+    // 检查答案
+    answerInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        checkAnswer();
+      }
+    });
+
+    function checkAnswer() {
+      const userAnswer = answerInput.value.trim().toUpperCase();
+      const correctWord = answerInput.dataset.currentWord;
+
+      if (userAnswer === correctWord) {
+        score += Math.max(10, timer); // 根据剩余时间给分
+        updateScore();
+        showCorrectAnswer();
+      } else {
+        showIncorrectAnswer();
+      }
+    }
+
+    function showCorrectAnswer() {
+      const definition = answerInput.dataset.currentDefinition;
+      document.getElementById('puzzle-hint').innerHTML = `
+        <div class="text-green-600 font-bold">Correct! ✅</div>
+        <div class="text-sm text-gray-600 mt-2">${definition}</div>
+      `;
+      
+      setTimeout(() => {
+        showNewWord();
+      }, 2000);
+    }
+
+    function showIncorrectAnswer() {
+      const correctWord = answerInput.dataset.currentWord;
+      document.getElementById('puzzle-hint').innerHTML = `
+        <div class="text-red-600 font-bold">Incorrect! ❌</div>
+        <div class="text-sm text-gray-600 mt-2">The correct answer was: ${correctWord}</div>
+      `;
+      
+      setTimeout(() => {
+        showNewWord();
+      }, 2000);
+    }
+
+    // 提示按钮
+    hintBtn.addEventListener('click', () => {
+      const correctWord = answerInput.dataset.currentWord;
+      const revealedLetters = Math.floor(correctWord.length / 3);
+      let hint = '';
+      
+      for (let i = 0; i < correctWord.length; i++) {
+        if (i < revealedLetters) {
+          hint += correctWord[i] + ' ';
+        } else {
+          hint += '_ ';
+        }
+      }
+      
+      document.getElementById('target-word').textContent = hint.trim();
+    });
+
+    // 跳过按钮
+    skipBtn.addEventListener('click', () => {
+      showIncorrectAnswer();
+    });
+
+    // 计时器
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        timer--;
+        updateTimer();
+        
+        if (timer <= 0) {
+          clearInterval(timerInterval);
+          showIncorrectAnswer();
+        }
+      }, 1000);
+    }
+
+    function updateTimer() {
+      document.getElementById('timer').textContent = timer;
+    }
+
+    function updateScore() {
+      document.getElementById('score').textContent = score;
+    }
+
+    function updateLevel() {
+      document.getElementById('level').textContent = currentLevel;
+    }
+
+    // 结束游戏
+    function endGame() {
+      clearInterval(timerInterval);
+      gameScreen.classList.add('hidden');
+      resultScreen.classList.remove('hidden');
+      
+      document.getElementById('final-score').textContent = score;
+      
+      // 根据分数显示结果
+      let resultTitle, resultMessage, resultEmoji;
+      
+      if (score >= 500) {
+        resultTitle = "Weather Expert! 🌦️";
+        resultMessage = "Outstanding knowledge of British weather vocabulary!";
+        resultEmoji = "🌦️";
+      } else if (score >= 300) {
+        resultTitle = "Weather Enthusiast! ☔";
+        resultMessage = "Great understanding of UK weather terms!";
+        resultEmoji = "☔";
+      } else if (score >= 150) {
+        resultTitle = "Weather Learner! 🌤️";
+        resultMessage = "Good progress with British weather vocabulary!";
+        resultEmoji = "🌤️";
+      } else {
+        resultTitle = "Weather Beginner! 🌧️";
+        resultMessage = "Keep learning British weather vocabulary!";
+        resultEmoji = "🌧️";
+      }
+      
+      document.getElementById('result-title').textContent = resultTitle;
+      document.getElementById('result-message').textContent = resultMessage;
+      document.getElementById('result-emoji').textContent = resultEmoji;
+    }
+
+    // 重新开始
+    restartBtn.addEventListener('click', () => {
+      resultScreen.classList.add('hidden');
+      startScreen.classList.remove('hidden');
+    });
+
+    // 分享分数
+    shareBtn.addEventListener('click', () => {
+      const shareText = `I scored ${score} points in the UK Weather Word Puzzle! Learn British weather vocabulary: ${window.location.href}`;
+      
+      if (navigator.share) {
+        navigator.share({
+          title: 'UK Weather Word Puzzle',
+          text: shareText,
+          url: window.location.href
+        });
+      } else {
+        // 复制到剪贴板
+        navigator.clipboard.writeText(shareText).then(() => {
+          alert('Score copied to clipboard!');
+        });
+      }
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto">
+  <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">More Action Games</h3>
+  <div class="flex flex-wrap justify-center gap-2">
+    <a href="action-deep-sea-adventure-survival-game-free.html" class="bg-white rounded-lg shadow p-2 w-40 hover:shadow-lg transition flex flex-col items-center">
+      <picture>
+        <source srcset="/images/games/action-deep-sea-adventure-survival-game-free.webp" type="image/webp">
+        <img src="/images/games/action-deep-sea-adventure-survival-game-free.webp" alt="action deep-sea-adventure-survival-game-free html5 game, deep-sea-adventure-survival-game-free online play, free action game" title="action deep-sea-adventure-survival-game-free html5 game, deep-sea-adventure-survival-game-free online play, free action game" class="rounded mb-1 w-28 h-20 object-cover mx-auto" loading="lazy">
+      </picture>
+      <h4 class="font-bold text-gray-800 text-sm mb-1 text-center">Action Deep-Sea-Adventure-Survival-Game-Free Game</h4>
+      <p class="text-gray-600 text-xs text-center">Play Action-Deep-Sea-Adventure-Survival-Game-Free online. This action game features: action, fast, exciting. Free HTML5 game, mobile-friendly, no download.</p>
+    </a>
+  </div>
+</div>
+
+</body>
+</html> 

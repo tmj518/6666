@@ -1,0 +1,32 @@
+{
+  "generatedAt": "2025-07-15T09:35:20.158Z",
+  "siteInfo": {
+    "name": "PlayHTML5",
+    "url": "https://www.ukhtml5games.com",
+    "description": "Free HTML5 Games Platform"
+  },
+  "files": {
+    "sitemap": "https://www.ukhtml5games.com/sitemap.xml",
+    "robots": "https://www.ukhtml5games.com/robots.txt",
+    "terms": "https://www.ukhtml5games.com/terms.html",
+    "privacy": "https://www.ukhtml5games.com/privacy.html",
+    "copyright": "https://www.ukhtml5games.com/copyright.html"
+  },
+  "seoChecklist": [
+    "✅ 生成sitemap.xml",
+    "✅ 配置robots.txt",
+    "✅ 创建协议页面",
+    "✅ 添加结构化数据",
+    "✅ 优化meta标签",
+    "✅ 设置canonical链接",
+    "✅ 配置Open Graph标签"
+  ],
+  "recommendations": [
+    "定期更新sitemap.xml",
+    "监控Google Search Console",
+    "优化页面加载速度",
+    "添加更多内部链接",
+    "创建高质量内容",
+    "优化移动端体验"
+  ]
+}

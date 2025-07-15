@@ -1,0 +1,76 @@
+{
+  "categories": [
+    {
+      "id": "all",
+      "name": {"en": "All Games", "zh": "所有游戏", "ja": "すべてのゲーム", "ko": "모든 게임"},
+      "icon": "fa-gamepad",
+      "count": 0
+    },
+    {
+      "id": "new",
+      "name": {"en": "New", "zh": "新游戏", "ja": "新着", "ko": "신규"},
+      "icon": "fa-star",
+      "count": 0
+    },
+    {
+      "id": "popular",
+      "name": {"en": "Popular", "zh": "热门", "ja": "人気", "ko": "인기"},
+      "icon": "fa-fire",
+      "count": 0
+    },
+    {
+      "id": "puzzle",
+      "name": {"en": "Puzzle", "zh": "益智", "ja": "パズル", "ko": "퍼즐"},
+      "icon": "fa-puzzle-piece",
+      "count": 0
+    },
+    {
+      "id": "action",
+      "name": {"en": "Action", "zh": "动作", "ja": "アクション", "ko": "액션"},
+      "icon": "fa-bolt",
+      "count": 0
+    },
+    {
+      "id": "arcade",
+      "name": {"en": "Arcade", "zh": "街机", "ja": "アーケード", "ko": "아케이드"},
+      "icon": "fa-trophy",
+      "count": 0
+    },
+    {
+      "id": "strategy",
+      "name": {"en": "Strategy", "zh": "策略", "ja": "戦略", "ko": "전략"},
+      "icon": "fa-chess",
+      "count": 0
+    },
+    {
+      "id": "adventure",
+      "name": {"en": "Adventure", "zh": "冒险", "ja": "アドベンチャー", "ko": "어드벤처"},
+      "icon": "fa-map-signs",
+      "count": 0
+    },
+    {
+      "id": "card",
+      "name": {"en": "Card", "zh": "卡牌", "ja": "カード", "ko": "카드"},
+      "icon": "fa-clone",
+      "count": 0
+    },
+    {
+      "id": "sports",
+      "name": {"en": "Sports", "zh": "体育", "ja": "スポーツ", "ko": "스포츠"},
+      "icon": "fa-futbol-o",
+      "count": 0
+    },
+    {
+      "id": "educational",
+      "name": {"en": "Educational", "zh": "教育", "ja": "教育", "ko": "교육"},
+      "icon": "fa-book",
+      "count": 0
+    },
+    {
+      "id": "casual",
+      "name": {"en": "Casual", "zh": "休闲", "ja": "カジュアル", "ko": "캐주얼"},
+      "icon": "fa-coffee",
+      "count": 0
+    }
+  ]
+} 

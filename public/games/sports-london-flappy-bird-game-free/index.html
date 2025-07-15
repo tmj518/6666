@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Play London Flappy Bird Game Free - Navigate through iconic London landmarks in this exciting HTML5 game. Perfect for students and UK gaming enthusiasts. No download required!">
+    <meta name="keywords" content="London Flappy Bird Game Free, UK HTML5 Games, London Games, Free Online Games, British Games, Student Games, London Landmarks Game">
+    <meta name="author" content="UK Games Studio">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="London Flappy Bird Game Free - Fly Through London Landmarks">
+    <meta property="og:description" content="Navigate through iconic London landmarks in this exciting HTML5 game. Perfect for students and UK gaming enthusiasts.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ukgames.com/london-flappy-bird/">
+    <meta property="og:image" content="https://ukgames.com/london-flappy-bird/icon.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="London Flappy Bird Game Free">
+    <meta name="twitter:description" content="Navigate through iconic London landmarks in this exciting HTML5 game.">
+    <meta name="twitter:image" content="https://ukgames.com/london-flappy-bird/icon.png">
+    
+    <title>London Flappy Bird Game Free - Fly Through London Landmarks | UK Games</title>
+    
+    <link rel="canonical" href="https://ukgames.com/london-flappy-bird/">
+    <link rel="icon" type="image/png" href="icon.png">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow: hidden;
+        }
+        
+        .game-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+
+        
+        #gameCanvas {
+            border: 3px solid #333;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            background: #87CEEB;
+        }
+        
+        .game-info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            max-width: 200px;
+            font-size: 12px;
+        }
+        
+        .game-info h3 {
+            margin: 0 0 10px 0;
+            color: #ffd700;
+        }
+        
+        .game-info p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        
+        .related-games {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            max-width: 250px;
+        }
+        
+        .related-games h4 {
+            margin: 0 0 10px 0;
+            color: #ffd700;
+        }
+        
+        .related-games a {
+            color: #87CEEB;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+            transition: color 0.3s;
+        }
+        
+        .related-games a:hover {
+            color: #ffd700;
+        }
+        
+        .gdpr-notice {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            z-index: 1001;
+            display: none;
+        }
+        
+        .gdpr-notice button {
+            background: #ffd700;
+            color: #000;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        
+        .return-btn {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            z-index: 999;
+            font-size: 12px;
+        }
+        
+        .return-btn:hover {
+            background: rgba(0, 0, 0, 0.9);
+        }
+    </style>
+    
+    <script src="london-flappy-bird.js"></script>
+</head>
+<body>
+
+    
+    <div class="game-container">
+        <canvas id="gameCanvas" width="320" height="550">
+            Your browser does not support HTML5 Canvas. Please use a modern browser.
+        </canvas>
+        
+        <div class="game-info">
+            <h3>🎮 How to Play</h3>
+            <p>• Click/tap to fly</p>
+            <p>• Navigate landmarks</p>
+            <p>• Avoid obstacles</p>
+        </div>
+        
+        <div class="related-games">
+            <h4>🎯 More UK Games</h4>
+            <a href="/british-royal-family-quiz">British Royal Family Quiz</a>
+            <a href="/uk-weather-puzzle">UK Weather Word Puzzle</a>
+            <a href="/british-cities-memory">British Cities Memory Game</a>
+            <a href="/london-tube-game">London Tube Challenge</a>
+        </div>
+        
+        <a class="return-btn" href="https://www.ukhtml5games.com/">← Back</a>
+    </div>
+    
+    <div class="gdpr-notice" id="gdprNotice">
+        <span>This website uses cookies to enhance your gaming experience. By continuing to play, you consent to our use of cookies.</span>
+        <button onclick="acceptCookies()">Accept</button>
+    </div>
+    
+    <script>
+        // GDPR Compliance
+        function acceptCookies() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('gdprNotice').style.display = 'none';
+        }
+        
+        // Check if cookies were already accepted
+        if (!localStorage.getItem('cookiesAccepted')) {
+            document.getElementById('gdprNotice').style.display = 'block';
+        }
+        
+        // SEO-friendly page title updates
+        let gameScore = 0;
+        function updatePageTitle() {
+            if (gameScore > 0) {
+                document.title = `London Flappy Bird Game - Score: ${gameScore} | UK Games`;
+            }
+        }
+        
+        // Structured data for SEO
+        const structuredData = {
+            "@context": "https://schema.org",
+            "@type": "VideoGame",
+            "name": "London Flappy Bird Game Free",
+            "description": "Navigate through iconic London landmarks in this exciting HTML5 game. Perfect for students and UK gaming enthusiasts.",
+            "url": "https://ukgames.com/london-flappy-bird/",
+            "image": "https://ukgames.com/london-flappy-bird/icon.png",
+            "genre": "Arcade",
+            "gamePlatform": "Web Browser",
+            "applicationCategory": "Game",
+            "operatingSystem": "Any",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "GBP"
+            },
+            "audience": {
+                "@type": "Audience",
+                "audienceType": "Students, UK Gaming Enthusiasts"
+            }
+        };
+        
+        // Add structured data to page
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.text = JSON.stringify(structuredData);
+        document.head.appendChild(script);
+        
+        // Analytics tracking (GDPR compliant)
+        function trackGameEvent(event, data) {
+            if (localStorage.getItem('cookiesAccepted')) {
+                // Send analytics data
+                console.log('Game Event:', event, data);
+            }
+        }
+        
+        // Initialize game when page loads
+        window.addEventListener('load', function() {
+            trackGameEvent('game_loaded', {game: 'london-flappy-bird'});
+        });
+    </script>
+</body>
+</html> 

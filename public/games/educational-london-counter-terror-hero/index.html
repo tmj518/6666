@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Play London Counter Terror Hero - the ultimate free UK FPS game online! Defend London landmarks, stop threats, and become a British hero.">
+    <meta name="keywords" content="London FPS Game Free, UK Counter Terror, British Shooting Game, London Police Game, Free Online FPS, UK Student Game">
+    <meta name="author" content="UK Games Studio">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="London Counter Terror Hero - Free UK FPS Game Online">
+    <meta property="og:description" content="Defend London landmarks, stop threats, and become a British hero in this free, fun, and original FPS game online.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.ukhtml5games.com/games/london-counter-terror-hero/">
+    <meta property="og:image" content="icon.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="London Counter Terror Hero - Free UK FPS Game Online">
+    <meta name="twitter:description" content="Defend London landmarks, stop threats, and become a British hero in this free, fun, and original FPS game online.">
+    <meta name="twitter:image" content="icon.png">
+    <title>London Counter Terror Hero - Free UK FPS Game Online</title>
+    <link rel="canonical" href="https://www.ukhtml5games.com/games/london-counter-terror-hero/">
+    <link rel="icon" type="image/png" href="icon.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #232526 0%, #414345 100%);
+            overflow: hidden;
+        }
+
+        #gameCanvas {
+            border: 3px solid #333;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            background: #222;
+        }
+        .game-info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            max-width: 200px;
+            font-size: 12px;
+        }
+        .game-info h3 {
+            margin: 0 0 10px 0;
+            color: #ffd700;
+        }
+        .game-info p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .gdpr-notice {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            z-index: 1001;
+            display: none;
+        }
+        .gdpr-notice button {
+            background: #ffd700;
+            color: #000;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .return-btn {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            z-index: 999;
+            font-size: 12px;
+        }
+        .return-btn:hover {
+            background: rgba(0, 0, 0, 0.9);
+        }
+    </style>
+    <script src="london-counter-terror-hero.js"></script>
+</head>
+<body>
+
+    <div class="game-container" style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;">
+        <canvas id="gameCanvas" width="360" height="600" aria-label="London Counter Terror Hero Game Area">
+            Your browser does not support HTML5 Canvas. Please use a modern browser.
+        </canvas>
+        <img src="icon.png" alt="London Counter Terror Hero Game Icon" style="display:none;">
+        <div class="game-info">
+            <h3>🛡️ How to Play</h3>
+            <p>• Tap/click to shoot</p>
+            <p>• Defend London landmarks</p>
+            <p>• Survive to become a hero!</p>
+        </div>
+
+        <a class="return-btn" href="https://www.ukhtml5games.com/">← Back</a>
+    </div>
+    <div class="gdpr-notice" id="gdprNotice">
+        <span>This website uses cookies to enhance your gaming experience. By continuing to play, you consent to our use of cookies.</span>
+        <button onclick="acceptCookies()">Accept</button>
+    </div>
+    <script>
+        // GDPR Compliance
+        function acceptCookies() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('gdprNotice').style.display = 'none';
+        }
+        if (!localStorage.getItem('cookiesAccepted')) {
+            document.getElementById('gdprNotice').style.display = 'block';
+        }
+        // Structured data for SEO
+        const structuredData = {
+            "@context": "https://schema.org",
+            "@type": "VideoGame",
+            "name": "London Counter Terror Hero",
+            "description": "Defend London landmarks, stop threats, and become a British hero in this free, fun, and original FPS game online.",
+            "url": "https://www.ukhtml5games.com/games/london-counter-terror-hero/",
+            "image": "icon.png",
+            "genre": "Shooter, FPS, Arcade",
+            "gamePlatform": "Web Browser",
+            "applicationCategory": "Game",
+            "operatingSystem": "Any",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "GBP"
+            },
+            "audience": {
+                "@type": "Audience",
+                "audienceType": "Students, UK Gaming Enthusiasts, FPS Fans"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "bestRating": "5",
+                "ratingCount": "1287"
+            }
+        };
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.text = JSON.stringify(structuredData);
+        document.head.appendChild(script);
+    </script>
+</body>
+</html> 

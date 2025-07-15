@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>British Cities Memory Match Free – Play Free Online Game in UK</title>
+  <meta name="description" content="Play British Cities Memory Match Free online! Match pairs of famous UK city landmarks. Fun, free memory game for all ages. No download needed.">
+  <meta name="keywords" content="British Cities Memory Match Free, UK city memory game, British landmarks, free online memory match, UK puzzle game">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="British Cities Memory Match Free – UK Game">
+  <meta property="og:description" content="Play British Cities Memory Match Free online! Match pairs of famous UK city landmarks. Fun, free memory game for all ages. No download needed.">
+  <!-- Schema.org 标记 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "British Cities Memory Match Free",
+    "description": "Play British Cities Memory Match Free online! Match pairs of famous UK city landmarks. Fun, free memory game for all ages.",
+    "audience": "UK players",
+    "gamePlatform": "Browser",
+    "keywords": "British Cities Memory Match Free, UK city memory game, British landmarks, free online memory match, UK puzzle game"
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3B82F6',
+            secondary: '#10B981',
+            accent: '#F59E0B',
+            dark: '#1E293B',
+          },
+        },
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto { content-visibility: auto; }
+      .game-shadow { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3); }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans min-h-screen flex flex-col items-center justify-center">
+<nav class="w-full bg-white shadow mb-4 flex items-center px-4 py-2">
+  <div class="flex items-center gap-4">
+    <a href="https://www.ukhtml5games.com/" class="flex items-center" title="PlayHTML5 Home">
+      <picture>
+        <source srcset="/images/games/logo.webp" type="image/webp">
+        <img src="/images/games/logo.png" alt="PlayHTML5 Logo" height="32" loading="lazy">
+      </picture>
+    </a>
+    <a href="https://www.ukhtml5games.com/" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+    <a href="https://www.ukhtml5games.com/" class="text-gray-700 hover:text-blue-600 font-medium">All Games</a>
+  </div>
+  <div class="flex-1"></div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- GDPR 合规弹窗 -->
+  <div id="gdpr-modal" class="fixed inset-0 flex items-center justify-center z-50 bg-black/50" style="display:flex;">
+    <div class="bg-white rounded-lg p-6 max-w-md w-full mx-4 text-center shadow-lg">
+      <h2 class="text-xl font-bold mb-2">GDPR Notice</h2>
+      <p class="mb-4">This game collects data for gameplay stats – learn more.</p>
+      <button id="gdpr-accept" class="px-4 py-2 bg-primary text-white rounded" aria-label="Accept GDPR policy">Accept</button>
+    </div>
+  </div>
+
+  <div id="game-container" class="w-full max-w-2xl mx-auto flex flex-col items-center p-4">
+    <h1 class="text-3xl md:text-4xl font-bold text-dark mb-4 text-center">British Cities Memory Match</h1>
+    <p class="mb-4 text-lg text-gray-700 text-center max-w-xl">Match pairs of famous UK city landmarks! Test your memory with London, Manchester, Edinburgh and more. Designed for British puzzle fans.</p>
+    <!-- 游戏画布区 -->
+    <div class="relative w-full flex flex-col items-center">
+      <div id="memory-board" class="bg-white rounded-lg game-shadow mb-4 p-4 grid grid-cols-4 gap-2"></div>
+    </div>
+    <!-- 控制按钮 -->
+    <div class="flex flex-wrap gap-4 mb-4 justify-center">
+      <button id="start-btn" class="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-all" aria-label="Start game">
+        Start Game
+      </button>
+      <button id="restart-btn" class="px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent/90 transition-all hidden" aria-label="Restart game">
+        Restart
+      </button>
+      <button id="sound-btn" class="px-6 py-3 bg-dark text-white rounded-lg hover:bg-dark/90 transition-all" aria-label="Toggle sound">
+        Sound: On
+      </button>
+    </div>
+    <div id="message" class="mb-2 text-green-700 font-semibold"></div>
+  </div>
+
+  <!-- 音效资源示例（可替换） -->
+  <audio id="win-sound" src="https://cdn.pixabay.com/audio/2022/07/26/audio_124bfae5e2.mp3" preload="auto"></audio>
+
+  <!-- 游戏玩法骨架：英国城市地标配对记忆游戏（极简示例） -->
+  <script>
+    // GDPR 弹窗控制
+    document.addEventListener('DOMContentLoaded', () => {
+      const gdprModal = document.getElementById('gdpr-modal');
+      const gdprAccept = document.getElementById('gdpr-accept');
+      if (!localStorage.getItem('gdprAccepted')) {
+        gdprModal.style.display = 'flex';
+      } else {
+        gdprModal.style.display = 'none';
+      }
+      gdprAccept.onclick = () => {
+        localStorage.setItem('gdprAccepted', 'yes');
+        gdprModal.style.display = 'none';
+      };
+    });
+
+    // 英国城市地标配对数据（可扩展）
+    const CITIES = [
+      { name: 'London', icon: '🎡' },
+      { name: 'Manchester', icon: '🏟️' },
+      { name: 'Edinburgh', icon: '🏰' },
+      { name: 'Liverpool', icon: '⚓' },
+      { name: 'Bristol', icon: '🌉' },
+      { name: 'Birmingham', icon: '🚆' },
+      { name: 'Oxford', icon: '🎓' },
+      { name: 'Cambridge', icon: '📚' }
+    ];
+    let board = document.getElementById('memory-board');
+    let startBtn = document.getElementById('start-btn');
+    let restartBtn = document.getElementById('restart-btn');
+    let soundBtn = document.getElementById('sound-btn');
+    let message = document.getElementById('message');
+    let winSound = document.getElementById('win-sound');
+    let soundEnabled = true;
+    let cards = [];
+    let firstCard = null;
+    let secondCard = null;
+    let lockBoard = false;
+    let matchedPairs = 0;
+
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+    function createBoard() {
+      const pairs = shuffle([...CITIES, ...CITIES]);
+      board.innerHTML = '';
+      cards = [];
+      pairs.forEach((city, idx) => {
+        const card = document.createElement('button');
+        card.className = 'relative aspect-square bg-white rounded-lg shadow-md flex items-center justify-center text-3xl font-bold cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-primary transition-all';
+        card.setAttribute('data-city', city.name);
+        card.setAttribute('aria-label', city.name + ' landmark');
+        card.innerHTML = '<span class="opacity-0">' + city.icon + '</span>';
+        card.addEventListener('click', () => flipCard(card));
+        cards.push(card);
+        board.appendChild(card);
+      });
+    }
+    function flipCard(card) {
+      if (lockBoard || card === firstCard || card.classList.contains('matched')) return;
+      card.querySelector('span').classList.remove('opacity-0');
+      card.classList.add('ring-2','ring-accent');
+      if (!firstCard) {
+        firstCard = card;
+        return;
+      }
+      secondCard = card;
+      lockBoard = true;
+      if (firstCard.getAttribute('data-city') === secondCard.getAttribute('data-city')) {
+        firstCard.classList.add('matched','bg-secondary','text-white');
+        secondCard.classList.add('matched','bg-secondary','text-white');
+        matchedPairs++;
+        setTimeout(() => {
+          resetTurn();
+          if (matchedPairs === CITIES.length) {
+            message.textContent = 'Congratulations! You matched all British cities!';
+            if (soundEnabled) winSound.play();
+            startBtn.style.display = '';
+            restartBtn.style.display = 'none';
+          }
+        }, 600);
+      } else {
+        setTimeout(() => {
+          firstCard.querySelector('span').classList.add('opacity-0');
+          secondCard.querySelector('span').classList.add('opacity-0');
+          firstCard.classList.remove('ring-2','ring-accent');
+          secondCard.classList.remove('ring-2','ring-accent');
+          resetTurn();
+        }, 900);
+      }
+    }
+    function resetTurn() {
+      [firstCard, secondCard, lockBoard] = [null, null, false];
+    }
+    startBtn.onclick = () => {
+      matchedPairs = 0;
+      startBtn.style.display = 'none';
+      restartBtn.style.display = '';
+      message.textContent = '';
+      createBoard();
+    };
+    restartBtn.onclick = () => {
+      matchedPairs = 0;
+      message.textContent = '';
+      createBoard();
+    };
+    soundBtn.onclick = () => {
+      soundEnabled = !soundEnabled;
+      soundBtn.textContent = soundEnabled ? 'Sound: On' : 'Sound: Off';
+    };
+    // 初始状态
+    startBtn.style.display = '';
+    restartBtn.style.display = 'none';
+    message.textContent = '';
+    board.innerHTML = '';
+  </script>
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+</body>
+</html> 

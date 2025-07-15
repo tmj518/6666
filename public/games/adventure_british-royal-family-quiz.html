@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta property="og:image" content="https://www.ukhtml5games.com/images/games/adventure-british-royal-family-quiz.jpg">
+    <meta property="og:url" content="https://www.ukhtml5games.com/games/adventure_british-royal-family-quiz.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://www.ukhtml5games.com/games/adventure_british-royal-family-quiz.html">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>British Royal Family Quiz Game Free – Play Royal Knowledge Test Online in UK</title>
+  <meta name="description" content="Test your knowledge of the British Royal Family with our free online quiz game. Learn about kings, queens, princes, and princesses in this educational UK game.">
+  <meta name="keywords" content="British Royal Family Quiz Game Free, royal family quiz UK, British monarchy game, royal knowledge test, UK royal quiz free, British kings queens game">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="Adventure British-Royal-Family-Quiz Game - PlayHTML5">
+  <meta property="og:description" content="A brand new HTML5 adventure game!">
+  <!-- Schema.org 标记 -->
+  <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Adventure British-Royal-Family-Quiz Game",
+  "description": "A brand new HTML5 adventure game!",
+  "image": "https://www.ukhtml5games.com/images/games/adventure-british-royal-family-quiz.jpg",
+  "url": "https://www.ukhtml5games.com/games/adventure_british-royal-family-quiz.html",
+  "genre": "adventure",
+  "gamePlatform": "HTML5",
+  "applicationCategory": "Game",
+  "operatingSystem": "Web Browser",
+  "author": {
+    "@type": "Organization",
+    "name": "AutoSync"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PlayHTML5"
+  },
+  "datePublished": "2025-07-15",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 4.8,
+    "ratingCount": "0+"
+  }
+}
+    </script>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E40AF',
+            secondary: '#DC2626',
+            accent: '#F59E0B',
+            dark: '#1E293B',
+            royal: '#B91C1C',
+          },
+        },
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto { content-visibility: auto; }
+      .game-shadow { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3); }
+      .royal-gradient { background: linear-gradient(135deg, #B91C1C 0%, #DC2626 50%, #EF4444 100%); }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-red-50 font-sans min-h-screen">
+<nav class="w-full bg-white shadow mb-4 flex items-center px-4 py-2">
+  <div class="flex items-center gap-4">
+    <a href="https://www.ukhtml5games.com/" class="flex items-center" title="PlayHTML5 Home">
+      <picture>
+        <source srcset="/images/games/logo.webp" type="image/webp">
+        <img src="/images/games/logo.png" alt="PlayHTML5 Logo" height="32" loading="lazy">
+      </picture>
+    </a>
+    <a href="https://www.ukhtml5games.com/" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+    <a href="https://www.ukhtml5games.com/" class="text-gray-700 hover:text-blue-600 font-medium">All Games</a>
+  </div>
+  <div class="flex-1"></div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- GDPR 合规弹窗 -->
+  <div id="gdpr-modal" class="fixed inset-0 flex items-center justify-center z-50 bg-black/50" style="display:flex;">
+    <div class="bg-white rounded-lg p-6 max-w-md w-full mx-4 text-center shadow-lg">
+      <h2 class="text-xl font-bold mb-2 text-royal">GDPR Notice</h2>
+      <p class="mb-4">This royal quiz game collects data for gameplay stats – learn more.</p>
+      <button id="gdpr-accept" class="px-4 py-2 bg-royal text-white rounded hover:bg-red-700 transition-colors" aria-label="Accept GDPR policy">Accept</button>
+    </div>
+  </div>
+
+  <div id="game-container" class="w-full max-w-4xl mx-auto flex flex-col items-center p-4">
+    <header class="text-center mb-8">
+      <h1 class="text-4xl md:text-5xl font-bold text-royal mb-4">👑 British Royal Family Quiz</h1>
+      <p class="text-lg text-gray-700 max-w-2xl">Test your knowledge of the British monarchy! Answer questions about kings, queens, princes, and princesses throughout history.</p>
+    </header>
+
+    <!-- 游戏状态显示 -->
+    <div class="w-full max-w-2xl mb-6">
+      <div class="flex justify-between items-center bg-white rounded-lg p-4 shadow-md">
+        <div class="text-center">
+          <div class="text-2xl font-bold text-royal" id="score">0</div>
+          <div class="text-sm text-gray-600">Score</div>
+        </div>
+        <div class="text-center">
+          <div class="text-2xl font-bold text-primary" id="question-number">1</div>
+          <div class="text-sm text-gray-600">Question</div>
+        </div>
+        <div class="text-center">
+          <div class="text-2xl font-bold text-accent" id="timer">30</div>
+          <div class="text-sm text-gray-600">Seconds</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 游戏区域 -->
+    <div class="w-full max-w-2xl">
+      <div id="start-screen" class="bg-white rounded-lg p-8 text-center shadow-lg">
+        <div class="text-6xl mb-4">👑</div>
+        <h2 class="text-3xl font-bold text-royal mb-4">British Royal Family Quiz</h2>
+        <p class="text-gray-600 mb-6">Test your knowledge of the British monarchy with 20 challenging questions!</p>
+        <button id="start-btn" class="px-8 py-4 bg-royal text-white rounded-lg text-xl font-bold hover:bg-red-700 transition-all transform hover:scale-105">
+          Start Quiz
+        </button>
+      </div>
+
+      <div id="quiz-screen" class="bg-white rounded-lg p-8 shadow-lg hidden">
+        <div class="mb-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-4" id="question-text">Question text will appear here</h3>
+          <div class="space-y-3" id="answers-container">
+            <!-- Answers will be generated here -->
+          </div>
+        </div>
+        <div class="flex justify-between items-center">
+          <button id="pause-btn" class="px-4 py-2 bg-accent text-white rounded hover:bg-yellow-600 transition-colors">
+            Pause
+          </button>
+          <div class="text-sm text-gray-600">
+            <span id="progress-text">1 of 20</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="result-screen" class="bg-white rounded-lg p-8 text-center shadow-lg hidden">
+        <div class="text-6xl mb-4" id="result-emoji">👑</div>
+        <h2 class="text-3xl font-bold text-royal mb-4" id="result-title">Quiz Complete!</h2>
+        <div class="text-2xl font-bold text-primary mb-4">
+          Your Score: <span id="final-score">0</span>/20
+        </div>
+        <div class="text-gray-600 mb-6" id="result-message">Great job!</div>
+        <div class="space-y-3">
+          <button id="restart-btn" class="w-full px-6 py-3 bg-royal text-white rounded-lg font-bold hover:bg-red-700 transition-colors">
+            Play Again
+          </button>
+          <button id="share-btn" class="w-full px-6 py-3 bg-primary text-white rounded-lg font-bold hover:bg-blue-700 transition-colors">
+            Share Score
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 游戏信息 -->
+    <div class="mt-8 text-center text-gray-600">
+      <p>Learn about British Royal Family history while having fun!</p>
+    </div>
+  </div>
+
+  <!-- 游戏逻辑 -->
+  <script>
+    // 英国王室知识题库
+    const royalQuestions = [
+      {
+        question: "Who is the current reigning monarch of the United Kingdom?",
+        answers: ["Queen Elizabeth II", "King Charles III", "Queen Victoria", "King George VI"],
+        correct: 1,
+        explanation: "King Charles III became the reigning monarch after Queen Elizabeth II's death in 2022."
+      },
+      {
+        question: "Which royal residence is the official London home of the British monarch?",
+        answers: ["Windsor Castle", "Buckingham Palace", "Kensington Palace", "Hampton Court"],
+        correct: 1,
+        explanation: "Buckingham Palace has been the official London residence of the British monarch since 1837."
+      },
+      {
+        question: "What is the name of the current heir to the British throne?",
+        answers: ["Prince William", "Prince Harry", "Prince George", "Prince Louis"],
+        correct: 0,
+        explanation: "Prince William, the Prince of Wales, is the current heir to the British throne."
+      },
+      {
+        question: "Which king was known as 'The Lionheart'?",
+        answers: ["King Richard I", "King Henry VIII", "King Edward I", "King John"],
+        correct: 0,
+        explanation: "King Richard I was known as 'The Lionheart' for his military prowess during the Crusades."
+      },
+      {
+        question: "Who was the first British monarch to be called 'Queen'?",
+        answers: ["Queen Victoria", "Queen Elizabeth I", "Queen Mary I", "Queen Anne"],
+        correct: 1,
+        explanation: "Queen Elizabeth I was the first British monarch to be called 'Queen' in her own right."
+      },
+      {
+        question: "Which royal family member is known as 'The People's Princess'?",
+        answers: ["Princess Anne", "Princess Diana", "Princess Margaret", "Princess Kate"],
+        correct: 1,
+        explanation: "Princess Diana was known as 'The People's Princess' for her humanitarian work."
+      },
+      {
+        question: "What year did Queen Elizabeth II become queen?",
+        answers: ["1952", "1953", "1954", "1955"],
+        correct: 0,
+        explanation: "Queen Elizabeth II became queen in 1952 after the death of her father, King George VI."
+      },
+      {
+        question: "Which castle is the largest inhabited castle in the world?",
+        answers: ["Edinburgh Castle", "Windsor Castle", "Tower of London", "Balmoral Castle"],
+        correct: 1,
+        explanation: "Windsor Castle is the largest inhabited castle in the world and has been a royal residence for over 900 years."
+      },
+      {
+        question: "Who was the last king to be executed in England?",
+        answers: ["King Charles I", "King James II", "King Edward VIII", "King Henry VIII"],
+        correct: 0,
+        explanation: "King Charles I was executed in 1649 during the English Civil War."
+      },
+      {
+        question: "What is the name of the current Queen Consort?",
+        answers: ["Queen Camilla", "Queen Kate", "Queen Sophie", "Queen Anne"],
+        correct: 0,
+        explanation: "Queen Camilla is the current Queen Consort, married to King Charles III."
+      },
+      {
+        question: "Which king had six wives?",
+        answers: ["King Henry VII", "King Henry VIII", "King Edward VI", "King James I"],
+        correct: 1,
+        explanation: "King Henry VIII famously had six wives: Catherine of Aragon, Anne Boleyn, Jane Seymour, Anne of Cleves, Catherine Howard, and Catherine Parr."
+      },
+      {
+        question: "What is the name of the royal family's official website?",
+        answers: ["royal.uk", "britishroyal.uk", "monarchy.uk", "queen.uk"],
+        correct: 0,
+        explanation: "The official website of the British Royal Family is royal.uk"
+      },
+      {
+        question: "Which prince is known as 'The Duke of Sussex'?",
+        answers: ["Prince William", "Prince Harry", "Prince Andrew", "Prince Edward"],
+        correct: 1,
+        explanation: "Prince Harry is known as 'The Duke of Sussex' since his marriage to Meghan Markle."
+      },
+      {
+        question: "What is the name of the current Princess of Wales?",
+        answers: ["Princess Kate", "Princess Diana", "Princess Anne", "Princess Sophie"],
+        correct: 0,
+        explanation: "Princess Kate (Catherine) is the current Princess of Wales, married to Prince William."
+      },
+      {
+        question: "Which king was known as 'The Conqueror'?",
+        answers: ["King William I", "King Richard I", "King Edward I", "King Henry I"],
+        correct: 0,
+        explanation: "King William I was known as 'The Conqueror' after his victory at the Battle of Hastings in 1066."
+      },
+      {
+        question: "What is the name of the royal family's summer residence in Scotland?",
+        answers: ["Balmoral Castle", "Holyrood Palace", "Stirling Castle", "Edinburgh Castle"],
+        correct: 0,
+        explanation: "Balmoral Castle in Scotland is the royal family's private summer residence."
+      },
+      {
+        question: "Which queen ruled for the longest time in British history?",
+        answers: ["Queen Victoria", "Queen Elizabeth II", "Queen Elizabeth I", "Queen Anne"],
+        correct: 1,
+        explanation: "Queen Elizabeth II ruled for 70 years, making her the longest-reigning British monarch."
+      },
+      {
+        question: "What is the name of the current heir to the throne's eldest son?",
+        answers: ["Prince George", "Prince Louis", "Prince Archie", "Prince Charles"],
+        correct: 0,
+        explanation: "Prince George is the eldest son of Prince William and the future heir to the throne."
+      },
+      {
+        question: "Which royal residence is located in Windsor?",
+        answers: ["Buckingham Palace", "Windsor Castle", "Kensington Palace", "Hampton Court"],
+        correct: 1,
+        explanation: "Windsor Castle is located in the town of Windsor, Berkshire."
+      },
+      {
+        question: "Who was the first British monarch to be photographed?",
+        answers: ["Queen Victoria", "King George IV", "King William IV", "Queen Elizabeth I"],
+        correct: 0,
+        explanation: "Queen Victoria was the first British monarch to be photographed, with the first royal photograph taken in 1840."
+      }
+    ];
+
+    // 游戏状态
+    let currentQuestion = 0;
+    let score = 0;
+    let timer = 30;
+    let timerInterval;
+    let isPaused = false;
+
+    // DOM 元素
+    const startScreen = document.getElementById('start-screen');
+    const quizScreen = document.getElementById('quiz-screen');
+    const resultScreen = document.getElementById('result-screen');
+    const startBtn = document.getElementById('start-btn');
+    const pauseBtn = document.getElementById('pause-btn');
+    const restartBtn = document.getElementById('restart-btn');
+    const shareBtn = document.getElementById('share-btn');
+
+    // GDPR 处理
+    document.addEventListener('DOMContentLoaded', () => {
+      const gdprModal = document.getElementById('gdpr-modal');
+      const gdprAccept = document.getElementById('gdpr-accept');
+      
+      if (!localStorage.getItem('gdprAccepted')) {
+        gdprModal.style.display = 'flex';
+      } else {
+        gdprModal.style.display = 'none';
+      }
+      
+      gdprAccept.onclick = () => {
+        localStorage.setItem('gdprAccepted', 'yes');
+        gdprModal.style.display = 'none';
+      };
+    });
+
+    // 开始游戏
+    startBtn.addEventListener('click', startGame);
+
+    function startGame() {
+      currentQuestion = 0;
+      score = 0;
+      updateScore();
+      startScreen.classList.add('hidden');
+      quizScreen.classList.remove('hidden');
+      showQuestion();
+      startTimer();
+    }
+
+    // 显示问题
+    function showQuestion() {
+      if (currentQuestion >= royalQuestions.length) {
+        endGame();
+        return;
+      }
+
+      const question = royalQuestions[currentQuestion];
+      document.getElementById('question-text').textContent = question.question;
+      document.getElementById('question-number').textContent = currentQuestion + 1;
+      document.getElementById('progress-text').textContent = `${currentQuestion + 1} of ${royalQuestions.length}`;
+
+      const answersContainer = document.getElementById('answers-container');
+      answersContainer.innerHTML = '';
+
+      question.answers.forEach((answer, index) => {
+        const button = document.createElement('button');
+        button.className = 'w-full p-4 text-left bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors border-2 border-transparent hover:border-royal';
+        button.textContent = answer;
+        button.addEventListener('click', () => selectAnswer(index));
+        answersContainer.appendChild(button);
+      });
+
+      // 重置计时器
+      timer = 30;
+      updateTimer();
+    }
+
+    // 选择答案
+    function selectAnswer(selectedIndex) {
+      const question = royalQuestions[currentQuestion];
+      const buttons = document.querySelectorAll('#answers-container button');
+      
+      // 禁用所有按钮
+      buttons.forEach(btn => btn.disabled = true);
+
+      // 显示正确答案
+      buttons[question.correct].classList.add('bg-green-500', 'text-white');
+      
+      if (selectedIndex !== question.correct) {
+        buttons[selectedIndex].classList.add('bg-red-500', 'text-white');
+      }
+
+      // 更新分数
+      if (selectedIndex === question.correct) {
+        score += Math.max(1, timer); // 根据剩余时间给分
+        updateScore();
+      }
+
+      // 延迟进入下一题
+      setTimeout(() => {
+        currentQuestion++;
+        showQuestion();
+      }, 2000);
+    }
+
+    // 计时器
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        if (!isPaused) {
+          timer--;
+          updateTimer();
+          
+          if (timer <= 0) {
+            clearInterval(timerInterval);
+            // 时间到，自动选择错误答案
+            selectAnswer(-1);
+          }
+        }
+      }, 1000);
+    }
+
+    function updateTimer() {
+      document.getElementById('timer').textContent = timer;
+    }
+
+    function updateScore() {
+      document.getElementById('score').textContent = score;
+    }
+
+    // 暂停/继续
+    pauseBtn.addEventListener('click', () => {
+      isPaused = !isPaused;
+      pauseBtn.textContent = isPaused ? 'Resume' : 'Pause';
+    });
+
+    // 结束游戏
+    function endGame() {
+      clearInterval(timerInterval);
+      quizScreen.classList.add('hidden');
+      resultScreen.classList.remove('hidden');
+      
+      document.getElementById('final-score').textContent = score;
+      
+      // 根据分数显示结果
+      const maxScore = royalQuestions.length * 30;
+      const percentage = (score / maxScore) * 100;
+      
+      let resultTitle, resultMessage, resultEmoji;
+      
+      if (percentage >= 90) {
+        resultTitle = "Royal Expert! 👑";
+        resultMessage = "Outstanding knowledge of the British Royal Family!";
+        resultEmoji = "👑";
+      } else if (percentage >= 70) {
+        resultTitle = "Noble Knowledge! 🏰";
+        resultMessage = "Excellent understanding of royal history!";
+        resultEmoji = "🏰";
+      } else if (percentage >= 50) {
+        resultTitle = "Gentleman/Lady! 🎩";
+        resultMessage = "Good knowledge of British royalty!";
+        resultEmoji = "🎩";
+      } else {
+        resultTitle = "Apprentice! 📚";
+        resultMessage = "Keep learning about the British Royal Family!";
+        resultEmoji = "📚";
+      }
+      
+      document.getElementById('result-title').textContent = resultTitle;
+      document.getElementById('result-message').textContent = resultMessage;
+      document.getElementById('result-emoji').textContent = resultEmoji;
+    }
+
+    // 重新开始
+    restartBtn.addEventListener('click', () => {
+      resultScreen.classList.add('hidden');
+      startScreen.classList.remove('hidden');
+    });
+
+    // 分享分数
+    shareBtn.addEventListener('click', () => {
+      const shareText = `I scored ${score} points in the British Royal Family Quiz! Test your royal knowledge: ${window.location.href}`;
+      
+      if (navigator.share) {
+        navigator.share({
+          title: 'British Royal Family Quiz',
+          text: shareText,
+          url: window.location.href
+        });
+      } else {
+        // 复制到剪贴板
+        navigator.clipboard.writeText(shareText).then(() => {
+          alert('Score copied to clipboard!');
+        });
+      }
+    });
+  </script>
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto">
+  <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">More Adventure Games</h3>
+  <div class="flex flex-wrap justify-center gap-2">
+    <a href="adventure-british-word-games-for-kids.html" class="bg-white rounded-lg shadow p-2 w-40 hover:shadow-lg transition flex flex-col items-center">
+      <picture>
+        <source srcset="/images/games/adventure-british-word-games-for-kids.webp" type="image/webp">
+        <img src="/images/games/adventure-british-word-games-for-kids.webp" alt="adventure british-word-games-for-kids html5 game, british-word-games-for-kids online play, free adventure game" title="adventure british-word-games-for-kids html5 game, british-word-games-for-kids online play, free adventure game" class="rounded mb-1 w-28 h-20 object-cover mx-auto" loading="lazy">
+      </picture>
+      <h4 class="font-bold text-gray-800 text-sm mb-1 text-center">Adventure British-Word-Games-For-Kids Game</h4>
+      <p class="text-gray-600 text-xs text-center">Play Adventure-British-Word-Games-For-Kids online. This adventure game features: adventure, explore, quest. Free HTML5 game, mobile-friendly, no download.</p>
+    </a>
+  </div>
+</div>
+
+</body>
+</html> 
