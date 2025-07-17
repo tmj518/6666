@@ -2,6 +2,60 @@
   "games": [
     {
       "title": {
+        "en": "Puzzle Puzzle-Ukshoot Game",
+        "zh": "Puzzle Puzzle-Ukshoot Game",
+        "ja": "Puzzle Puzzle-Ukshoot Game",
+        "ko": "Puzzle Puzzle-Ukshoot Game"
+      },
+      "description": {
+        "en": "Play Puzzle-Ukshoot online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
+        "zh": "在线畅玩Puzzle-Ukshoot。本puzzle游戏包含：益智, 逻辑, 动脑。 免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
+        "ja": "Play Puzzle-Ukshoot online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
+        "ko": "Play Puzzle-Ukshoot online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download."
+      },
+      "image": "/images/games/puzzle-ukshoot.webp",
+      "category": [
+        "puzzle"
+      ],
+      "rating": 4.8,
+      "developer": "AutoSync",
+      "published": "2025-07-17",
+      "plays": "0+",
+      "regions": [
+        "global"
+      ],
+      "url": "/games/puzzle-ukshoot.html",
+      "id": 1035
+    },
+    {
+      "title": {
+        "en": "Puzzle Puzzle-Tupian Game",
+        "zh": "Puzzle Puzzle-Tupian Game",
+        "ja": "Puzzle Puzzle-Tupian Game",
+        "ko": "Puzzle Puzzle-Tupian Game"
+      },
+      "description": {
+        "en": "Play Puzzle-Tupian online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
+        "zh": "在线畅玩Puzzle-Tupian。本puzzle游戏包含：益智, 逻辑, 动脑。 免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
+        "ja": "Play Puzzle-Tupian online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
+        "ko": "Play Puzzle-Tupian online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download."
+      },
+      "image": "/images/games/puzzle-tupian.webp",
+      "category": [
+        "puzzle"
+      ],
+      "rating": 4.8,
+      "developer": "AutoSync",
+      "published": "2025-07-17",
+      "plays": "0+",
+      "regions": [
+        "global"
+      ],
+      "url": "/games/puzzle-tupian.html",
+      "id": 1036
+    },
+    {
+      "title": {
         "en": "Adventure British-Royal-Family-Quiz Game",
         "zh": "Adventure British-Royal-Family-Quiz Game",
         "ja": "Adventure British-Royal-Family-Quiz Game",
@@ -53,34 +107,6 @@
       ],
       "url": "/games/educational-london-counter-terror-hero.html",
       "id": 1022
-    },
-
-    {
-      "title": {
-        "en": "Puzzle 2048 Game",
-        "zh": "Puzzle 2048 Game",
-        "ja": "Puzzle 2048 Game",
-        "ko": "Puzzle 2048 Game"
-      },
-      "description": {
-        "en": "A brand new HTML5 puzzle game!",
-        "zh": "A brand new HTML5 puzzle game!",
-        "ja": "A brand new HTML5 puzzle game!",
-        "ko": "A brand new HTML5 puzzle game!"
-      },
-      "image": "/images/games/puzzle-2048.jpg",
-      "category": [
-        "puzzle"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/puzzle_2048.html",
-      "id": 1009
     },
     {
       "title": {
