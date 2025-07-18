@@ -42,7 +42,7 @@
         "ko": "퍼즐"
       },
       "icon": "fa-puzzle-piece",
-      "count": 4
+      "count": 5
     },
     {
       "id": "action",
@@ -108,7 +108,7 @@
         "ko": "스포츠"
       },
       "icon": "fa-futbol-o",
-      "count": 2
+      "count": 1
     },
     {
       "id": "educational",

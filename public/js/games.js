@@ -486,10 +486,10 @@ class GameManager {
     let badgeText = '';
     let badgeClass = '';
     if (game.category.includes('new')) {
-      badgeText = (window.i18n && window.i18n.t) ? i18n.t('games.new') : 'New';
+      badgeText = i18n.t('games.new');
       badgeClass = 'bg-success text-white';
     } else if (game.category.includes('popular')) {
-      badgeText = (window.i18n && window.i18n.t) ? i18n.t('games.popular') : 'Popular';
+      badgeText = i18n.t('games.popular');
       badgeClass = 'bg-warning text-white';
     }
     return `
@@ -511,7 +511,7 @@ class GameManager {
               <span class="text-sm ml-1">${game.rating}</span>
             </div>
             <button class="text-primary hover:text-primary/80 text-sm font-medium flex items-center" onclick="event.stopPropagation(); window.open('${game.url}','_blank')">
-              ${(window.i18n && window.i18n.t) ? i18n.t('games.playNow') : 'Play Now'} <i class="fa fa-arrow-right ml-1"></i>
+              ${i18n.t('games.playNow')} <i class="fa fa-arrow-right ml-1"></i>
             </button>
           </div>
         </div>
@@ -540,7 +540,7 @@ class GameManager {
     const game = this.games.find(g => g.id === gameId);
     if (!game) return;
 
-    const currentLang = (window.i18n && window.i18n.getCurrentLanguage) ? i18n.getCurrentLanguage() : 'en';
+    const currentLang = i18n.getCurrentLanguage();
     const title = game.title[currentLang] || game.title.en;
     const description = game.description[currentLang] || game.description.en;
 
@@ -661,8 +661,7 @@ class GameManager {
     }
     related = related.slice(0, 3);
     recommendationGrid.innerHTML = related.map(g => {
-      const currentLang = (window.i18n && window.i18n.getCurrentLanguage) ? i18n.getCurrentLanguage() : 'en';
-      const t = g.title[currentLang] || g.title.en;
+      const t = g.title[i18n.getCurrentLanguage()] || g.title.en;
       return `<div class='cursor-pointer rounded-lg shadow-md bg-white p-3 flex flex-col items-center' onclick="window.gameManager.showGameModal(${g.id})">
         <img src='${g.image}' alt='${t}' class='w-full h-28 object-cover rounded mb-2'>
         <div class='font-semibold text-base mb-1'>${t}</div>

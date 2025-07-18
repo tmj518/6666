@@ -91,6 +91,12 @@
             .category-active {
                 @apply bg-primary/10 text-primary;
             }
+            .line-clamp-2 {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
         }
     </style>
     
@@ -291,6 +297,8 @@
                 <div class="game-card-hover bg-white rounded-xl overflow-hidden shadow-md cursor-pointer" data-game-id="5">
                     <div class="relative h-48 bg-gray-200">
                         <picture>
+                            <source srcset="https://picsum.photos/seed/popular1/400/300" type="image/webp">
+                            <picture>
       <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
       <picture>
       <source srcset="/https://picsum.photos/seed/popular1/400/300" type="image/webp">
@@ -300,6 +308,7 @@
     </picture>
     </picture>
     </picture>
+                        </picture>
                         <div class="absolute top-3 left-3">
                             <span class="badge bg-warning text-white category-badge" data-category="popular" style="cursor:pointer;">Popular</span>
                         </div>
@@ -323,6 +332,8 @@
                 <div class="game-card-hover bg-white rounded-xl overflow-hidden shadow-md cursor-pointer" data-game-id="6">
                     <div class="relative h-48 bg-gray-200">
                         <picture>
+                            <source srcset="https://picsum.photos/seed/popular2/400/300" type="image/webp">
+                            <picture>
       <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
       <picture>
       <source srcset="/https://picsum.photos/seed/popular2/400/300" type="image/webp">
@@ -332,6 +343,7 @@
     </picture>
     </picture>
     </picture>
+                        </picture>
                         <div class="absolute top-3 left-3">
                             <span class="badge bg-warning text-white category-badge" data-category="popular" style="cursor:pointer;">Popular</span>
                         </div>
@@ -390,6 +402,8 @@
                 </div>
                 <div class="rounded-xl overflow-hidden shadow-lg">
                     <picture>
+                        <source srcset="https://picsum.photos/seed/about/600/400" type="image/webp">
+                        <picture>
       <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
       <picture>
       <source srcset="/https://picsum.photos/seed/about/600/400" type="image/webp">
@@ -399,6 +413,7 @@
     </picture>
     </picture>
     </picture>
+                    </picture>
                 </div>
             </div>
         </div>
@@ -418,6 +433,8 @@
                     <div>
                         <div class="rounded-lg overflow-hidden h-64 mb-4">
                             <picture>
+                                <source srcset="https://picsum.photos/seed/game/600/400" type="image/webp">
+                                <picture>
       <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
       <picture>
       <source srcset="/https://picsum.photos/seed/game/600/400" type="image/webp">
@@ -427,6 +444,7 @@
     </picture>
     </picture>
     </picture>
+                            </picture>
                         </div>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span id="modalGameCategory" class="badge bg-primary text-white">Action</span>
@@ -589,9 +607,15 @@
         </div>
     </footer>
     
-    <!-- 只保留最简洁的弹窗交互JS -->
+    <!-- 移动端菜单和弹窗交互JS -->
     <script>
     document.addEventListener('DOMContentLoaded', function() {
+        // 移动端菜单相关元素
+        var mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        var mobileMenu = document.getElementById('mobileMenu');
+        var closeMobileMenu = document.getElementById('closeMobileMenu');
+        var mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
         // 桌面端按钮
         var addGameBtn = document.getElementById('addGameBtn');
         // 移动端按钮
@@ -601,14 +625,38 @@
         // 取消按钮
         var cancelAddGame = document.getElementById('cancelAddGame');
 
-        // 打开弹窗
+        // 移动端菜单功能
+        function openMobileMenu() {
+            if (mobileMenu) {
+                mobileMenu.classList.remove('translate-x-full');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeMobileMenuFunc() {
+            if (mobileMenu) {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // 移动端菜单事件监听
+        if (mobileMenuBtn) mobileMenuBtn.onclick = openMobileMenu;
+        if (closeMobileMenu) closeMobileMenu.onclick = closeMobileMenuFunc;
+
+        // 移动端导航链接点击关闭菜单
+        mobileNavLinks.forEach(function(link) {
+            link.addEventListener('click', closeMobileMenuFunc);
+        });
+
+        // 添加游戏弹窗功能
         function openModal() {
             if (addGameModal) {
                 addGameModal.classList.remove('hidden');
                 document.body.style.overflow = 'hidden';
             }
         }
-        // 关闭弹窗
+        
         function closeModal() {
             if (addGameModal) {
                 addGameModal.classList.add('hidden');
@@ -626,10 +674,93 @@
                 if (e.target === addGameModal) closeModal();
             });
         }
-        // ESC键关闭
+        
+        // ESC键关闭弹窗
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && addGameModal && !addGameModal.classList.contains('hidden')) {
-                closeModal();
+            if (e.key === 'Escape') {
+                if (addGameModal && !addGameModal.classList.contains('hidden')) {
+                    closeModal();
+                }
+                if (mobileMenu && !mobileMenu.classList.contains('translate-x-full')) {
+                    closeMobileMenuFunc();
+                }
+            }
+        });
+
+        // 游戏详情模态框功能
+        var gameModal = document.getElementById('gameModal');
+        var closeModalBtn = document.getElementById('closeModal');
+        var modalPlayBtn = document.getElementById('modalPlayBtn');
+
+        function openGameModal() {
+            if (gameModal) {
+                gameModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeGameModal() {
+            if (gameModal) {
+                gameModal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        if (closeModalBtn) closeModalBtn.onclick = closeGameModal;
+        if (modalPlayBtn) modalPlayBtn.onclick = function() {
+            // 这里可以添加游戏启动逻辑
+            console.log('Launching game...');
+        };
+
+        // 点击游戏详情模态框背景关闭
+        if (gameModal) {
+            gameModal.addEventListener('click', function(e) {
+                if (e.target === gameModal) closeGameModal();
+            });
+        }
+
+        // 游戏卡片点击事件
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('.game-card-hover')) {
+                openGameModal();
+            }
+            
+            // 游戏按钮点击事件
+            if (e.target.closest('.play-game-btn')) {
+                e.preventDefault();
+                e.stopPropagation();
+                const gameUrl = e.target.closest('.play-game-btn').getAttribute('data-game-url');
+                if (gameUrl && gameUrl !== '#') {
+                    window.open(gameUrl, '_blank', 'noopener,noreferrer');
+                } else {
+                    openGameModal();
+                }
+            }
+            
+            // 分类标签点击事件
+            if (e.target.closest('.category-badge')) {
+                e.preventDefault();
+                e.stopPropagation();
+                const category = e.target.closest('.category-badge').getAttribute('data-category');
+                if (category) {
+                    // 滚动到分类区域并激活对应分类
+                    const categorySection = document.getElementById('categories');
+                    if (categorySection) {
+                        categorySection.scrollIntoView({ behavior: 'smooth' });
+                        // 激活对应分类按钮
+                        const categoryBtn = document.querySelector(`[data-category="${category}"]`);
+                        if (categoryBtn) {
+                            // 移除所有活动状态
+                            document.querySelectorAll('.category-btn').forEach(btn => {
+                                btn.classList.remove('category-active');
+                                btn.classList.add('bg-gray-100', 'text-gray-800');
+                            });
+                            // 激活当前分类
+                            categoryBtn.classList.add('category-active');
+                            categoryBtn.classList.remove('bg-gray-100', 'text-gray-800');
+                        }
+                    }
+                }
             }
         });
     });

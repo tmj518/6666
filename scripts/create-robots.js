@@ -1,4 +1,7 @@
-# PlayHTML5 Robots.txt
+const fs = require('fs');
+const path = require('path');
+
+const robotsContent = `# PlayHTML5 Robots.txt
 # 适用于HTML5游戏网站的爬虫协议
 
 # 允许所有搜索引擎爬虫访问
@@ -43,3 +46,22 @@ Sitemap: https://www.ukhtml5games.com/sitemap.xml
 
 # 爬取延迟（可选，单位为秒）
 Crawl-delay: 1
+`;
+
+const robotsPath = path.join(__dirname, '../public/robots.txt');
+
+try {
+  fs.writeFileSync(robotsPath, robotsContent, 'utf8');
+  console.log('✅ robots.txt文件创建成功！');
+  console.log(`📁 文件路径: ${robotsPath}`);
+  console.log(`📊 文件大小: ${robotsContent.length} 字符`);
+  
+  // 验证文件内容
+  const content = fs.readFileSync(robotsPath, 'utf8');
+  console.log('\n📋 文件内容预览:');
+  console.log(content.split('\n').slice(0, 10).join('\n'));
+  console.log('...');
+  
+} catch (error) {
+  console.error('❌ 创建robots.txt文件失败:', error.message);
+} 
