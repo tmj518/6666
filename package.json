@@ -25,6 +25,7 @@
     "adsense:add": "node scripts/add-adsense.js",
     "adsense:ads": "node scripts/add-adsense-ads.js",
     "adsense:optimize": "node scripts/adsense-optimizer.js",
+    "fix:duplicates": "node scripts/fix-duplicate-images.js",
     "clean-backups": "node scripts/clean-backups.js",
     "scheduled-cleanup": "node scripts/scheduled-cleanup.js",
     "monitor": "node scripts/start-monitoring.js",

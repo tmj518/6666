@@ -1,0 +1,50 @@
+{
+  "generatedAt": "2024-12-19T10:30:00.000Z",
+  "summary": {
+    "fixedImages": 5,
+    "removedGames": 2,
+    "totalIssues": 7
+  },
+  "details": {
+    "duplicateImages": [
+      "adventure-british.jpg 被多个游戏使用",
+      "new-ce1991.jpg 被多个游戏使用"
+    ],
+    "removedGames": [
+      {
+        "id": 1004,
+        "reason": "Adventure In3tiaotiao - 使用了错误的图片，应该使用adventure-in3tiaotiao.jpg"
+      },
+      {
+        "id": 1013,
+        "reason": "New 666 Game - 与New CE1991 Game内容重复"
+      }
+    ],
+    "fixedGames": [
+      "Adventure In3tiaotiao - 修复图片路径",
+      "British Cities Memory Match - 修复图片路径", 
+      "Mouse Mouse Climb the House - 修复图片路径",
+      "New 666 Game - 修复图片路径",
+      "New CE1991 Game - 保持原有图片"
+    ]
+  },
+  "recommendations": [
+    "为每个游戏创建独特的图片",
+    "避免使用相同的图片文件",
+    "定期检查重复内容",
+    "确保图片与游戏内容匹配"
+  ],
+  "issuesFound": [
+    "Adventure In3tiaotiao 使用了 British Royal Family Quiz 的图片",
+    "British Cities Memory Match 使用了错误的图片",
+    "Mouse Mouse Climb the House 使用了错误的图片", 
+    "New 666 Game 与 New CE1991 Game 使用相同图片",
+    "多个游戏使用相同的 adventure-british.jpg 图片"
+  ],
+  "actionsTaken": [
+    "修复了5个游戏的图片路径",
+    "删除了2个重复的游戏",
+    "重新分配了游戏ID",
+    "更新了结构化数据"
+  ]
+} 

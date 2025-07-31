@@ -15,12 +15,17 @@
         "ko": "깊은 바다를 탐험하고, 자원을 수집하며, 위험을 피해 이 스릴 넘치는 어드벤처 게임에서 생존하세요."
       },
       "image": "/images/games/action-deep-sea-adventure-survival-game-free.jpg",
-      "category": ["action", "adventure"],
+      "category": [
+        "action",
+        "adventure"
+      ],
       "rating": 4.8,
       "developer": "Game Studio",
       "published": "2024-01-15",
       "plays": "1.2M+",
-      "regions": ["global"],
+      "regions": [
+        "global"
+      ],
       "url": "/games/action-deep-sea-adventure-survival-game-free.html"
     },
     {
@@ -38,12 +43,17 @@
         "ko": "흥미진진한 게임플레이와 도전적인 레벨을 가진 빠른 속도의 액션 게임."
       },
       "image": "/images/games/action-gameslike.jpg",
-      "category": ["action", "popular"],
+      "category": [
+        "action",
+        "popular"
+      ],
       "rating": 4.9,
       "developer": "Game Studio",
       "published": "2024-01-10",
       "plays": "980K+",
-      "regions": ["global"],
+      "regions": [
+        "global"
+      ],
       "url": "/games/action-gameslike.html"
     },
     {
@@ -61,39 +71,22 @@
         "ko": "영국식 영어 어휘와 재미있는 학습 활동을 포함한 어린이를 위한 교육용 단어 게임."
       },
       "image": "/images/games/adventure-british-word-games-for-kids.jpg",
-      "category": ["adventure", "educational"],
+      "category": [
+        "adventure",
+        "educational"
+      ],
       "rating": 4.6,
       "developer": "Educational Games",
       "published": "2023-12-20",
       "plays": "750K+",
-      "regions": ["uk", "global"],
+      "regions": [
+        "uk",
+        "global"
+      ],
       "url": "/games/adventure-british-word-games-for-kids.html"
     },
     {
       "id": 1004,
-      "title": {
-        "en": "Adventure In3tiaotiao",
-        "zh": "冒险跳跃游戏",
-        "ja": "アドベンチャーイン3ティアオティアオ",
-        "ko": "어드벤처 인3티아오티아오"
-      },
-      "description": {
-        "en": "Exciting jumping adventure game with unique mechanics and challenging obstacles.",
-        "zh": "具有独特机制和具有挑战性障碍的刺激跳跃冒险游戏。",
-        "ja": "ユニークなメカニクスと挑戦的な障害を持つエキサイティングなジャンプアドベンチャーゲーム。",
-        "ko": "독특한 메커니즘과 도전적인 장애물을 가진 흥미진진한 점프 어드벤처 게임."
-      },
-      "image": "/images/games/adventure-british.jpg",
-      "category": ["adventure", "action"],
-      "rating": 4.5,
-      "developer": "Adventure Studio",
-      "published": "2023-11-15",
-      "plays": "620K+",
-      "regions": ["global"],
-      "url": "/games/adventure-in3tiaotiao.html"
-    },
-    {
-      "id": 1005,
       "title": {
         "en": "British Royal Family Quiz",
         "zh": "英国王室家族问答",
@@ -107,16 +100,22 @@
         "ko": "이 교육용 퀴즈 게임으로 영국 왕실에 대한 지식을 테스트하세요."
       },
       "image": "/images/games/adventure-british-royal-family-quiz.jpg",
-      "category": ["adventure", "educational"],
+      "category": [
+        "adventure",
+        "educational"
+      ],
       "rating": 4.7,
       "developer": "Educational Games",
       "published": "2023-10-25",
       "plays": "890K+",
-      "regions": ["uk", "global"],
+      "regions": [
+        "uk",
+        "global"
+      ],
       "url": "/games/adventure_british-royal-family-quiz.html"
     },
     {
-      "id": 1006,
+      "id": 1005,
       "title": {
         "en": "Arcade Red Herrings Word Game",
         "zh": "街机红鲱鱼单词游戏",
@@ -130,16 +129,21 @@
         "ko": "레드 헤링 단서와 도전적인 단어 연관을 포함한 재미있는 단어 퍼즐 게임."
       },
       "image": "/images/games/arcade-red-herrings-word-game.jpg",
-      "category": ["arcade", "puzzle"],
+      "category": [
+        "arcade",
+        "puzzle"
+      ],
       "rating": 4.4,
       "developer": "Word Games Studio",
       "published": "2023-09-30",
       "plays": "540K+",
-      "regions": ["global"],
+      "regions": [
+        "global"
+      ],
       "url": "/games/arcade-red-herrings-word-game.html"
     },
     {
-      "id": 1007,
+      "id": 1006,
       "title": {
         "en": "Arcade T66 Game",
         "zh": "街机T66游戏",
@@ -153,16 +157,21 @@
         "ko": "레트로 그래픽과 중독성 있는 게임플레이 메커니즘을 가진 클래식 아케이드 스타일 게임."
       },
       "image": "/images/games/arcade-t66-game.jpg",
-      "category": ["arcade", "retro"],
+      "category": [
+        "arcade",
+        "retro"
+      ],
       "rating": 4.3,
       "developer": "Retro Games",
       "published": "2023-08-15",
       "plays": "480K+",
-      "regions": ["global"],
+      "regions": [
+        "global"
+      ],
       "url": "/games/arcade-t66.html"
     },
     {
-      "id": 1008,
+      "id": 1007,
       "title": {
         "en": "British Cities Memory Match",
         "zh": "英国城市记忆匹配",
@@ -175,17 +184,23 @@
         "ja": "有名なイギリスの都市とランドマークを特徴とするメモリーマッチングゲーム。",
         "ko": "유명한 영국 도시와 랜드마크를 특징으로 하는 메모리 매칭 게임."
       },
-      "image": "/images/games/adventure-british.jpg",
-      "category": ["puzzle", "educational"],
+      "image": "/images/games/british-cities-memory-match.jpg",
+      "category": [
+        "puzzle",
+        "educational"
+      ],
       "rating": 4.5,
       "developer": "Educational Games",
       "published": "2023-07-20",
       "plays": "380K+",
-      "regions": ["uk", "global"],
+      "regions": [
+        "uk",
+        "global"
+      ],
       "url": "/games/British-Cities-Memory-Match-Free.html"
     },
     {
-      "id": 1009,
+      "id": 1008,
       "title": {
         "en": "Card British Museum Puzzle Game",
         "zh": "英国博物馆卡牌益智游戏",
@@ -199,16 +214,23 @@
         "ko": "영국 박물관의 유물과 전시품을 특징으로 하는 카드 기반 퍼즐 게임."
       },
       "image": "/images/games/card-british-museum-puzzle-game-free.jpg",
-      "category": ["card", "puzzle", "educational"],
+      "category": [
+        "card",
+        "puzzle",
+        "educational"
+      ],
       "rating": 4.6,
       "developer": "Educational Games",
       "published": "2023-06-10",
       "plays": "420K+",
-      "regions": ["uk", "global"],
+      "regions": [
+        "uk",
+        "global"
+      ],
       "url": "/games/card-british-museum-puzzle-game-free.html"
     },
     {
-      "id": 1010,
+      "id": 1009,
       "title": {
         "en": "Card Free UK Puzzle Games Online",
         "zh": "英国免费在线卡牌益智游戏",
@@ -222,16 +244,22 @@
         "ko": "영국 테마와 문화적 요소를 가진 무료 온라인 카드 퍼즐 게임 모음."
       },
       "image": "/images/games/card-free-uk-puzzle-games-online.jpg",
-      "category": ["card", "puzzle"],
+      "category": [
+        "card",
+        "puzzle"
+      ],
       "rating": 4.4,
       "developer": "UK Games Studio",
       "published": "2023-05-25",
       "plays": "350K+",
-      "regions": ["uk", "global"],
+      "regions": [
+        "uk",
+        "global"
+      ],
       "url": "/games/card-free-uk-puzzle-games-online.html"
     },
     {
-      "id": 1011,
+      "id": 1010,
       "title": {
         "en": "Educational London Counter Terror Hero",
         "zh": "教育性伦敦反恐英雄",
@@ -245,16 +273,22 @@
         "ko": "현실적인 시나리오를 가진 런던의 대테러 작전에 대한 교육용 게임."
       },
       "image": "/images/games/educational-london-counter-terror-hero.jpg",
-      "category": ["educational", "action"],
+      "category": [
+        "educational",
+        "action"
+      ],
       "rating": 4.7,
       "developer": "Educational Games",
       "published": "2023-04-15",
       "plays": "680K+",
-      "regions": ["uk", "global"],
+      "regions": [
+        "uk",
+        "global"
+      ],
       "url": "/games/educational-london-counter-terror-hero.html"
     },
     {
-      "id": 1012,
+      "id": 1011,
       "title": {
         "en": "Mouse Mouse Climb the House",
         "zh": "老鼠爬房子",
@@ -267,40 +301,22 @@
         "ja": "挑戦的な障害と楽しいメカニクスを持つかわいいマウスクライミングアドベンチャーゲーム。",
         "ko": "도전적인 장애물과 재미있는 메커니즘을 가진 귀여운 마우스 등반 어드벤처 게임."
       },
-      "image": "/images/games/adventure-british.jpg",
-      "category": ["adventure", "casual"],
+      "image": "/images/games/mouse-mouse-climb-the-house.jpg",
+      "category": [
+        "adventure",
+        "casual"
+      ],
       "rating": 4.3,
       "developer": "Casual Games",
       "published": "2023-03-20",
       "plays": "290K+",
-      "regions": ["global"],
+      "regions": [
+        "global"
+      ],
       "url": "/games/mouse-mouse-climb-the-house.html"
     },
     {
-      "id": 1013,
-      "title": {
-        "en": "New 666 Game",
-        "zh": "新666游戏",
-        "ja": "新666ゲーム",
-        "ko": "새 666 게임"
-      },
-      "description": {
-        "en": "New action-packed game with exciting challenges and innovative gameplay.",
-        "zh": "具有刺激挑战和创新游戏玩法的新动作游戏。",
-        "ja": "エキサイティングな挑戦と革新的なゲームプレイを持つ新しいアクションゲーム。",
-        "ko": "흥미진진한 도전과 혁신적인 게임플레이를 가진 새로운 액션 게임."
-      },
-      "image": "/images/games/new-ce1991.jpg",
-      "category": ["new", "action"],
-      "rating": 4.5,
-      "developer": "New Games Studio",
-      "published": "2024-01-05",
-      "plays": "180K+",
-      "regions": ["global"],
-      "url": "/games/new-666.html"
-    },
-    {
-      "id": 1014,
+      "id": 1012,
       "title": {
         "en": "New CE1991 Game",
         "zh": "新CE1991游戏",
@@ -314,16 +330,21 @@
         "ko": "최첨단 그래픽과 몰입형 게임플레이 경험을 가진 최신 출시 게임."
       },
       "image": "/images/games/new-ce1991.jpg",
-      "category": ["new", "action"],
+      "category": [
+        "new",
+        "action"
+      ],
       "rating": 4.6,
       "developer": "New Games Studio",
       "published": "2024-01-08",
       "plays": "220K+",
-      "regions": ["global"],
+      "regions": [
+        "global"
+      ],
       "url": "/games/new-ce1991.html"
     },
     {
-      "id": 1015,
+      "id": 1013,
       "title": {
         "en": "New Deep Sea Adventure Survival Game",
         "zh": "新深海冒险生存游戏",
@@ -337,16 +358,21 @@
         "ko": "향상된 그래픽과 새로운 기능을 가진 인기 딥시 어드벤처의 업데이트 버전."
       },
       "image": "/images/games/new-deep-sea-adventure-survival-game-free.jpg",
-      "category": ["new", "adventure"],
+      "category": [
+        "new",
+        "adventure"
+      ],
       "rating": 4.7,
       "developer": "Adventure Studio",
       "published": "2024-01-12",
       "plays": "150K+",
-      "regions": ["global"],
+      "regions": [
+        "global"
+      ],
       "url": "/games/new-deep-sea-adventure-survival-game-free.html"
     },
     {
-      "id": 1016,
+      "id": 1014,
       "title": {
         "en": "New London Arcade Games Free",
         "zh": "新伦敦免费街机游戏",
@@ -360,16 +386,22 @@
         "ko": "런던 테마와 랜드마크를 특징으로 하는 무료 아케이드 게임의 새로운 모음."
       },
       "image": "/images/games/new-london-arcade-games-free.jpg",
-      "category": ["new", "arcade"],
+      "category": [
+        "new",
+        "arcade"
+      ],
       "rating": 4.4,
       "developer": "UK Games Studio",
       "published": "2024-01-15",
       "plays": "120K+",
-      "regions": ["uk", "global"],
+      "regions": [
+        "uk",
+        "global"
+      ],
       "url": "/games/new-london-arcade-games-free.html"
     },
     {
-      "id": 1017,
+      "id": 1015,
       "title": {
         "en": "Popular 777 Game",
         "zh": "热门777游戏",
@@ -383,16 +415,21 @@
         "ko": "흥미진진한 게임플레이와 행운의 숫자 메커니즘을 가진 인기 카지노 스타일 게임."
       },
       "image": "/images/games/popular-popular-777.jpg",
-      "category": ["popular", "casino"],
+      "category": [
+        "popular",
+        "casino"
+      ],
       "rating": 4.8,
       "developer": "Casino Games",
       "published": "2023-12-01",
       "plays": "1.5M+",
-      "regions": ["global"],
+      "regions": [
+        "global"
+      ],
       "url": "/games/popular-777.html"
     },
     {
-      "id": 1018,
+      "id": 1016,
       "title": {
         "en": "Popular Ceshi1 Game",
         "zh": "热门测试1游戏",
@@ -406,16 +443,21 @@
         "ko": "다양한 도전과 스킬 기반 게임플레이를 가진 인기 테스트 게임."
       },
       "image": "/images/games/popular-ceshi1.jpg",
-      "category": ["popular", "puzzle"],
+      "category": [
+        "popular",
+        "puzzle"
+      ],
       "rating": 4.6,
       "developer": "Test Games",
       "published": "2023-11-20",
       "plays": "980K+",
-      "regions": ["global"],
+      "regions": [
+        "global"
+      ],
       "url": "/games/popular_ceshi1.html"
     },
     {
-      "id": 1019,
+      "id": 1017,
       "title": {
         "en": "Puzzle Fixed Game",
         "zh": "修复益智游戏",
@@ -429,16 +471,21 @@
         "ko": "개선된 메커니즘과 버그 수정을 가진 인기 퍼즐 게임의 수정 버전."
       },
       "image": "/images/games/puzzle-fixed.jpg",
-      "category": ["puzzle", "popular"],
+      "category": [
+        "puzzle",
+        "popular"
+      ],
       "rating": 4.7,
       "developer": "Puzzle Studio",
       "published": "2023-10-15",
       "plays": "1.1M+",
-      "regions": ["global"],
+      "regions": [
+        "global"
+      ],
       "url": "/games/puzzle-fixed.html"
     },
     {
-      "id": 1020,
+      "id": 1018,
       "title": {
         "en": "Puzzle Tupian Game",
         "zh": "图片益智游戏",
@@ -452,16 +499,21 @@
         "ko": "아름다운 그래픽과 도전적인 이미지 배치를 가진 이미지 기반 퍼즐 게임."
       },
       "image": "/images/games/puzzle-tupian.jpg",
-      "category": ["puzzle", "casual"],
+      "category": [
+        "puzzle",
+        "casual"
+      ],
       "rating": 4.5,
       "developer": "Puzzle Studio",
       "published": "2023-09-25",
       "plays": "720K+",
-      "regions": ["global"],
+      "regions": [
+        "global"
+      ],
       "url": "/games/puzzle-tupian.html"
     },
     {
-      "id": 1021,
+      "id": 1019,
       "title": {
         "en": "Puzzle UK Counties Crossword Challenge",
         "zh": "英国郡县填字游戏挑战",
@@ -475,16 +527,22 @@
         "ko": "영국의 카운티와 지리적 지식을 특징으로 하는 교육용 크로스워드 퍼즐."
       },
       "image": "/images/games/puzzle-uk-counties-crossword-challenge.jpg",
-      "category": ["puzzle", "educational"],
+      "category": [
+        "puzzle",
+        "educational"
+      ],
       "rating": 4.6,
       "developer": "Educational Games",
       "published": "2023-08-30",
       "plays": "450K+",
-      "regions": ["uk", "global"],
+      "regions": [
+        "uk",
+        "global"
+      ],
       "url": "/games/puzzle-uk-counties-crossword-challenge.html"
     },
     {
-      "id": 1022,
+      "id": 1020,
       "title": {
         "en": "Puzzle UK Shoot Game",
         "zh": "英国射击益智游戏",
@@ -498,16 +556,22 @@
         "ko": "영국 테마 타겟과 전략적 게임플레이를 가진 슈팅 퍼즐 게임."
       },
       "image": "/images/games/puzzle-ukshoot.jpg",
-      "category": ["puzzle", "action"],
+      "category": [
+        "puzzle",
+        "action"
+      ],
       "rating": 4.4,
       "developer": "UK Games Studio",
       "published": "2023-07-15",
       "plays": "380K+",
-      "regions": ["uk", "global"],
+      "regions": [
+        "uk",
+        "global"
+      ],
       "url": "/games/puzzle-ukshoot.html"
     },
     {
-      "id": 1023,
+      "id": 1021,
       "title": {
         "en": "Puzzle X3M Game",
         "zh": "X3M益智游戏",
@@ -521,16 +585,21 @@
         "ko": "X3M 메커니즘과 도전적인 두뇌 퀴즈를 가진 고급 퍼즐 게임."
       },
       "image": "/images/games/puzzle-x3m.jpg",
-      "category": ["puzzle", "strategy"],
+      "category": [
+        "puzzle",
+        "strategy"
+      ],
       "rating": 4.7,
       "developer": "Puzzle Studio",
       "published": "2023-06-20",
       "plays": "520K+",
-      "regions": ["global"],
+      "regions": [
+        "global"
+      ],
       "url": "/games/puzzle-x3m.html"
     },
     {
-      "id": 1024,
+      "id": 1022,
       "title": {
         "en": "Sports London Flappy Bird Game Free",
         "zh": "伦敦体育小鸟游戏免费版",
@@ -544,16 +613,22 @@
         "ko": "상징적인 랜드마크와 영국 스포츠 요소를 특징으로 하는 런던 테마의 플래피 버드 게임."
       },
       "image": "/images/games/sports-london-flappy-bird-game-free.jpg",
-      "category": ["sports", "casual"],
+      "category": [
+        "sports",
+        "casual"
+      ],
       "rating": 4.5,
       "developer": "Sports Games",
       "published": "2023-05-10",
       "plays": "680K+",
-      "regions": ["uk", "global"],
+      "regions": [
+        "uk",
+        "global"
+      ],
       "url": "/games/sports-london-flappy-bird-game-free.html"
     },
     {
-      "id": 1025,
+      "id": 1023,
       "title": {
         "en": "Sports T2 Game",
         "zh": "体育T2游戏",
@@ -567,16 +642,21 @@
         "ko": "T2 메커니즘과 경쟁적 게임플레이를 가진 빠른 속도의 스포츠 게임."
       },
       "image": "/images/games/sports-t2.jpg",
-      "category": ["sports", "action"],
+      "category": [
+        "sports",
+        "action"
+      ],
       "rating": 4.3,
       "developer": "Sports Games",
       "published": "2023-04-25",
       "plays": "420K+",
-      "regions": ["global"],
+      "regions": [
+        "global"
+      ],
       "url": "/games/sports_t2.html"
     },
     {
-      "id": 1026,
+      "id": 1024,
       "title": {
         "en": "Strategy Blue Prince Puzzle Adventure",
         "zh": "策略蓝王子益智冒险",
@@ -590,16 +670,22 @@
         "ko": "복잡한 도전과 왕실 테마를 가진 블루 프린스를 특징으로 하는 전략적 퍼즐 어드벤처."
       },
       "image": "/images/games/strategy-blue-prince-puzzle-adventure-free.jpg",
-      "category": ["strategy", "puzzle", "adventure"],
+      "category": [
+        "strategy",
+        "puzzle",
+        "adventure"
+      ],
       "rating": 4.8,
       "developer": "Strategy Games",
       "published": "2023-03-15",
       "plays": "580K+",
-      "regions": ["global"],
+      "regions": [
+        "global"
+      ],
       "url": "/games/strategy-blue-prince-puzzle-adventure-free.html"
     },
     {
-      "id": 1027,
+      "id": 1025,
       "title": {
         "en": "Strategy IN5 Game",
         "zh": "策略IN5游戏",
@@ -613,16 +699,21 @@
         "ko": "IN5 메커니즘과 전술적 의사결정 도전을 가진 고급 전략 게임."
       },
       "image": "/images/games/strategy-in5.jpg",
-      "category": ["strategy", "tactical"],
+      "category": [
+        "strategy",
+        "tactical"
+      ],
       "rating": 4.6,
       "developer": "Strategy Games",
       "published": "2023-02-20",
       "plays": "350K+",
-      "regions": ["global"],
+      "regions": [
+        "global"
+      ],
       "url": "/games/strategy_in5.html"
     },
     {
-      "id": 1028,
+      "id": 1026,
       "title": {
         "en": "Temple Run Game",
         "zh": "神庙逃亡游戏",
@@ -636,12 +727,17 @@
         "ko": "무한한 장애물과 흥미진진한 추적 시퀀스를 가진 클래식 템플 러닝 게임."
       },
       "image": "/images/games/puzzle-x3m.jpg",
-      "category": ["action", "adventure"],
+      "category": [
+        "action",
+        "adventure"
+      ],
       "rating": 4.7,
       "developer": "Adventure Studio",
       "published": "2023-01-30",
       "plays": "890K+",
-      "regions": ["global"],
+      "regions": [
+        "global"
+      ],
       "url": "/games/temple-run.html"
     }
   ]
