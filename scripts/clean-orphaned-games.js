@@ -28,7 +28,12 @@ function cleanOrphanedGames() {
   
   console.log(`📊 开始校验 ${originalCount} 个游戏的文件存在性...`);
   
-  // 遍历所有游戏，检查文件存在性
+  // 检查重复内容
+  const duplicateImages = new Map();
+  const duplicateTitles = new Map();
+  const duplicateUrls = new Map();
+  
+  // 遍历所有游戏，检查文件存在性和重复内容
   for (const game of data.games) {
     // 修正路径拼接，确保 public 目录下的真实路径
     const imagePath = path.join(__dirname, '../public', game.image.replace(/^\//, ''));
@@ -36,6 +41,45 @@ function cleanOrphanedGames() {
     
     const imageExists = fs.existsSync(imagePath);
     const htmlExists = fs.existsSync(htmlPath);
+    
+    // 检查重复图片
+    if (duplicateImages.has(game.image)) {
+      console.log(`🖼️  发现重复图片: ${game.title.en} 使用 ${game.image}`);
+      console.log(`   与游戏冲突: ${duplicateImages.get(game.image).title.en}`);
+      
+      // 为重复图片的游戏生成新的图片路径
+      const baseName = game.title.en.toLowerCase().replace(/[^a-z0-9]/g, '-');
+      const category = game.category?.[0] || 'other';
+      game.image = `/images/games/${category}-${baseName}.jpg`;
+      console.log(`   修复图片路径: ${game.image}`);
+    } else {
+      duplicateImages.set(game.image, game);
+    }
+    
+    // 检查重复标题
+    if (game.title.en && duplicateTitles.has(game.title.en)) {
+      console.log(`📝  发现重复标题: ${game.title.en}`);
+      console.log(`   与游戏冲突: ${duplicateTitles.get(game.title.en).title.en}`);
+      
+      // 为重复标题的游戏添加后缀
+      game.title.en = `${game.title.en} (${game.category?.[0] || 'Game'})`;
+      console.log(`   修复标题: ${game.title.en}`);
+    } else if (game.title.en) {
+      duplicateTitles.set(game.title.en, game);
+    }
+    
+    // 检查重复URL
+    if (duplicateUrls.has(game.url)) {
+      console.log(`🔗  发现重复URL: ${game.title.en} 使用 ${game.url}`);
+      console.log(`   与游戏冲突: ${duplicateUrls.get(game.url).title.en}`);
+      
+      // 为重复URL的游戏生成新的URL
+      const baseName = game.title.en.toLowerCase().replace(/[^a-z0-9]/g, '-');
+      game.url = `/games/${baseName}.html`;
+      console.log(`   修复URL: ${game.url}`);
+    } else {
+      duplicateUrls.set(game.url, game);
+    }
     
     if (!imageExists || !htmlExists) {
       orphanedGames.push({

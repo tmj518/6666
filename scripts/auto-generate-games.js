@@ -63,6 +63,8 @@ function removeDuplicates(games) {
   const seen = new Set();
   const uniqueGames = [];
   let duplicateCount = 0;
+  
+  // 检查重复的URL
   for (const game of games) {
     const key = game.url || game.title?.en || game.title;
     if (seen.has(key)) {
@@ -73,10 +75,36 @@ function removeDuplicates(games) {
     seen.add(key);
     uniqueGames.push(game);
   }
+  
+  // 检查重复的图片
+  const imageMap = new Map();
+  const gamesWithUniqueImages = [];
+  let imageDuplicateCount = 0;
+  
+  for (const game of uniqueGames) {
+    const image = game.image;
+    if (imageMap.has(image)) {
+      imageDuplicateCount++;
+      console.log(`[去重] 发现重复图片: ${game.title?.en || game.title} 使用 ${image}`);
+      
+      // 为重复图片的游戏生成新的图片路径
+      const baseName = game.title?.en?.toLowerCase().replace(/[^a-z0-9]/g, '-') || 'game';
+      const category = game.category?.[0] || 'other';
+      game.image = `/images/games/${category}-${baseName}.jpg`;
+      console.log(`[修复] 更新图片路径: ${game.image}`);
+    }
+    imageMap.set(image, game);
+    gamesWithUniqueImages.push(game);
+  }
+  
   if (duplicateCount > 0) {
     console.log(`[去重] 移除 ${duplicateCount} 个重复游戏`);
   }
-  return uniqueGames;
+  if (imageDuplicateCount > 0) {
+    console.log(`[去重] 修复 ${imageDuplicateCount} 个重复图片`);
+  }
+  
+  return gamesWithUniqueImages;
 }
 
 function sortGames(games) {

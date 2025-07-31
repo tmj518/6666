@@ -3,7 +3,7 @@
     <!-- 首页 -->
     <url>
         <loc>https://www.ukhtml5games.com/</loc>
-        <lastmod>2025-07-28</lastmod>
+        <lastmod>2025-07-31</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
@@ -11,189 +11,105 @@
     <!-- 协议页面 -->
     <url>
         <loc>https://www.ukhtml5games.com/terms.html</loc>
-        <lastmod>2025-07-28</lastmod>
+        <lastmod>2025-07-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
         <loc>https://www.ukhtml5games.com/privacy.html</loc>
-        <lastmod>2025-07-28</lastmod>
+        <lastmod>2025-07-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
         <loc>https://www.ukhtml5games.com/copyright.html</loc>
-        <lastmod>2025-07-28</lastmod>
+        <lastmod>2025-07-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>
     
     <!-- 游戏页面 -->
         <url>
-        <loc>https://www.ukhtml5games.com/games/action-deep-sea-adventure-survival-game-free.html</loc>
-        <lastmod>2025-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://www.ukhtml5games.com/games/action-gameslike.html</loc>
-        <lastmod>2025-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ukhtml5games.com/games/adventure-british-word-games-for-kids.html</loc>
-        <lastmod>2025-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ukhtml5games.com/games/adventure-in3tiaotiao.html</loc>
-        <lastmod>2025-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ukhtml5games.com/games/adventure_british-royal-family-quiz.html</loc>
-        <lastmod>2025-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ukhtml5games.com/games/arcade-red-herrings-word-game.html</loc>
-        <lastmod>2025-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ukhtml5games.com/games/arcade-t66.html</loc>
-        <lastmod>2025-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ukhtml5games.com/games/British-Cities-Memory-Match-Free.html</loc>
-        <lastmod>2025-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ukhtml5games.com/games/card-british-museum-puzzle-game-free.html</loc>
-        <lastmod>2025-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ukhtml5games.com/games/card-free-uk-puzzle-games-online.html</loc>
-        <lastmod>2025-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ukhtml5games.com/games/educational-london-counter-terror-hero.html</loc>
-        <lastmod>2025-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ukhtml5games.com/games/mouse-mouse-climb-the-house.html</loc>
-        <lastmod>2025-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ukhtml5games.com/games/new-666.html</loc>
-        <lastmod>2025-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ukhtml5games.com/games/new-ce1991.html</loc>
-        <lastmod>2025-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ukhtml5games.com/games/new-deep-sea-adventure-survival-game-free.html</loc>
-        <lastmod>2025-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ukhtml5games.com/games/new-london-arcade-games-free.html</loc>
-        <lastmod>2025-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ukhtml5games.com/games/popular-777.html</loc>
-        <lastmod>2025-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ukhtml5games.com/games/popular_ceshi1.html</loc>
-        <lastmod>2025-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ukhtml5games.com/games/puzzle-fixed.html</loc>
-        <lastmod>2025-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ukhtml5games.com/games/puzzle-tupian.html</loc>
-        <lastmod>2025-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ukhtml5games.com/games/puzzle-uk-counties-crossword-challenge.html</loc>
-        <lastmod>2025-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ukhtml5games.com/games/puzzle-ukshoot.html</loc>
-        <lastmod>2025-07-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.ukhtml5games.com/games/puzzle-x3m.html</loc>
-        <lastmod>2025-07-28</lastmod>
+        <lastmod>2025-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.ukhtml5games.com/games/sports-london-flappy-bird-game-free.html</loc>
-        <lastmod>2025-07-28</lastmod>
+        <lastmod>2025-07-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.ukhtml5games.com/games/puzzle-x3m.html</loc>
+        <lastmod>2025-07-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.ukhtml5games.com/games/puzzle-uk-counties-crossword-challenge.html</loc>
+        <lastmod>2025-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.ukhtml5games.com/games/sports_t2.html</loc>
-        <lastmod>2025-07-28</lastmod>
+        <lastmod>2025-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.ukhtml5games.com/games/strategy-blue-prince-puzzle-adventure-free.html</loc>
-        <lastmod>2025-07-28</lastmod>
+        <loc>https://www.ukhtml5games.com/games/mouse-mouse-climb-the-house.html</loc>
+        <lastmod>2025-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.ukhtml5games.com/games/strategy_in5.html</loc>
-        <lastmod>2025-07-28</lastmod>
+        <loc>https://www.ukhtml5games.com/games/adventure_british-royal-family-quiz.html</loc>
+        <lastmod>2025-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.ukhtml5games.com/games/temple-run.html</loc>
-        <lastmod>2025-07-28</lastmod>
+        <loc>https://www.ukhtml5games.com/games/arcade-red-herrings-word-game.html</loc>
+        <lastmod>2025-07-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.ukhtml5games.com/games/new-deep-sea-adventure-survival-game-free.html</loc>
+        <lastmod>2025-07-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.ukhtml5games.com/games/popular-777.html</loc>
+        <lastmod>2025-07-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.ukhtml5games.com/games/card-british-museum-puzzle-game-free.html</loc>
+        <lastmod>2025-07-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.ukhtml5games.com/games/card-free-uk-puzzle-games-online.html</loc>
+        <lastmod>2025-07-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.ukhtml5games.com/games/new-ce1991.html</loc>
+        <lastmod>2025-07-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.ukhtml5games.com/games/puzzle-fixed.html</loc>
+        <lastmod>2025-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -202,73 +118,73 @@
     <!-- 分类页面 -->
         <url>
         <loc>https://www.ukhtml5games.com/#all</loc>
-        <lastmod>2025-07-28</lastmod>
+        <lastmod>2025-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
         <loc>https://www.ukhtml5games.com/#new</loc>
-        <lastmod>2025-07-28</lastmod>
+        <lastmod>2025-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
         <loc>https://www.ukhtml5games.com/#popular</loc>
-        <lastmod>2025-07-28</lastmod>
+        <lastmod>2025-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
         <loc>https://www.ukhtml5games.com/#puzzle</loc>
-        <lastmod>2025-07-28</lastmod>
+        <lastmod>2025-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
         <loc>https://www.ukhtml5games.com/#action</loc>
-        <lastmod>2025-07-28</lastmod>
+        <lastmod>2025-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
         <loc>https://www.ukhtml5games.com/#arcade</loc>
-        <lastmod>2025-07-28</lastmod>
+        <lastmod>2025-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
         <loc>https://www.ukhtml5games.com/#strategy</loc>
-        <lastmod>2025-07-28</lastmod>
+        <lastmod>2025-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
         <loc>https://www.ukhtml5games.com/#adventure</loc>
-        <lastmod>2025-07-28</lastmod>
+        <lastmod>2025-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
         <loc>https://www.ukhtml5games.com/#card</loc>
-        <lastmod>2025-07-28</lastmod>
+        <lastmod>2025-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
         <loc>https://www.ukhtml5games.com/#sports</loc>
-        <lastmod>2025-07-28</lastmod>
+        <lastmod>2025-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
         <loc>https://www.ukhtml5games.com/#educational</loc>
-        <lastmod>2025-07-28</lastmod>
+        <lastmod>2025-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
         <loc>https://www.ukhtml5games.com/#casual</loc>
-        <lastmod>2025-07-28</lastmod>
+        <lastmod>2025-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>

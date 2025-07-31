@@ -9,6 +9,7 @@ const duplicateImageMap = {
   1012: '/images/games/mouse-mouse-climb-the-house.jpg', // Mouse Mouse Climb the House
   1013: '/images/games/new-666.jpg', // New 666 Game
   1014: '/images/games/new-ce1991.jpg', // New CE1991 Game (这个是正确的)
+  1026: '/images/games/temple-run.jpg', // Temple Run Game - 修复错误的图片
 };
 
 // 需要删除的重复游戏
@@ -76,7 +77,9 @@ function createMissingImages() {
     'mouse-mouse-climb-the-house.jpg',
     'mouse-mouse-climb-the-house.webp',
     'new-666.jpg',
-    'new-666.webp'
+    'new-666.webp',
+    'temple-run.jpg',
+    'temple-run.webp'
   ];
   
   console.log('🖼️ 创建缺失的图片文件...');
@@ -99,34 +102,54 @@ function createMissingImages() {
 // 更新结构化数据
 function updateStructuredData() {
   const structuredDataPath = path.join(__dirname, '../public/structured-data.json');
-  let structuredData = JSON.parse(fs.readFileSync(structuredDataPath, 'utf-8'));
   
-  console.log('📊 更新结构化数据...');
-  
-  // 更新游戏数据中的图片路径
-  structuredData.forEach(item => {
-    if (item['@type'] === 'VideoGame') {
-      // 修复重复的图片路径
-      if (item.image && item.image.includes('adventure-british.jpg')) {
-        // 根据游戏标题确定正确的图片
-        if (item.name && item.name.includes('In3tiaotiao')) {
-          item.image = item.image.replace('adventure-british.jpg', 'adventure-in3tiaotiao.jpg');
-        } else if (item.name && item.name.includes('Memory Match')) {
-          item.image = item.image.replace('adventure-british.jpg', 'british-cities-memory-match.jpg');
-        } else if (item.name && item.name.includes('Mouse')) {
-          item.image = item.image.replace('adventure-british.jpg', 'mouse-mouse-climb-the-house.jpg');
+  try {
+    let structuredData = JSON.parse(fs.readFileSync(structuredDataPath, 'utf-8'));
+    
+    console.log('📊 更新结构化数据...');
+    
+    // 确保structuredData是数组
+    if (!Array.isArray(structuredData)) {
+      console.log('  ⚠️ 结构化数据不是数组格式，跳过更新');
+      return;
+    }
+    
+    // 更新游戏数据中的图片路径
+    structuredData.forEach(item => {
+      if (item['@type'] === 'VideoGame') {
+        // 修复重复的图片路径
+        if (item.image && item.image.includes('adventure-british.jpg')) {
+          // 根据游戏标题确定正确的图片
+          if (item.name && item.name.includes('In3tiaotiao')) {
+            item.image = item.image.replace('adventure-british.jpg', 'adventure-in3tiaotiao.jpg');
+          } else if (item.name && item.name.includes('Memory Match')) {
+            item.image = item.image.replace('adventure-british.jpg', 'british-cities-memory-match.jpg');
+          } else if (item.name && item.name.includes('Mouse')) {
+            item.image = item.image.replace('adventure-british.jpg', 'mouse-mouse-climb-the-house.jpg');
+          }
+        }
+        
+        // 修复Temple Run的重复图片
+        if (item.image && item.image.includes('puzzle-x3m.jpg') && item.name && item.name.includes('Temple Run')) {
+          item.image = item.image.replace('puzzle-x3m.jpg', 'temple-run.jpg');
+        }
+        
+        // 更新Open Graph图片
+        if (item.ogImage && item.ogImage.includes('adventure-british.jpg')) {
+          item.ogImage = item.ogImage.replace('adventure-british.jpg', 'adventure-in3tiaotiao.jpg');
+        }
+        
+        if (item.ogImage && item.ogImage.includes('puzzle-x3m.jpg') && item.name && item.name.includes('Temple Run')) {
+          item.ogImage = item.ogImage.replace('puzzle-x3m.jpg', 'temple-run.jpg');
         }
       }
-      
-      // 更新Open Graph图片
-      if (item.ogImage && item.ogImage.includes('adventure-british.jpg')) {
-        item.ogImage = item.ogImage.replace('adventure-british.jpg', 'adventure-in3tiaotiao.jpg');
-      }
-    }
-  });
-  
-  fs.writeFileSync(structuredDataPath, JSON.stringify(structuredData, null, 2));
-  console.log('  ✅ 结构化数据已更新');
+    });
+    
+    fs.writeFileSync(structuredDataPath, JSON.stringify(structuredData, null, 2));
+    console.log('  ✅ 结构化数据已更新');
+  } catch (error) {
+    console.log(`  ⚠️ 更新结构化数据时出错: ${error.message}`);
+  }
 }
 
 // 生成修复报告

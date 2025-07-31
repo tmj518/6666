@@ -15,60 +15,28 @@
     {
       "@context": "https://schema.org",
       "@type": "VideoGame",
-      "name": "Action Deep Sea Adventure Survival Game Free",
-      "description": "Explore the deep sea, collect resources, avoid dangers, and survive in this thrilling adventure game.",
-      "image": "https://www.ukhtml5games.com/images/games/action-deep-sea-adventure-survival-game-free.jpg",
-      "imageAlt": "action deep-sea-adventure-survival-game-free html5 game, deep-sea-adventure-survival-game-free online play, free action game",
-      "imageTitle": "action deep-sea-adventure-survival-game-free html5 game, deep-sea-adventure-survival-game-free online play, free action game",
-      "url": "https://www.ukhtml5games.com/games/action-deep-sea-adventure-survival-game-free.html",
-      "genre": "action, adventure",
-      "gamePlatform": "HTML5",
-      "applicationCategory": "Game",
-      "operatingSystem": "Web Browser",
-      "author": {
-        "@type": "Organization",
-        "name": "Game Studio"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "PlayHTML5"
-      },
-      "datePublished": "2024-01-15",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.8,
-        "ratingCount": "1.2M+"
-      },
-      "ogImage": "https://www.ukhtml5games.com/images/games/action-deep-sea-adventure-survival-game-free.jpg",
-      "ogTitle": "Action Deep Sea Adventure Survival Game Free - PlayHTML5",
-      "ogDescription": "Explore the deep sea, collect resources, avoid dangers, and survive in this thrilling adventure game.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/action-deep-sea-adventure-survival-game-free.html"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
       "name": "Action Gameslike Game",
       "description": "Fast-paced action game with exciting gameplay and challenging levels.",
       "image": "https://www.ukhtml5games.com/images/games/action-gameslike.jpg",
       "imageAlt": "action gameslike html5 game, gameslike online play, free action game",
       "imageTitle": "action gameslike html5 game, gameslike online play, free action game",
       "url": "https://www.ukhtml5games.com/games/action-gameslike.html",
-      "genre": "action, popular",
+      "genre": "action",
       "gamePlatform": "HTML5",
       "applicationCategory": "Game",
       "operatingSystem": "Web Browser",
       "author": {
         "@type": "Organization",
-        "name": "Game Studio"
+        "name": "AutoSync"
       },
       "publisher": {
         "@type": "Organization",
         "name": "PlayHTML5"
       },
-      "datePublished": "2024-01-10",
+      "datePublished": "2025-07-31",
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": 4.9,
+        "ratingValue": 4.8,
         "ratingCount": "980K+"
       },
       "ogImage": "https://www.ukhtml5games.com/images/games/action-gameslike.jpg",
@@ -79,706 +47,98 @@
     {
       "@context": "https://schema.org",
       "@type": "VideoGame",
-      "name": "Adventure British Word Games for Kids",
-      "description": "Educational word games designed for kids with British English vocabulary and fun learning activities.",
-      "image": "https://www.ukhtml5games.com/images/games/adventure-british-word-games-for-kids.jpg",
-      "imageAlt": "adventure british-word-games-for-kids html5 game, british-word-games-for-kids online play, free adventure game",
-      "imageTitle": "adventure british-word-games-for-kids html5 game, british-word-games-for-kids online play, free adventure game",
-      "url": "https://www.ukhtml5games.com/games/adventure-british-word-games-for-kids.html",
-      "genre": "adventure, educational",
+      "name": "Sports London-Flappy-Bird-Game-Free Game",
+      "description": "London-themed flappy bird game featuring iconic landmarks and British sports elements.",
+      "image": "https://www.ukhtml5games.com/images/games/sports-london-flappy-bird-game-free.jpg",
+      "imageAlt": "sports london-flappy-bird-game-free html5 game, london-flappy-bird-game-free online play, free sports game",
+      "imageTitle": "sports london-flappy-bird-game-free html5 game, london-flappy-bird-game-free online play, free sports game",
+      "url": "https://www.ukhtml5games.com/games/sports-london-flappy-bird-game-free.html",
+      "genre": "sports",
       "gamePlatform": "HTML5",
       "applicationCategory": "Game",
       "operatingSystem": "Web Browser",
       "author": {
         "@type": "Organization",
-        "name": "Educational Games"
+        "name": "AutoSync"
       },
       "publisher": {
         "@type": "Organization",
         "name": "PlayHTML5"
       },
-      "datePublished": "2023-12-20",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.6,
-        "ratingCount": "750K+"
-      },
-      "ogImage": "https://www.ukhtml5games.com/images/games/adventure-british-word-games-for-kids.jpg",
-      "ogTitle": "Adventure British Word Games for Kids - PlayHTML5",
-      "ogDescription": "Educational word games designed for kids with British English vocabulary and fun learning activities.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/adventure-british-word-games-for-kids.html"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "Adventure In3tiaotiao",
-      "description": "Exciting jumping adventure game with unique mechanics and challenging obstacles.",
-      "image": "https://www.ukhtml5games.com/images/games/adventure-british.jpg",
-      "imageAlt": "adventure british html5 game, british online play, free adventure game",
-      "imageTitle": "adventure british html5 game, british online play, free adventure game",
-      "url": "https://www.ukhtml5games.com/games/adventure-in3tiaotiao.html",
-      "genre": "adventure, action",
-      "gamePlatform": "HTML5",
-      "applicationCategory": "Game",
-      "operatingSystem": "Web Browser",
-      "author": {
-        "@type": "Organization",
-        "name": "Adventure Studio"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "PlayHTML5"
-      },
-      "datePublished": "2023-11-15",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.5,
-        "ratingCount": "620K+"
-      },
-      "ogImage": "https://www.ukhtml5games.com/images/games/adventure-british.jpg",
-      "ogTitle": "Adventure In3tiaotiao - PlayHTML5",
-      "ogDescription": "Exciting jumping adventure game with unique mechanics and challenging obstacles.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/adventure-in3tiaotiao.html"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "British Royal Family Quiz",
-      "description": "Test your knowledge about the British Royal Family with this educational quiz game.",
-      "image": "https://www.ukhtml5games.com/images/games/adventure-british-royal-family-quiz.jpg",
-      "imageAlt": "adventure british-royal-family-quiz html5 game, british-royal-family-quiz online play, free adventure game",
-      "imageTitle": "adventure british-royal-family-quiz html5 game, british-royal-family-quiz online play, free adventure game",
-      "url": "https://www.ukhtml5games.com/games/adventure_british-royal-family-quiz.html",
-      "genre": "adventure, educational",
-      "gamePlatform": "HTML5",
-      "applicationCategory": "Game",
-      "operatingSystem": "Web Browser",
-      "author": {
-        "@type": "Organization",
-        "name": "Educational Games"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "PlayHTML5"
-      },
-      "datePublished": "2023-10-25",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.7,
-        "ratingCount": "890K+"
-      },
-      "ogImage": "https://www.ukhtml5games.com/images/games/adventure-british-royal-family-quiz.jpg",
-      "ogTitle": "British Royal Family Quiz - PlayHTML5",
-      "ogDescription": "Test your knowledge about the British Royal Family with this educational quiz game.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/adventure_british-royal-family-quiz.html"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "Arcade Red Herrings Word Game",
-      "description": "Fun word puzzle game with red herring clues and challenging word associations.",
-      "image": "https://www.ukhtml5games.com/images/games/arcade-red-herrings-word-game.jpg",
-      "imageAlt": "arcade red-herrings-word-game html5 game, red-herrings-word-game online play, free arcade game",
-      "imageTitle": "arcade red-herrings-word-game html5 game, red-herrings-word-game online play, free arcade game",
-      "url": "https://www.ukhtml5games.com/games/arcade-red-herrings-word-game.html",
-      "genre": "arcade, puzzle",
-      "gamePlatform": "HTML5",
-      "applicationCategory": "Game",
-      "operatingSystem": "Web Browser",
-      "author": {
-        "@type": "Organization",
-        "name": "Word Games Studio"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "PlayHTML5"
-      },
-      "datePublished": "2023-09-30",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.4,
-        "ratingCount": "540K+"
-      },
-      "ogImage": "https://www.ukhtml5games.com/images/games/arcade-red-herrings-word-game.jpg",
-      "ogTitle": "Arcade Red Herrings Word Game - PlayHTML5",
-      "ogDescription": "Fun word puzzle game with red herring clues and challenging word associations.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/arcade-red-herrings-word-game.html"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "Arcade T66 Game",
-      "description": "Classic arcade-style game with retro graphics and addictive gameplay mechanics.",
-      "image": "https://www.ukhtml5games.com/images/games/arcade-t66-game.jpg",
-      "imageAlt": "arcade t66 game html5 game, t66 game online play, free arcade game",
-      "imageTitle": "arcade t66 game html5 game, t66 game online play, free arcade game",
-      "url": "https://www.ukhtml5games.com/games/arcade-t66.html",
-      "genre": "arcade, retro",
-      "gamePlatform": "HTML5",
-      "applicationCategory": "Game",
-      "operatingSystem": "Web Browser",
-      "author": {
-        "@type": "Organization",
-        "name": "Retro Games"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "PlayHTML5"
-      },
-      "datePublished": "2023-08-15",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.3,
-        "ratingCount": "480K+"
-      },
-      "ogImage": "https://www.ukhtml5games.com/images/games/arcade-t66-game.jpg",
-      "ogTitle": "Arcade T66 Game - PlayHTML5",
-      "ogDescription": "Classic arcade-style game with retro graphics and addictive gameplay mechanics.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/arcade-t66.html"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "British Cities Memory Match",
-      "description": "Memory matching game featuring famous British cities and landmarks.",
-      "image": "https://www.ukhtml5games.com/images/games/adventure-british.jpg",
-      "imageAlt": "adventure british html5 game, british online play, free adventure game",
-      "imageTitle": "adventure british html5 game, british online play, free adventure game",
-      "url": "https://www.ukhtml5games.com/games/British-Cities-Memory-Match-Free.html",
-      "genre": "puzzle, educational",
-      "gamePlatform": "HTML5",
-      "applicationCategory": "Game",
-      "operatingSystem": "Web Browser",
-      "author": {
-        "@type": "Organization",
-        "name": "Educational Games"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "PlayHTML5"
-      },
-      "datePublished": "2023-07-20",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.5,
-        "ratingCount": "380K+"
-      },
-      "ogImage": "https://www.ukhtml5games.com/images/games/adventure-british.jpg",
-      "ogTitle": "British Cities Memory Match - PlayHTML5",
-      "ogDescription": "Memory matching game featuring famous British cities and landmarks.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/British-Cities-Memory-Match-Free.html"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "Card British Museum Puzzle Game",
-      "description": "Card-based puzzle game featuring artifacts and exhibits from the British Museum.",
-      "image": "https://www.ukhtml5games.com/images/games/card-british-museum-puzzle-game-free.jpg",
-      "imageAlt": "card british-museum-puzzle-game-free html5 game, british-museum-puzzle-game-free online play, free card game",
-      "imageTitle": "card british-museum-puzzle-game-free html5 game, british-museum-puzzle-game-free online play, free card game",
-      "url": "https://www.ukhtml5games.com/games/card-british-museum-puzzle-game-free.html",
-      "genre": "card, puzzle, educational",
-      "gamePlatform": "HTML5",
-      "applicationCategory": "Game",
-      "operatingSystem": "Web Browser",
-      "author": {
-        "@type": "Organization",
-        "name": "Educational Games"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "PlayHTML5"
-      },
-      "datePublished": "2023-06-10",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.6,
-        "ratingCount": "420K+"
-      },
-      "ogImage": "https://www.ukhtml5games.com/images/games/card-british-museum-puzzle-game-free.jpg",
-      "ogTitle": "Card British Museum Puzzle Game - PlayHTML5",
-      "ogDescription": "Card-based puzzle game featuring artifacts and exhibits from the British Museum.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/card-british-museum-puzzle-game-free.html"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "Card Free UK Puzzle Games Online",
-      "description": "Collection of free online card puzzle games with British themes and cultural elements.",
-      "image": "https://www.ukhtml5games.com/images/games/card-free-uk-puzzle-games-online.jpg",
-      "imageAlt": "card free-uk-puzzle-games-online html5 game, free-uk-puzzle-games-online online play, free card game",
-      "imageTitle": "card free-uk-puzzle-games-online html5 game, free-uk-puzzle-games-online online play, free card game",
-      "url": "https://www.ukhtml5games.com/games/card-free-uk-puzzle-games-online.html",
-      "genre": "card, puzzle",
-      "gamePlatform": "HTML5",
-      "applicationCategory": "Game",
-      "operatingSystem": "Web Browser",
-      "author": {
-        "@type": "Organization",
-        "name": "UK Games Studio"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "PlayHTML5"
-      },
-      "datePublished": "2023-05-25",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.4,
-        "ratingCount": "350K+"
-      },
-      "ogImage": "https://www.ukhtml5games.com/images/games/card-free-uk-puzzle-games-online.jpg",
-      "ogTitle": "Card Free UK Puzzle Games Online - PlayHTML5",
-      "ogDescription": "Collection of free online card puzzle games with British themes and cultural elements.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/card-free-uk-puzzle-games-online.html"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "Educational London Counter Terror Hero",
-      "description": "Educational game about counter-terrorism operations in London with realistic scenarios.",
-      "image": "https://www.ukhtml5games.com/images/games/educational-london-counter-terror-hero.jpg",
-      "imageAlt": "educational london-counter-terror-hero html5 game, london-counter-terror-hero online play, free educational game",
-      "imageTitle": "educational london-counter-terror-hero html5 game, london-counter-terror-hero online play, free educational game",
-      "url": "https://www.ukhtml5games.com/games/educational-london-counter-terror-hero.html",
-      "genre": "educational, action",
-      "gamePlatform": "HTML5",
-      "applicationCategory": "Game",
-      "operatingSystem": "Web Browser",
-      "author": {
-        "@type": "Organization",
-        "name": "Educational Games"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "PlayHTML5"
-      },
-      "datePublished": "2023-04-15",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.7,
-        "ratingCount": "680K+"
-      },
-      "ogImage": "https://www.ukhtml5games.com/images/games/educational-london-counter-terror-hero.jpg",
-      "ogTitle": "Educational London Counter Terror Hero - PlayHTML5",
-      "ogDescription": "Educational game about counter-terrorism operations in London with realistic scenarios.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/educational-london-counter-terror-hero.html"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "Mouse Mouse Climb the House",
-      "description": "Cute mouse climbing adventure game with challenging obstacles and fun mechanics.",
-      "image": "https://www.ukhtml5games.com/images/games/adventure-british.jpg",
-      "imageAlt": "adventure british html5 game, british online play, free adventure game",
-      "imageTitle": "adventure british html5 game, british online play, free adventure game",
-      "url": "https://www.ukhtml5games.com/games/mouse-mouse-climb-the-house.html",
-      "genre": "adventure, casual",
-      "gamePlatform": "HTML5",
-      "applicationCategory": "Game",
-      "operatingSystem": "Web Browser",
-      "author": {
-        "@type": "Organization",
-        "name": "Casual Games"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "PlayHTML5"
-      },
-      "datePublished": "2023-03-20",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.3,
-        "ratingCount": "290K+"
-      },
-      "ogImage": "https://www.ukhtml5games.com/images/games/adventure-british.jpg",
-      "ogTitle": "Mouse Mouse Climb the House - PlayHTML5",
-      "ogDescription": "Cute mouse climbing adventure game with challenging obstacles and fun mechanics.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/mouse-mouse-climb-the-house.html"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "New 666 Game",
-      "description": "New action-packed game with exciting challenges and innovative gameplay.",
-      "image": "https://www.ukhtml5games.com/images/games/new-ce1991.jpg",
-      "imageAlt": "new ce1991 html5 game, ce1991 online play, free new game",
-      "imageTitle": "new ce1991 html5 game, ce1991 online play, free new game",
-      "url": "https://www.ukhtml5games.com/games/new-666.html",
-      "genre": "new, action",
-      "gamePlatform": "HTML5",
-      "applicationCategory": "Game",
-      "operatingSystem": "Web Browser",
-      "author": {
-        "@type": "Organization",
-        "name": "New Games Studio"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "PlayHTML5"
-      },
-      "datePublished": "2024-01-05",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.5,
-        "ratingCount": "180K+"
-      },
-      "ogImage": "https://www.ukhtml5games.com/images/games/new-ce1991.jpg",
-      "ogTitle": "New 666 Game - PlayHTML5",
-      "ogDescription": "New action-packed game with exciting challenges and innovative gameplay.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/new-666.html"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "New CE1991 Game",
-      "description": "Latest release with cutting-edge graphics and immersive gameplay experience.",
-      "image": "https://www.ukhtml5games.com/images/games/new-ce1991.jpg",
-      "imageAlt": "new ce1991 html5 game, ce1991 online play, free new game",
-      "imageTitle": "new ce1991 html5 game, ce1991 online play, free new game",
-      "url": "https://www.ukhtml5games.com/games/new-ce1991.html",
-      "genre": "new, action",
-      "gamePlatform": "HTML5",
-      "applicationCategory": "Game",
-      "operatingSystem": "Web Browser",
-      "author": {
-        "@type": "Organization",
-        "name": "New Games Studio"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "PlayHTML5"
-      },
-      "datePublished": "2024-01-08",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.6,
-        "ratingCount": "220K+"
-      },
-      "ogImage": "https://www.ukhtml5games.com/images/games/new-ce1991.jpg",
-      "ogTitle": "New CE1991 Game - PlayHTML5",
-      "ogDescription": "Latest release with cutting-edge graphics and immersive gameplay experience.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/new-ce1991.html"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "New Deep Sea Adventure Survival Game",
-      "description": "Updated version of the popular deep sea adventure with enhanced graphics and new features.",
-      "image": "https://www.ukhtml5games.com/images/games/new-deep-sea-adventure-survival-game-free.jpg",
-      "imageAlt": "new deep-sea-adventure-survival-game-free html5 game, deep-sea-adventure-survival-game-free online play, free new game",
-      "imageTitle": "new deep-sea-adventure-survival-game-free html5 game, deep-sea-adventure-survival-game-free online play, free new game",
-      "url": "https://www.ukhtml5games.com/games/new-deep-sea-adventure-survival-game-free.html",
-      "genre": "new, adventure",
-      "gamePlatform": "HTML5",
-      "applicationCategory": "Game",
-      "operatingSystem": "Web Browser",
-      "author": {
-        "@type": "Organization",
-        "name": "Adventure Studio"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "PlayHTML5"
-      },
-      "datePublished": "2024-01-12",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.7,
-        "ratingCount": "150K+"
-      },
-      "ogImage": "https://www.ukhtml5games.com/images/games/new-deep-sea-adventure-survival-game-free.jpg",
-      "ogTitle": "New Deep Sea Adventure Survival Game - PlayHTML5",
-      "ogDescription": "Updated version of the popular deep sea adventure with enhanced graphics and new features.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/new-deep-sea-adventure-survival-game-free.html"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "New London Arcade Games Free",
-      "description": "New collection of free arcade games featuring London themes and landmarks.",
-      "image": "https://www.ukhtml5games.com/images/games/new-london-arcade-games-free.jpg",
-      "imageAlt": "new london-arcade-games-free html5 game, london-arcade-games-free online play, free new game",
-      "imageTitle": "new london-arcade-games-free html5 game, london-arcade-games-free online play, free new game",
-      "url": "https://www.ukhtml5games.com/games/new-london-arcade-games-free.html",
-      "genre": "new, arcade",
-      "gamePlatform": "HTML5",
-      "applicationCategory": "Game",
-      "operatingSystem": "Web Browser",
-      "author": {
-        "@type": "Organization",
-        "name": "UK Games Studio"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "PlayHTML5"
-      },
-      "datePublished": "2024-01-15",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.4,
-        "ratingCount": "120K+"
-      },
-      "ogImage": "https://www.ukhtml5games.com/images/games/new-london-arcade-games-free.jpg",
-      "ogTitle": "New London Arcade Games Free - PlayHTML5",
-      "ogDescription": "New collection of free arcade games featuring London themes and landmarks.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/new-london-arcade-games-free.html"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "Popular 777 Game",
-      "description": "Popular casino-style game with exciting gameplay and lucky number mechanics.",
-      "image": "https://www.ukhtml5games.com/images/games/popular-popular-777.jpg",
-      "imageAlt": "popular popular-777 html5 game, popular-777 online play, free popular game",
-      "imageTitle": "popular popular-777 html5 game, popular-777 online play, free popular game",
-      "url": "https://www.ukhtml5games.com/games/popular-777.html",
-      "genre": "popular, casino",
-      "gamePlatform": "HTML5",
-      "applicationCategory": "Game",
-      "operatingSystem": "Web Browser",
-      "author": {
-        "@type": "Organization",
-        "name": "Casino Games"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "PlayHTML5"
-      },
-      "datePublished": "2023-12-01",
+      "datePublished": "2025-07-31",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.8,
-        "ratingCount": "1.5M+"
+        "ratingCount": "680K+"
       },
-      "ogImage": "https://www.ukhtml5games.com/images/games/popular-popular-777.jpg",
-      "ogTitle": "Popular 777 Game - PlayHTML5",
-      "ogDescription": "Popular casino-style game with exciting gameplay and lucky number mechanics.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/popular-777.html"
+      "ogImage": "https://www.ukhtml5games.com/images/games/sports-london-flappy-bird-game-free.jpg",
+      "ogTitle": "Sports London-Flappy-Bird-Game-Free Game - PlayHTML5",
+      "ogDescription": "London-themed flappy bird game featuring iconic landmarks and British sports elements.",
+      "canonicalUrl": "https://www.ukhtml5games.com/games/sports-london-flappy-bird-game-free.html"
     },
     {
       "@context": "https://schema.org",
       "@type": "VideoGame",
-      "name": "Popular Ceshi1 Game",
-      "description": "Popular testing game with various challenges and skill-based gameplay.",
-      "image": "https://www.ukhtml5games.com/images/games/popular-ceshi1.jpg",
-      "imageAlt": "popular ceshi1 html5 game, ceshi1 online play, free popular game",
-      "imageTitle": "popular ceshi1 html5 game, ceshi1 online play, free popular game",
-      "url": "https://www.ukhtml5games.com/games/popular_ceshi1.html",
-      "genre": "popular, puzzle",
-      "gamePlatform": "HTML5",
-      "applicationCategory": "Game",
-      "operatingSystem": "Web Browser",
-      "author": {
-        "@type": "Organization",
-        "name": "Test Games"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "PlayHTML5"
-      },
-      "datePublished": "2023-11-20",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.6,
-        "ratingCount": "980K+"
-      },
-      "ogImage": "https://www.ukhtml5games.com/images/games/popular-ceshi1.jpg",
-      "ogTitle": "Popular Ceshi1 Game - PlayHTML5",
-      "ogDescription": "Popular testing game with various challenges and skill-based gameplay.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/popular_ceshi1.html"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "Puzzle Fixed Game",
-      "description": "Fixed version of the popular puzzle game with improved mechanics and bug fixes.",
-      "image": "https://www.ukhtml5games.com/images/games/puzzle-fixed.jpg",
-      "imageAlt": "puzzle fixed html5 game, fixed online play, free puzzle game",
-      "imageTitle": "puzzle fixed html5 game, fixed online play, free puzzle game",
-      "url": "https://www.ukhtml5games.com/games/puzzle-fixed.html",
-      "genre": "puzzle, popular",
-      "gamePlatform": "HTML5",
-      "applicationCategory": "Game",
-      "operatingSystem": "Web Browser",
-      "author": {
-        "@type": "Organization",
-        "name": "Puzzle Studio"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "PlayHTML5"
-      },
-      "datePublished": "2023-10-15",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.7,
-        "ratingCount": "1.1M+"
-      },
-      "ogImage": "https://www.ukhtml5games.com/images/games/puzzle-fixed.jpg",
-      "ogTitle": "Puzzle Fixed Game - PlayHTML5",
-      "ogDescription": "Fixed version of the popular puzzle game with improved mechanics and bug fixes.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/puzzle-fixed.html"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "Puzzle Tupian Game",
-      "description": "Image-based puzzle game with beautiful graphics and challenging picture arrangements.",
-      "image": "https://www.ukhtml5games.com/images/games/puzzle-tupian.jpg",
-      "imageAlt": "puzzle tupian html5 game, tupian online play, free puzzle game",
-      "imageTitle": "puzzle tupian html5 game, tupian online play, free puzzle game",
-      "url": "https://www.ukhtml5games.com/games/puzzle-tupian.html",
-      "genre": "puzzle, casual",
-      "gamePlatform": "HTML5",
-      "applicationCategory": "Game",
-      "operatingSystem": "Web Browser",
-      "author": {
-        "@type": "Organization",
-        "name": "Puzzle Studio"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "PlayHTML5"
-      },
-      "datePublished": "2023-09-25",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.5,
-        "ratingCount": "720K+"
-      },
-      "ogImage": "https://www.ukhtml5games.com/images/games/puzzle-tupian.jpg",
-      "ogTitle": "Puzzle Tupian Game - PlayHTML5",
-      "ogDescription": "Image-based puzzle game with beautiful graphics and challenging picture arrangements.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/puzzle-tupian.html"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "Puzzle UK Counties Crossword Challenge",
-      "description": "Educational crossword puzzle featuring UK counties and geographical knowledge.",
-      "image": "https://www.ukhtml5games.com/images/games/puzzle-uk-counties-crossword-challenge.jpg",
-      "imageAlt": "puzzle uk-counties-crossword-challenge html5 game, uk-counties-crossword-challenge online play, free puzzle game",
-      "imageTitle": "puzzle uk-counties-crossword-challenge html5 game, uk-counties-crossword-challenge online play, free puzzle game",
-      "url": "https://www.ukhtml5games.com/games/puzzle-uk-counties-crossword-challenge.html",
-      "genre": "puzzle, educational",
-      "gamePlatform": "HTML5",
-      "applicationCategory": "Game",
-      "operatingSystem": "Web Browser",
-      "author": {
-        "@type": "Organization",
-        "name": "Educational Games"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "PlayHTML5"
-      },
-      "datePublished": "2023-08-30",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.6,
-        "ratingCount": "450K+"
-      },
-      "ogImage": "https://www.ukhtml5games.com/images/games/puzzle-uk-counties-crossword-challenge.jpg",
-      "ogTitle": "Puzzle UK Counties Crossword Challenge - PlayHTML5",
-      "ogDescription": "Educational crossword puzzle featuring UK counties and geographical knowledge.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/puzzle-uk-counties-crossword-challenge.html"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "Puzzle UK Shoot Game",
-      "description": "Shooting puzzle game with UK-themed targets and strategic gameplay.",
-      "image": "https://www.ukhtml5games.com/images/games/puzzle-ukshoot.jpg",
-      "imageAlt": "puzzle ukshoot html5 game, ukshoot online play, free puzzle game",
-      "imageTitle": "puzzle ukshoot html5 game, ukshoot online play, free puzzle game",
-      "url": "https://www.ukhtml5games.com/games/puzzle-ukshoot.html",
-      "genre": "puzzle, action",
-      "gamePlatform": "HTML5",
-      "applicationCategory": "Game",
-      "operatingSystem": "Web Browser",
-      "author": {
-        "@type": "Organization",
-        "name": "UK Games Studio"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "PlayHTML5"
-      },
-      "datePublished": "2023-07-15",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.4,
-        "ratingCount": "380K+"
-      },
-      "ogImage": "https://www.ukhtml5games.com/images/games/puzzle-ukshoot.jpg",
-      "ogTitle": "Puzzle UK Shoot Game - PlayHTML5",
-      "ogDescription": "Shooting puzzle game with UK-themed targets and strategic gameplay.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/puzzle-ukshoot.html"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
-      "name": "Puzzle X3M Game",
+      "name": "Puzzle X3m Game",
       "description": "Advanced puzzle game with X3M mechanics and challenging brain teasers.",
       "image": "https://www.ukhtml5games.com/images/games/puzzle-x3m.jpg",
       "imageAlt": "puzzle x3m html5 game, x3m online play, free puzzle game",
       "imageTitle": "puzzle x3m html5 game, x3m online play, free puzzle game",
       "url": "https://www.ukhtml5games.com/games/puzzle-x3m.html",
-      "genre": "puzzle, strategy",
+      "genre": "puzzle",
       "gamePlatform": "HTML5",
       "applicationCategory": "Game",
       "operatingSystem": "Web Browser",
       "author": {
         "@type": "Organization",
-        "name": "Puzzle Studio"
+        "name": "AutoSync"
       },
       "publisher": {
         "@type": "Organization",
         "name": "PlayHTML5"
       },
-      "datePublished": "2023-06-20",
+      "datePublished": "2025-07-31",
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": 4.7,
+        "ratingValue": 4.8,
         "ratingCount": "520K+"
       },
       "ogImage": "https://www.ukhtml5games.com/images/games/puzzle-x3m.jpg",
-      "ogTitle": "Puzzle X3M Game - PlayHTML5",
+      "ogTitle": "Puzzle X3m Game - PlayHTML5",
       "ogDescription": "Advanced puzzle game with X3M mechanics and challenging brain teasers.",
       "canonicalUrl": "https://www.ukhtml5games.com/games/puzzle-x3m.html"
     },
     {
       "@context": "https://schema.org",
       "@type": "VideoGame",
-      "name": "Sports London Flappy Bird Game Free",
-      "description": "London-themed flappy bird game featuring iconic landmarks and British sports elements.",
-      "image": "https://www.ukhtml5games.com/images/games/sports-london-flappy-bird-game-free.jpg",
-      "imageAlt": "sports london-flappy-bird-game-free html5 game, london-flappy-bird-game-free online play, free sports game",
-      "imageTitle": "sports london-flappy-bird-game-free html5 game, london-flappy-bird-game-free online play, free sports game",
-      "url": "https://www.ukhtml5games.com/games/sports-london-flappy-bird-game-free.html",
-      "genre": "sports, casual",
+      "name": "Puzzle Uk-Counties-Crossword-Challenge Game",
+      "description": "Educational crossword puzzle featuring UK counties and geographical knowledge.",
+      "image": "https://www.ukhtml5games.com/images/games/puzzle-uk-counties-crossword-challenge.jpg",
+      "imageAlt": "puzzle uk-counties-crossword-challenge html5 game, uk-counties-crossword-challenge online play, free puzzle game",
+      "imageTitle": "puzzle uk-counties-crossword-challenge html5 game, uk-counties-crossword-challenge online play, free puzzle game",
+      "url": "https://www.ukhtml5games.com/games/puzzle-uk-counties-crossword-challenge.html",
+      "genre": "puzzle",
       "gamePlatform": "HTML5",
       "applicationCategory": "Game",
       "operatingSystem": "Web Browser",
       "author": {
         "@type": "Organization",
-        "name": "Sports Games"
+        "name": "AutoSync"
       },
       "publisher": {
         "@type": "Organization",
         "name": "PlayHTML5"
       },
-      "datePublished": "2023-05-10",
+      "datePublished": "2025-07-31",
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": 4.5,
-        "ratingCount": "680K+"
+        "ratingValue": 4.8,
+        "ratingCount": "450K+"
       },
-      "ogImage": "https://www.ukhtml5games.com/images/games/sports-london-flappy-bird-game-free.jpg",
-      "ogTitle": "Sports London Flappy Bird Game Free - PlayHTML5",
-      "ogDescription": "London-themed flappy bird game featuring iconic landmarks and British sports elements.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/sports-london-flappy-bird-game-free.html"
+      "ogImage": "https://www.ukhtml5games.com/images/games/puzzle-uk-counties-crossword-challenge.jpg",
+      "ogTitle": "Puzzle Uk-Counties-Crossword-Challenge Game - PlayHTML5",
+      "ogDescription": "Educational crossword puzzle featuring UK counties and geographical knowledge.",
+      "canonicalUrl": "https://www.ukhtml5games.com/games/puzzle-uk-counties-crossword-challenge.html"
     },
     {
       "@context": "https://schema.org",
@@ -789,22 +149,22 @@
       "imageAlt": "sports t2 html5 game, t2 online play, free sports game",
       "imageTitle": "sports t2 html5 game, t2 online play, free sports game",
       "url": "https://www.ukhtml5games.com/games/sports_t2.html",
-      "genre": "sports, action",
+      "genre": "action",
       "gamePlatform": "HTML5",
       "applicationCategory": "Game",
       "operatingSystem": "Web Browser",
       "author": {
         "@type": "Organization",
-        "name": "Sports Games"
+        "name": "AutoSync"
       },
       "publisher": {
         "@type": "Organization",
         "name": "PlayHTML5"
       },
-      "datePublished": "2023-04-25",
+      "datePublished": "2025-07-31",
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": 4.3,
+        "ratingValue": 4.8,
         "ratingCount": "420K+"
       },
       "ogImage": "https://www.ukhtml5games.com/images/games/sports-t2.jpg",
@@ -815,102 +175,294 @@
     {
       "@context": "https://schema.org",
       "@type": "VideoGame",
-      "name": "Strategy Blue Prince Puzzle Adventure",
-      "description": "Strategic puzzle adventure featuring the Blue Prince with complex challenges and royal themes.",
-      "image": "https://www.ukhtml5games.com/images/games/strategy-blue-prince-puzzle-adventure-free.jpg",
-      "imageAlt": "strategy blue-prince-puzzle-adventure-free html5 game, blue-prince-puzzle-adventure-free online play, free strategy game",
-      "imageTitle": "strategy blue-prince-puzzle-adventure-free html5 game, blue-prince-puzzle-adventure-free online play, free strategy game",
-      "url": "https://www.ukhtml5games.com/games/strategy-blue-prince-puzzle-adventure-free.html",
-      "genre": "strategy, puzzle, adventure",
+      "name": "Mouse-Mouse-Climb-The-House Game",
+      "description": "Cute mouse climbing adventure game with challenging obstacles and fun mechanics.",
+      "image": "https://www.ukhtml5games.com/images/games/mouse-mouse-climb-the-house-game-unique.jpg",
+      "imageAlt": "mouse mouse-climb-the-house-game-unique html5 game, mouse-climb-the-house-game-unique online play, free mouse game",
+      "imageTitle": "mouse mouse-climb-the-house-game-unique html5 game, mouse-climb-the-house-game-unique online play, free mouse game",
+      "url": "https://www.ukhtml5games.com/games/mouse-mouse-climb-the-house.html",
+      "genre": "adventure",
       "gamePlatform": "HTML5",
       "applicationCategory": "Game",
       "operatingSystem": "Web Browser",
       "author": {
         "@type": "Organization",
-        "name": "Strategy Games"
+        "name": "AutoSync"
       },
       "publisher": {
         "@type": "Organization",
         "name": "PlayHTML5"
       },
-      "datePublished": "2023-03-15",
+      "datePublished": "2025-07-31",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.8,
-        "ratingCount": "580K+"
+        "ratingCount": "290K+"
       },
-      "ogImage": "https://www.ukhtml5games.com/images/games/strategy-blue-prince-puzzle-adventure-free.jpg",
-      "ogTitle": "Strategy Blue Prince Puzzle Adventure - PlayHTML5",
-      "ogDescription": "Strategic puzzle adventure featuring the Blue Prince with complex challenges and royal themes.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/strategy-blue-prince-puzzle-adventure-free.html"
+      "ogImage": "https://www.ukhtml5games.com/images/games/mouse-mouse-climb-the-house-game-unique.jpg",
+      "ogTitle": "Mouse-Mouse-Climb-The-House Game - PlayHTML5",
+      "ogDescription": "Cute mouse climbing adventure game with challenging obstacles and fun mechanics.",
+      "canonicalUrl": "https://www.ukhtml5games.com/games/mouse-mouse-climb-the-house.html"
     },
     {
       "@context": "https://schema.org",
       "@type": "VideoGame",
-      "name": "Strategy IN5 Game",
-      "description": "Advanced strategy game with IN5 mechanics and tactical decision-making challenges.",
-      "image": "https://www.ukhtml5games.com/images/games/strategy-in5.jpg",
-      "imageAlt": "strategy in5 html5 game, in5 online play, free strategy game",
-      "imageTitle": "strategy in5 html5 game, in5 online play, free strategy game",
-      "url": "https://www.ukhtml5games.com/games/strategy_in5.html",
-      "genre": "strategy, tactical",
+      "name": "Adventure British-Royal-Family-Quiz Game",
+      "description": "Play Adventure British-Royal-Family-Quiz online. This adventure game features: adventure, explore, quest, duck, relaxing, nature. Free HTML5 game, mobile-friendly, no download.",
+      "image": "https://www.ukhtml5games.com/images/games/adventure-british-royal-family-quiz.webp",
+      "imageAlt": "adventure british-royal-family-quiz html5 game, british-royal-family-quiz online play, free adventure game",
+      "imageTitle": "adventure british-royal-family-quiz html5 game, british-royal-family-quiz online play, free adventure game",
+      "url": "https://www.ukhtml5games.com/games/adventure_british-royal-family-quiz.html",
+      "genre": "adventure",
       "gamePlatform": "HTML5",
       "applicationCategory": "Game",
       "operatingSystem": "Web Browser",
       "author": {
         "@type": "Organization",
-        "name": "Strategy Games"
+        "name": "AutoSync"
       },
       "publisher": {
         "@type": "Organization",
         "name": "PlayHTML5"
       },
-      "datePublished": "2023-02-20",
+      "datePublished": "2025-07-31",
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": 4.6,
-        "ratingCount": "350K+"
+        "ratingValue": 4.8,
+        "ratingCount": "0+"
       },
-      "ogImage": "https://www.ukhtml5games.com/images/games/strategy-in5.jpg",
-      "ogTitle": "Strategy IN5 Game - PlayHTML5",
-      "ogDescription": "Advanced strategy game with IN5 mechanics and tactical decision-making challenges.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/strategy_in5.html"
+      "ogImage": "https://www.ukhtml5games.com/images/games/adventure-british-royal-family-quiz.webp",
+      "ogTitle": "Adventure British-Royal-Family-Quiz Game - PlayHTML5",
+      "ogDescription": "Play Adventure British-Royal-Family-Quiz online. This adventure game features: adventure, explore, quest, duck, relaxing, nature. Free HTML5 game, mobile-friendly, no download.",
+      "canonicalUrl": "https://www.ukhtml5games.com/games/adventure_british-royal-family-quiz.html"
     },
     {
       "@context": "https://schema.org",
       "@type": "VideoGame",
-      "name": "Temple Run Game",
-      "description": "Classic temple running game with endless obstacles and exciting chase sequences.",
-      "image": "https://www.ukhtml5games.com/images/games/puzzle-x3m.jpg",
-      "imageAlt": "puzzle x3m html5 game, x3m online play, free puzzle game",
-      "imageTitle": "puzzle x3m html5 game, x3m online play, free puzzle game",
-      "url": "https://www.ukhtml5games.com/games/temple-run.html",
-      "genre": "action, adventure",
+      "name": "Arcade Red-Herrings-Word-Game Game",
+      "description": "Play Arcade-Red-Herrings-Word-Game online. This arcade game features: arcade, retro, fun. Free HTML5 game, mobile-friendly, no download.",
+      "image": "https://www.ukhtml5games.com/images/games/arcade-red-herrings-word-game.webp",
+      "imageAlt": "arcade red-herrings-word-game html5 game, red-herrings-word-game online play, free arcade game",
+      "imageTitle": "arcade red-herrings-word-game html5 game, red-herrings-word-game online play, free arcade game",
+      "url": "https://www.ukhtml5games.com/games/arcade-red-herrings-word-game.html",
+      "genre": "arcade",
       "gamePlatform": "HTML5",
       "applicationCategory": "Game",
       "operatingSystem": "Web Browser",
       "author": {
         "@type": "Organization",
-        "name": "Adventure Studio"
+        "name": "AutoSync"
       },
       "publisher": {
         "@type": "Organization",
         "name": "PlayHTML5"
       },
-      "datePublished": "2023-01-30",
+      "datePublished": "2025-07-31",
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": 4.7,
-        "ratingCount": "890K+"
+        "ratingValue": 4.8,
+        "ratingCount": "0+"
       },
-      "ogImage": "https://www.ukhtml5games.com/images/games/puzzle-x3m.jpg",
-      "ogTitle": "Temple Run Game - PlayHTML5",
-      "ogDescription": "Classic temple running game with endless obstacles and exciting chase sequences.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/temple-run.html"
+      "ogImage": "https://www.ukhtml5games.com/images/games/arcade-red-herrings-word-game.webp",
+      "ogTitle": "Arcade Red-Herrings-Word-Game Game - PlayHTML5",
+      "ogDescription": "Play Arcade-Red-Herrings-Word-Game online. This arcade game features: arcade, retro, fun. Free HTML5 game, mobile-friendly, no download.",
+      "canonicalUrl": "https://www.ukhtml5games.com/games/arcade-red-herrings-word-game.html"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "New Deep-Sea-Adventure-Survival-Game-Free Game",
+      "description": "Play New-Deep-Sea-Adventure-Survival-Game-Free online. This new game features: new, trending, hot. Free HTML5 game, mobile-friendly, no download.",
+      "image": "https://www.ukhtml5games.com/images/games/new-deep-sea-adventure-survival-game-free.webp",
+      "imageAlt": "new deep-sea-adventure-survival-game-free html5 game, deep-sea-adventure-survival-game-free online play, free new game",
+      "imageTitle": "new deep-sea-adventure-survival-game-free html5 game, deep-sea-adventure-survival-game-free online play, free new game",
+      "url": "https://www.ukhtml5games.com/games/new-deep-sea-adventure-survival-game-free.html",
+      "genre": "new",
+      "gamePlatform": "HTML5",
+      "applicationCategory": "Game",
+      "operatingSystem": "Web Browser",
+      "author": {
+        "@type": "Organization",
+        "name": "AutoSync"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PlayHTML5"
+      },
+      "datePublished": "2025-07-31",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.8,
+        "ratingCount": "0+"
+      },
+      "ogImage": "https://www.ukhtml5games.com/images/games/new-deep-sea-adventure-survival-game-free.webp",
+      "ogTitle": "New Deep-Sea-Adventure-Survival-Game-Free Game - PlayHTML5",
+      "ogDescription": "Play New-Deep-Sea-Adventure-Survival-Game-Free online. This new game features: new, trending, hot. Free HTML5 game, mobile-friendly, no download.",
+      "canonicalUrl": "https://www.ukhtml5games.com/games/new-deep-sea-adventure-survival-game-free.html"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Popular 777 Game",
+      "description": "Play Popular-777 online. This popular game features: popular, trending, best. Free HTML5 game, mobile-friendly, no download.",
+      "image": "https://www.ukhtml5games.com/images/games/popular-popular-777.webp",
+      "imageAlt": "popular popular-777 html5 game, popular-777 online play, free popular game",
+      "imageTitle": "popular popular-777 html5 game, popular-777 online play, free popular game",
+      "url": "https://www.ukhtml5games.com/games/popular-777.html",
+      "genre": "popular",
+      "gamePlatform": "HTML5",
+      "applicationCategory": "Game",
+      "operatingSystem": "Web Browser",
+      "author": {
+        "@type": "Organization",
+        "name": "AutoSync"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PlayHTML5"
+      },
+      "datePublished": "2025-07-31",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.8,
+        "ratingCount": "0+"
+      },
+      "ogImage": "https://www.ukhtml5games.com/images/games/popular-popular-777.webp",
+      "ogTitle": "Popular 777 Game - PlayHTML5",
+      "ogDescription": "Play Popular-777 online. This popular game features: popular, trending, best. Free HTML5 game, mobile-friendly, no download.",
+      "canonicalUrl": "https://www.ukhtml5games.com/games/popular-777.html"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Card British-Museum-Puzzle-Game-Free Game",
+      "description": "Play Card-British-Museum-Puzzle-Game-Free online. This card game features: card, solitaire, classic, puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
+      "image": "https://www.ukhtml5games.com/images/games/card-british-museum-puzzle-game-free.webp",
+      "imageAlt": "card british-museum-puzzle-game-free html5 game, british-museum-puzzle-game-free online play, free card game",
+      "imageTitle": "card british-museum-puzzle-game-free html5 game, british-museum-puzzle-game-free online play, free card game",
+      "url": "https://www.ukhtml5games.com/games/card-british-museum-puzzle-game-free.html",
+      "genre": "card",
+      "gamePlatform": "HTML5",
+      "applicationCategory": "Game",
+      "operatingSystem": "Web Browser",
+      "author": {
+        "@type": "Organization",
+        "name": "AutoSync"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PlayHTML5"
+      },
+      "datePublished": "2025-07-31",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.8,
+        "ratingCount": "0+"
+      },
+      "ogImage": "https://www.ukhtml5games.com/images/games/card-british-museum-puzzle-game-free.webp",
+      "ogTitle": "Card British-Museum-Puzzle-Game-Free Game - PlayHTML5",
+      "ogDescription": "Play Card-British-Museum-Puzzle-Game-Free online. This card game features: card, solitaire, classic, puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
+      "canonicalUrl": "https://www.ukhtml5games.com/games/card-british-museum-puzzle-game-free.html"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Card Free-Uk-Puzzle-Games-Online Game",
+      "description": "Play Card-Free-Uk-Puzzle-Games-Online online. This card game features: card, solitaire, classic, puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
+      "image": "https://www.ukhtml5games.com/images/games/card-free-uk-puzzle-games-online.webp",
+      "imageAlt": "card free-uk-puzzle-games-online html5 game, free-uk-puzzle-games-online online play, free card game",
+      "imageTitle": "card free-uk-puzzle-games-online html5 game, free-uk-puzzle-games-online online play, free card game",
+      "url": "https://www.ukhtml5games.com/games/card-free-uk-puzzle-games-online.html",
+      "genre": "card",
+      "gamePlatform": "HTML5",
+      "applicationCategory": "Game",
+      "operatingSystem": "Web Browser",
+      "author": {
+        "@type": "Organization",
+        "name": "AutoSync"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PlayHTML5"
+      },
+      "datePublished": "2025-07-31",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.8,
+        "ratingCount": "0+"
+      },
+      "ogImage": "https://www.ukhtml5games.com/images/games/card-free-uk-puzzle-games-online.webp",
+      "ogTitle": "Card Free-Uk-Puzzle-Games-Online Game - PlayHTML5",
+      "ogDescription": "Play Card-Free-Uk-Puzzle-Games-Online online. This card game features: card, solitaire, classic, puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
+      "canonicalUrl": "https://www.ukhtml5games.com/games/card-free-uk-puzzle-games-online.html"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "New Ce1991 Game",
+      "description": "Play New-Ce1991 online. This new game features: new, trending, hot. Free HTML5 game, mobile-friendly, no download.",
+      "image": "https://www.ukhtml5games.com/images/games/new-ce1991.webp",
+      "imageAlt": "new ce1991 html5 game, ce1991 online play, free new game",
+      "imageTitle": "new ce1991 html5 game, ce1991 online play, free new game",
+      "url": "https://www.ukhtml5games.com/games/new-ce1991.html",
+      "genre": "new",
+      "gamePlatform": "HTML5",
+      "applicationCategory": "Game",
+      "operatingSystem": "Web Browser",
+      "author": {
+        "@type": "Organization",
+        "name": "AutoSync"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PlayHTML5"
+      },
+      "datePublished": "2025-07-31",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.8,
+        "ratingCount": "0+"
+      },
+      "ogImage": "https://www.ukhtml5games.com/images/games/new-ce1991.webp",
+      "ogTitle": "New Ce1991 Game - PlayHTML5",
+      "ogDescription": "Play New-Ce1991 online. This new game features: new, trending, hot. Free HTML5 game, mobile-friendly, no download.",
+      "canonicalUrl": "https://www.ukhtml5games.com/games/new-ce1991.html"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Puzzle Fixed Game",
+      "description": "Play Puzzle-Fixed online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
+      "image": "https://www.ukhtml5games.com/images/games/puzzle-fixed.webp",
+      "imageAlt": "puzzle fixed html5 game, fixed online play, free puzzle game",
+      "imageTitle": "puzzle fixed html5 game, fixed online play, free puzzle game",
+      "url": "https://www.ukhtml5games.com/games/puzzle-fixed.html",
+      "genre": "puzzle",
+      "gamePlatform": "HTML5",
+      "applicationCategory": "Game",
+      "operatingSystem": "Web Browser",
+      "author": {
+        "@type": "Organization",
+        "name": "AutoSync"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PlayHTML5"
+      },
+      "datePublished": "2025-07-31",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.8,
+        "ratingCount": "0+"
+      },
+      "ogImage": "https://www.ukhtml5games.com/images/games/puzzle-fixed.webp",
+      "ogTitle": "Puzzle Fixed Game - PlayHTML5",
+      "ogDescription": "Play Puzzle-Fixed online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
+      "canonicalUrl": "https://www.ukhtml5games.com/games/puzzle-fixed.html"
     }
   ],
-  "totalGames": 28,
-  "generatedAt": "2025-07-28T08:39:41.605Z",
+  "totalGames": 14,
+  "generatedAt": "2025-07-31T06:39:51.584Z",
   "metadata": {
     "altTitleConsistency": "All images have unique alt/title attributes",
     "ogImageConsistency": "All games have unique og:image URLs",
