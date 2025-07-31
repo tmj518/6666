@@ -297,7 +297,7 @@
     </header>
 
     <!-- 主横幅 (添加ID: home) -->
-    <section id="home" class="bg-gradient-to-r from-primary/90 to-primary py-12 md:py-20 cursor-pointer hover:bg-gradient-to-r hover:from-primary hover:to-primary transition-all duration-300" onclick="handleHeroClick(event)">
+    <section id="home" class="bg-gradient-to-r from-primary/90 to-primary py-12 md:py-20">
         <div class="container mx-auto px-4">
             <div class="max-w-3xl mx-auto text-center">
                 <h2 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-white mb-4">Play Free HTML5 Games</h2>
@@ -517,21 +517,7 @@
         </div>
     </div>
 
-    <!-- 主横幅点击处理函数 -->
-    <script>
-        function handleHeroClick(event) {
-            // 检查点击的元素是否是搜索框或其子元素
-            const searchContainer = event.target.closest('.relative');
-            if (searchContainer && searchContainer.querySelector('input[type="text"]')) {
-                return; // 如果是搜索框区域，不执行跳转
-            }
-            
-            // 其他区域点击跳转到谷歌
-            window.open('https://www.google.com', '_blank', 'noopener,noreferrer');
-        }
 
-
-    </script>
 
     <!-- 移除原有模拟数据和JS渲染逻辑，改为引入真实功能JS -->
     <script src="/js/i18n.js"></script>
