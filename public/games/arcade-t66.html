@@ -3,19 +3,35 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
+    <!-- 安全头 -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+    <!-- 关键资源预加载 -->
+    <link rel="preload" href="/js/main.js" as="script">
+    <link rel="preload" href="/js/games.js" as="script">
+    <link rel="preload" href="/css/styles.css" as="style">
+    
+    <!-- 字体预加载 -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
+    
+    <!-- 关键图片预加载 -->
+    <link rel="preload" href="/images/games/logo.webp" as="image">
     <meta property="og:url" content="https://www.ukhtml5games.com/games/arcade-t66.html">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://www.ukhtml5games.com/games/arcade-t66.html">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Play Arcade-T66 Game, a brand new free HTML5 arcade game! Enjoy classic arcade fun, mobile-friendly, no download needed.">
-  <meta name="keywords" content="arcade, arcade game, HTML5, free, online, mobile, classic, T66">
+  <meta name="description" content="Classic arcade-style game with retro graphics and addictive gameplay mechanics. Play this free HTML5 game online without download. No registration required.">
+  <meta name="keywords" content="Arcade T66 Game, free HTML5 game, online game, arcade, retro, PlayHTML5">
   <meta property="og:title" content="Arcade T66 Game - PlayHTML5">
-  <meta property="og:description" content="Play Arcade T66 Game online. This arcade game features: arcade, trending, fun. Free HTML5 game, mobile-friendly, no download.">
-  <meta property="og:image" content="https://www.ukhtml5games.com/images/games/arcade-t66-game.webp">
+  <meta property="og:description" content="Classic arcade-style game with retro graphics and addictive gameplay mechanics.">
+  <meta property="og:image" content="https://www.ukhtml5games.com/images/games/arcade-t66-game.jpg">
   <meta property="og:locale" content="en_GB">
-  <title>Arcade-T66 Game | Free HTML5 Arcade Game Online</title>
+  <title>Arcade T66 Game - Free HTML5 Game | PlayHTML5</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -37,64 +53,73 @@
       .game-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); }
     }
   </style>
-  <script type="application/ld+json">
+  
+  
+    <script type="application/ld+json">
     {
   "@context": "https://schema.org",
   "@type": "VideoGame",
   "name": "Arcade T66 Game",
-  "description": "Play Arcade T66 Game online. This arcade game features: arcade, trending, fun. Free HTML5 game, mobile-friendly, no download.",
-  "image": "https://www.ukhtml5games.com/images/games/arcade-t66-game.webp",
+  "description": "Classic arcade-style game with retro graphics and addictive gameplay mechanics.",
+  "image": "https://www.ukhtml5games.com/images/games/arcade-t66-game.jpg",
   "url": "https://www.ukhtml5games.com/games/arcade-t66.html",
-  "genre": "arcade",
+  "genre": "arcade, retro",
   "gamePlatform": "HTML5",
   "applicationCategory": "Game",
   "operatingSystem": "Web Browser",
   "author": {
     "@type": "Organization",
-    "name": "AutoSync"
+    "name": "Retro Games"
   },
   "publisher": {
     "@type": "Organization",
     "name": "PlayHTML5"
   },
-  "datePublished": "2025-07-15",
+  "datePublished": "2023-08-15",
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": 4.8,
-    "ratingCount": "0+"
+    "ratingValue": 4.3,
+    "ratingCount": "480K+"
   }
 }
     </script>
-  <script type="application/ld+json">
+    <script type="application/ld+json">
     {
   "@context": "https://schema.org",
-  "@type": "VideoGame",
-  "name": "Arcade T66 Game",
-  "description": "Play Arcade T66 Game online. This arcade game features: arcade, trending, fun. Free HTML5 game, mobile-friendly, no download.",
-  "image": "https://www.ukhtml5games.com/images/games/arcade-t66-game.webp",
-  "url": "https://www.ukhtml5games.com/games/arcade-t66.html",
-  "genre": "arcade",
-  "gamePlatform": "HTML5",
-  "applicationCategory": "Game",
-  "operatingSystem": "Web Browser",
-  "author": {
-    "@type": "Organization",
-    "name": "AutoSync"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "PlayHTML5"
-  },
-  "datePublished": "2025-07-15",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": 4.8,
-    "ratingCount": "0+"
-  }
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ukhtml5games.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Arcade T66 Game",
+      "item": "https://www.ukhtml5games.com/games/arcade-t66.html"
+    }
+  ]
 }
     </script>
-</head>
+        <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6886160126549046"
+         crossorigin="anonymous"></script>
+    </head>
 <body class="bg-gray-100 font-sans">
+
+    <nav class="breadcrumb bg-white shadow-sm mb-6">
+      <div class="container mx-auto px-4 py-3">
+        <ol class="flex items-center space-x-2 text-sm">
+          <li><a href="/" class="text-primary hover:underline">Home</a></li>
+          <li><i class="fa fa-chevron-right text-gray-400"></i></li>
+          <li><a href="/games/" class="text-primary hover:underline">Games</a></li>
+          <li><i class="fa fa-chevron-right text-gray-400"></i></li>
+          <li class="text-gray-600">arcade t66</li>
+        </ol>
+      </div>
+    </nav>
 <nav class="w-full bg-white shadow mb-4 flex items-center px-4 py-2">
   <div class="flex items-center gap-4">
     <a href="https://www.ukhtml5games.com/" class="flex items-center" title="PlayHTML5 Home">
@@ -102,7 +127,16 @@
         <source srcset="/images/games/logo.webp" type="image/webp">
         <picture>
       <source srcset="/images/games/logo.webp" type="image/webp">
-      <img src="/images/games/logo.png" alt="Arcade T66 Game - Free HTML5 Game" title="Arcade T66 Game" loading="lazy">
+      <picture>
+      <source srcset="/images/games/logo.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/logo.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/logo.webp" type="image/webp">
+      <img src="/images/games/logo.png" alt="Arcade T66 Game - Free HTML5 Game" title="Arcade T66 Game" loading="lazy" decoding="async">
+    </picture>
+    </picture>
+    </picture>
     </picture>
       </picture>
     </a>
@@ -581,7 +615,16 @@
         <source srcset="/images/games/arcade-red-herrings-word-game.webp" type="image/webp">
         <picture>
       <source srcset="/images/games/arcade-red-herrings-word-game.webp" type="image/webp">
-      <img src="/images/games/arcade-red-herrings-word-game.webp" alt="arcade red-herrings-word-game html5 game, red-herrings-word-game online play, free arcade game" title="arcade red-herrings-word-game html5 game, red-herrings-word-game online play, free arcade game" loading="lazy">
+      <picture>
+      <source srcset="/images/games/arcade-red-herrings-word-game.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/arcade-red-herrings-word-game.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/arcade-red-herrings-word-game.webp" type="image/webp">
+      <img src="/images/games/arcade-red-herrings-word-game.webp" alt="arcade red-herrings-word-game html5 game, red-herrings-word-game online play, free arcade game" title="arcade red-herrings-word-game html5 game, red-herrings-word-game online play, free arcade game" loading="lazy" decoding="async">
+    </picture>
+    </picture>
+    </picture>
     </picture>
       </picture>
       <h4 class="font-bold text-gray-800 text-sm mb-1 text-center">Arcade Red-Herrings-Word-Game Game</h4>

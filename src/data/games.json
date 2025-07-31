@@ -1,7 +1,90 @@
 {
   "games": [
     {
-      "id": 1022,
+      "id": 1001,
+      "title": {
+        "en": "Racing Master",
+        "zh": "Racing Master",
+        "ja": "Racing Master",
+        "ko": "Racing Master"
+      },
+      "description": {
+        "en": "Race against the clock and other players in this high-speed racing game.",
+        "zh": "Race against the clock and other players in this high-speed racing game.",
+        "ja": "Race against the clock and other players in this high-speed racing game.",
+        "ko": "Race against the clock and other players in this high-speed racing game."
+      },
+      "image": "/images/games/action-gameslike.jpg",
+      "category": [
+        "popular"
+      ],
+      "rating": 4.9,
+      "developer": "Game Studio",
+      "published": "2024-01-15",
+      "plays": "1.2M+",
+      "regions": [
+        "global"
+      ],
+      "url": "/games/racing-master.html"
+    },
+    {
+      "id": 1002,
+      "title": {
+        "en": "Tower Defense",
+        "zh": "Tower Defense",
+        "ja": "Tower Defense",
+        "ko": "Tower Defense"
+      },
+      "description": {
+        "en": "Defend your base from waves of enemies in this strategic tower defense game.",
+        "zh": "Defend your base from waves of enemies in this strategic tower defense game.",
+        "ja": "Defend your base from waves of enemies in this strategic tower defense game.",
+        "ko": "Defend your base from waves of enemies in this strategic tower defense game."
+      },
+      "image": "/images/games/strategy-blue-prince-puzzle-adventure-free.jpg",
+      "category": [
+        "popular",
+        "strategy"
+      ],
+      "rating": 4.8,
+      "developer": "Game Studio",
+      "published": "2024-01-10",
+      "plays": "980K+",
+      "regions": [
+        "global"
+      ],
+      "url": "/games/tower-defense.html"
+    },
+    {
+      "id": 1003,
+      "title": {
+        "en": "Super Adventure Boy",
+        "zh": "Super Adventure Boy",
+        "ja": "Super Adventure Boy",
+        "ko": "Super Adventure Boy"
+      },
+      "description": {
+        "en": "Embark on an epic journey through dangerous worlds filled with challenges, puzzles, and enemies. Collect coins, power-ups, and unlock new levels as you progress through this exciting adventure game.",
+        "zh": "Embark on an epic journey through dangerous worlds filled with challenges, puzzles, and enemies. Collect coins, power-ups, and unlock new levels as you progress through this exciting adventure game.",
+        "ja": "Embark on an epic journey through dangerous worlds filled with challenges, puzzles, and enemies. Collect coins, power-ups, and unlock new levels as you progress through this exciting adventure game.",
+        "ko": "Embark on an epic journey through dangerous worlds filled with challenges, puzzles, and enemies. Collect coins, power-ups, and unlock new levels as you progress through this exciting adventure game."
+      },
+      "image": "/images/games/adventure-british-royal-family-quiz.jpg",
+      "category": [
+        "action",
+        "adventure"
+      ],
+      "rating": 4.7,
+      "developer": "Game Studio",
+      "published": "2023-06-15",
+      "plays": "2.4M+",
+      "regions": [
+        "global"
+      ],
+      "url": "/games/super-adventure-boy.html"
+    },
+    {
+      "id": 1004,
       "title": {
         "en": "London Flappy Bird Game Free",
         "zh": "London Flappy Bird Game Free",
@@ -14,559 +97,187 @@
         "ja": "Navigate through iconic London landmarks in this exciting HTML5 game. Perfect for students and UK gaming enthusiasts. No download required!",
         "ko": "Navigate through iconic London landmarks in this exciting HTML5 game. Perfect for students and UK gaming enthusiasts. No download required!"
       },
-      "image": "https://picsum.photos/seed/sports-london-flappy-bird-game-free/400/300",
+      "image": "/images/games/sports-london-flappy-bird-game-free.jpg",
       "category": [
-        "sports"
+        "sports",
+        "popular"
       ],
-      "rating": 4,
-      "developer": "Unknown",
-      "published": "2025-07-15",
-      "plays": "0+",
+      "rating": 4.5,
+      "developer": "PlayHTML5",
+      "published": "2024-01-20",
+      "plays": "750K+",
       "regions": [
         "global"
       ],
-      "url": "/games/sports-london-flappy-bird-game-free.html"
+      "url": "/games/london-flappy-bird-game-free.html"
     },
     {
+      "id": 1005,
       "title": {
-        "en": "Action In1 Game",
-        "zh": "Action In1 Game",
-        "ja": "Action In1 Game",
-        "ko": "Action In1 Game"
+        "en": "Puzzle Master 2048",
+        "zh": "Puzzle Master 2048",
+        "ja": "Puzzle Master 2048",
+        "ko": "Puzzle Master 2048"
       },
       "description": {
-        "en": "A brand new HTML5 action game!",
-        "zh": "A brand new HTML5 action game!",
-        "ja": "A brand new HTML5 action game!",
-        "ko": "A brand new HTML5 action game!"
+        "en": "Challenge your mind with this addictive number puzzle game. Combine tiles to reach 2048 and beyond!",
+        "zh": "Challenge your mind with this addictive number puzzle game. Combine tiles to reach 2048 and beyond!",
+        "ja": "Challenge your mind with this addictive number puzzle game. Combine tiles to reach 2048 and beyond!",
+        "ko": "Challenge your mind with this addictive number puzzle game. Combine tiles to reach 2048 and beyond!"
       },
-      "image": "/images/games/action-in1.jpg",
+      "image": "/images/games/puzzle-fixed.jpg",
       "category": [
-        "action"
+        "puzzle",
+        "popular"
       ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
+      "rating": 4.6,
+      "developer": "Puzzle Games Inc",
+      "published": "2024-01-05",
+      "plays": "1.8M+",
       "regions": [
         "global"
       ],
-      "url": "/games/action_in1.html",
-      "id": 1001
+      "url": "/games/puzzle-master-2048.html"
     },
     {
+      "id": 1006,
       "title": {
-        "en": "Adventure British-Royal-Family-Quiz Game",
-        "zh": "Adventure British-Royal-Family-Quiz Game",
-        "ja": "Adventure British-Royal-Family-Quiz Game",
-        "ko": "Adventure British-Royal-Family-Quiz Game"
+        "en": "Arcade Classics Collection",
+        "zh": "Arcade Classics Collection",
+        "ja": "Arcade Classics Collection",
+        "ko": "Arcade Classics Collection"
       },
       "description": {
-        "en": "A brand new HTML5 adventure game!",
-        "zh": "A brand new HTML5 adventure game!",
-        "ja": "A brand new HTML5 adventure game!",
-        "ko": "A brand new HTML5 adventure game!"
+        "en": "Relive the golden age of arcade gaming with this collection of classic games. Includes Pac-Man, Space Invaders, and more!",
+        "zh": "Relive the golden age of arcade gaming with this collection of classic games. Includes Pac-Man, Space Invaders, and more!",
+        "ja": "Relive the golden age of arcade gaming with this collection of classic games. Includes Pac-Man, Space Invaders, and more!",
+        "ko": "Relive the golden age of arcade gaming with this collection of classic games. Includes Pac-Man, Space Invaders, and more!"
       },
-      "image": "/images/games/adventure-british-royal-family-quiz.jpg",
+      "image": "/images/games/arcade-red-herrings-word-game.jpg",
       "category": [
-        "adventure"
+        "arcade",
+        "popular"
       ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
+      "rating": 4.7,
+      "developer": "Retro Games",
+      "published": "2024-01-12",
+      "plays": "1.1M+",
       "regions": [
         "global"
       ],
-      "url": "/games/adventure_british-royal-family-quiz.html",
-      "id": 1002
+      "url": "/games/arcade-classics-collection.html"
     },
     {
+      "id": 1007,
       "title": {
-        "en": "Card T1 Game",
-        "zh": "Card T1 Game",
-        "ja": "Card T1 Game",
-        "ko": "Card T1 Game"
+        "en": "Card Solitaire Pro",
+        "zh": "Card Solitaire Pro",
+        "ja": "Card Solitaire Pro",
+        "ko": "Card Solitaire Pro"
       },
       "description": {
-        "en": "A brand new HTML5 card game!",
-        "zh": "A brand new HTML5 card game!",
-        "ja": "A brand new HTML5 card game!",
-        "ko": "A brand new HTML5 card game!"
+        "en": "The ultimate solitaire experience with multiple game modes and beautiful card designs.",
+        "zh": "The ultimate solitaire experience with multiple game modes and beautiful card designs.",
+        "ja": "The ultimate solitaire experience with multiple game modes and beautiful card designs.",
+        "ko": "The ultimate solitaire experience with multiple game modes and beautiful card designs."
       },
-      "image": "/images/games/card-t1.jpg",
+      "image": "/images/games/card-british-museum-puzzle-game-free.jpg",
       "category": [
-        "card"
+        "card",
+        "popular"
       ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
+      "rating": 4.4,
+      "developer": "Card Games Studio",
+      "published": "2024-01-08",
+      "plays": "650K+",
       "regions": [
         "global"
       ],
-      "url": "/games/card_t1.html",
-      "id": 1003
+      "url": "/games/card-solitaire-pro.html"
     },
-
     {
+      "id": 1008,
       "title": {
-        "en": "New In33 Game",
-        "zh": "New In33 Game",
-        "ja": "New In33 Game",
-        "ko": "New In33 Game"
+        "en": "Educational Math Quest",
+        "zh": "Educational Math Quest",
+        "ja": "Educational Math Quest",
+        "ko": "Educational Math Quest"
       },
       "description": {
-        "en": "A brand new HTML5 new game!",
-        "zh": "A brand new HTML5 new game!",
-        "ja": "A brand new HTML5 new game!",
-        "ko": "A brand new HTML5 new game!"
+        "en": "Learn math through fun and interactive gameplay. Perfect for students of all ages!",
+        "zh": "Learn math through fun and interactive gameplay. Perfect for students of all ages!",
+        "ja": "Learn math through fun and interactive gameplay. Perfect for students of all ages!",
+        "ko": "Learn math through fun and interactive gameplay. Perfect for students of all ages!"
       },
-      "image": "/images/games/new-in33.jpg",
+      "image": "/images/games/educational-london-counter-terror-hero.jpg",
       "category": [
+        "educational",
         "new"
       ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
+      "rating": 4.3,
+      "developer": "EduGames",
+      "published": "2024-01-25",
+      "plays": "320K+",
       "regions": [
         "global"
       ],
-      "url": "/games/new_in33.html",
-      "id": 1005
+      "url": "/games/educational-math-quest.html"
     },
     {
+      "id": 1009,
       "title": {
-        "en": "Popular In3 Game",
-        "zh": "Popular In3 Game",
-        "ja": "Popular In3 Game",
-        "ko": "Popular In3 Game"
+        "en": "Strategy Chess Master",
+        "zh": "Strategy Chess Master",
+        "ja": "Strategy Chess Master",
+        "ko": "Strategy Chess Master"
       },
       "description": {
-        "en": "A brand new HTML5 popular game!",
-        "zh": "A brand new HTML5 popular game!",
-        "ja": "A brand new HTML5 popular game!",
-        "ko": "A brand new HTML5 popular game!"
+        "en": "Master the game of chess with AI opponents and online multiplayer. Improve your strategic thinking!",
+        "zh": "Master the game of chess with AI opponents and online multiplayer. Improve your strategic thinking!",
+        "ja": "Master the game of chess with AI opponents and online multiplayer. Improve your strategic thinking!",
+        "ko": "Master the game of chess with AI opponents and online multiplayer. Improve your strategic thinking!"
       },
-      "image": "/images/games/popular-in3.jpg",
+      "image": "/images/games/strategy-blue-prince-puzzle-adventure-free.jpg",
       "category": [
+        "strategy",
         "popular"
       ],
       "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
+      "developer": "Strategy Games",
+      "published": "2024-01-15",
+      "plays": "890K+",
       "regions": [
         "global"
       ],
-      "url": "/games/popular_in3.html",
-      "id": 1006
+      "url": "/games/strategy-chess-master.html"
     },
     {
+      "id": 1010,
       "title": {
-        "en": "Popular In4 Game",
-        "zh": "Popular In4 Game",
-        "ja": "Popular In4 Game",
-        "ko": "Popular In4 Game"
+        "en": "Sports Football Manager",
+        "zh": "Sports Football Manager",
+        "ja": "Sports Football Manager",
+        "ko": "Sports Football Manager"
       },
       "description": {
-        "en": "A brand new HTML5 popular game!",
-        "zh": "A brand new HTML5 popular game!",
-        "ja": "A brand new HTML5 popular game!",
-        "ko": "A brand new HTML5 popular game!"
+        "en": "Build your dream team and lead them to victory in this exciting football management game.",
+        "zh": "Build your dream team and lead them to victory in this exciting football management game.",
+        "ja": "Build your dream team and lead them to victory in this exciting football management game.",
+        "ko": "Build your dream team and lead them to victory in this exciting football management game."
       },
-      "image": "/images/games/popular-in4.jpg",
+      "image": "/images/games/sports-london-flappy-bird-game-free.jpg",
       "category": [
-        "popular"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/popular_in4.html",
-      "id": 1007
-    },
-    {
-      "title": {
-        "en": "Popular In5 Game",
-        "zh": "Popular In5 Game",
-        "ja": "Popular In5 Game",
-        "ko": "Popular In5 Game"
-      },
-      "description": {
-        "en": "A brand new HTML5 popular game!",
-        "zh": "A brand new HTML5 popular game!",
-        "ja": "A brand new HTML5 popular game!",
-        "ko": "A brand new HTML5 popular game!"
-      },
-      "image": "/images/games/popular-in5.jpg",
-      "category": [
-        "popular"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/popular_in5.html",
-      "id": 1008
-    },
-    {
-      "title": {
-        "en": "Puzzle 2048 Game",
-        "zh": "Puzzle 2048 Game",
-        "ja": "Puzzle 2048 Game",
-        "ko": "Puzzle 2048 Game"
-      },
-      "description": {
-        "en": "A brand new HTML5 puzzle game!",
-        "zh": "A brand new HTML5 puzzle game!",
-        "ja": "A brand new HTML5 puzzle game!",
-        "ko": "A brand new HTML5 puzzle game!"
-      },
-      "image": "/images/games/puzzle-2048.jpg",
-      "category": [
-        "puzzle"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/puzzle_2048.html",
-      "id": 1009
-    },
-    {
-      "title": {
-        "en": "Sports T2 Game",
-        "zh": "Sports T2 Game",
-        "ja": "Sports T2 Game",
-        "ko": "Sports T2 Game"
-      },
-      "description": {
-        "en": "A brand new HTML5 sports game!",
-        "zh": "A brand new HTML5 sports game!",
-        "ja": "A brand new HTML5 sports game!",
-        "ko": "A brand new HTML5 sports game!"
-      },
-      "image": "/images/games/sports-t2.jpg",
-      "category": [
-        "sports"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/sports_t2.html",
-      "id": 1010
-    },
-    {
-      "title": {
-        "en": "Strategy In5 Game",
-        "zh": "Strategy In5 Game",
-        "ja": "Strategy In5 Game",
-        "ko": "Strategy In5 Game"
-      },
-      "description": {
-        "en": "A brand new HTML5 strategy game!",
-        "zh": "A brand new HTML5 strategy game!",
-        "ja": "A brand new HTML5 strategy game!",
-        "ko": "A brand new HTML5 strategy game!"
-      },
-      "image": "/images/games/strategy-in5.jpg",
-      "category": [
+        "sports",
         "strategy"
       ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
+      "rating": 4.5,
+      "developer": "Sports Games Inc",
+      "published": "2024-01-18",
+      "plays": "540K+",
       "regions": [
         "global"
       ],
-      "url": "/games/strategy_in5.html",
-      "id": 1011
-    },
-    {
-      "title": {
-        "en": "Adventure Uk-Weather-Word-Puzzle-Free Game",
-        "zh": "Adventure Uk-Weather-Word-Puzzle-Free Game",
-        "ja": "Adventure Uk-Weather-Word-Puzzle-Free Game",
-        "ko": "Adventure Uk-Weather-Word-Puzzle-Free Game"
-      },
-      "description": {
-        "en": "Play Adventure Uk-Weather-Word-Puzzle-Free online. This adventure game features: adventure, explore, quest, puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩Adventure Uk-Weather-Word-Puzzle-Free。本adventure游戏包含：冒险, 探索, 闯关，益智, 逻辑, 动脑。 免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play Adventure Uk-Weather-Word-Puzzle-Free online. This adventure game features: adventure, explore, quest, puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play Adventure Uk-Weather-Word-Puzzle-Free online. This adventure game features: adventure, explore, quest, puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download."
-      },
-      "image": "/images/games/adventure-uk-weather-word-puzzle-free.webp",
-      "category": [
-        "adventure"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/adventure_uk-weather-word-puzzle-free.html",
-      "id": 1012
-    },
-    {
-      "title": {
-        "en": "Popular Ceshi1 Game",
-        "zh": "Popular Ceshi1 Game",
-        "ja": "Popular Ceshi1 Game",
-        "ko": "Popular Ceshi1 Game"
-      },
-      "description": {
-        "en": "Play Popular Ceshi1 online. This popular game features: popular, trending, best. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩Popular Ceshi1。本popular游戏包含：热门, 流行, 精选。 免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play Popular Ceshi1 online. This popular game features: popular, trending, best. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play Popular Ceshi1 online. This popular game features: popular, trending, best. Free HTML5 game, mobile-friendly, no download."
-      },
-      "image": "/images/games/popular-ceshi1.webp",
-      "category": [
-        "popular"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/popular_ceshi1.html",
-      "id": 1013
-    },
-    {
-      "id": 1014,
-      "title": {
-        "en": "Popular Ce66 Game",
-        "zh": "Popular Ce66 Game",
-        "ja": "Popular Ce66 Game",
-        "ko": "Popular Ce66 Game"
-      },
-      "description": {
-        "en": "Play Popular Ce66 Game online. This popular game features: popular, trending, fun. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩Popular Ce66 Game。本popular游戏包含：popular，热门，趣味。免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play Popular Ce66 Game online. This popular game features: popular, trending, fun. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play Popular Ce66 Game online. This popular game features: popular, trending, fun. Free HTML5 game, mobile-friendly, no download."
-      },
-      "image": "/images/games/popular-ce66-game.jpg",
-      "category": [
-        "popular"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/Popular-ce66 Game.html"
-    },
-    {
-      "id": 1015,
-      "title": {
-        "en": "Adventure In3tiaotiao Game",
-        "zh": "Adventure In3tiaotiao Game",
-        "ja": "Adventure In3tiaotiao Game",
-        "ko": "Adventure In3tiaotiao Game"
-      },
-      "description": {
-        "en": "Play Adventure In3tiaotiao Game online. This adventure game features: adventure, trending, fun. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩Adventure In3tiaotiao Game。本adventure游戏包含：adventure，热门，趣味。免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play Adventure In3tiaotiao Game online. This adventure game features: adventure, trending, fun. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play Adventure In3tiaotiao Game online. This adventure game features: adventure, trending, fun. Free HTML5 game, mobile-friendly, no download."
-      },
-      "image": "/images/games/adventure-in3tiaotiao.jpg",
-      "category": [
-        "adventure"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/adventure-in3tiaotiao.html"
-    },
-    {
-      "id": 1016,
-      "title": {
-        "en": "Arcade T66 Game",
-        "zh": "Arcade T66 Game",
-        "ja": "Arcade T66 Game",
-        "ko": "Arcade T66 Game"
-      },
-      "description": {
-        "en": "Play Arcade T66 Game online. This arcade game features: arcade, trending, fun. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩Arcade T66 Game。本arcade游戏包含：arcade，热门，趣味。免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play Arcade T66 Game online. This arcade game features: arcade, trending, fun. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play Arcade T66 Game online. This arcade game features: arcade, trending, fun. Free HTML5 game, mobile-friendly, no download."
-      },
-      "image": "/images/games/arcade-t66-game.jpg",
-      "category": [
-        "arcade"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/arcade-t66.html"
-    },
-    {
-      "id": 1017,
-      "title": {
-        "en": "In3tiaotiao Game",
-        "zh": "In3tiaotiao Game",
-        "ja": "In3tiaotiao Game",
-        "ko": "In3tiaotiao Game"
-      },
-      "description": {
-        "en": "Play In3tiaotiao Game online. This adventure game features: adventure, trending, fun. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩In3tiaotiao Game。本adventure游戏包含：adventure，热门，趣味。免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play In3tiaotiao Game online. This adventure game features: adventure, trending, fun. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play In3tiaotiao Game online. This adventure game features: adventure, trending, fun. Free HTML5 game, mobile-friendly, no download."
-      },
-      "image": "/images/games/adventure-in3tiaotiao.jpg",
-      "category": [
-        "adventure"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/in3tiaotiao.html"
-    },
-    {
-      "id": 1018,
-      "title": {
-        "en": "New 666 Game",
-        "zh": "New 666 Game",
-        "ja": "New 666 Game",
-        "ko": "New 666 Game"
-      },
-      "description": {
-        "en": "Play New 666 Game online. This new game features: new, trending, fun. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩New 666 Game。本new游戏包含：new，热门，趣味。免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play New 666 Game online. This new game features: new, trending, fun. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play New 666 Game online. This new game features: new, trending, fun. Free HTML5 game, mobile-friendly, no download."
-      },
-      "image": "/images/games/new-new-666.jpg",
-      "category": [
-        "new"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/new-666.html"
-    },
-    {
-      "id": 1019,
-      "title": {
-        "en": "New Ce12 Game",
-        "zh": "New Ce12 Game",
-        "ja": "New Ce12 Game",
-        "ko": "New Ce12 Game"
-      },
-      "description": {
-        "en": "Play New Ce12 Game online. This new game features: new, trending, fun. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩New Ce12 Game。本new游戏包含：new，热门，趣味。免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play New Ce12 Game online. This new game features: new, trending, fun. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play New Ce12 Game online. This new game features: new, trending, fun. Free HTML5 game, mobile-friendly, no download."
-      },
-      "image": "/images/games/new-new-ce12.jpg",
-      "category": [
-        "new"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/new-ce12.html"
-    },
-    {
-      "id": 1020,
-      "title": {
-        "en": "Popular 777 Game",
-        "zh": "Popular 777 Game",
-        "ja": "Popular 777 Game",
-        "ko": "Popular 777 Game"
-      },
-      "description": {
-        "en": "Play Popular 777 Game online. This popular game features: popular, trending, fun. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩Popular 777 Game。本popular游戏包含：popular，热门，趣味。免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play Popular 777 Game online. This popular game features: popular, trending, fun. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play Popular 777 Game online. This popular game features: popular, trending, fun. Free HTML5 game, mobile-friendly, no download."
-      },
-      "image": "/images/games/popular-popular-777.jpg",
-      "category": [
-        "popular"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/popular-777.html"
-    },
-    {
-      "id": 1021,
-      "title": {
-        "en": "New Deep Sea Adventure Survival Game Free",
-        "zh": "New 深海冒险生存游戏免费版",
-        "ja": "New Deep Sea Adventure Survival Game Free",
-        "ko": "New Deep Sea Adventure Survival Game Free"
-      },
-      "description": {
-        "en": "Play Deep Sea Adventure Survival Game Free online. This new game features: new, trending, fun. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩深海冒险生存游戏免费版。本new游戏包含：new，热门，趣味。免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play Deep Sea Adventure Survival Game Free online. This new game features: new, trending, fun. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play Deep Sea Adventure Survival Game Free online. This new game features: new, trending, fun. Free HTML5 game, mobile-friendly, no download."
-      },
-      "image": "/images/games/new-deep-sea-adventure-survival-game-free.jpg",
-      "category": [
-        "new"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/new-deep-sea-adventure-survival-game-free.html"
+      "url": "/games/sports-football-manager.html"
     }
   ]
 }

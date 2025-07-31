@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="keywords" content="HTML5 games, free games, online games, PlayHTML5">
-    <meta name="description" content="Free HTML5 Games Platform">
+    <!-- 安全头 -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+    <!-- 关键资源预加载 -->
+    <link rel="preload" href="/js/main.js" as="script">
+    <link rel="preload" href="/js/games.js" as="script">
+    <link rel="preload" href="/css/styles.css" as="style">
+    
+    <!-- 字体预加载 -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
+    
+    <!-- 关键图片预加载 -->
+    <link rel="preload" href="/images/games/logo.webp" as="image">
+    <meta name="keywords" content="HTML5 game, free game, online game, PlayHTML5">
+    <meta name="description" content="Play free HTML5 games online!">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>London Counter Terror Hero</title>
+    <title>HTML5 Game - PlayHTML5</title>
     <style>
         body {
             margin: 0;
@@ -24,7 +40,19 @@
         }
     </style>
     <script src="london-counter-terror-hero.js"></script>
-</head>
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "HTML5 Game",
+  "description": "Play free HTML5 games online!",
+  "url": "https://www.ukhtml5games.com/games/educational-london-counter-terror-hero/index_embed.html"
+}
+    </script>
+        <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6886160126549046"
+         crossorigin="anonymous"></script>
+    </head>
 <body>
     <canvas id="gameCanvas" width="360" height="600" aria-label="London Counter Terror Hero Game Area">
         Your browser does not support HTML5 Canvas. Please use a modern browser.

@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script type="application/ld+json">
-    {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "PlayHTML5",
-  "url": "https://www.ukhtml5games.com",
-  "description": "Free HTML5 Games Platform"
-}
-    </script>
+    <!-- 安全头 -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+    <!-- 关键资源预加载 -->
+    <link rel="preload" href="/js/main.js" as="script">
+    <link rel="preload" href="/js/games.js" as="script">
+    <link rel="preload" href="/css/styles.css" as="style">
+    
+    <!-- 字体预加载 -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
+    
+    <!-- 关键图片预加载 -->
+    <link rel="preload" href="/images/games/logo.webp" as="image">
+    
     <meta property="og:image" content="https://www.ukhtml5games.com/images/og-image.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copyright Notice / 著作権表示 - PlayHTML5</title>
-    <meta name="description" content="Copyright Notice for HTML5 games platform, protecting website content and intellectual property rights. / HTML5ゲームプラットフォームの著作権表示、ウェブサイトコンテンツと知的財産権を保護します。">
-    <meta name="keywords" content="Copyright Notice,intellectual property,content protection,HTML5 games,著作権表示,知的財産,コンテンツ保護,HTML5ゲーム">
+    <title>HTML5 Game - PlayHTML5</title>
+    <meta name="description" content="Play free HTML5 games online!">
+    <meta name="keywords" content="HTML5 game, free game, online game, PlayHTML5">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Copyright Notice / 著作権表示 - PlayHTML5">
     <meta property="og:description" content="Copyright Notice for HTML5 games platform, protecting website content and intellectual property rights. / HTML5ゲームプラットフォームの著作権表示、ウェブサイトコンテンツと知的財産権を保護します。">
@@ -49,7 +57,19 @@
         .content-section { max-width: 800px; margin: 0 auto; }
         .section-title { border-bottom: 2px solid #165DFF; padding-bottom: 0.5rem; }
     </style>
-</head>
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "HTML5 Game",
+  "description": "Play free HTML5 games online!",
+  "url": "https://www.ukhtml5games.com/copyright.html"
+}
+    </script>
+        <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6886160126549046"
+         crossorigin="anonymous"></script>
+    </head>
 <body class="bg-gray-50 text-dark">
     <!-- Navigation Bar -->
     <header class="bg-white shadow-sm">

@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 安全头 -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+    <!-- 关键资源预加载 -->
+    <link rel="preload" href="/js/main.js" as="script">
+    <link rel="preload" href="/js/games.js" as="script">
+    <link rel="preload" href="/css/styles.css" as="style">
+    
+    <!-- 字体预加载 -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
+    
+    <!-- 关键图片预加载 -->
+    <link rel="preload" href="/images/games/logo.webp" as="image">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moto X3M - Extreme Dirt Bike Stunt Driving Game | Play Free Online</title>
+    <title>HTML5 Game - PlayHTML5</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Play Moto X3M online for free! Experience extreme dirt bike stunt driving with side scrolling action. Master challenging obstacles, perform incredible stunts, and complete all levels in this thrilling 1 player motorcycle game.">
-    <meta name="keywords" content="Moto X3M, dirt bike game, motorcycle stunt, driving game, side scrolling, extreme sports, free online game, HTML5 game, bike racing, stunt driving">
+    <meta name="description" content="Play free HTML5 games online!">
+    <meta name="keywords" content="HTML5 game, free game, online game, PlayHTML5">
     <meta name="author" content="PlayHTML5">
     <meta name="robots" content="index, follow">
     
@@ -49,29 +65,7 @@
     </script>
     
     <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Game",
-        "name": "Moto X3M",
-        "description": "Extreme dirt bike stunt driving game with side scrolling action and challenging obstacles",
-        "genre": ["Racing", "Stunt", "Sports"],
-        "gamePlatform": "Web Browser",
-        "applicationCategory": "Game",
-        "operatingSystem": "Web Browser",
-        "url": "https://www.ukhtml5games.com/moto-x3m-game.html",
-        "image": "https://www.ukhtml5games.com/images/games/moto-x3m-preview.jpg",
-        "publisher": {
-            "@type": "Organization",
-            "name": "PlayHTML5"
-        },
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        }
-    }
-    </script>
+    
     
     <style>
         body {
@@ -90,7 +84,19 @@
             }
         }
     </style>
-</head>
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "HTML5 Game",
+  "description": "Play free HTML5 games online!",
+  "url": "https://www.ukhtml5games.com/moto-x3m-game.html"
+}
+    </script>
+        <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6886160126549046"
+         crossorigin="anonymous"></script>
+    </head>
 <body class="bg-white text-apple-dark font-sf">
     <!-- Header -->
     <header class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
