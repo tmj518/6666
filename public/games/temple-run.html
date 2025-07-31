@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 安全头 -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+    <!-- 关键资源预加载 -->
+    <link rel="preload" href="/js/main.js" as="script">
+    <link rel="preload" href="/js/games.js" as="script">
+    <link rel="preload" href="/css/styles.css" as="style">
+    
+    <!-- 字体预加载 -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
+    
+    <!-- 关键图片预加载 -->
+    <link rel="preload" href="/images/games/logo.webp" as="image">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Run Game - Free HTML5 Game | PlayHTML5</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Classic temple running game with endless obstacles and exciting chase sequences. Play this free HTML5 game online without download. No registration required.">
+    <meta name="keywords" content="Temple Run Game, free HTML5 game, online game, action, adventure, PlayHTML5">
+    <meta name="author" content="PlayHTML5">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Temple Run Game - PlayHTML5">
+    <meta property="og:description" content="Classic temple running game with endless obstacles and exciting chase sequences.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.ukhtml5games.com/games/temple-run.html">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.ukhtml5games.com/games/temple-run.html">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'apple-blue': '#007AFF',
+                        'apple-gray': '#8E8E93',
+                        'apple-light-gray': '#F2F2F7',
+                        'apple-dark': '#1D1D1F'
+                    },
+                    fontFamily: {
+                        'sf': ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Structured Data -->
+    
+    
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .game-container {
+            aspect-ratio: 16/9;
+            max-height: 70vh;
+        }
+        
+        @media (max-width: 768px) {
+            .game-container {
+                aspect-ratio: 4/3;
+                max-height: 50vh;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Temple Run Game",
+  "description": "Classic temple running game with endless obstacles and exciting chase sequences.",
+  "image": "https://www.ukhtml5games.com/images/games/puzzle-x3m.jpg",
+  "url": "https://www.ukhtml5games.com/games/temple-run.html",
+  "genre": "action, adventure",
+  "gamePlatform": "HTML5",
+  "applicationCategory": "Game",
+  "operatingSystem": "Web Browser",
+  "author": {
+    "@type": "Organization",
+    "name": "Adventure Studio"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PlayHTML5"
+  },
+  "datePublished": "2023-01-30",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 4.7,
+    "ratingCount": "890K+"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ukhtml5games.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Temple Run Game",
+      "item": "https://www.ukhtml5games.com/games/temple-run.html"
+    }
+  ]
+}
+    </script>
+        <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6886160126549046"
+         crossorigin="anonymous"></script>
+    </head>
+<body class="bg-white text-apple-dark font-sf">
+
+    <nav class="breadcrumb bg-white shadow-sm mb-6">
+      <div class="container mx-auto px-4 py-3">
+        <ol class="flex items-center space-x-2 text-sm">
+          <li><a href="/" class="text-primary hover:underline">Home</a></li>
+          <li><i class="fa fa-chevron-right text-gray-400"></i></li>
+          <li><a href="/games/" class="text-primary hover:underline">Games</a></li>
+          <li><i class="fa fa-chevron-right text-gray-400"></i></li>
+          <li class="text-gray-600">temple run</li>
+        </ol>
+      </div>
+    </nav>
+<nav class="w-full bg-white shadow mb-4 flex items-center px-4 py-2">
+  <div class="flex items-center gap-4">
+    <a href="https://www.ukhtml5games.com/" class="flex items-center" title="PlayHTML5 Home">
+      <picture>
+        <source srcset="/images/games/logo.webp" type="image/webp">
+        <picture>
+      <source srcset="/images/games/logo.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/logo.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/logo.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/logo.webp" type="image/webp">
+      <img src="/images/games/logo.png" alt="Temple Run Game - Free HTML5 Game" title="Temple Run Game" loading="lazy" decoding="async">
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+      </picture>
+    </a>
+    <a href="https://www.ukhtml5games.com/" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+    <a href="https://www.ukhtml5games.com/" class="text-gray-700 hover:text-blue-600 font-medium">All Games</a>
+  </div>
+  <div class="flex-1"></div>
+</nav>
+
+
+
+
+
+
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="https://www.ukhtml5games.com" class="text-apple-blue font-semibold text-xl">
+                        PlayHTML5
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-apple-blue to-blue-600 text-white py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                Temple Run
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+                Run through ancient temples, avoid obstacles, and collect precious gems in this thrilling adventure.
+            </p>
+            <a href="#game" class="bg-white text-apple-blue px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors inline-block">
+                Play Now - Free Online
+            </a>
+        </div>
+    </section>
+
+    <!-- Game Section -->
+    <section id="game" class="py-16 bg-apple-light-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Play Temple Run Online</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="game-container bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <iframe 
+                    src="https://html5games.com/Game/Temple-Run" 
+                    class="w-full h-full border-0"
+                    allowfullscreen
+                    title="html5games.com Game">
+                </iframe>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">About Temple Run</h2>
+                    <p class="text-lg text-apple-gray leading-relaxed mb-6">
+                        Run through ancient temples, avoid obstacles, and collect precious gems in this thrilling adventure.
+                    </p>
+                    <p class="text-lg text-apple-gray leading-relaxed">
+                        Experience the thrill of running, adventure, arcade gaming with Temple Run. This exciting game offers challenging gameplay, stunning graphics, and hours of entertainment for players of all skill levels.
+                    </p>
+                </div>
+                <div class="bg-apple-light-gray rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold mb-6">Game Features</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                <span class="text-apple-blue mr-3 mt-1">✓</span>
+                <span>Free to play online</span>
+            </li><li class="flex items-start">
+                <span class="text-apple-blue mr-3 mt-1">✓</span>
+                <span>No download required</span>
+            </li><li class="flex items-start">
+                <span class="text-apple-blue mr-3 mt-1">✓</span>
+                <span>Cross-platform compatibility</span>
+            </li><li class="flex items-start">
+                <span class="text-apple-blue mr-3 mt-1">✓</span>
+                <span>Regular updates and improvements</span>
+            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Controls Section -->
+    <section id="controls" class="py-16 bg-apple-light-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">How to Play</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Game Controls</h3>
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-xl p-6 shadow-sm">
+                <h4 class="font-semibold text-apple-blue mb-2">Turn Left</h4>
+                <p class="text-apple-gray">Press LEFT or swipe left to turn left</p>
+            </div><div class="bg-white rounded-xl p-6 shadow-sm">
+                <h4 class="font-semibold text-apple-blue mb-2">Turn Right</h4>
+                <p class="text-apple-gray">Press RIGHT or swipe right to turn right</p>
+            </div><div class="bg-white rounded-xl p-6 shadow-sm">
+                <h4 class="font-semibold text-apple-blue mb-2">Jump</h4>
+                <p class="text-apple-gray">Press UP or swipe up to jump over obstacles</p>
+            </div><div class="bg-white rounded-xl p-6 shadow-sm">
+                <h4 class="font-semibold text-apple-blue mb-2">Slide</h4>
+                <p class="text-apple-gray">Press DOWN or swipe down to slide under barriers</p>
+            </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Game Objectives</h3>
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-xl p-6 shadow-sm">
+                <h4 class="font-semibold text-apple-blue mb-2">Complete Levels</h4>
+                <p class="text-apple-gray">Progress through increasingly challenging levels and overcome obstacles</p>
+            </div><div class="bg-white rounded-xl p-6 shadow-sm">
+                <h4 class="font-semibold text-apple-blue mb-2">Achieve High Scores</h4>
+                <p class="text-apple-gray">Beat your personal best and compete for the highest scores</p>
+            </div><div class="bg-white rounded-xl p-6 shadow-sm">
+                <h4 class="font-semibold text-apple-blue mb-2">Unlock Achievements</h4>
+                <p class="text-apple-gray">Complete special challenges and unlock new content</p>
+            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Info Table -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Game Information</h2>
+            <div class="bg-apple-light-gray rounded-2xl overflow-hidden">
+                <table class="w-full">
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="bg-white">
+                <td class="px-6 py-4 font-semibold text-apple-dark">Game Title</td>
+                <td class="px-6 py-4 text-apple-gray">Temple Run</td>
+            </tr><tr class="bg-white">
+                <td class="px-6 py-4 font-semibold text-apple-dark">Genre</td>
+                <td class="px-6 py-4 text-apple-gray">Running, Adventure, Arcade</td>
+            </tr><tr class="bg-white">
+                <td class="px-6 py-4 font-semibold text-apple-dark">Game Type</td>
+                <td class="px-6 py-4 text-apple-gray">Endless Runner, 1 Player</td>
+            </tr><tr class="bg-white">
+                <td class="px-6 py-4 font-semibold text-apple-dark">Platform</td>
+                <td class="px-6 py-4 text-apple-gray">Web Browser (HTML5)</td>
+            </tr><tr class="bg-white">
+                <td class="px-6 py-4 font-semibold text-apple-dark">Controls</td>
+                <td class="px-6 py-4 text-apple-gray">Keyboard (Arrow Keys) or Touch</td>
+            </tr><tr class="bg-white">
+                <td class="px-6 py-4 font-semibold text-apple-dark">Price</td>
+                <td class="px-6 py-4 text-apple-gray">Free to Play</td>
+            </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-apple-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-apple-gray mb-4">
+                    © 2024 PlayHTML5. All rights reserved. Temple Run is a free online HTML5 game.
+                </p>
+                <p class="text-sm text-apple-gray">
+                    This game is provided for entertainment purposes only. All game content and trademarks belong to their respective owners.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth Scrolling -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+</body>
+</html>

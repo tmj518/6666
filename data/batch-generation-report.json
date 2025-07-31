@@ -1,0 +1,29 @@
+{
+  "timestamp": "2025-07-18T06:29:47.240Z",
+  "totalGames": 1,
+  "successful": 1,
+  "failed": 0,
+  "displayTypes": {
+    "iframe": 1,
+    "redirect": 0,
+    "error": 0
+  },
+  "results": [
+    {
+      "filePath": "C:\\Users\\zfz123\\Desktop\\daima6666\\public\\games\\mouse-mouse-climb-the-house.html",
+      "gameSlug": "mouse-mouse-climb-the-house",
+      "analysis": {
+        "sourceName": "poki.com",
+        "config": {
+          "supportsIframe": true,
+          "displayType": "iframe",
+          "baseUrl": "https://poki.com/en/g/",
+          "fallbackMessage": "游戏加载中..."
+        },
+        "displayType": "iframe",
+        "supportsIframe": true
+      },
+      "displayType": "iframe"
+    }
+  ]
+}

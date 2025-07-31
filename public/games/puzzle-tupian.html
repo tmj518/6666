@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 安全头 -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+    <!-- 关键资源预加载 -->
+    <link rel="preload" href="/js/main.js" as="script">
+    <link rel="preload" href="/js/games.js" as="script">
+    <link rel="preload" href="/css/styles.css" as="style">
+    
+    <!-- 字体预加载 -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
+    
+    <!-- 关键图片预加载 -->
+    <link rel="preload" href="/images/games/logo.webp" as="image">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Image-based puzzle game with beautiful graphics and challenging picture arrangements. Play this free HTML5 game online without download. No registration required.">
+    <meta name="keywords" content="Puzzle Tupian Game, free HTML5 game, online game, puzzle, casual, PlayHTML5">
+    <title>Puzzle Tupian Game - Free HTML5 Game | PlayHTML5</title>
+    <link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-100-M/font-awesome/6.0.0/css/all.min.css"  rel="stylesheet">
+    <script src="https://s2.ssl.qhres2.com/static/56662140ef7d5d03.css"></script> 
+    <style>
+        :root {
+            --primary: #3a86ff;
+            --secondary: #8338ec;
+            --accent: #ff006e;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --success: #28a745;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: #f5f7fa;
+            color: var(--dark);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(30deg);
+            animation: shine 8s infinite linear;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) rotate(30deg); }
+            100% { transform: translateX(100%) rotate(30deg); }
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .logo i {
+            font-size: 2.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        .upload-section {
+            background-color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .upload-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+        }
+        
+        .upload-area {
+            border: 2px dashed var(--gray);
+            border-radius: 8px;
+            padding: 3rem 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .upload-area:hover {
+            border-color: var(--primary);
+            background-color: rgba(58, 134, 255, 0.05);
+        }
+        
+        .upload-area.active  {
+            border-color: var(--success);
+            background-color: rgba(40, 167, 69, 0.05);
+        }
+        
+        .upload-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .upload-text {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .upload-hint {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #2a75e6;
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: rgba(58, 134, 255, 0.1);
+        }
+        
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            justify-content: center;
+        }
+        
+        .history-section {
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 3px;
+        }
+        
+        .history-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .history-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .history-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .card-body {
+            padding: 1rem;
+        }
+        
+        .card-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+            font-size: 1rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-bottom: 0.5rem;
+        }
+        
+        .card-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .keyword {
+            background-color: rgba(58, 134, 255, 0.1);
+            color: var(--primary);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .card-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .action-btn {
+            flex: 1;
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .action-btn i {
+            margin-right: 0.25rem;
+        }
+        
+        .action-btn.copy  {
+            background-color: rgba(40, 167, 69, 0.1);
+            color: var(--success);
+        }
+        
+        .action-btn.copy:hover  {
+            background-color: rgba(40, 167, 69, 0.2);
+        }
+        
+        .action-btn.share  {
+            background-color: rgba(13, 110, 253, 0.1);
+            color: var(--primary);
+        }
+        
+        .action-btn.share:hover  {
+            background-color: rgba(13, 110, 253, 0.2);
+        }
+        
+        .action-btn.delete  {
+            background-color: rgba(220, 53, 69, 0.1);
+            color: #dc3545;
+        }
+        
+        .action-btn.delete:hover  {
+            background-color: rgba(220, 53, 69, 0.2);
+        }
+        
+        .result-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            margin-bottom: 3rem;
+            display: none;
+        }
+        
+        .result-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+        
+        .result-content {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .result-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+        
+        .result-details {
+            flex: 1;
+        }
+        
+        .result-url {
+            background-color: rgba(248, 249, 250, 1);
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 0.75rem 1rem;
+            font-family: monospace;
+            word-break: break-all;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .copy-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            margin-left: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .copy-btn:hover {
+            background-color: #2a75e6;
+        }
+        
+        .share-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .share-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.25rem;
+            transition: transform 0.2s ease;
+        }
+        
+        .share-btn:hover {
+            transform: translateY(-3px);
+        }
+        
+        .facebook {
+            background-color: #3b5998;
+        }
+        
+        .twitter {
+            background-color: #1da1f2;
+        }
+        
+        .pinterest {
+            background-color: #e60023;
+        }
+        
+        .linkedin {
+            background-color: #0077b5;
+        }
+        
+        .footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 2rem 0;
+            margin-top: auto;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .footer-link {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        .footer-link:hover {
+            color: white;
+        }
+        
+        .copyright {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+        }
+        
+        .loading {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        @media (max-width: 768px) {
+            .result-content {
+                flex-direction: column;
+            }
+            
+            .result-image {
+                width: 100%;
+                height: auto;
+                max-height: 300px;
+            }
+            
+            .history-grid {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Puzzle Tupian Game",
+  "description": "Image-based puzzle game with beautiful graphics and challenging picture arrangements.",
+  "image": "https://www.ukhtml5games.com/images/games/puzzle-tupian.jpg",
+  "url": "https://www.ukhtml5games.com/games/puzzle-tupian.html",
+  "genre": "puzzle, casual",
+  "gamePlatform": "HTML5",
+  "applicationCategory": "Game",
+  "operatingSystem": "Web Browser",
+  "author": {
+    "@type": "Organization",
+    "name": "Puzzle Studio"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PlayHTML5"
+  },
+  "datePublished": "2023-09-25",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 4.5,
+    "ratingCount": "720K+"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ukhtml5games.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Puzzle Tupian Game",
+      "item": "https://www.ukhtml5games.com/games/puzzle-tupian.html"
+    }
+  ]
+}
+    </script>
+        <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6886160126549046"
+         crossorigin="anonymous"></script>
+    </head>
+<body>
+
+    <nav class="breadcrumb bg-white shadow-sm mb-6">
+      <div class="container mx-auto px-4 py-3">
+        <ol class="flex items-center space-x-2 text-sm">
+          <li><a href="/" class="text-primary hover:underline">Home</a></li>
+          <li><i class="fa fa-chevron-right text-gray-400"></i></li>
+          <li><a href="/games/" class="text-primary hover:underline">Games</a></li>
+          <li><i class="fa fa-chevron-right text-gray-400"></i></li>
+          <li class="text-gray-600">puzzle tupian</li>
+        </ol>
+      </div>
+    </nav>
+<nav class="w-full bg-white shadow mb-4 flex items-center px-4 py-2">
+  <div class="flex items-center gap-4">
+    <a href="https://www.ukhtml5games.com/" class="flex items-center" title="PlayHTML5 Home">
+      <picture>
+        <source srcset="/images/games/logo.webp" type="image/webp">
+        <picture>
+      <source srcset="/images/games/logo.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/logo.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/logo.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/logo.webp" type="image/webp">
+      <img src="/images/games/logo.png" alt="Puzzle Tupian Game - Free HTML5 Game" title="Puzzle Tupian Game" loading="lazy" decoding="async">
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+      </picture>
+    </a>
+    <a href="https://www.ukhtml5games.com/" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+    <a href="https://www.ukhtml5games.com/" class="text-gray-700 hover:text-blue-600 font-medium">All Games</a>
+  </div>
+  <div class="flex-1"></div>
+</nav>
+
+
+
+
+
+
+
+
+
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-camera-retro"></i>
+                <span>ImageShare Pro</span>
+            </div>
+            <div class="tagline">专业图片上传与分享平台 · 一键生成永久链接</div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="upload-section">
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <div class="upload-text">拖拽图片到此处或点击上传</div>
+                <div class="upload-hint">支持 JPG, PNG, GIF 格式，最大 10MB</div>
+                <input type="file" id="fileInput" accept="image/*" style="display: none;">
+            </div>
+            
+            <div class="btn-group">
+                <button class="btn btn-primary" id="uploadBtn">
+                    <i class="fas fa-upload"></i> 选择图片
+                </button>
+                <button class="btn btn-outline" id="pasteBtn">
+                    <i class="fas fa-paste"></i> 粘贴上传
+                </button>
+            </div>
+        </div>
+        
+        <div class="result-section" id="resultSection">
+            <h3 class="result-title">上传成功!</h3>
+            <div class="result-content">
+                <img src="" alt="上传的图片" class="result-image" id="resultImage">
+                <div class="result-details">
+                    <div class="result-url" id="resultUrl">
+                        <span id="urlText">https://imageshare.pro/i/abc123</span> 
+                        <button class="copy-btn" id="copyBtn">
+                            <i class="fas fa-copy"></i> 复制
+                        </button>
+                    </div>
+                    <div class="share-buttons">
+                        <div class="share-btn facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                        <div class="share-btn twitter">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="share-btn pinterest">
+                            <i class="fab fa-pinterest-p"></i>
+                        </div>
+                        <div class="share-btn linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="history-section">
+            <h2 class="section-title">历史记录</h2>
+            <div class="history-grid" id="historyGrid">
+                <!-- 示例历史记录卡片 -->
+                <div class="history-card">
+                    <picture>
+      <source srcset="/https://images.unsplash.com/photo-1506744038136-46273834b3fb" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1506744038136-46273834b3fb" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1506744038136-46273834b3fb" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1506744038136-46273834b3fb" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1506744038136-46273834b3fb" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1506744038136-46273834b3fb" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1506744038136-46273834b3fb" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1506744038136-46273834b3fb" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1506744038136-46273834b3fb" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1506744038136-46273834b3fb" type="image/webp">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Puzzle Tupian Game - Free HTML5 Game" title="Puzzle Tupian Game" loading="lazy" decoding="async">
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+                    <div class="card-body">
+                        <h3 class="card-title">landscape.jpg</h3> 
+                        <div class="card-meta">
+                            <span>2023-05-15</span>
+                            <span>1.2MB</span>
+                        </div>
+                        <div class="card-keywords">
+                            <span class="keyword">风景</span>
+                            <span class="keyword">自然</span>
+                            <span class="keyword">旅游</span>
+                        </div>
+                        <div class="card-actions">
+                            <div class="action-btn copy">
+                                <i class="fas fa-copy"></i> 复制
+                            </div>
+                            <div class="action-btn share">
+                                <i class="fas fa-share-alt"></i> 分享
+                            </div>
+                            <div class="action-btn delete">
+                                <i class="fas fa-trash"></i> 删除
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="history-card">
+                    <picture>
+      <source srcset="/https://images.unsplash.com/photo-1519125323398-675f0ddb6308" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1519125323398-675f0ddb6308" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1519125323398-675f0ddb6308" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1519125323398-675f0ddb6308" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1519125323398-675f0ddb6308" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1519125323398-675f0ddb6308" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1519125323398-675f0ddb6308" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1519125323398-675f0ddb6308" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1519125323398-675f0ddb6308" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1519125323398-675f0ddb6308" type="image/webp">
+      <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308" alt="Puzzle Tupian Game - Free HTML5 Game" title="Puzzle Tupian Game" loading="lazy" decoding="async">
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+                    <div class="card-body">
+                        <h3 class="card-title">portrait.png</h3> 
+                        <div class="card-meta">
+                            <span>2023-05-10</span>
+                            <span>2.5MB</span>
+                        </div>
+                        <div class="card-keywords">
+                            <span class="keyword">人像</span>
+                            <span class="keyword">摄影</span>
+                            <span class="keyword">艺术</span>
+                        </div>
+                        <div class="card-actions">
+                            <div class="action-btn copy">
+                                <i class="fas fa-copy"></i> 复制
+                            </div>
+                            <div class="action-btn share">
+                                <i class="fas fa-share-alt"></i> 分享
+                            </div>
+                            <div class="action-btn delete">
+                                <i class="fas fa-trash"></i> 删除
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="history-card">
+                        <picture>
+      <source srcset="/https://images.unsplash.com/photo-1554080353-a576cf803bda" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1554080353-a576cf803bda" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1554080353-a576cf803bda" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1554080353-a576cf803bda" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1554080353-a576cf803bda" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1554080353-a576cf803bda" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1554080353-a576cf803bda" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1554080353-a576cf803bda" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1554080353-a576cf803bda" type="image/webp">
+      <picture>
+      <source srcset="/https://images.unsplash.com/photo-1554080353-a576cf803bda" type="image/webp">
+      <img src="https://images.unsplash.com/photo-1554080353-a576cf803bda" alt="Puzzle Tupian Game - Free HTML5 Game" title="Puzzle Tupian Game" loading="lazy" decoding="async">
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+                        <div class="card-body">
+                            <h3 class="card-title">photography.jpg</h3> 
+                            <div class="card-meta">
+                                <span>2023-05-05</span>
+                                <span>3.1MB</span>
+                            </div>
+                            <div class="card-keywords">
+                                <span class="keyword">摄影</span>
+                                <span class="keyword">技巧</span>
+                                <span class="keyword">相机</span>
+                            </div>
+                            <div class="card-actions">
+                                <div class="action-btn copy">
+                                    <i class="fas fa-copy"></i> 复制
+                                </div>
+                                <div class="action-btn share">
+                                    <i class="fas fa-share-alt"></i> 分享
+                                </div>
+                                <div class="action-btn delete">
+                                    <i class="fas fa-trash"></i> 删除
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">ImageShare Pro</div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">关于我们</a>
+                    <a href="#" class="footer-link">服务条款</a>
+                    <a href="#" class="footer-link">隐私政策</a>
+                    <a href="#" class="footer-link">帮助中心</a>
+                    <a href="#" class="footer-link">联系我们</a>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2023 ImageShare Pro. 保留所有权利。
+            </div>
+        </div>
+    </div>
+    
+    <div class="loading" id="loading" style="display: none;">
+        <div class="spinner"></div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded',  function() {
+            const uploadArea = document.getElementById('uploadArea'); 
+            const fileInput = document.getElementById('fileInput'); 
+            const uploadBtn = document.getElementById('uploadBtn'); 
+            const pasteBtn = document.getElementById('pasteBtn'); 
+            const resultSection = document.getElementById('resultSection'); 
+            const resultImage = document.getElementById('resultImage'); 
+            const urlText = document.getElementById('urlText'); 
+            const copyBtn = document.getElementById('copyBtn'); 
+            const loading = document.getElementById('loading'); 
+            
+            // 点击上传区域触发文件选择
+            uploadArea.addEventListener('click',  function() {
+                fileInput.click(); 
+            });
+            
+            // 上传按钮点击事件
+            uploadBtn.addEventListener('click',  function() {
+                fileInput.click(); 
+            });
+            
+            // 文件选择变化事件
+            fileInput.addEventListener('change',  function(e) {
+                if (e.target.files.length  > 0) {
+                    handleFileUpload(e.target.files[0]); 
+                }
+            });
+            
+            // 粘贴上传事件
+            pasteBtn.addEventListener('click',  function() {
+                alert('请按Ctrl+V粘贴图片');
+            });
+            
+            // 拖放上传事件
+            uploadArea.addEventListener('dragover',  function(e) {
+                e.preventDefault(); 
+                uploadArea.classList.add('active'); 
+            });
+            
+            uploadArea.addEventListener('dragleave',  function(e) {
+                e.preventDefault(); 
+                uploadArea.classList.remove('active'); 
+            });
+            
+            uploadArea.addEventListener('drop',  function(e) {
+                e.preventDefault(); 
+                uploadArea.classList.remove('active'); 
+                
+                if (e.dataTransfer.files.length  > 0) {
+                    handleFileUpload(e.dataTransfer.files[0]); 
+                }
+            });
+            
+            // 复制链接按钮事件
+            copyBtn.addEventListener('click',  function() {
+                const textToCopy = urlText.textContent; 
+                navigator.clipboard.writeText(textToCopy).then(function()  {
+                    copyBtn.innerHTML  = '<i class="fas fa-check"></i> 已复制';
+                    setTimeout(function() {
+                        copyBtn.innerHTML  = '<i class="fas fa-copy"></i> 复制';
+                    }, 2000);
+                });
+            });
+            
+            // 处理文件上传
+            function handleFileUpload(file) {
+                // 验证文件类型
+                if (!file.type.match('image.*'))  {
+                    alert('请上传图片文件 (JPG, PNG, GIF)');
+                    return;
+                }
+                
+                // 验证文件大小 (10MB)
+                if (file.size  > 10 * 1024 * 1024) {
+                    alert('文件大小不能超过10MB');
+                    return;
+                }
+                
+                // 显示加载动画
+                loading.style.display  = 'flex';
+                
+                // 模拟上传过程 (实际项目中这里应该是AJAX请求)
+                setTimeout(function() {
+                    // 创建预览
+                    const reader = new FileReader();
+                    reader.onload  = function(e) {
+                        resultImage.src  = e.target.result; 
+                        
+                        // 生成随机URL
+                        const randomId = Math.random().toString(36).substring(2,  8);
+                        urlText.textContent  = `https://imageshare.pro/i/${randomId}`; 
+                        
+                        // 显示结果区域
+                        resultSection.style.display  = 'block';
+                        
+                        // 隐藏加载动画
+                        loading.style.display  = 'none';
+                        
+                        // 添加到历史记录
+                        addToHistory(file.name,  file.size,  e.target.result,  randomId);
+                    };
+                    reader.readAsDataURL(file); 
+                }, 1500);
+            }
+            
+            // 添加到历史记录
+            function addToHistory(filename, filesize, imageData, imageId) {
+                const historyGrid = document.getElementById('historyGrid'); 
+                
+                // 格式化日期
+                const now = new Date();
+                const formattedDate = `${now.getFullYear()}-${String(now.getMonth()  + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2,  '0')}`;
+                
+                // 格式化文件大小
+                const formattedSize = filesize > 1024 * 1024 
+                    ? `${(filesize / (1024 * 1024)).toFixed(1)}MB` 
+                    : `${Math.round(filesize  / 1024)}KB`;
+                
+                // 生成关键词 (模拟SEO关键词)
+                const keywords = generateKeywords(filename);
+                
+                // 创建历史记录卡片
+                const card = document.createElement('div'); 
+                card.className  = 'history-card';
+                card.innerHTML  = `
+                    <picture>
+      <source srcset="/${imageData}" type="image/webp">
+      <picture>
+      <source srcset="/${imageData}" type="image/webp">
+      <picture>
+      <source srcset="/${imageData}" type="image/webp">
+      <picture>
+      <source srcset="/${imageData}" type="image/webp">
+      <picture>
+      <source srcset="/${imageData}" type="image/webp">
+      <picture>
+      <source srcset="/${imageData}" type="image/webp">
+      <picture>
+      <source srcset="/${imageData}" type="image/webp">
+      <picture>
+      <source srcset="/${imageData}" type="image/webp">
+      <picture>
+      <source srcset="/${imageData}" type="image/webp">
+      <picture>
+      <source srcset="/${imageData}" type="image/webp">
+      <img src="${imageData}" alt="Puzzle Tupian Game - Free HTML5 Game" title="Puzzle Tupian Game" loading="lazy" decoding="async">
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+                    <div class="card-body">
+                        <h3 class="card-title">${filename}</h3>
+                        <div class="card-meta">
+                            <span>${formattedDate}</span>
+                            <span>${formattedSize}</span>
+                        </div>
+                        <div class="card-keywords">
+                            ${keywords.map(kw  => `<span class="keyword">${kw}</span>`).join('')}
+                        </div>
+                        <div class="card-actions">
+                            <div class="action-btn copy" data-url="https://imageshare.pro/i/${imageId}"> 
+                                <i class="fas fa-copy"></i> 复制
+                            </div>
+                            <div class="action-btn share">
+                                <i class="fas fa-share-alt"></i> 分享
+                            </div>
+                            <div class="action-btn delete">
+                                <i class="fas fa-trash"></i> 删除
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                // 添加到历史记录顶部
+                historyGrid.insertBefore(card,  historyGrid.firstChild); 
+                
+                // 为复制按钮添加事件
+                card.querySelector('.action-btn.copy').addEventListener('click',  function() {
+                    const url = this.getAttribute('data-url'); 
+                    navigator.clipboard.writeText(url).then(function()  {
+                        const copyBtn = this;
+                        copyBtn.innerHTML  = '<i class="fas fa-check"></i> 已复制';
+                        setTimeout(function() {
+                            copyBtn.innerHTML  = '<i class="fas fa-copy"></i> 复制';
+                        }, 2000);
+                    }.bind(this));
+                });
+                
+                // 为分享按钮添加事件
+                card.querySelector('.action-btn.share').addEventListener('click',  function() {
+                    alert('分享功能将在后续版本中实现');
+                });
+                
+                // 为删除按钮添加事件
+                card.querySelector('.action-btn.delete').addEventListener('click',  function() {
+                    if (confirm('确定要删除这张图片吗?')) {
+                        card.remove(); 
+                    }
+                });
+            }
+            
+            // 生成关键词 (模拟SEO关键词)
+            function generateKeywords(filename) {
+                const commonKeywords = {
+                    'landscape': ['风景', '自然', '旅游', '山水', '风光'],
+                    'portrait': ['人像', '摄影', '艺术', '写真', '人物'],
+                    'photo': ['照片', '图片', '摄影', '相片', '图像'],
+                    'nature': ['自然', '风景', '生态', '户外', '环境'],
+                    'city': ['城市', '建筑', '都市', '街景', '高楼']
+                };
+                
+                // 随机选择3个关键词
+                const randomKeywords = [];
+                const allKeywords = [];
+                
+                // 从文件名中提取可能的关键词
+                for (const key in commonKeywords) {
+                    if (filename.toLowerCase().includes(key))  {
+                        allKeywords.push(...commonKeywords[key]); 
+                    }
+                }
+                
+                // 如果没找到匹配的关键词，使用默认关键词
+                if (allKeywords.length  === 0) {
+                    allKeywords.push(...[' 图片', '照片', '摄影', '相册', '分享']);
+                }
+                
+                // 随机选择3个不重复的关键词
+                while (randomKeywords.length  < 3 && allKeywords.length  > 0) {
+                    const randomIndex = Math.floor(Math.random()  * allKeywords.length); 
+                    const selected = allKeywords.splice(randomIndex,  1)[0];
+                    randomKeywords.push(selected); 
+                }
+                
+                return randomKeywords;
+            }
+            
+            // 粘贴上传功能
+            document.addEventListener('paste',  function(e) {
+                if (e.clipboardData  && e.clipboardData.items)  {
+                    for (let i = 0; i < e.clipboardData.items.length;  i++) {
+                        const item = e.clipboardData.items[i]; 
+                        if (item.type.indexOf('image')  !== -1) {
+                            const blob = item.getAsFile(); 
+                            handleFileUpload(blob);
+                            break;
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto">
+  <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">More Puzzle Games</h3>
+  <div class="flex flex-wrap justify-center gap-2">
+    <a href="puzzle-fixed.html" class="bg-white rounded-lg shadow p-2 w-40 hover:shadow-lg transition flex flex-col items-center">
+      <picture>
+        <source srcset="/images/games/puzzle-fixed.webp" type="image/webp">
+        <picture>
+      <source srcset="/images/games/puzzle-fixed.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/puzzle-fixed.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/puzzle-fixed.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/puzzle-fixed.webp" type="image/webp">
+      <img src="/images/games/puzzle-fixed.webp" alt="puzzle fixed html5 game, fixed online play, free puzzle game" title="puzzle fixed html5 game, fixed online play, free puzzle game" loading="lazy" decoding="async">
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+      </picture>
+      <h4 class="font-bold text-gray-800 text-sm mb-1 text-center">Puzzle Fixed Game</h4>
+      <p class="text-gray-600 text-xs text-center">Play Puzzle-Fixed online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.</p>
+    </a>
+    <a href="puzzle-uk-counties-crossword-challenge.html" class="bg-white rounded-lg shadow p-2 w-40 hover:shadow-lg transition flex flex-col items-center">
+      <picture>
+        <source srcset="/images/games/puzzle-uk-counties-crossword-challenge.webp" type="image/webp">
+        <picture>
+      <source srcset="/images/games/puzzle-uk-counties-crossword-challenge.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/puzzle-uk-counties-crossword-challenge.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/puzzle-uk-counties-crossword-challenge.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/puzzle-uk-counties-crossword-challenge.webp" type="image/webp">
+      <img src="/images/games/puzzle-uk-counties-crossword-challenge.webp" alt="puzzle uk-counties-crossword-challenge html5 game, uk-counties-crossword-challenge online play, free puzzle game" title="puzzle uk-counties-crossword-challenge html5 game, uk-counties-crossword-challenge online play, free puzzle game" loading="lazy" decoding="async">
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+      </picture>
+      <h4 class="font-bold text-gray-800 text-sm mb-1 text-center">Puzzle Uk-Counties-Crossword-Challenge Game</h4>
+      <p class="text-gray-600 text-xs text-center">Play Puzzle-Uk-Counties-Crossword-Challenge online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.</p>
+    </a>
+    <a href="puzzle-ukshoot.html" class="bg-white rounded-lg shadow p-2 w-40 hover:shadow-lg transition flex flex-col items-center">
+      <picture>
+        <source srcset="/images/games/puzzle-ukshoot.webp" type="image/webp">
+        <picture>
+      <source srcset="/images/games/puzzle-ukshoot.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/puzzle-ukshoot.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/puzzle-ukshoot.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/puzzle-ukshoot.webp" type="image/webp">
+      <img src="/images/games/puzzle-ukshoot.webp" alt="puzzle ukshoot html5 game, ukshoot online play, free puzzle game" title="puzzle ukshoot html5 game, ukshoot online play, free puzzle game" loading="lazy" decoding="async">
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+      </picture>
+      <h4 class="font-bold text-gray-800 text-sm mb-1 text-center">Puzzle Ukshoot Game</h4>
+      <p class="text-gray-600 text-xs text-center">Play Puzzle-Ukshoot online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.</p>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>

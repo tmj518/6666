@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 安全头 -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+    <!-- 关键资源预加载 -->
+    <link rel="preload" href="/js/main.js" as="script">
+    <link rel="preload" href="/js/games.js" as="script">
+    <link rel="preload" href="/css/styles.css" as="style">
+    
+    <!-- 字体预加载 -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
+    
+    <!-- 关键图片预加载 -->
+    <link rel="preload" href="/images/games/logo.webp" as="image">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle UK Shoot Game - Free HTML5 Game | PlayHTML5</title>
+    <meta name="description" content="Shooting puzzle game with UK-themed targets and strategic gameplay. Play this free HTML5 game online without download. No registration required.">
+    <meta name="keywords" content="Puzzle UK Shoot Game, free HTML5 game, online game, puzzle, action, PlayHTML5">
+    <meta name="author" content="British Bulldog Shooter Team">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#002868', // British blue
+                        secondary: '#C8102E', // British red
+                        accent: '#FFD700', // Gold accent
+                        dark: '#111827',
+                        light: '#F3F4F6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .text-shadow-lg {
+                text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+            }
+            .animate-float {
+                animation: float 3s ease-in-out infinite;
+            }
+            .animate-pulse-slow {
+                animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            }
+            .parallax-bg {
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Puzzle UK Shoot Game",
+  "description": "Shooting puzzle game with UK-themed targets and strategic gameplay.",
+  "image": "https://www.ukhtml5games.com/images/games/puzzle-ukshoot.jpg",
+  "url": "https://www.ukhtml5games.com/games/puzzle-ukshoot.html",
+  "genre": "puzzle, action",
+  "gamePlatform": "HTML5",
+  "applicationCategory": "Game",
+  "operatingSystem": "Web Browser",
+  "author": {
+    "@type": "Organization",
+    "name": "UK Games Studio"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PlayHTML5"
+  },
+  "datePublished": "2023-07-15",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 4.4,
+    "ratingCount": "380K+"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ukhtml5games.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Puzzle UK Shoot Game",
+      "item": "https://www.ukhtml5games.com/games/puzzle-ukshoot.html"
+    }
+  ]
+}
+    </script>
+        <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6886160126549046"
+         crossorigin="anonymous"></script>
+    </head>
+<body class="bg-gray-100 font-sans text-dark min-h-screen flex flex-col">
+
+    <nav class="breadcrumb bg-white shadow-sm mb-6">
+      <div class="container mx-auto px-4 py-3">
+        <ol class="flex items-center space-x-2 text-sm">
+          <li><a href="/" class="text-primary hover:underline">Home</a></li>
+          <li><i class="fa fa-chevron-right text-gray-400"></i></li>
+          <li><a href="/games/" class="text-primary hover:underline">Games</a></li>
+          <li><i class="fa fa-chevron-right text-gray-400"></i></li>
+          <li class="text-gray-600">puzzle ukshoot</li>
+        </ol>
+      </div>
+    </nav>
+<nav class="w-full bg-white shadow mb-4 flex items-center px-4 py-2">
+  <div class="flex items-center gap-4">
+    <a href="https://www.ukhtml5games.com/" class="flex items-center" title="PlayHTML5 Home">
+      <picture>
+        <source srcset="/images/games/logo.webp" type="image/webp">
+        <picture>
+      <source srcset="/images/games/logo.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/logo.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/logo.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/logo.webp" type="image/webp">
+      <img src="/images/games/logo.png" alt="Puzzle UK Shoot Game - Free HTML5 Game" title="Puzzle UK Shoot Game" loading="lazy" decoding="async">
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+      </picture>
+    </a>
+    <a href="https://www.ukhtml5games.com/" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+    <a href="https://www.ukhtml5games.com/" class="text-gray-700 hover:text-blue-600 font-medium">All Games</a>
+  </div>
+  <div class="flex-1"></div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- SEO optimized header -->
+    <header class="bg-primary text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex flex-wrap items-center justify-between">
+            <a href="#" class="flex items-center space-x-2">
+                <i class="fa fa-crosshairs text-accent text-2xl"></i>
+                <h1 class="text-xl md:text-2xl font-bold tracking-tight">British Bulldog Shooter</h1>
+            </a>
+            
+            <button class="md:hidden text-white focus:outline-none" id="mobile-menu-button">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-primary/95 backdrop-blur-md" id="mobile-menu">
+            <div class="px-4 py-2 space-y-3">
+                <a href="#game" class="block py-2 hover:text-accent transition-colors duration-300">Play Game</a>
+                <a href="#features" class="block py-2 hover:text-accent transition-colors duration-300">Features</a>
+                <a href="#leaderboard" class="block py-2 hover:text-accent transition-colors duration-300">Leaderboard</a>
+                <a href="#about" class="block py-2 hover:text-accent transition-colors duration-300">About</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero section with SEO meta data -->
+    <section class="relative parallax-bg bg-cover bg-center py-20 md:py-32" style="background-image: url('https://picsum.photos/id/1015/1920/1080');">
+        <div class="absolute inset-0 bg-primary/60 backdrop-blur-sm"></div>
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <h2 class="text-[clamp(2rem,5vw,4rem)] font-bold text-white text-shadow-lg mb-4">
+                Test Your Aim with British Precision
+            </h2>
+            <p class="text-[clamp(1rem,2vw,1.25rem)] text-white text-shadow max-w-2xl mx-auto mb-8">
+                Experience the excitement of British-themed shooting gameplay. Target iconic landmarks and characters in this action-packed browser game.
+            </p>
+            <a href="#game" class="inline-block bg-secondary hover:bg-secondary/90 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300">
+                <i class="fa fa-play-circle mr-2"></i> Start Shooting
+            </a>
+        </div>
+    </section>
+
+    <!-- Game section -->
+    <section id="game" class="py-12 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">The Game</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Shoot the British-themed targets as they appear. Earn points for accuracy and speed. How high can you score?</p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+                <!-- Game canvas container -->
+                <div class="relative aspect-video bg-gray-100" id="game-container">
+                    <canvas id="gameCanvas" class="w-full h-full"></canvas>
+                    
+                    <!-- Game start overlay -->
+                    <div id="start-screen" class="absolute inset-0 flex flex-col items-center justify-center bg-primary/80 text-white">
+                        <h3 class="text-3xl font-bold mb-6 animate-float">British Bulldog Shooter</h3>
+                        <div class="mb-8 text-center">
+                            <p class="mb-2"><i class="fa fa-mouse-pointer mr-2"></i> Click to shoot</p>
+                            <p class="mb-2"><i class="fa fa-clock-o mr-2"></i> 60 seconds per round</p>
+                            <p><i class="fa fa-trophy mr-2"></i> Score points for accuracy</p>
+                        </div>
+                        <button id="start-game" class="bg-secondary hover:bg-secondary/90 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300">
+                            <i class="fa fa-play mr-2"></i> Start Game
+                        </button>
+                    </div>
+                    
+                    <!-- Game over overlay (hidden by default) -->
+                    <div id="game-over" class="absolute inset-0 flex-col items-center justify-center bg-dark/90 text-white hidden">
+                        <h3 class="text-3xl font-bold mb-4">Game Over!</h3>
+                        <p class="text-2xl mb-2">Your Score: <span id="final-score" class="text-accent font-bold">0</span></p>
+                        <p class="mb-8">Targets Hit: <span id="targets-hit" class="text-accent font-bold">0</span></p>
+                        <button id="restart-game" class="bg-secondary hover:bg-secondary/90 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300">
+                            <i class="fa fa-refresh mr-2"></i> Play Again
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Game controls and stats -->
+                <div class="p-6 grid grid-cols-1 md:grid-cols-3 gap-6 bg-gray-50">
+                    <div class="text-center">
+                        <p class="text-sm text-gray-500">Score</p>
+                        <p class="text-3xl font-bold text-primary" id="score">0</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-sm text-gray-500">Time Remaining</p>
+                        <p class="text-3xl font-bold text-primary" id="time">60s</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-sm text-gray-500">Targets Hit</p>
+                        <p class="text-3xl font-bold text-primary" id="hit-count">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features section with SEO keywords -->
+    <section id="features" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Game Features</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Experience authentic British gameplay with these exciting features</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fa fa-map-marker text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">Iconic British Targets</h3>
+                    <p class="text-gray-600 text-center">Shoot at famous British landmarks including Big Ben, red telephone boxes, and double-decker buses.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fa fa-trophy text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">Competitive Leaderboard</h3>
+                    <p class="text-gray-600 text-center">Compete with players worldwide and see how your score ranks on our global leaderboard.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fa fa-bolt text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">Fast-Paced Gameplay</h3>
+                    <p class="text-gray-600 text-center">Test your reflexes with our challenging time-based rounds and increasing difficulty levels.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fa fa-paint-brush text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">Authentic British Design</h3>
+                    <p class="text-gray-600 text-center">Immerse yourself in British culture with our detailed graphics and iconic red, white, and blue color scheme.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fa fa-mobile text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">Mobile Friendly</h3>
+                    <p class="text-gray-600 text-center">Play seamlessly on any device - desktop, tablet, or mobile phone with touch controls optimized for mobile play.</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fa fa-gift text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">Unlockable Achievements</h3>
+                    <p class="text-gray-600 text-center">Complete special challenges to unlock British-themed achievements and earn bragging rights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leaderboard section -->
+    <section id="leaderboard" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Top Shooters</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">See how you compare to the best British Bulldog Shooters around the world</p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden max-w-3xl mx-auto">
+                <div class="bg-primary text-white p-4">
+                    <h3 class="text-xl font-bold">Leaderboard</h3>
+                </div>
+                <div class="p-6">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b">
+                                <th class="py-3 text-left font-bold text-gray-600">#</th>
+                                <th class="py-3 text-left font-bold text-gray-600">Player</th>
+                                <th class="py-3 text-left font-bold text-gray-600">Score</th>
+                                <th class="py-3 text-left font-bold text-gray-600">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboard-body">
+                            <!-- Leaderboard data will be populated by JavaScript -->
+                            <tr class="border-b">
+                                <td class="py-3">1</td>
+                                <td class="py-3 font-bold">Winston S.</td>
+                                <td class="py-3 text-primary font-bold">9,875</td>
+                                <td class="py-3 text-gray-500">July 15, 2025</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-3">2</td>
+                                <td class="py-3 font-bold">Victoria R.</td>
+                                <td class="py-3 text-primary font-bold">9,540</td>
+                                <td class="py-3 text-gray-500">July 16, 2025</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-3">3</td>
+                                <td class="py-3 font-bold">Charles III</td>
+                                <td class="py-3 text-primary font-bold">9,210</td>
+                                <td class="py-3 text-gray-500">July 17, 2025</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-3">4</td>
+                                <td class="py-3 font-bold">Boris J.</td>
+                                <td class="py-3 text-primary font-bold">8,950</td>
+                                <td class="py-3 text-gray-500">July 14, 2025</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3">5</td>
+                                <td class="py-3 font-bold">Emma W.</td>
+                                <td class="py-3 text-primary font-bold">8,750</td>
+                                <td class="py-3 text-gray-500">July 13, 2025</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About section with SEO content -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">About British Bulldog Shooter</h2>
+                    <p class="text-gray-600 mb-6">British Bulldog Shooter is an exciting browser-based shooting game that brings the charm and excitement of British culture to your screen. Developed with precision and attention to detail, our game offers an immersive experience featuring iconic British landmarks and characters.</p>
+                    <p class="text-gray-600 mb-6">Whether you're a fan of British culture or just looking for a fun, fast-paced shooting game, British Bulldog Shooter offers hours of entertainment for players of all ages. Test your aim, challenge your friends, and see if you have what it takes to become the top shooter in our global leaderboard.</p>
+                    <div class="flex flex-wrap gap-4 mt-8">
+                        <a href="#game" class="bg-primary hover:bg-primary/90 text-white font-bold py-2 px-6 rounded-full shadow-md transform hover:scale-105 transition-all duration-300">
+                            <i class="fa fa-play-circle mr-2"></i> Play Now
+                        </a>
+                        <a href="#" class="bg-white hover:bg-gray-100 text-primary font-bold py-2 px-6 rounded-full shadow-md transform hover:scale-105 transition-all duration-300 border border-primary">
+                            <i class="fa fa-share-alt mr-2"></i> Share with Friends
+                        </a>
+                    </div>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-all duration-500">
+                    <picture>
+      <source srcset="/https://picsum.photos/id/1043/800/600" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/id/1043/800/600" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/id/1043/800/600" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/id/1043/800/600" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/id/1043/800/600" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/id/1043/800/600" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/id/1043/800/600" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/id/1043/800/600" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/id/1043/800/600" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/id/1043/800/600" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/id/1043/800/600" type="image/webp">
+      <picture>
+      <source srcset="/https://picsum.photos/id/1043/800/600" type="image/webp">
+      <img src="https://picsum.photos/id/1043/800/600" alt="Puzzle UK Shoot Game - Free HTML5 Game" title="Puzzle UK Shoot Game" loading="lazy" decoding="async">
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with SEO links and meta -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fa fa-crosshairs text-accent mr-2"></i> British Bulldog Shooter
+                    </h3>
+                    <p class="text-gray-300 mb-4">Experience the thrill of British-themed shooting gameplay in this action-packed browser game.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-accent transition-colors duration-300">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-accent transition-colors duration-300">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-accent transition-colors duration-300">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-accent transition-colors duration-300">
+                            <i class="fa fa-youtube-play"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#game" class="text-gray-300 hover:text-white transition-colors duration-300">Play Game</a></li>
+                        <li><a href="#features" class="text-gray-300 hover:text-white transition-colors duration-300">Features</a></li>
+                        <li><a href="#leaderboard" class="text-gray-300 hover:text-white transition-colors duration-300">Leaderboard</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors duration-300">About</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">How to Play</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">FAQs</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Subscribe</h3>
+                    <p class="text-gray-300 mb-4">Get the latest updates and news about British Bulldog Shooter</p>
+                    <form class="space-y-2">
+                        <input type="email" placeholder="Your email address" class="w-full px-4 py-2 rounded-md text-dark focus:outline-none focus:ring-2 focus:ring-accent">
+                        <button type="submit" class="w-full bg-secondary hover:bg-secondary/90 text-white font-bold py-2 px-4 rounded-md transition-colors duration-300">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400">
+                <p>&copy; 2025 British Bulldog Shooter. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Game functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const canvas = document.getElementById('gameCanvas');
+            const ctx = canvas.getContext('2d');
+            const startScreen = document.getElementById('start-screen');
+            const gameOverScreen = document.getElementById('game-over');
+            const startGameButton = document.getElementById('start-game');
+            const restartGameButton = document.getElementById('restart-game');
+            const scoreDisplay = document.getElementById('score');
+            const timeDisplay = document.getElementById('time');
+            const hitCountDisplay = document.getElementById('hit-count');
+            const finalScoreDisplay = document.getElementById('final-score');
+            const targetsHitDisplay = document.getElementById('targets-hit');
+            
+            // Set canvas dimensions
+            function resizeCanvas() {
+                canvas.width = canvas.offsetWidth;
+                canvas.height = canvas.offsetHeight;
+            }
+            
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+            
+            // Game state
+            let gameActive = false;
+            let score = 0;
+            let timeLeft = 60;
+            let hitCount = 0;
+            let gameInterval;
+            let targetInterval;
+            let targets = [];
+            let lastTargetTime = 0;
+            let targetSpawnRate = 1000; // milliseconds
+            
+            // British-themed target images (placeholders)
+            const targetImages = [
+                { src: 'https://picsum.photos/id/1015/80/80', type: 'big-ben', points: 100 },
+                { src: 'https://picsum.photos/id/1027/80/80', type: 'double-decker', points: 80 },
+                { src: 'https://picsum.photos/id/1040/80/80', type: 'red-phone', points: 60 },
+                { src: 'https://picsum.photos/id/1042/80/80', type: 'union-jack', points: 120 },
+                { src: 'https://picsum.photos/id/1043/80/80', type: 'british-bulldog', points: 150 }
+            ];
+            
+            // Preload images
+            const images = {};
+            targetImages.forEach(img => {
+                const image = new Image();
+                image.src = img.src;
+                images[img.type] = image;
+            });
+            
+            // Target class
+            class Target {
+                constructor() {
+                    this.reset();
+                }
+                
+                reset() {
+                    const randomImage = targetImages[Math.floor(Math.random() * targetImages.length)];
+                    this.type = randomImage.type;
+                    this.points = randomImage.points;
+                    this.size = Math.floor(Math.random() * 20) + 60; // Random size between 60-80
+                    this.x = Math.floor(Math.random() * (canvas.width - this.size));
+                    this.y = Math.floor(Math.random() * (canvas.height - this.size));
+                    this.speedX = (Math.random() - 0.5) * 5;
+                    this.speedY = (Math.random() - 0.5) * 5;
+                    this.life = Math.floor(Math.random() * 3000) + 2000; // 2-5 seconds
+                    this.createdAt = Date.now();
+                    this.hit = false;
+                }
+                
+                update() {
+                    // Move target
+                    this.x += this.speedX;
+                    this.y += this.speedY;
+                    
+                    // Bounce off walls
+                    if (this.x <= 0 || this.x + this.size >= canvas.width) {
+                        this.speedX = -this.speedX;
+                    }
+                    
+                    if (this.y <= 0 || this.y + this.size >= canvas.height) {
+                        this.speedY = -this.speedY;
+                    }
+                    
+                    // Check if target should disappear
+                    return Date.now() - this.createdAt > this.life;
+                }
+                
+                draw() {
+                    const image = images[this.type];
+                    if (image.complete) {
+                        ctx.drawImage(image, this.x, this.y, this.size, this.size);
+                    } else {
+                        // Draw placeholder if image not loaded
+                        ctx.fillStyle = this.hit ? '#FFD700' : '#C8102E';
+                        ctx.fillRect(this.x, this.y, this.size, this.size);
+                    }
+                    
+                    // Draw points on hit
+                    if (this.hit) {
+                        ctx.fillStyle = 'white';
+                        ctx.font = 'bold 16px Arial';
+                        ctx.fillText(`+${this.points}`, this.x + this.size/2 - 15, this.y - 5);
+                    }
+                }
+                
+                checkHit(mouseX, mouseY) {
+                    return (
+                        mouseX >= this.x && 
+                        mouseX <= this.x + this.size && 
+                        mouseY >= this.y && 
+                        mouseY <= this.y + this.size
+                    );
+                }
+            }
+            
+            // Create initial targets
+            function createTargets() {
+                targets = [];
+                for (let i = 0; i < 3; i++) {
+                    targets.push(new Target());
+                }
+            }
+            
+            // Game loop
+            function gameLoop() {
+                if (!gameActive) return;
+                
+                // Clear canvas
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Update and draw targets
+                const currentTime = Date.now();
+                if (currentTime - lastTargetTime > targetSpawnRate) {
+                    targets.push(new Target());
+                    lastTargetTime = currentTime;
+                    
+                    // Increase difficulty over time
+                    if (targetSpawnRate > 500) {
+                        targetSpawnRate -= 10;
+                    }
+                }
+                
+                // Update and draw existing targets
+                for (let i = targets.length - 1; i >= 0; i--) {
+                    const target = targets[i];
+                    const shouldRemove = target.update();
+                    
+                    if (shouldRemove && !target.hit) {
+                        targets.splice(i, 1);
+                    } else {
+                        target.draw();
+                    }
+                }
+                
+                requestAnimationFrame(gameLoop);
+            }
+            
+            // Handle mouse click
+            function handleClick(event) {
+                if (!gameActive) return;
+                
+                const rect = canvas.getBoundingClientRect();
+                const mouseX = event.clientX - rect.left;
+                const mouseY = event.clientY - rect.top;
+                
+                let hit = false;
+                
+                // Check each target for hit
+                for (let i = targets.length - 1; i >= 0; i--) {
+                    const target = targets[i];
+                    if (!target.hit && target.checkHit(mouseX, mouseY)) {
+                        target.hit = true;
+                        score += target.points;
+                        hitCount++;
+                        hit = true;
+                        
+                        // Update displays
+                        scoreDisplay.textContent = score;
+                        hitCountDisplay.textContent = hitCount;
+                        
+                        // Remove target after a short delay
+                        setTimeout(() => {
+                            targets.splice(i, 1);
+                        }, 500);
+                        
+                        break;
+                    }
+                }
+                
+                // Draw crosshair
+                if (hit) {
+                    ctx.strokeStyle = 'red';
+                    ctx.lineWidth = 2;
+                    ctx.beginPath();
+                    ctx.arc(mouseX, mouseY, 15, 0, Math.PI * 2);
+                    ctx.stroke();
+                    ctx.beginPath();
+                    ctx.moveTo(mouseX - 10, mouseY);
+                    ctx.lineTo(mouseX + 10, mouseY);
+                    ctx.moveTo(mouseX, mouseY - 10);
+                    ctx.lineTo(mouseX, mouseY + 10);
+                    ctx.stroke();
+                }
+            }
+            
+            // Start game
+            function startGame() {
+                // Reset game state
+                gameActive = true;
+                score = 0;
+                timeLeft = 60;
+                hitCount = 0;
+                targetSpawnRate = 1000;
+                
+                // Update displays
+                scoreDisplay.textContent = score;
+                timeDisplay.textContent = `${timeLeft}s`;
+                hitCountDisplay.textContent = hitCount;
+                
+                // Hide start screen
+                startScreen.classList.add('hidden');
+                gameOverScreen.classList.add('hidden');
+                
+                // Create initial targets
+                createTargets();
+                lastTargetTime = Date.now();
+                
+                // Start game loop
+                requestAnimationFrame(gameLoop);
+                
+                // Start timer
+                gameInterval = setInterval(() => {
+                    timeLeft--;
+                    timeDisplay.textContent = `${timeLeft}s`;
+                    
+                    if (timeLeft <= 0) {
+                        endGame();
+                    }
+                }, 1000);
+            }
+            
+            // End game
+            function endGame() {
+                gameActive = false;
+                clearInterval(gameInterval);
+                
+                // Show game over screen
+                finalScoreDisplay.textContent = score;
+                targetsHitDisplay.textContent = hitCount;
+                gameOverScreen.classList.remove('hidden');
+                gameOverScreen.style.display = 'flex';
+                
+                // Add score to leaderboard (client-side only)
+                addScoreToLeaderboard(score);
+            }
+            
+            // Add score to leaderboard (client-side only)
+            function addScoreToLeaderboard(score) {
+                // Generate a random name for demonstration
+                const names = ['Winston', 'Victoria', 'Charles', 'Boris', 'Emma', 'David', 'Elizabeth', 'James', 'Sophia', 'Daniel'];
+                const randomName = names[Math.floor(Math.random() * names.length)] + ' ' + Math.floor(Math.random() * 100);
+                
+                // Create new score entry
+                const newScore = {
+                    name: randomName,
+                    score: score,
+                    date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+                };
+                
+                // Get existing scores from localStorage or create empty array
+                let scores = JSON.parse(localStorage.getItem('britishShooterScores')) || [];
+                
+                // Add new score and sort
+                scores.push(newScore);
+                scores.sort((a, b) => b.score - a.score);
+                
+                // Keep only top 5 scores
+                scores = scores.slice(0, 5);
+                
+                // Save to localStorage
+                localStorage.setItem('britishShooterScores', JSON.stringify(scores));
+                
+                // Update leaderboard display
+                updateLeaderboard(scores);
+            }
+            
+            // Update leaderboard display
+            function updateLeaderboard(scores) {
+                const leaderboardBody = document.getElementById('leaderboard-body');
+                leaderboardBody.innerHTML = '';
+                
+                scores.forEach((entry, index) => {
+                    const row = document.createElement('tr');
+                    row.className = index === 0 ? 'border-b bg-primary/5' : 'border-b';
+                    
+                    row.innerHTML = `
+                        <td class="py-3">${index + 1}</td>
+                        <td class="py-3 font-bold">${entry.name}</td>
+                        <td class="py-3 text-primary font-bold">${entry.score}</td>
+                        <td class="py-3 text-gray-500">${entry.date}</td>
+                    `;
+                    
+                    leaderboardBody.appendChild(row);
+                });
+            }
+            
+            // Event listeners
+            startGameButton.addEventListener('click', startGame);
+            restartGameButton.addEventListener('click', startGame);
+            canvas.addEventListener('click', handleClick);
+            
+            // Initialize leaderboard
+            const savedScores = JSON.parse(localStorage.getItem('britishShooterScores')) || [];
+            updateLeaderboard(savedScores);
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto">
+  <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">More Puzzle Games</h3>
+  <div class="flex flex-wrap justify-center gap-2">
+    <a href="puzzle-fixed.html" class="bg-white rounded-lg shadow p-2 w-40 hover:shadow-lg transition flex flex-col items-center">
+      <picture>
+        <source srcset="/images/games/puzzle-fixed.webp" type="image/webp">
+        <picture>
+      <source srcset="/images/games/puzzle-fixed.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/puzzle-fixed.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/puzzle-fixed.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/puzzle-fixed.webp" type="image/webp">
+      <img src="/images/games/puzzle-fixed.webp" alt="puzzle fixed html5 game, fixed online play, free puzzle game" title="puzzle fixed html5 game, fixed online play, free puzzle game" loading="lazy" decoding="async">
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+      </picture>
+      <h4 class="font-bold text-gray-800 text-sm mb-1 text-center">Puzzle Fixed Game</h4>
+      <p class="text-gray-600 text-xs text-center">Play Puzzle-Fixed online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.</p>
+    </a>
+    <a href="puzzle-tupian.html" class="bg-white rounded-lg shadow p-2 w-40 hover:shadow-lg transition flex flex-col items-center">
+      <picture>
+        <source srcset="/images/games/puzzle-tupian.webp" type="image/webp">
+        <picture>
+      <source srcset="/images/games/puzzle-tupian.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/puzzle-tupian.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/puzzle-tupian.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/puzzle-tupian.webp" type="image/webp">
+      <img src="/images/games/puzzle-tupian.webp" alt="puzzle tupian html5 game, tupian online play, free puzzle game" title="puzzle tupian html5 game, tupian online play, free puzzle game" loading="lazy" decoding="async">
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+      </picture>
+      <h4 class="font-bold text-gray-800 text-sm mb-1 text-center">Puzzle Tupian Game</h4>
+      <p class="text-gray-600 text-xs text-center">Play Puzzle-Tupian online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.</p>
+    </a>
+    <a href="puzzle-uk-counties-crossword-challenge.html" class="bg-white rounded-lg shadow p-2 w-40 hover:shadow-lg transition flex flex-col items-center">
+      <picture>
+        <source srcset="/images/games/puzzle-uk-counties-crossword-challenge.webp" type="image/webp">
+        <picture>
+      <source srcset="/images/games/puzzle-uk-counties-crossword-challenge.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/puzzle-uk-counties-crossword-challenge.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/puzzle-uk-counties-crossword-challenge.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/puzzle-uk-counties-crossword-challenge.webp" type="image/webp">
+      <img src="/images/games/puzzle-uk-counties-crossword-challenge.webp" alt="puzzle uk-counties-crossword-challenge html5 game, uk-counties-crossword-challenge online play, free puzzle game" title="puzzle uk-counties-crossword-challenge html5 game, uk-counties-crossword-challenge online play, free puzzle game" loading="lazy" decoding="async">
+    </picture>
+    </picture>
+    </picture>
+    </picture>
+      </picture>
+      <h4 class="font-bold text-gray-800 text-sm mb-1 text-center">Puzzle Uk-Counties-Crossword-Challenge Game</h4>
+      <p class="text-gray-600 text-xs text-center">Play Puzzle-Uk-Counties-Crossword-Challenge online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.</p>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
+    

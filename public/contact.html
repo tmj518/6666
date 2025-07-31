@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script type="application/ld+json">
-    {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "PlayHTML5",
-  "url": "https://www.ukhtml5games.com",
-  "description": "Free HTML5 Games Platform"
-}
-    </script>
+    <!-- 安全头 -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+    <!-- 关键资源预加载 -->
+    <link rel="preload" href="/js/main.js" as="script">
+    <link rel="preload" href="/js/games.js" as="script">
+    <link rel="preload" href="/css/styles.css" as="style">
+    
+    <!-- 字体预加载 -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
+    
+    <!-- 关键图片预加载 -->
+    <link rel="preload" href="/images/games/logo.webp" as="image">
+    
     <meta property="og:image" content="https://www.ukhtml5games.com/images/og-image.jpg">
     <link rel="canonical" href="https://www.ukhtml5games.com/C:/Users/zfz123/Desktop/7月4.11版本/public/contact.html">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us / お問い合わせ - PlayHTML5</title>
-    <meta name="description" content="Contact PlayHTML5 team. Find our address, email, and location on Google Map.">
-    <meta name="keywords" content="Contact, PlayHTML5, Email, Address, Google Map, お問い合わせ">
+    <title>HTML5 Game - PlayHTML5</title>
+    <meta name="description" content="Play free HTML5 games online!">
+    <meta name="keywords" content="HTML5 game, free game, online game, PlayHTML5">
     <meta property="og:title" content="Contact Us - PlayHTML5">
     <meta property="og:description" content="Contact PlayHTML5 team. Find our address, email, and location on Google Map.">
     <meta property="og:type" content="website">
@@ -39,7 +47,19 @@
       }
       window.onload = initMap;
     </script>
-</head>
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "HTML5 Game",
+  "description": "Play free HTML5 games online!",
+  "url": "https://www.ukhtml5games.com/contact.html"
+}
+    </script>
+        <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6886160126549046"
+         crossorigin="anonymous"></script>
+    </head>
 <body class="bg-gray-50 text-dark">
     <div class="container mx-auto px-4 py-8">
         <h1 class="text-3xl font-bold mb-6 text-primary">Contact Us / お問い合わせ</h1>

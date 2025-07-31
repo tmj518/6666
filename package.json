@@ -19,8 +19,18 @@
     "ai": "node scripts/ai-assistant.js",
     "command": "node scripts/auto-command.js",
     "seo": "npm run generate-seo",
+    "seo:optimize": "node scripts/seo-optimizer.js",
+    "seo:fix": "node scripts/seo-batch-fix.js",
+    "seo:monitor": "node scripts/seo-monitor.js",
+    "adsense:add": "node scripts/add-adsense.js",
+    "adsense:ads": "node scripts/add-adsense-ads.js",
+    "adsense:optimize": "node scripts/adsense-optimizer.js",
     "clean-backups": "node scripts/clean-backups.js",
-    "scheduled-cleanup": "node scripts/scheduled-cleanup.js"
+    "scheduled-cleanup": "node scripts/scheduled-cleanup.js",
+    "monitor": "node scripts/start-monitoring.js",
+    "monitor:start": "node scripts/start-monitoring.js start",
+    "monitor:stop": "node scripts/start-monitoring.js stop",
+    "monitor:status": "node scripts/start-monitoring.js status"
   },
   "keywords": [
     "html5-games",

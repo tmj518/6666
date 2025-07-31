@@ -1,545 +1,648 @@
 {
   "games": [
     {
+      "id": 1001,
       "title": {
-        "en": "Adventure British-Royal-Family-Quiz Game",
-        "zh": "Adventure British-Royal-Family-Quiz Game",
-        "ja": "Adventure British-Royal-Family-Quiz Game",
-        "ko": "Adventure British-Royal-Family-Quiz Game"
+        "en": "Action Deep Sea Adventure Survival Game Free",
+        "zh": "深海冒险生存游戏免费版",
+        "ja": "アクション深海アドベンチャーサバイバルゲーム無料版",
+        "ko": "액션 딥시 어드벤처 서바이벌 게임 무료"
       },
       "description": {
-        "en": "A brand new HTML5 adventure game!",
-        "zh": "A brand new HTML5 adventure game!",
-        "ja": "A brand new HTML5 adventure game!",
-        "ko": "A brand new HTML5 adventure game!"
+        "en": "Explore the deep sea, collect resources, avoid dangers, and survive in this thrilling adventure game.",
+        "zh": "探索深海，收集资源，避开危险，在这个刺激的冒险游戏中生存。",
+        "ja": "深海を探索し、資源を集め、危険を避けて、このスリリングなアドベンチャーゲームで生き残りましょう。",
+        "ko": "깊은 바다를 탐험하고, 자원을 수집하며, 위험을 피해 이 스릴 넘치는 어드벤처 게임에서 생존하세요."
+      },
+      "image": "/images/games/action-deep-sea-adventure-survival-game-free.jpg",
+      "category": ["action", "adventure"],
+      "rating": 4.8,
+      "developer": "Game Studio",
+      "published": "2024-01-15",
+      "plays": "1.2M+",
+      "regions": ["global"],
+      "url": "/games/action-deep-sea-adventure-survival-game-free.html"
+    },
+    {
+      "id": 1002,
+      "title": {
+        "en": "Action Gameslike Game",
+        "zh": "动作游戏类游戏",
+        "ja": "アクションゲームライクゲーム",
+        "ko": "액션 게임라이크 게임"
+      },
+      "description": {
+        "en": "Fast-paced action game with exciting gameplay and challenging levels.",
+        "zh": "快节奏的动作游戏，具有刺激的游戏玩法和具有挑战性的关卡。",
+        "ja": "エキサイティングなゲームプレイと挑戦的なレベルを持つ高速アクションゲーム。",
+        "ko": "흥미진진한 게임플레이와 도전적인 레벨을 가진 빠른 속도의 액션 게임."
+      },
+      "image": "/images/games/action-gameslike.jpg",
+      "category": ["action", "popular"],
+      "rating": 4.9,
+      "developer": "Game Studio",
+      "published": "2024-01-10",
+      "plays": "980K+",
+      "regions": ["global"],
+      "url": "/games/action-gameslike.html"
+    },
+    {
+      "id": 1003,
+      "title": {
+        "en": "Adventure British Word Games for Kids",
+        "zh": "英国儿童单词冒险游戏",
+        "ja": "イギリス子供向け単語アドベンチャーゲーム",
+        "ko": "영국 어린이 단어 어드벤처 게임"
+      },
+      "description": {
+        "en": "Educational word games designed for kids with British English vocabulary and fun learning activities.",
+        "zh": "专为儿童设计的教育性单词游戏，包含英式英语词汇和有趣的学习活动。",
+        "ja": "イギリス英語の語彙と楽しい学習活動を含む子供向けの教育的単語ゲーム。",
+        "ko": "영국식 영어 어휘와 재미있는 학습 활동을 포함한 어린이를 위한 교육용 단어 게임."
+      },
+      "image": "/images/games/adventure-british-word-games-for-kids.jpg",
+      "category": ["adventure", "educational"],
+      "rating": 4.6,
+      "developer": "Educational Games",
+      "published": "2023-12-20",
+      "plays": "750K+",
+      "regions": ["uk", "global"],
+      "url": "/games/adventure-british-word-games-for-kids.html"
+    },
+    {
+      "id": 1004,
+      "title": {
+        "en": "Adventure In3tiaotiao",
+        "zh": "冒险跳跃游戏",
+        "ja": "アドベンチャーイン3ティアオティアオ",
+        "ko": "어드벤처 인3티아오티아오"
+      },
+      "description": {
+        "en": "Exciting jumping adventure game with unique mechanics and challenging obstacles.",
+        "zh": "具有独特机制和具有挑战性障碍的刺激跳跃冒险游戏。",
+        "ja": "ユニークなメカニクスと挑戦的な障害を持つエキサイティングなジャンプアドベンチャーゲーム。",
+        "ko": "독특한 메커니즘과 도전적인 장애물을 가진 흥미진진한 점프 어드벤처 게임."
+      },
+      "image": "/images/games/adventure-british.jpg",
+      "category": ["adventure", "action"],
+      "rating": 4.5,
+      "developer": "Adventure Studio",
+      "published": "2023-11-15",
+      "plays": "620K+",
+      "regions": ["global"],
+      "url": "/games/adventure-in3tiaotiao.html"
+    },
+    {
+      "id": 1005,
+      "title": {
+        "en": "British Royal Family Quiz",
+        "zh": "英国王室家族问答",
+        "ja": "イギリス王室クイズ",
+        "ko": "영국 왕실 퀴즈"
+      },
+      "description": {
+        "en": "Test your knowledge about the British Royal Family with this educational quiz game.",
+        "zh": "通过这个教育性问答游戏测试您对英国王室的知识。",
+        "ja": "この教育的クイズゲームでイギリス王室についての知識をテストしましょう。",
+        "ko": "이 교육용 퀴즈 게임으로 영국 왕실에 대한 지식을 테스트하세요."
       },
       "image": "/images/games/adventure-british-royal-family-quiz.jpg",
-      "category": [
-        "adventure"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/adventure_british-royal-family-quiz.html",
-      "id": 1002
+      "category": ["adventure", "educational"],
+      "rating": 4.7,
+      "developer": "Educational Games",
+      "published": "2023-10-25",
+      "plays": "890K+",
+      "regions": ["uk", "global"],
+      "url": "/games/adventure_british-royal-family-quiz.html"
     },
     {
+      "id": 1006,
       "title": {
-        "en": "Educational London-Counter-Terror-Hero Game",
-        "zh": "Educational London-Counter-Terror-Hero Game",
-        "ja": "Educational London-Counter-Terror-Hero Game",
-        "ko": "Educational London-Counter-Terror-Hero Game"
+        "en": "Arcade Red Herrings Word Game",
+        "zh": "街机红鲱鱼单词游戏",
+        "ja": "アーケードレッドヘリング単語ゲーム",
+        "ko": "아케이드 레드 헤링 단어 게임"
       },
       "description": {
-        "en": "Play Educational London-Counter-Terror-Hero online. This educational game features: educational, learn, London. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩Educational London-Counter-Terror-Hero。本educational游戏包含：educational，学习，伦敦。免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play Educational London-Counter-Terror-Hero online. This educational game features: educational, learn, London. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play Educational London-Counter-Terror-Hero online. This educational game features: educational, learn, London. Free HTML5 game, mobile-friendly, no download."
+        "en": "Fun word puzzle game with red herring clues and challenging word associations.",
+        "zh": "有趣的单词益智游戏，包含红鲱鱼线索和具有挑战性的单词联想。",
+        "ja": "レッドヘリングの手がかりと挑戦的な単語の関連付けを含む楽しい単語パズルゲーム。",
+        "ko": "레드 헤링 단서와 도전적인 단어 연관을 포함한 재미있는 단어 퍼즐 게임."
       },
-      "image": "/images/games/educational-london-counter-terror-hero.webp",
-      "category": [
-        "educational"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/educational-london-counter-terror-hero.html",
-      "id": 1022
-    },
-
-    {
-      "title": {
-        "en": "Puzzle 2048 Game",
-        "zh": "Puzzle 2048 Game",
-        "ja": "Puzzle 2048 Game",
-        "ko": "Puzzle 2048 Game"
-      },
-      "description": {
-        "en": "A brand new HTML5 puzzle game!",
-        "zh": "A brand new HTML5 puzzle game!",
-        "ja": "A brand new HTML5 puzzle game!",
-        "ko": "A brand new HTML5 puzzle game!"
-      },
-      "image": "/images/games/puzzle-2048.jpg",
-      "category": [
-        "puzzle"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/puzzle_2048.html",
-      "id": 1009
+      "image": "/images/games/arcade-red-herrings-word-game.jpg",
+      "category": ["arcade", "puzzle"],
+      "rating": 4.4,
+      "developer": "Word Games Studio",
+      "published": "2023-09-30",
+      "plays": "540K+",
+      "regions": ["global"],
+      "url": "/games/arcade-red-herrings-word-game.html"
     },
     {
+      "id": 1007,
       "title": {
-        "en": "Sports T2 Game",
-        "zh": "Sports T2 Game",
-        "ja": "Sports T2 Game",
-        "ko": "Sports T2 Game"
+        "en": "Arcade T66 Game",
+        "zh": "街机T66游戏",
+        "ja": "アーケードT66ゲーム",
+        "ko": "아케이드 T66 게임"
       },
       "description": {
-        "en": "A brand new HTML5 sports game!",
-        "zh": "A brand new HTML5 sports game!",
-        "ja": "A brand new HTML5 sports game!",
-        "ko": "A brand new HTML5 sports game!"
+        "en": "Classic arcade-style game with retro graphics and addictive gameplay mechanics.",
+        "zh": "具有复古图形和令人上瘾的游戏机制的经典街机风格游戏。",
+        "ja": "レトロなグラフィックスと中毒性のあるゲームプレイメカニクスを持つクラシックアーケードスタイルゲーム。",
+        "ko": "레트로 그래픽과 중독성 있는 게임플레이 메커니즘을 가진 클래식 아케이드 스타일 게임."
       },
-      "image": "/images/games/sports-t2.jpg",
-      "category": [
-        "sports"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/sports_t2.html",
-      "id": 1010
+      "image": "/images/games/arcade-t66-game.jpg",
+      "category": ["arcade", "retro"],
+      "rating": 4.3,
+      "developer": "Retro Games",
+      "published": "2023-08-15",
+      "plays": "480K+",
+      "regions": ["global"],
+      "url": "/games/arcade-t66.html"
     },
     {
+      "id": 1008,
       "title": {
-        "en": "Strategy In5 Game",
-        "zh": "Strategy In5 Game",
-        "ja": "Strategy In5 Game",
-        "ko": "Strategy In5 Game"
+        "en": "British Cities Memory Match",
+        "zh": "英国城市记忆匹配",
+        "ja": "イギリス都市メモリーマッチ",
+        "ko": "영국 도시 메모리 매치"
       },
       "description": {
-        "en": "A brand new HTML5 strategy game!",
-        "zh": "A brand new HTML5 strategy game!",
-        "ja": "A brand new HTML5 strategy game!",
-        "ko": "A brand new HTML5 strategy game!"
+        "en": "Memory matching game featuring famous British cities and landmarks.",
+        "zh": "以著名英国城市和地标为特色的记忆匹配游戏。",
+        "ja": "有名なイギリスの都市とランドマークを特徴とするメモリーマッチングゲーム。",
+        "ko": "유명한 영국 도시와 랜드마크를 특징으로 하는 메모리 매칭 게임."
       },
-      "image": "/images/games/strategy-in5.jpg",
-      "category": [
-        "strategy"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/strategy_in5.html",
-      "id": 1011
+      "image": "/images/games/adventure-british.jpg",
+      "category": ["puzzle", "educational"],
+      "rating": 4.5,
+      "developer": "Educational Games",
+      "published": "2023-07-20",
+      "plays": "380K+",
+      "regions": ["uk", "global"],
+      "url": "/games/British-Cities-Memory-Match-Free.html"
     },
     {
+      "id": 1009,
       "title": {
-        "en": "Popular Ceshi1 Game",
-        "zh": "Popular Ceshi1 Game",
-        "ja": "Popular Ceshi1 Game",
-        "ko": "Popular Ceshi1 Game"
+        "en": "Card British Museum Puzzle Game",
+        "zh": "英国博物馆卡牌益智游戏",
+        "ja": "カードイギリス博物館パズルゲーム",
+        "ko": "카드 영국 박물관 퍼즐 게임"
       },
       "description": {
-        "en": "Play Popular Ceshi1 online. This popular game features: popular, trending, best. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩Popular Ceshi1。本popular游戏包含：热门, 流行, 精选。 免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play Popular Ceshi1 online. This popular game features: popular, trending, best. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play Popular Ceshi1 online. This popular game features: popular, trending, best. Free HTML5 game, mobile-friendly, no download."
+        "en": "Card-based puzzle game featuring artifacts and exhibits from the British Museum.",
+        "zh": "以英国博物馆文物和展品为特色的基于卡牌的益智游戏。",
+        "ja": "イギリス博物館の遺物と展示品を特徴とするカードベースのパズルゲーム。",
+        "ko": "영국 박물관의 유물과 전시품을 특징으로 하는 카드 기반 퍼즐 게임."
       },
-      "image": "/images/games/popular-ceshi1.webp",
-      "category": [
-        "popular"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/popular_ceshi1.html",
-      "id": 1013
+      "image": "/images/games/card-british-museum-puzzle-game-free.jpg",
+      "category": ["card", "puzzle", "educational"],
+      "rating": 4.6,
+      "developer": "Educational Games",
+      "published": "2023-06-10",
+      "plays": "420K+",
+      "regions": ["uk", "global"],
+      "url": "/games/card-british-museum-puzzle-game-free.html"
+    },
+    {
+      "id": 1010,
+      "title": {
+        "en": "Card Free UK Puzzle Games Online",
+        "zh": "英国免费在线卡牌益智游戏",
+        "ja": "カード無料イギリスポズルゲームオンライン",
+        "ko": "카드 무료 영국 퍼즐 게임 온라인"
+      },
+      "description": {
+        "en": "Collection of free online card puzzle games with British themes and cultural elements.",
+        "zh": "具有英国主题和文化元素的免费在线卡牌益智游戏集合。",
+        "ja": "イギリスのテーマと文化的要素を持つ無料オンラインカードパズルゲームのコレクション。",
+        "ko": "영국 테마와 문화적 요소를 가진 무료 온라인 카드 퍼즐 게임 모음."
+      },
+      "image": "/images/games/card-free-uk-puzzle-games-online.jpg",
+      "category": ["card", "puzzle"],
+      "rating": 4.4,
+      "developer": "UK Games Studio",
+      "published": "2023-05-25",
+      "plays": "350K+",
+      "regions": ["uk", "global"],
+      "url": "/games/card-free-uk-puzzle-games-online.html"
+    },
+    {
+      "id": 1011,
+      "title": {
+        "en": "Educational London Counter Terror Hero",
+        "zh": "教育性伦敦反恐英雄",
+        "ja": "教育的ロンドン対テロヒーロー",
+        "ko": "교육용 런던 대테러 히어로"
+      },
+      "description": {
+        "en": "Educational game about counter-terrorism operations in London with realistic scenarios.",
+        "zh": "关于伦敦反恐行动的教育性游戏，具有真实场景。",
+        "ja": "現実的なシナリオを持つロンドンの対テロ作戦に関する教育的ゲーム。",
+        "ko": "현실적인 시나리오를 가진 런던의 대테러 작전에 대한 교육용 게임."
+      },
+      "image": "/images/games/educational-london-counter-terror-hero.jpg",
+      "category": ["educational", "action"],
+      "rating": 4.7,
+      "developer": "Educational Games",
+      "published": "2023-04-15",
+      "plays": "680K+",
+      "regions": ["uk", "global"],
+      "url": "/games/educational-london-counter-terror-hero.html"
+    },
+    {
+      "id": 1012,
+      "title": {
+        "en": "Mouse Mouse Climb the House",
+        "zh": "老鼠爬房子",
+        "ja": "マウスマウス家を登る",
+        "ko": "마우스 마우스 집을 오르다"
+      },
+      "description": {
+        "en": "Cute mouse climbing adventure game with challenging obstacles and fun mechanics.",
+        "zh": "可爱的老鼠攀爬冒险游戏，具有具有挑战性的障碍和有趣的机制。",
+        "ja": "挑戦的な障害と楽しいメカニクスを持つかわいいマウスクライミングアドベンチャーゲーム。",
+        "ko": "도전적인 장애물과 재미있는 메커니즘을 가진 귀여운 마우스 등반 어드벤처 게임."
+      },
+      "image": "/images/games/adventure-british.jpg",
+      "category": ["adventure", "casual"],
+      "rating": 4.3,
+      "developer": "Casual Games",
+      "published": "2023-03-20",
+      "plays": "290K+",
+      "regions": ["global"],
+      "url": "/games/mouse-mouse-climb-the-house.html"
+    },
+    {
+      "id": 1013,
+      "title": {
+        "en": "New 666 Game",
+        "zh": "新666游戏",
+        "ja": "新666ゲーム",
+        "ko": "새 666 게임"
+      },
+      "description": {
+        "en": "New action-packed game with exciting challenges and innovative gameplay.",
+        "zh": "具有刺激挑战和创新游戏玩法的新动作游戏。",
+        "ja": "エキサイティングな挑戦と革新的なゲームプレイを持つ新しいアクションゲーム。",
+        "ko": "흥미진진한 도전과 혁신적인 게임플레이를 가진 새로운 액션 게임."
+      },
+      "image": "/images/games/new-ce1991.jpg",
+      "category": ["new", "action"],
+      "rating": 4.5,
+      "developer": "New Games Studio",
+      "published": "2024-01-05",
+      "plays": "180K+",
+      "regions": ["global"],
+      "url": "/games/new-666.html"
+    },
+    {
+      "id": 1014,
+      "title": {
+        "en": "New CE1991 Game",
+        "zh": "新CE1991游戏",
+        "ja": "新CE1991ゲーム",
+        "ko": "새 CE1991 게임"
+      },
+      "description": {
+        "en": "Latest release with cutting-edge graphics and immersive gameplay experience.",
+        "zh": "具有尖端图形和沉浸式游戏体验的最新发布游戏。",
+        "ja": "最先端のグラフィックスと没入型ゲームプレイ体験を持つ最新リリース。",
+        "ko": "최첨단 그래픽과 몰입형 게임플레이 경험을 가진 최신 출시 게임."
+      },
+      "image": "/images/games/new-ce1991.jpg",
+      "category": ["new", "action"],
+      "rating": 4.6,
+      "developer": "New Games Studio",
+      "published": "2024-01-08",
+      "plays": "220K+",
+      "regions": ["global"],
+      "url": "/games/new-ce1991.html"
+    },
+    {
+      "id": 1015,
+      "title": {
+        "en": "New Deep Sea Adventure Survival Game",
+        "zh": "新深海冒险生存游戏",
+        "ja": "新深海アドベンチャーサバイバルゲーム",
+        "ko": "새 딥시 어드벤처 서바이벌 게임"
+      },
+      "description": {
+        "en": "Updated version of the popular deep sea adventure with enhanced graphics and new features.",
+        "zh": "热门深海冒险游戏的更新版本，具有增强的图形和新功能。",
+        "ja": "強化されたグラフィックスと新機能を持つ人気の深海アドベンチャーの更新版。",
+        "ko": "향상된 그래픽과 새로운 기능을 가진 인기 딥시 어드벤처의 업데이트 버전."
+      },
+      "image": "/images/games/new-deep-sea-adventure-survival-game-free.jpg",
+      "category": ["new", "adventure"],
+      "rating": 4.7,
+      "developer": "Adventure Studio",
+      "published": "2024-01-12",
+      "plays": "150K+",
+      "regions": ["global"],
+      "url": "/games/new-deep-sea-adventure-survival-game-free.html"
     },
     {
       "id": 1016,
       "title": {
-        "en": "Arcade T66 Game",
-        "zh": "Arcade T66 Game",
-        "ja": "Arcade T66 Game",
-        "ko": "Arcade T66 Game"
+        "en": "New London Arcade Games Free",
+        "zh": "新伦敦免费街机游戏",
+        "ja": "新ロンドン無料アーケードゲーム",
+        "ko": "새 런던 무료 아케이드 게임"
       },
       "description": {
-        "en": "Play Arcade T66 Game online. This arcade game features: arcade, trending, fun. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩Arcade T66 Game。本arcade游戏包含：arcade，热门，趣味。免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play Arcade T66 Game online. This arcade game features: arcade, trending, fun. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play Arcade T66 Game online. This arcade game features: arcade, trending, fun. Free HTML5 game, mobile-friendly, no download."
+        "en": "New collection of free arcade games featuring London themes and landmarks.",
+        "zh": "以伦敦主题和地标为特色的免费街机游戏新集合。",
+        "ja": "ロンドンのテーマとランドマークを特徴とする無料アーケードゲームの新しいコレクション。",
+        "ko": "런던 테마와 랜드마크를 특징으로 하는 무료 아케이드 게임의 새로운 모음."
       },
-      "image": "/images/games/arcade-t66-game.jpg",
-      "category": [
-        "arcade"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/arcade-t66.html"
+      "image": "/images/games/new-london-arcade-games-free.jpg",
+      "category": ["new", "arcade"],
+      "rating": 4.4,
+      "developer": "UK Games Studio",
+      "published": "2024-01-15",
+      "plays": "120K+",
+      "regions": ["uk", "global"],
+      "url": "/games/new-london-arcade-games-free.html"
     },
     {
+      "id": 1017,
       "title": {
         "en": "Popular 777 Game",
-        "zh": "Popular 777 Game",
-        "ja": "Popular 777 Game",
-        "ko": "Popular 777 Game"
+        "zh": "热门777游戏",
+        "ja": "人気777ゲーム",
+        "ko": "인기 777 게임"
       },
       "description": {
-        "en": "Play Popular 777 Game online. This popular game features: popular, trending, fun. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩Popular 777 Game。本popular游戏包含：popular，热门，趣味。免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play Popular 777 Game online. This popular game features: popular, trending, fun. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play Popular 777 Game online. This popular game features: popular, trending, fun. Free HTML5 game, mobile-friendly, no download."
+        "en": "Popular casino-style game with exciting gameplay and lucky number mechanics.",
+        "zh": "具有刺激游戏玩法和幸运数字机制的热门赌场风格游戏。",
+        "ja": "エキサイティングなゲームプレイとラッキーナンバーメカニクスを持つ人気のカジノスタイルゲーム。",
+        "ko": "흥미진진한 게임플레이와 행운의 숫자 메커니즘을 가진 인기 카지노 스타일 게임."
       },
       "image": "/images/games/popular-popular-777.jpg",
-      "category": [
-        "popular"
-      ],
+      "category": ["popular", "casino"],
       "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/popular-777.html",
-      "id": 1020
+      "developer": "Casino Games",
+      "published": "2023-12-01",
+      "plays": "1.5M+",
+      "regions": ["global"],
+      "url": "/games/popular-777.html"
     },
     {
+      "id": 1018,
       "title": {
-        "en": "New Deep-Sea-Adventure-Survival-Game-Free Game",
-        "zh": "New Deep-Sea-Adventure-Survival-Game-Free Game",
-        "ja": "New Deep-Sea-Adventure-Survival-Game-Free Game",
-        "ko": "New Deep-Sea-Adventure-Survival-Game-Free Game"
+        "en": "Popular Ceshi1 Game",
+        "zh": "热门测试1游戏",
+        "ja": "人気テスト1ゲーム",
+        "ko": "인기 테스트1 게임"
       },
       "description": {
-        "en": "Play Deep Sea Adventure Survival Game Free online. This new game features: new, trending, fun. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩深海冒险生存游戏免费版。本new游戏包含：new，热门，趣味。免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play Deep Sea Adventure Survival Game Free online. This new game features: new, trending, fun. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play Deep Sea Adventure Survival Game Free online. This new game features: new, trending, fun. Free HTML5 game, mobile-friendly, no download."
+        "en": "Popular testing game with various challenges and skill-based gameplay.",
+        "zh": "具有各种挑战和基于技能的游戏玩法的热门测试游戏。",
+        "ja": "様々な挑戦とスキルベースのゲームプレイを持つ人気のテストゲーム。",
+        "ko": "다양한 도전과 스킬 기반 게임플레이를 가진 인기 테스트 게임."
       },
-      "image": "/images/games/new-deep-sea-adventure-survival-game-free.jpg",
-      "category": [
-        "new"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/new-deep-sea-adventure-survival-game-free.html",
-      "id": 1021
+      "image": "/images/games/popular-ceshi1.jpg",
+      "category": ["popular", "puzzle"],
+      "rating": 4.6,
+      "developer": "Test Games",
+      "published": "2023-11-20",
+      "plays": "980K+",
+      "regions": ["global"],
+      "url": "/games/popular_ceshi1.html"
     },
     {
+      "id": 1019,
       "title": {
-        "en": "Action Deep-Sea-Adventure-Survival-Game-Free Game",
-        "zh": "Action Deep-Sea-Adventure-Survival-Game-Free Game",
-        "ja": "Action Deep-Sea-Adventure-Survival-Game-Free Game",
-        "ko": "Action Deep-Sea-Adventure-Survival-Game-Free Game"
+        "en": "Puzzle Fixed Game",
+        "zh": "修复益智游戏",
+        "ja": "パズル修正ゲーム",
+        "ko": "퍼즐 수정 게임"
       },
       "description": {
-        "en": "Play Action-Deep-Sea-Adventure-Survival-Game-Free online. This action game features: action, fast, exciting. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩Action-Deep-Sea-Adventure-Survival-Game-Free。本action游戏包含：动作, 刺激, 快节奏。 免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play Action-Deep-Sea-Adventure-Survival-Game-Free online. This action game features: action, fast, exciting. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play Action-Deep-Sea-Adventure-Survival-Game-Free online. This action game features: action, fast, exciting. Free HTML5 game, mobile-friendly, no download."
+        "en": "Fixed version of the popular puzzle game with improved mechanics and bug fixes.",
+        "zh": "具有改进机制和错误修复的热门益智游戏的修复版本。",
+        "ja": "改善されたメカニクスとバグ修正を持つ人気のパズルゲームの修正版。",
+        "ko": "개선된 메커니즘과 버그 수정을 가진 인기 퍼즐 게임의 수정 버전."
       },
-      "image": "/images/games/action-deep-sea-adventure-survival-game-free.webp",
-      "category": [
-        "action"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/action-deep-sea-adventure-survival-game-free.html",
-      "id": 1023
+      "image": "/images/games/puzzle-fixed.jpg",
+      "category": ["puzzle", "popular"],
+      "rating": 4.7,
+      "developer": "Puzzle Studio",
+      "published": "2023-10-15",
+      "plays": "1.1M+",
+      "regions": ["global"],
+      "url": "/games/puzzle-fixed.html"
     },
     {
+      "id": 1020,
       "title": {
-        "en": "Action Gameslike Game",
-        "zh": "Action Gameslike Game",
-        "ja": "Action Gameslike Game",
-        "ko": "Action Gameslike Game"
+        "en": "Puzzle Tupian Game",
+        "zh": "图片益智游戏",
+        "ja": "パズル図片ゲーム",
+        "ko": "퍼즐 이미지 게임"
       },
       "description": {
-        "en": "Play Action-Gameslike online. This action game features: action, fast, exciting. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩Action-Gameslike。本action游戏包含：动作, 刺激, 快节奏。 免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play Action-Gameslike online. This action game features: action, fast, exciting. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play Action-Gameslike online. This action game features: action, fast, exciting. Free HTML5 game, mobile-friendly, no download."
+        "en": "Image-based puzzle game with beautiful graphics and challenging picture arrangements.",
+        "zh": "具有美丽图形和具有挑战性的图片排列的基于图片的益智游戏。",
+        "ja": "美しいグラフィックスと挑戦的な画像配置を持つ画像ベースのパズルゲーム。",
+        "ko": "아름다운 그래픽과 도전적인 이미지 배치를 가진 이미지 기반 퍼즐 게임."
       },
-      "image": "/images/games/action-gameslike.webp",
-      "category": [
-        "action"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/action-gameslike.html",
-      "id": 1024
+      "image": "/images/games/puzzle-tupian.jpg",
+      "category": ["puzzle", "casual"],
+      "rating": 4.5,
+      "developer": "Puzzle Studio",
+      "published": "2023-09-25",
+      "plays": "720K+",
+      "regions": ["global"],
+      "url": "/games/puzzle-tupian.html"
     },
     {
+      "id": 1021,
       "title": {
-        "en": "Adventure British-Word-Games-For-Kids Game",
-        "zh": "Adventure British-Word-Games-For-Kids Game",
-        "ja": "Adventure British-Word-Games-For-Kids Game",
-        "ko": "Adventure British-Word-Games-For-Kids Game"
+        "en": "Puzzle UK Counties Crossword Challenge",
+        "zh": "英国郡县填字游戏挑战",
+        "ja": "パズルイギリス郡クロスワードチャレンジ",
+        "ko": "퍼즐 영국 카운티 크로스워드 챌린지"
       },
       "description": {
-        "en": "Play Adventure-British-Word-Games-For-Kids online. This adventure game features: adventure, explore, quest. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩Adventure-British-Word-Games-For-Kids。本adventure游戏包含：冒险, 探索, 闯关。 免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play Adventure-British-Word-Games-For-Kids online. This adventure game features: adventure, explore, quest. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play Adventure-British-Word-Games-For-Kids online. This adventure game features: adventure, explore, quest. Free HTML5 game, mobile-friendly, no download."
+        "en": "Educational crossword puzzle featuring UK counties and geographical knowledge.",
+        "zh": "以英国郡县和地理知识为特色的教育性填字游戏。",
+        "ja": "イギリスの郡と地理的知識を特徴とする教育的クロスワードパズル。",
+        "ko": "영국의 카운티와 지리적 지식을 특징으로 하는 교육용 크로스워드 퍼즐."
       },
-      "image": "/images/games/adventure-british-word-games-for-kids.webp",
-      "category": [
-        "adventure"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/adventure-british-word-games-for-kids.html",
-      "id": 1025
+      "image": "/images/games/puzzle-uk-counties-crossword-challenge.jpg",
+      "category": ["puzzle", "educational"],
+      "rating": 4.6,
+      "developer": "Educational Games",
+      "published": "2023-08-30",
+      "plays": "450K+",
+      "regions": ["uk", "global"],
+      "url": "/games/puzzle-uk-counties-crossword-challenge.html"
     },
     {
+      "id": 1022,
       "title": {
-        "en": "Arcade Red-Herrings-Word-Game Game",
-        "zh": "Arcade Red-Herrings-Word-Game Game",
-        "ja": "Arcade Red-Herrings-Word-Game Game",
-        "ko": "Arcade Red-Herrings-Word-Game Game"
+        "en": "Puzzle UK Shoot Game",
+        "zh": "英国射击益智游戏",
+        "ja": "パズルイギリスシュートゲーム",
+        "ko": "퍼즐 영국 슈팅 게임"
       },
       "description": {
-        "en": "Play Arcade-Red-Herrings-Word-Game online. This arcade game features: arcade, retro, fun. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩Arcade-Red-Herrings-Word-Game。本arcade游戏包含：街机, 复古, 趣味。 免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play Arcade-Red-Herrings-Word-Game online. This arcade game features: arcade, retro, fun. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play Arcade-Red-Herrings-Word-Game online. This arcade game features: arcade, retro, fun. Free HTML5 game, mobile-friendly, no download."
+        "en": "Shooting puzzle game with UK-themed targets and strategic gameplay.",
+        "zh": "具有英国主题目标和策略游戏玩法的射击益智游戏。",
+        "ja": "イギリスのテーマターゲットと戦略的ゲームプレイを持つシューティングパズルゲーム。",
+        "ko": "영국 테마 타겟과 전략적 게임플레이를 가진 슈팅 퍼즐 게임."
       },
-      "image": "/images/games/arcade-red-herrings-word-game.webp",
-      "category": [
-        "arcade"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/arcade-red-herrings-word-game.html",
-      "id": 1026
+      "image": "/images/games/puzzle-ukshoot.jpg",
+      "category": ["puzzle", "action"],
+      "rating": 4.4,
+      "developer": "UK Games Studio",
+      "published": "2023-07-15",
+      "plays": "380K+",
+      "regions": ["uk", "global"],
+      "url": "/games/puzzle-ukshoot.html"
     },
     {
+      "id": 1023,
       "title": {
-        "en": "Card British-Museum-Puzzle-Game-Free Game",
-        "zh": "Card British-Museum-Puzzle-Game-Free Game",
-        "ja": "Card British-Museum-Puzzle-Game-Free Game",
-        "ko": "Card British-Museum-Puzzle-Game-Free Game"
+        "en": "Puzzle X3M Game",
+        "zh": "X3M益智游戏",
+        "ja": "パズルX3Mゲーム",
+        "ko": "퍼즐 X3M 게임"
       },
       "description": {
-        "en": "Play Card-British-Museum-Puzzle-Game-Free online. This card game features: card, solitaire, classic, puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩Card-British-Museum-Puzzle-Game-Free。本card游戏包含：纸牌, 接龙, 经典，益智, 逻辑, 动脑。 免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play Card-British-Museum-Puzzle-Game-Free online. This card game features: card, solitaire, classic, puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play Card-British-Museum-Puzzle-Game-Free online. This card game features: card, solitaire, classic, puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download."
+        "en": "Advanced puzzle game with X3M mechanics and challenging brain teasers.",
+        "zh": "具有X3M机制和具有挑战性的脑筋急转弯的高级益智游戏。",
+        "ja": "X3Mメカニクスと挑戦的な脳トレを含む高度なパズルゲーム。",
+        "ko": "X3M 메커니즘과 도전적인 두뇌 퀴즈를 가진 고급 퍼즐 게임."
       },
-      "image": "/images/games/card-british-museum-puzzle-game-free.webp",
-      "category": [
-        "card"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/card-british-museum-puzzle-game-free.html",
-      "id": 1027
+      "image": "/images/games/puzzle-x3m.jpg",
+      "category": ["puzzle", "strategy"],
+      "rating": 4.7,
+      "developer": "Puzzle Studio",
+      "published": "2023-06-20",
+      "plays": "520K+",
+      "regions": ["global"],
+      "url": "/games/puzzle-x3m.html"
     },
     {
+      "id": 1024,
       "title": {
-        "en": "Card Free-Uk-Puzzle-Games-Online Game",
-        "zh": "Card Free-Uk-Puzzle-Games-Online Game",
-        "ja": "Card Free-Uk-Puzzle-Games-Online Game",
-        "ko": "Card Free-Uk-Puzzle-Games-Online Game"
+        "en": "Sports London Flappy Bird Game Free",
+        "zh": "伦敦体育小鸟游戏免费版",
+        "ja": "スポーツロンドンフラッピーバードゲーム無料版",
+        "ko": "스포츠 런던 플래피 버드 게임 무료"
       },
       "description": {
-        "en": "Play Card-Free-Uk-Puzzle-Games-Online online. This card game features: card, solitaire, classic, puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩Card-Free-Uk-Puzzle-Games-Online。本card游戏包含：纸牌, 接龙, 经典，益智, 逻辑, 动脑。 免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play Card-Free-Uk-Puzzle-Games-Online online. This card game features: card, solitaire, classic, puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play Card-Free-Uk-Puzzle-Games-Online online. This card game features: card, solitaire, classic, puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download."
-      },
-      "image": "/images/games/card-free-uk-puzzle-games-online.webp",
-      "category": [
-        "card"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/card-free-uk-puzzle-games-online.html",
-      "id": 1028
-    },
-    {
-      "title": {
-        "en": "New Ce1991 Game",
-        "zh": "New Ce1991 Game",
-        "ja": "New Ce1991 Game",
-        "ko": "New Ce1991 Game"
-      },
-      "description": {
-        "en": "Play New-Ce1991 online. This new game features: new, trending, hot. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩New-Ce1991。本new游戏包含：新游, 热门, 推荐。 免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play New-Ce1991 online. This new game features: new, trending, hot. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play New-Ce1991 online. This new game features: new, trending, hot. Free HTML5 game, mobile-friendly, no download."
-      },
-      "image": "/images/games/new-ce1991.webp",
-      "category": [
-        "new"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/new-ce1991.html",
-      "id": 1029
-    },
-    {
-      "title": {
-        "en": "New London-Arcade-Games-Free Game",
-        "zh": "New London-Arcade-Games-Free Game",
-        "ja": "New London-Arcade-Games-Free Game",
-        "ko": "New London-Arcade-Games-Free Game"
-      },
-      "description": {
-        "en": "Play New-London-Arcade-Games-Free online. This new game features: new, trending, hot. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩New-London-Arcade-Games-Free。本new游戏包含：新游, 热门, 推荐。 免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play New-London-Arcade-Games-Free online. This new game features: new, trending, hot. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play New-London-Arcade-Games-Free online. This new game features: new, trending, hot. Free HTML5 game, mobile-friendly, no download."
-      },
-      "image": "/images/games/new-london-arcade-games-free.webp",
-      "category": [
-        "new"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/new-london-arcade-games-free.html",
-      "id": 1030
-    },
-    {
-      "title": {
-        "en": "Puzzle Uk-Counties-Crossword-Challenge Game",
-        "zh": "Puzzle Uk-Counties-Crossword-Challenge Game",
-        "ja": "Puzzle Uk-Counties-Crossword-Challenge Game",
-        "ko": "Puzzle Uk-Counties-Crossword-Challenge Game"
-      },
-      "description": {
-        "en": "Play Puzzle-Uk-Counties-Crossword-Challenge online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩Puzzle-Uk-Counties-Crossword-Challenge。本puzzle游戏包含：益智, 逻辑, 动脑。 免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play Puzzle-Uk-Counties-Crossword-Challenge online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play Puzzle-Uk-Counties-Crossword-Challenge online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download."
-      },
-      "image": "/images/games/puzzle-uk-counties-crossword-challenge.webp",
-      "category": [
-        "puzzle"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/puzzle-uk-counties-crossword-challenge.html",
-      "id": 1031
-    },
-    {
-      "title": {
-        "en": "Strategy Blue-Prince-Puzzle-Adventure-Free Game",
-        "zh": "Strategy Blue-Prince-Puzzle-Adventure-Free Game",
-        "ja": "Strategy Blue-Prince-Puzzle-Adventure-Free Game",
-        "ko": "Strategy Blue-Prince-Puzzle-Adventure-Free Game"
-      },
-      "description": {
-        "en": "Play Strategy-Blue-Prince-Puzzle-Adventure-Free online. This strategy game features: strategy, thinking, plan, puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩Strategy-Blue-Prince-Puzzle-Adventure-Free。本strategy游戏包含：策略, 思考, 规划，益智, 逻辑, 动脑。 免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play Strategy-Blue-Prince-Puzzle-Adventure-Free online. This strategy game features: strategy, thinking, plan, puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play Strategy-Blue-Prince-Puzzle-Adventure-Free online. This strategy game features: strategy, thinking, plan, puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download."
-      },
-      "image": "/images/games/strategy-blue-prince-puzzle-adventure-free.webp",
-      "category": [
-        "strategy"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/strategy-blue-prince-puzzle-adventure-free.html",
-      "id": 1032
-    },
-    {
-      "title": {
-        "en": "London Flappy Bird Game Free",
-        "zh": "London Flappy Bird Game Free",
-        "ja": "London Flappy Bird Game Free",
-        "ko": "London Flappy Bird Game Free"
-      },
-      "description": {
-        "en": "Navigate through iconic London landmarks in this exciting HTML5 game. Perfect for students and UK gaming enthusiasts. No download required!",
-        "zh": "在这个令人兴奋的HTML5游戏中穿越标志性的伦敦地标。完美适合学生和英国游戏爱好者。无需下载！",
-        "ja": "Navigate through iconic London landmarks in this exciting HTML5 game. Perfect for students and UK gaming enthusiasts. No download required!",
-        "ko": "Navigate through iconic London landmarks in this exciting HTML5 game. Perfect for students and UK gaming enthusiasts. No download required!"
+        "en": "London-themed flappy bird game featuring iconic landmarks and British sports elements.",
+        "zh": "以标志性地标和英国体育元素为特色的伦敦主题小鸟游戏。",
+        "ja": "象徴的なランドマークとイギリスのスポーツ要素を特徴とするロンドンテーマのフラッピーバードゲーム。",
+        "ko": "상징적인 랜드마크와 영국 스포츠 요소를 특징으로 하는 런던 테마의 플래피 버드 게임."
       },
       "image": "/images/games/sports-london-flappy-bird-game-free.jpg",
-      "category": [
-        "sports"
-      ],
+      "category": ["sports", "casual"],
+      "rating": 4.5,
+      "developer": "Sports Games",
+      "published": "2023-05-10",
+      "plays": "680K+",
+      "regions": ["uk", "global"],
+      "url": "/games/sports-london-flappy-bird-game-free.html"
+    },
+    {
+      "id": 1025,
+      "title": {
+        "en": "Sports T2 Game",
+        "zh": "体育T2游戏",
+        "ja": "スポーツT2ゲーム",
+        "ko": "스포츠 T2 게임"
+      },
+      "description": {
+        "en": "Fast-paced sports game with T2 mechanics and competitive gameplay.",
+        "zh": "具有T2机制和竞技游戏玩法的快节奏体育游戏。",
+        "ja": "T2メカニクスと競争的ゲームプレイを持つ高速スポーツゲーム。",
+        "ko": "T2 메커니즘과 경쟁적 게임플레이를 가진 빠른 속도의 스포츠 게임."
+      },
+      "image": "/images/games/sports-t2.jpg",
+      "category": ["sports", "action"],
+      "rating": 4.3,
+      "developer": "Sports Games",
+      "published": "2023-04-25",
+      "plays": "420K+",
+      "regions": ["global"],
+      "url": "/games/sports_t2.html"
+    },
+    {
+      "id": 1026,
+      "title": {
+        "en": "Strategy Blue Prince Puzzle Adventure",
+        "zh": "策略蓝王子益智冒险",
+        "ja": "戦略ブループリンスパズルアドベンチャー",
+        "ko": "전략 블루 프린스 퍼즐 어드벤처"
+      },
+      "description": {
+        "en": "Strategic puzzle adventure featuring the Blue Prince with complex challenges and royal themes.",
+        "zh": "以蓝王子为特色的策略益智冒险，具有复杂的挑战和皇家主题。",
+        "ja": "複雑な挑戦と王室のテーマを持つブループリンスを特徴とする戦略的パズルアドベンチャー。",
+        "ko": "복잡한 도전과 왕실 테마를 가진 블루 프린스를 특징으로 하는 전략적 퍼즐 어드벤처."
+      },
+      "image": "/images/games/strategy-blue-prince-puzzle-adventure-free.jpg",
+      "category": ["strategy", "puzzle", "adventure"],
       "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-15",
-      "plays": "0+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/sports-london-flappy-bird-game-free.html",
-      "id": 1033
+      "developer": "Strategy Games",
+      "published": "2023-03-15",
+      "plays": "580K+",
+      "regions": ["global"],
+      "url": "/games/strategy-blue-prince-puzzle-adventure-free.html"
+    },
+    {
+      "id": 1027,
+      "title": {
+        "en": "Strategy IN5 Game",
+        "zh": "策略IN5游戏",
+        "ja": "戦略IN5ゲーム",
+        "ko": "전략 IN5 게임"
+      },
+      "description": {
+        "en": "Advanced strategy game with IN5 mechanics and tactical decision-making challenges.",
+        "zh": "具有IN5机制和战术决策挑战的高级策略游戏。",
+        "ja": "IN5メカニクスと戦術的決定の挑戦を持つ高度な戦略ゲーム。",
+        "ko": "IN5 메커니즘과 전술적 의사결정 도전을 가진 고급 전략 게임."
+      },
+      "image": "/images/games/strategy-in5.jpg",
+      "category": ["strategy", "tactical"],
+      "rating": 4.6,
+      "developer": "Strategy Games",
+      "published": "2023-02-20",
+      "plays": "350K+",
+      "regions": ["global"],
+      "url": "/games/strategy_in5.html"
+    },
+    {
+      "id": 1028,
+      "title": {
+        "en": "Temple Run Game",
+        "zh": "神庙逃亡游戏",
+        "ja": "テンプルランゲーム",
+        "ko": "템플 런 게임"
+      },
+      "description": {
+        "en": "Classic temple running game with endless obstacles and exciting chase sequences.",
+        "zh": "具有无尽障碍和刺激追逐序列的经典神庙逃亡游戏。",
+        "ja": "無限の障害とエキサイティングなチェイスシーケンスを持つクラシックテンプルランニングゲーム。",
+        "ko": "무한한 장애물과 흥미진진한 추적 시퀀스를 가진 클래식 템플 러닝 게임."
+      },
+      "image": "/images/games/puzzle-x3m.jpg",
+      "category": ["action", "adventure"],
+      "rating": 4.7,
+      "developer": "Adventure Studio",
+      "published": "2023-01-30",
+      "plays": "890K+",
+      "regions": ["global"],
+      "url": "/games/temple-run.html"
     }
   ]
 }

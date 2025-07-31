@@ -79,10 +79,10 @@ function generateGameUrls() {
         
         gamesData.forEach(game => {
             if (game.id && game.title) {
-                // 处理多语言标题，优先使用英文
-                const title = typeof game.title === 'object' ? (game.title.en || game.title.zh || Object.values(game.title)[0]) : game.title;
+                // 使用游戏的实际URL，如果没有则使用ID
+                const gameUrl = game.url || `/games/${game.id}.html`;
                 gameUrls += `    <url>
-        <loc>${CONFIG.siteUrl}/games/${game.id}.html</loc>
+        <loc>${CONFIG.siteUrl}${gameUrl}</loc>
         <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -348,40 +348,92 @@ function generateSEOReport() {
     console.log('✅ SEO报告生成完成');
 }
 
+// 修复SEO问题
+function fixSEOIssues() {
+    console.log('🔧 修复SEO问题...');
+    try {
+        fixActionGameslikeCanonical();
+        fixIndexHtmlLinks();
+        console.log('✅ SEO问题修复完成');
+    } catch (error) {
+        console.log('⚠️  修复SEO问题时出错:', error.message);
+    }
+}
+
+// 修复action-gameslike.html的canonical标签
+function fixActionGameslikeCanonical() {
+    const filePath = path.join(__dirname, CONFIG.outputDir, 'games/action-gameslike.html');
+    if (!fs.existsSync(filePath)) {
+        console.log('⚠️  action-gameslike.html文件不存在，跳过修复');
+        return;
+    }
+    let content = fs.readFileSync(filePath, 'utf8');
+    content = content.replace(
+        /<meta property="og:url" content="https:\/\/www\.ukhtml5games\.com\/games\/adventure_uk-weather-word-puzzle-free\.html">/g,
+        '<meta property="og:url" content="https://www.ukhtml5games.com/games/action-gameslike.html">'
+    );
+    content = content.replace(
+        /<link rel="canonical" href="https:\/\/www\.ukhtml5games\.com\/games\/adventure_uk-weather-word-puzzle-free\.html">/g,
+        '<link rel="canonical" href="https://www.ukhtml5games.com/games/action-gameslike.html">'
+    );
+    fs.writeFileSync(filePath, content, 'utf8');
+    console.log('  ✅ 修复了action-gameslike.html的canonical标签');
+}
+
+// 修复index.html中的错误游戏链接
+function fixIndexHtmlLinks() {
+    const filePath = path.join(__dirname, CONFIG.outputDir, 'index.html');
+    if (!fs.existsSync(filePath)) {
+        console.log('⚠️  index.html文件不存在，跳过修复');
+        return;
+    }
+    let content = fs.readFileSync(filePath, 'utf8');
+    content = content.replace(
+        /"name": "IN33 Action Game",\s*"description": "A fun HTML5 action game you can play directly!",\s*"image": "https:\/\/www\.ukhtml5games\.com\/images\/games\/in33\.jpg",\s*"url": "https:\/\/www\.ukhtml5games\.com\/games\/in33\.html",\s*"genre": "action"/g,
+        '"name": "Action Deep Sea Adventure Survival Game", "description": "A thrilling HTML5 action game you can play directly!", "image": "https://www.ukhtml5games.com/images/games/action-deep-sea-adventure-survival-game-free.webp", "url": "https://www.ukhtml5games.com/games/action-deep-sea-adventure-survival-game-free.html", "genre": "action"'
+    );
+    content = content.replace(
+        /"name": "IN1 Action Game",\s*"description": "A brand new HTML5 action game!",\s*"image": "https:\/\/www\.ukhtml5games\.com\/images\/games\/in1\.png",\s*"url": "https:\/\/www\.ukhtml5games\.com\/games\/in1\.html",\s*"genre": "action"/g,
+        '"name": "Action Gameslike Game", "description": "A brand new HTML5 action game!", "image": "https://www.ukhtml5games.com/images/games/action-gameslike.webp", "url": "https://www.ukhtml5games.com/games/action-gameslike.html", "genre": "action"'
+    );
+    fs.writeFileSync(filePath, content, 'utf8');
+    console.log('  ✅ 修复了index.html中的错误游戏链接');
+}
+
 // 主函数
 function main() {
     console.log('🚀 开始生成SEO文件...\n');
-    
     try {
         // 确保输出目录存在
         const outputDir = path.join(__dirname, CONFIG.outputDir);
         if (!fs.existsSync(outputDir)) {
             fs.mkdirSync(outputDir, { recursive: true });
         }
-        
+        // 先修复SEO问题
+        fixSEOIssues();
         // 生成各种SEO文件
         generateSitemap();
         updateRobotsTxt();
         generateStructuredData();
         generateSEOReport();
-        
         console.log('\n🎉 SEO文件生成完成！');
         console.log('\n📋 生成的文件:');
         console.log('  - sitemap.xml (网站地图)');
         console.log('  - robots.txt (爬虫协议)');
         console.log('  - structured-data.json (结构化数据)');
         console.log('  - seo-report.json (SEO报告)');
+        console.log('\n🔧 修复的问题:');
+        console.log('  - 修复了action-gameslike.html的canonical标签');
+        console.log('  - 修复了index.html中的404错误链接');
         console.log('\n🔗 协议页面:');
         console.log('  - terms.html (用户服务协议)');
         console.log('  - privacy.html (隐私政策)');
         console.log('  - copyright.html (版权声明)');
-        
         console.log('\n💡 建议:');
         console.log('  1. 将sitemap.xml提交到Google Search Console');
         console.log('  2. 测试robots.txt是否正常工作');
         console.log('  3. 定期更新游戏数据和sitemap');
         console.log('  4. 监控网站SEO表现');
-        
     } catch (error) {
         console.error('❌ 生成SEO文件时出错:', error.message);
         process.exit(1);

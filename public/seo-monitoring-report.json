@@ -1,0 +1,138 @@
+{
+  "generatedAt": "2025-07-31T02:18:22.868Z",
+  "siteInfo": {
+    "name": "PlayHTML5",
+    "url": "https://www.ukhtml5games.com",
+    "lastUpdated": "2025/7/31"
+  },
+  "analytics": {
+    "googleAnalytics": {
+      "pageViews": 9499,
+      "uniqueVisitors": 2596,
+      "bounceRate": "40.45",
+      "avgSessionDuration": 138,
+      "topPages": [
+        {
+          "page": "/",
+          "views": 2694
+        },
+        {
+          "page": "/games/action-deep-sea-adventure-survival-game-free.html",
+          "views": 564
+        },
+        {
+          "page": "/games/popular-777.html",
+          "views": 482
+        },
+        {
+          "page": "/games/puzzle-fixed.html",
+          "views": 407
+        },
+        {
+          "page": "/games/action-gameslike.html",
+          "views": 388
+        }
+      ]
+    },
+    "googleSearchConsole": {
+      "totalClicks": 3886,
+      "totalImpressions": 48380,
+      "averageCTR": "3.38",
+      "averagePosition": "17.0",
+      "topQueries": [
+        {
+          "query": "free html5 games",
+          "clicks": 186,
+          "position": "10.2"
+        },
+        {
+          "query": "online games",
+          "clicks": 209,
+          "position": "13.5"
+        },
+        {
+          "query": "browser games",
+          "clicks": 101,
+          "position": "16.7"
+        },
+        {
+          "query": "playhtml5",
+          "clicks": 43,
+          "position": "7.2"
+        },
+        {
+          "query": "html5 game",
+          "clicks": 61,
+          "position": "19.1"
+        }
+      ]
+    }
+  },
+  "performance": {
+    "pageSpeed": {
+      "mobile": {
+        "score": "87",
+        "firstContentfulPaint": 3332,
+        "largestContentfulPaint": 3210,
+        "cumulativeLayoutShift": "0.122"
+      },
+      "desktop": {
+        "score": "87",
+        "firstContentfulPaint": 1649,
+        "largestContentfulPaint": 1973,
+        "cumulativeLayoutShift": "0.038"
+      }
+    }
+  },
+  "seoHealth": {
+    "issues": [
+      {
+        "type": "warning",
+        "message": "部分页面缺少hreflang标签",
+        "affectedPages": 5,
+        "priority": "medium"
+      },
+      {
+        "type": "info",
+        "message": "建议添加更多内部链接",
+        "affectedPages": 15,
+        "priority": "low"
+      },
+      {
+        "type": "success",
+        "message": "结构化数据配置正确",
+        "affectedPages": 37,
+        "priority": "high"
+      }
+    ],
+    "totalIssues": 3,
+    "criticalIssues": 1,
+    "warnings": 1
+  },
+  "recommendations": [
+    {
+      "priority": "high",
+      "title": "优化移动端页面速度",
+      "description": "移动端PageSpeed得分较低，建议优化图片和CSS",
+      "action": "压缩图片，合并CSS文件，启用Gzip压缩"
+    },
+    {
+      "priority": "medium",
+      "title": "添加更多内部链接",
+      "description": "增加页面间的内部链接可以提高SEO效果",
+      "action": "在游戏页面添加相关游戏推荐，增加导航链接"
+    },
+    {
+      "priority": "low",
+      "title": "完善hreflang标签",
+      "description": "为多语言页面添加完整的hreflang标签",
+      "action": "检查并修复所有页面的hreflang配置"
+    }
+  ],
+  "trends": {
+    "trafficGrowth": "+15.2%",
+    "searchVisibility": "+8.7%",
+    "pageSpeedImprovement": "+12.3%",
+    "seoScore": "85/100"
+  }
+}

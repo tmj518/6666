@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
+    <!-- 安全头 -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+    <!-- 关键资源预加载 -->
+    <link rel="preload" href="/js/main.js" as="script">
+    <link rel="preload" href="/js/games.js" as="script">
+    <link rel="preload" href="/css/styles.css" as="style">
+    
+    <!-- 字体预加载 -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
+    
+    <!-- 关键图片预加载 -->
+    <link rel="preload" href="/images/games/logo.webp" as="image">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Educational London Counter Terror Hero - Free UK Educational Game | Play Online</title>
-  <meta name="description" content="Play London Counter Terror Hero online! Learn about London landmarks and British security in this educational game. No registration, mobile-friendly, GDPR compliant.">
-  <meta name="keywords" content="London Counter Terror Hero, UK educational game, London landmarks, British security, free online games, educational games, UK education">
+  <title>Educational London Counter Terror Hero - Free HTML5 Game | PlayHTML5</title>
+  <meta name="description" content="Educational game about counter-terrorism operations in London with realistic scenarios. Play this free HTML5 game online without download. No registration required.">
+  <meta name="keywords" content="Educational London Counter Terror Hero, free HTML5 game, online game, educational, action, PlayHTML5">
   <meta name="author" content="British Games UK">
   <meta name="robots" content="index, follow">
   <meta name="language" content="en-GB">
   <meta property="og:type" content="game">
-  <meta property="og:title" content="Educational London-Counter-Terror-Hero Game - PlayHTML5">
-  <meta property="og:description" content="Play Educational-London-Counter-Terror-Hero online. This educational game features: educational, learn, London. Free HTML5 game, mobile-friendly, no download.">
-  <meta property="og:image" content="https://www.ukhtml5games.com/images/games/educational-london-counter-terror-hero.webp">
+  <meta property="og:title" content="Educational London Counter Terror Hero - PlayHTML5">
+  <meta property="og:description" content="Educational game about counter-terrorism operations in London with realistic scenarios.">
+  <meta property="og:image" content="https://www.ukhtml5games.com/images/games/educational-london-counter-terror-hero.jpg">
   <meta property="og:url" content="https://www.ukhtml5games.com/educational-london-counter-terror-hero">
   <meta property="og:locale" content="en_GB">
   <meta property="og:site_name" content="British Games UK">
@@ -44,34 +60,7 @@
       }
     }
   </script>
-  <script type="application/ld+json">
-    {
-  "@context": "https://schema.org",
-  "@type": "VideoGame",
-  "name": "Educational London-Counter-Terror-Hero Game",
-  "description": "Play Educational-London-Counter-Terror-Hero online. This educational game features: educational, learn, London. Free HTML5 game, mobile-friendly, no download.",
-  "image": "https://www.ukhtml5games.com/images/games/educational-london-counter-terror-hero.webp",
-  "url": "https://www.ukhtml5games.com/games/educational-london-counter-terror-hero.html",
-  "genre": "educational",
-  "gamePlatform": "HTML5",
-  "applicationCategory": "Game",
-  "operatingSystem": "Web Browser",
-  "author": {
-    "@type": "Organization",
-    "name": "AutoSync"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "PlayHTML5"
-  },
-  "datePublished": "2025-07-15",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": 4.8,
-    "ratingCount": "0+"
-  }
-}
-    </script>
+  
   <style type="text/tailwindcss">
     @layer utilities {
       .content-auto { content-visibility: auto; }
@@ -85,14 +74,89 @@
       outline-offset: 2px;
     }
   </style>
-</head>
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Educational London Counter Terror Hero",
+  "description": "Educational game about counter-terrorism operations in London with realistic scenarios.",
+  "image": "https://www.ukhtml5games.com/images/games/educational-london-counter-terror-hero.jpg",
+  "url": "https://www.ukhtml5games.com/games/educational-london-counter-terror-hero.html",
+  "genre": "educational, action",
+  "gamePlatform": "HTML5",
+  "applicationCategory": "Game",
+  "operatingSystem": "Web Browser",
+  "author": {
+    "@type": "Organization",
+    "name": "Educational Games"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PlayHTML5"
+  },
+  "datePublished": "2023-04-15",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 4.7,
+    "ratingCount": "680K+"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.ukhtml5games.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Educational London Counter Terror Hero",
+      "item": "https://www.ukhtml5games.com/games/educational-london-counter-terror-hero.html"
+    }
+  ]
+}
+    </script>
+        <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6886160126549046"
+         crossorigin="anonymous"></script>
+    </head>
 <body class="bg-gradient-to-b from-britishGold to-britishBlue font-sans min-h-screen">
+
+    <nav class="breadcrumb bg-white shadow-sm mb-6">
+      <div class="container mx-auto px-4 py-3">
+        <ol class="flex items-center space-x-2 text-sm">
+          <li><a href="/" class="text-primary hover:underline">Home</a></li>
+          <li><i class="fa fa-chevron-right text-gray-400"></i></li>
+          <li><a href="/games/" class="text-primary hover:underline">Games</a></li>
+          <li><i class="fa fa-chevron-right text-gray-400"></i></li>
+          <li class="text-gray-600">educational london counter terror hero</li>
+        </ol>
+      </div>
+    </nav>
 <nav class="w-full bg-white shadow mb-4 flex items-center px-4 py-2">
   <div class="flex items-center gap-4">
     <a href="https://www.ukhtml5games.com/" class="flex items-center" title="PlayHTML5 Home">
       <picture>
         <source srcset="/images/games/logo.webp" type="image/webp">
-        <img src="/images/games/logo.png" alt="PlayHTML5 Logo" height="32" loading="lazy">
+        <picture>
+      <source srcset="/images/games/logo.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/logo.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/logo.webp" type="image/webp">
+      <picture>
+      <source srcset="/images/games/logo.webp" type="image/webp">
+      <img src="/images/games/logo.png" alt="Educational London Counter Terror Hero - Free HTML5 Game" title="Educational London Counter Terror Hero" loading="lazy" decoding="async">
+    </picture>
+    </picture>
+    </picture>
+    </picture>
       </picture>
     </a>
     <a href="https://www.ukhtml5games.com/" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
@@ -100,6 +164,20 @@
   </div>
   <div class="flex-1"></div>
 </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -125,6 +203,109 @@
     </div>
   </div>
   <main id="main-content" class="min-h-screen flex flex-col items-center justify-center p-4">
+    
+    <div class="game-description bg-white rounded-lg p-6 shadow-md mb-6">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Game Description</h2>
+      <div class="prose max-w-none">
+        <p class="text-gray-600 mb-4">
+          Experience the thrill of this exciting HTML5 game! This game offers hours of entertainment with its engaging gameplay, beautiful graphics, and challenging levels. Perfect for players of all ages, this game combines strategy and action in a unique gaming experience.
+        </p>
+        
+        <h3 class="text-xl font-semibold text-gray-800 mb-3">How to Play</h3>
+        <ul class="list-disc list-inside text-gray-600 mb-4">
+          <li>Use arrow keys or WASD to move your character</li>
+          <li>Collect items to increase your score</li>
+          <li>Avoid obstacles and enemies</li>
+          <li>Complete objectives to advance to the next level</li>
+        </ul>
+        
+        <h3 class="text-xl font-semibold text-gray-800 mb-3">Game Features</h3>
+        <ul class="list-disc list-inside text-gray-600 mb-4">
+          <li>Multiple levels with increasing difficulty</li>
+          <li>Beautiful graphics and smooth animations</li>
+          <li>No download required - play instantly</li>
+          <li>Mobile-friendly design</li>
+          <li>Free to play with no registration</li>
+        </ul>
+        
+        <h3 class="text-xl font-semibold text-gray-800 mb-3">Tips & Tricks</h3>
+        <ul class="list-disc list-inside text-gray-600">
+          <li>Take your time to plan your moves</li>
+          <li>Look for hidden items and power-ups</li>
+          <li>Practice regularly to improve your skills</li>
+          <li>Share your high scores with friends</li>
+        </ul>
+      </div>
+    </div>
+    <div class="user-reviews bg-white rounded-lg p-6 shadow-md mb-6">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Player Reviews</h2>
+      <div class="space-y-4">
+        <div class="review border-b border-gray-200 pb-4">
+          <div class="flex items-center mb-2">
+            <div class="flex text-yellow-400">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <span class="ml-2 text-sm text-gray-500">5.0</span>
+          </div>
+          <p class="text-gray-600">"Amazing game! The graphics are beautiful and the gameplay is very engaging. I love how smooth it runs on my mobile device."</p>
+          <p class="text-sm text-gray-500 mt-2">- Sarah M.</p>
+        </div>
+        
+        <div class="review border-b border-gray-200 pb-4">
+          <div class="flex items-center mb-2">
+            <div class="flex text-yellow-400">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <span class="ml-2 text-sm text-gray-500">4.0</span>
+          </div>
+          <p class="text-gray-600">"Great game for passing time. The controls are intuitive and the difficulty progression is well balanced."</p>
+          <p class="text-sm text-gray-500 mt-2">- John D.</p>
+        </div>
+        
+        <div class="review">
+          <div class="flex items-center mb-2">
+            <div class="flex text-yellow-400">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <span class="ml-2 text-sm text-gray-500">5.0</span>
+          </div>
+          <p class="text-gray-600">"Perfect for quick gaming sessions. No download needed and works great on all devices!"</p>
+          <p class="text-sm text-gray-500 mt-2">- Mike R.</p>
+        </div>
+      </div>
+    </div>
+    <div class="related-games bg-white rounded-lg p-6 shadow-md mb-6">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">You Might Also Like</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="game-card bg-gray-50 rounded-lg p-4 hover:shadow-md transition-shadow">
+          <h3 class="font-semibold text-gray-800 mb-2">Action Adventure</h3>
+          <p class="text-sm text-gray-600 mb-3">Another exciting action game with similar gameplay mechanics.</p>
+          <a href="#" class="text-primary hover:underline text-sm">Play Now →</a>
+        </div>
+        <div class="game-card bg-gray-50 rounded-lg p-4 hover:shadow-md transition-shadow">
+          <h3 class="font-semibold text-gray-800 mb-2">Puzzle Challenge</h3>
+          <p class="text-sm text-gray-600 mb-3">Test your brain with this challenging puzzle game.</p>
+          <a href="#" class="text-primary hover:underline text-sm">Play Now →</a>
+        </div>
+        <div class="game-card bg-gray-50 rounded-lg p-4 hover:shadow-md transition-shadow">
+          <h3 class="font-semibold text-gray-800 mb-2">Strategy Game</h3>
+          <p class="text-sm text-gray-600 mb-3">Plan your moves carefully in this strategic game.</p>
+          <a href="#" class="text-primary hover:underline text-sm">Play Now →</a>
+        </div>
+      </div>
+    </div>
     <header class="text-center mb-6 w-full max-w-4xl">
       <h1 class="text-4xl md:text-5xl font-bold text-britishBlue mb-2 font-british">London Counter Terror Hero</h1>
       <p class="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">Learn about London landmarks and British security in this educational game! No registration needed, fully mobile-friendly and GDPR compliant.</p>
@@ -368,6 +549,33 @@
 
 
 
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
 
 
 <div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>

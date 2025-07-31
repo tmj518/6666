@@ -391,3 +391,60 @@ node scripts/ai-assistant.js
 - 清理孤立游戏数据已集成到 `scripts/full-auto.js` 中
 - 每次自动化执行都会自动清理已删除文件的游戏
 - 确保前端页面不会显示图片裂痕或灰色占位符 
+
+## 2024-07-17 首页“关于我们”品牌图片修复复盘
+
+### 问题描述
+- 用户反馈首页“关于我们”区域右侧品牌图片不显示，且页面加载慢、图片404。
+- 多次尝试修复，反而影响到其他区域图片和JS加载，用户极度不满。
+
+### 排查与修复过程
+1. **初步排查**：
+   - 检查HTML代码，确认图片路径为 `/images/games/card-free-uk-puzzle-games-online.jpg`。
+   - 检查 `public/images/games/` 目录，图片文件真实存在。
+2. **服务器目录问题**：
+   - 一开始在 `public` 目录下启动服务器，导致 `/images/games/xxx.jpg` 实际指向 `public/public/images/games/xxx.jpg`，图片404。
+   - 正确做法：**必须在项目根目录（daima6666）启动服务器**，这样 `/images/games/xxx.jpg` 才能正确访问。
+3. **图片路径书写问题**：
+   - 路径多次被写成 `/public/images/games/xxx.jpg` 或 `public/images/games/xxx.jpg`，这些路径在静态服务器下都是404。
+   - 正确写法：**用 `images/games/xxx.jpg` 或 `/images/games/xxx.jpg`**，不要加 `public/` 前缀。
+4. **只改指定区域**：
+   - 多次误改、批量处理，甚至影响到其他区域图片和JS，导致问题扩大。
+   - 经验教训：**只动指定区域，绝不批量处理或影响其他代码**。
+5. **沟通与排查细节**：
+   - 没有第一时间让用户截图“元素”标签页和404报错，导致排查方向反复。
+   - 经验教训：**遇到404等问题，优先让用户截图实际src和报错，精准定位**。
+
+### 最终正确做法
+1. 服务器命令：
+   ```bash
+   python -m http.server 8000
+   ```
+   必须在 `C:\Users\zfz123\Desktop\daima6666` 目录下运行。
+2. `public/index.html` 里关于我们区域图片代码应如下：
+   ```html
+   <img src="images/games/card-free-uk-puzzle-games-online.jpg"
+        alt="Brand Image"
+        class="w-full h-full object-cover rounded-xl"
+        loading="lazy">
+   ```
+3. 浏览器访问：
+   ```
+   http://localhost:8000/
+   ```
+   图片应能正常显示。
+
+### 经验与教训
+- **服务器一定要在项目根目录启动**，否则所有静态资源路径都会错。
+- **图片路径不要加 public/ 前缀**，直接用 `/images/games/xxx.jpg` 或 `images/games/xxx.jpg`。
+- **只动指定区域代码，绝不批量处理**，避免牵连其他功能。
+- **遇到问题先看浏览器元素和控制台报错**，再做针对性修复。
+- **每一步操作都要和用户确认，尤其是新手用户，细致讲解每一步**。
+- **遇到用户不满要及时道歉，承认不足，快速定位和解决问题**。
+
+### 沟通建议
+- 以后遇到图片/资源404，第一步让用户截图“元素”标签页和控制台报错，精准定位。
+- 只改用户指定区域，绝不批量处理或影响其他页面。
+- 每次修复后让用户刷新并截图，确认问题彻底解决。
+
+--- 

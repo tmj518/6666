@@ -38,8 +38,8 @@ Disallow: /README.md
 Disallow: /api/
 Disallow: /ajax/
 
-# 网站地图地址（请替换为你的实际域名）
+# 网站地图地址
 Sitemap: https://www.ukhtml5games.com/sitemap.xml
 
 # 爬取延迟（可选，单位为秒）
-Crawl-delay: 1 
+Crawl-delay: 1
