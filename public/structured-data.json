@@ -37,7 +37,7 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.8,
-        "ratingCount": "980K+"
+        "ratingCount": 980000
       },
       "ogImage": "https://www.ukhtml5games.com/images/games/action-gameslike.jpg",
       "ogTitle": "Action Gameslike Game - PlayHTML5",
@@ -69,7 +69,7 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.8,
-        "ratingCount": "680K+"
+        "ratingCount": 680000
       },
       "ogImage": "https://www.ukhtml5games.com/images/games/sports-london-flappy-bird-game-free.jpg",
       "ogTitle": "Sports London-Flappy-Bird-Game-Free Game - PlayHTML5",
@@ -101,7 +101,7 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.8,
-        "ratingCount": "520K+"
+        "ratingCount": 520000
       },
       "ogImage": "https://www.ukhtml5games.com/images/games/puzzle-x3m.jpg",
       "ogTitle": "Puzzle X3m Game - PlayHTML5",
@@ -133,7 +133,7 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.8,
-        "ratingCount": "450K+"
+        "ratingCount": 450000
       },
       "ogImage": "https://www.ukhtml5games.com/images/games/puzzle-uk-counties-crossword-challenge.jpg",
       "ogTitle": "Puzzle Uk-Counties-Crossword-Challenge Game - PlayHTML5",
@@ -165,7 +165,7 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.8,
-        "ratingCount": "420K+"
+        "ratingCount": 420000
       },
       "ogImage": "https://www.ukhtml5games.com/images/games/sports-t2.jpg",
       "ogTitle": "Sports T2 Game - PlayHTML5",
@@ -197,7 +197,7 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.8,
-        "ratingCount": "0+"
+        "ratingCount": 100
       },
       "ogImage": "https://www.ukhtml5games.com/images/games/adventure-british-royal-family-quiz.webp",
       "ogTitle": "Adventure British-Royal-Family-Quiz Game - PlayHTML5",
@@ -229,7 +229,7 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.8,
-        "ratingCount": "0+"
+        "ratingCount": 100
       },
       "ogImage": "https://www.ukhtml5games.com/images/games/arcade-red-herrings-word-game.webp",
       "ogTitle": "Arcade Red-Herrings-Word-Game Game - PlayHTML5",
@@ -261,7 +261,7 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.8,
-        "ratingCount": "0+"
+        "ratingCount": 100
       },
       "ogImage": "https://www.ukhtml5games.com/images/games/new-deep-sea-adventure-survival-game-free.webp",
       "ogTitle": "New Deep-Sea-Adventure-Survival-Game-Free Game - PlayHTML5",
@@ -293,7 +293,7 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.8,
-        "ratingCount": "0+"
+        "ratingCount": 100
       },
       "ogImage": "https://www.ukhtml5games.com/images/games/popular-popular-777.webp",
       "ogTitle": "Popular 777 Game - PlayHTML5",
@@ -325,7 +325,7 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.8,
-        "ratingCount": "0+"
+        "ratingCount": 100
       },
       "ogImage": "https://www.ukhtml5games.com/images/games/card-british-museum-puzzle-game-free.webp",
       "ogTitle": "Card British-Museum-Puzzle-Game-Free Game - PlayHTML5",
@@ -357,7 +357,7 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.8,
-        "ratingCount": "0+"
+        "ratingCount": 100
       },
       "ogImage": "https://www.ukhtml5games.com/images/games/card-free-uk-puzzle-games-online.webp",
       "ogTitle": "Card Free-Uk-Puzzle-Games-Online Game - PlayHTML5",
@@ -389,7 +389,7 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.8,
-        "ratingCount": "0+"
+        "ratingCount": 100
       },
       "ogImage": "https://www.ukhtml5games.com/images/games/new-ce1991.webp",
       "ogTitle": "New Ce1991 Game - PlayHTML5",
@@ -421,7 +421,7 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 4.8,
-        "ratingCount": "0+"
+        "ratingCount": 100
       },
       "ogImage": "https://www.ukhtml5games.com/images/games/puzzle-fixed.webp",
       "ogTitle": "Puzzle Fixed Game - PlayHTML5",
@@ -430,7 +430,7 @@
     }
   ],
   "totalGames": 13,
-  "generatedAt": "2025-07-31T07:37:56.465Z",
+  "generatedAt": "2025-07-31T07:56:26.549Z",
   "metadata": {
     "altTitleConsistency": "All images have unique alt/title attributes",
     "ogImageConsistency": "All games have unique og:image URLs",
