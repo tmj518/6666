@@ -137,33 +137,6 @@
     },
     {
       "title": {
-        "en": "Mouse-Mouse-Climb-The-House Game",
-        "zh": "Mouse-Mouse-Climb-The-House Game",
-        "ja": "Mouse-Mouse-Climb-The-House Game",
-        "ko": "Mouse-Mouse-Climb-The-House Game"
-      },
-      "description": {
-        "en": "Cute mouse climbing adventure game with challenging obstacles and fun mechanics.",
-        "zh": "可爱的老鼠攀爬冒险游戏，具有具有挑战性的障碍和有趣的机制。",
-        "ja": "挑戦的な障害と楽しいメカニクスを持つかわいいマウスクライミングアドベンチャーゲーム。",
-        "ko": "도전적인 장애물과 재미있는 메커니즘을 가진 귀여운 마우스 등반 어드벤처 게임."
-      },
-      "image": "/images/games/mouse-mouse-climb-the-house-game-unique.jpg",
-      "category": [
-        "adventure"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-07-31",
-      "plays": "290K+",
-      "regions": [
-        "global"
-      ],
-      "url": "/games/mouse-mouse-climb-the-house.html",
-      "id": 1006
-    },
-    {
-      "title": {
         "en": "Adventure British-Royal-Family-Quiz Game",
         "zh": "Adventure British-Royal-Family-Quiz Game",
         "ja": "Adventure British-Royal-Family-Quiz Game",

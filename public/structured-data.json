@@ -175,38 +175,6 @@
     {
       "@context": "https://schema.org",
       "@type": "VideoGame",
-      "name": "Mouse-Mouse-Climb-The-House Game",
-      "description": "Cute mouse climbing adventure game with challenging obstacles and fun mechanics.",
-      "image": "https://www.ukhtml5games.com/images/games/mouse-mouse-climb-the-house-game-unique.jpg",
-      "imageAlt": "mouse mouse-climb-the-house-game-unique html5 game, mouse-climb-the-house-game-unique online play, free mouse game",
-      "imageTitle": "mouse mouse-climb-the-house-game-unique html5 game, mouse-climb-the-house-game-unique online play, free mouse game",
-      "url": "https://www.ukhtml5games.com/games/mouse-mouse-climb-the-house.html",
-      "genre": "adventure",
-      "gamePlatform": "HTML5",
-      "applicationCategory": "Game",
-      "operatingSystem": "Web Browser",
-      "author": {
-        "@type": "Organization",
-        "name": "AutoSync"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "PlayHTML5"
-      },
-      "datePublished": "2025-07-31",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.8,
-        "ratingCount": "290K+"
-      },
-      "ogImage": "https://www.ukhtml5games.com/images/games/mouse-mouse-climb-the-house-game-unique.jpg",
-      "ogTitle": "Mouse-Mouse-Climb-The-House Game - PlayHTML5",
-      "ogDescription": "Cute mouse climbing adventure game with challenging obstacles and fun mechanics.",
-      "canonicalUrl": "https://www.ukhtml5games.com/games/mouse-mouse-climb-the-house.html"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoGame",
       "name": "Adventure British-Royal-Family-Quiz Game",
       "description": "Play Adventure British-Royal-Family-Quiz online. This adventure game features: adventure, explore, quest, duck, relaxing, nature. Free HTML5 game, mobile-friendly, no download.",
       "image": "https://www.ukhtml5games.com/images/games/adventure-british-royal-family-quiz.webp",
@@ -461,8 +429,8 @@
       "canonicalUrl": "https://www.ukhtml5games.com/games/puzzle-fixed.html"
     }
   ],
-  "totalGames": 14,
-  "generatedAt": "2025-07-31T06:39:51.584Z",
+  "totalGames": 13,
+  "generatedAt": "2025-07-31T07:29:11.044Z",
   "metadata": {
     "altTitleConsistency": "All images have unique alt/title attributes",
     "ogImageConsistency": "All games have unique og:image URLs",
