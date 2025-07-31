@@ -158,6 +158,20 @@
             font-family: 'Inter', sans-serif;
         }
         
+        /* 隐藏右侧浮动图标 */
+        .floating-icon,
+        [class*="floating"],
+        [class*="fixed"][class*="right"],
+        [class*="absolute"][class*="right"][class*="top"] {
+            display: none !important;
+        }
+        
+        /* 隐藏可能的第三方浮动元素 */
+        div[style*="position: fixed"][style*="right"],
+        div[style*="position: absolute"][style*="right"] {
+            display: none !important;
+        }
+        
         .game-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
