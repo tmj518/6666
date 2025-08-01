@@ -326,10 +326,10 @@
     },
     {
       "title": {
-        "en": "Puzzle Puzzle-Game Game",
-        "zh": "Puzzle Puzzle-Game Game",
-        "ja": "Puzzle Puzzle-Game Game",
-        "ko": "Puzzle Puzzle-Game Game"
+        "en": "Puzzle Game Game",
+        "zh": "Puzzle Game Game",
+        "ja": "Puzzle Game Game",
+        "ko": "Puzzle Game Game"
       },
       "description": {
         "en": "Play Puzzle-Game online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
@@ -359,14 +359,14 @@
         "ko": "British-Gomoku-Puzzle-Game Game"
       },
       "description": {
-        "en": "Play British-Gomoku-Puzzle-Game online. This other game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
-        "zh": "在线畅玩British-Gomoku-Puzzle-Game。本other游戏包含：益智, 逻辑, 动脑。 免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
-        "ja": "Play British-Gomoku-Puzzle-Game online. This other game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
-        "ko": "Play British-Gomoku-Puzzle-Game online. This other game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download."
+        "en": "Play British-Gomoku-Puzzle-Game online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
+        "zh": "在线畅玩British-Gomoku-Puzzle-Game。本puzzle游戏包含：益智, 逻辑, 动脑。 免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
+        "ja": "Play British-Gomoku-Puzzle-Game online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
+        "ko": "Play British-Gomoku-Puzzle-Game online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download."
       },
       "image": "/images/games/british-gomoku-puzzle-game.webp",
       "category": [
-        "other"
+        "puzzle"
       ],
       "rating": 4.8,
       "developer": "AutoSync",

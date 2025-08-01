@@ -399,7 +399,7 @@
     {
       "@context": "https://schema.org",
       "@type": "VideoGame",
-      "name": "Puzzle Puzzle-Game Game",
+      "name": "Puzzle Game Game",
       "description": "Play Puzzle-Game online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
       "image": "https://www.ukhtml5games.com/images/games/puzzle-game.webp",
       "imageAlt": "puzzle game html5 game, game online play, free puzzle game",
@@ -424,7 +424,7 @@
         "ratingCount": "0+"
       },
       "ogImage": "https://www.ukhtml5games.com/images/games/puzzle-game.webp",
-      "ogTitle": "Puzzle Puzzle-Game Game - PlayHTML5",
+      "ogTitle": "Puzzle Game Game - PlayHTML5",
       "ogDescription": "Play Puzzle-Game online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
       "canonicalUrl": "https://www.ukhtml5games.com/games/puzzle-game.html"
     },
@@ -432,12 +432,12 @@
       "@context": "https://schema.org",
       "@type": "VideoGame",
       "name": "British-Gomoku-Puzzle-Game Game",
-      "description": "Play British-Gomoku-Puzzle-Game online. This other game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
+      "description": "Play British-Gomoku-Puzzle-Game online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
       "image": "https://www.ukhtml5games.com/images/games/british-gomoku-puzzle-game.webp",
       "imageAlt": "british gomoku-puzzle-game html5 game, gomoku-puzzle-game online play, free british game",
       "imageTitle": "british gomoku-puzzle-game html5 game, gomoku-puzzle-game online play, free british game",
       "url": "https://www.ukhtml5games.com/games/british-gomoku-puzzle-game.html",
-      "genre": "other",
+      "genre": "puzzle",
       "gamePlatform": "HTML5",
       "applicationCategory": "Game",
       "operatingSystem": "Web Browser",
@@ -457,12 +457,12 @@
       },
       "ogImage": "https://www.ukhtml5games.com/images/games/british-gomoku-puzzle-game.webp",
       "ogTitle": "British-Gomoku-Puzzle-Game Game - PlayHTML5",
-      "ogDescription": "Play British-Gomoku-Puzzle-Game online. This other game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
+      "ogDescription": "Play British-Gomoku-Puzzle-Game online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
       "canonicalUrl": "https://www.ukhtml5games.com/games/british-gomoku-puzzle-game.html"
     }
   ],
   "totalGames": 14,
-  "generatedAt": "2025-08-01T03:03:33.413Z",
+  "generatedAt": "2025-08-01T03:05:36.495Z",
   "metadata": {
     "altTitleConsistency": "All images have unique alt/title attributes",
     "ogImageConsistency": "All games have unique og:image URLs",
