@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>British Gomoku Puzzle Game Free - UK Students Brain Training</title>
+    <meta name="description" content="Play the classic British Gomoku puzzle game online for free! Perfect brain training for UK students. Challenge your strategic thinking with this traditional five-in-a-row game.">
+    <meta name="keywords" content="British gomoku puzzle game, UK students brain training, free online puzzle games, British board games, UK educational games, gomoku free online, British strategy games">
+    <meta name="author" content="British Educational Games">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://british-gomoku-puzzle.uk/">
+    <meta property="og:title" content="British Gomoku Puzzle Game Free - UK Students Brain Training">
+    <meta property="og:description" content="Play the classic British Gomoku puzzle game online for free! Perfect brain training for UK students.">
+    <meta property="og:image" content="https://british-gomoku-puzzle.uk/images/gomoku-preview.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://british-gomoku-puzzle.uk/">
+    <meta property="twitter:title" content="British Gomoku Puzzle Game Free - UK Students Brain Training">
+    <meta property="twitter:description" content="Play the classic British Gomoku puzzle game online for free! Perfect brain training for UK students.">
+    <meta property="twitter:image" content="https://british-gomoku-puzzle.uk/images/gomoku-preview.jpg">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "British Gomoku Puzzle Game",
+        "description": "Free online British Gomoku puzzle game for UK students brain training",
+        "url": "https://british-gomoku-puzzle.uk/",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "GBP"
+        },
+        "audience": {
+            "@type": "Audience",
+            "audienceType": "UK Students"
+        },
+        "genre": "Puzzle Game",
+        "gamePlatform": "Web Browser"
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .game-container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        .game-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .current-player {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #495057;
+        }
+        
+        .score {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .score-item {
+            text-align: center;
+        }
+        
+        .score-label {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        
+        .score-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #495057;
+        }
+        
+        .board {
+            display: grid;
+            grid-template-columns: repeat(15, 1fr);
+            gap: 1px;
+            background: #8B4513;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 20px 0;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cell {
+            width: 28px;
+            height: 28px;
+            background: #DEB887;
+            border: 1px solid #8B4513;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+        
+        .cell:hover {
+            background: #F5DEB3;
+            transform: scale(1.05);
+        }
+        
+        .cell.black::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: #000;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .cell.white::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            border: 2px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .controls {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+        
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+        
+        .btn-success:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+        
+        .message {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .message.win {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .message.draw {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        
+        .difficulty-selector {
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .difficulty-btn {
+            padding: 8px 16px;
+            margin: 0 5px;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .difficulty-btn.active {
+            background: #667eea;
+            color: white;
+        }
+        
+        .difficulty-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        .game-features {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .features-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #495057;
+        }
+        
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .features-list li {
+            padding: 8px 0;
+            color: #6c757d;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .features-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .gdpr-notice {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.9);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            z-index: 1000;
+        }
+        
+        .gdpr-notice button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .board {
+                max-width: 350px;
+            }
+            
+            .cell {
+                width: 22px;
+                height: 22px;
+            }
+            
+            .cell::after {
+                width: 16px;
+                height: 16px;
+            }
+            
+            .controls {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 200px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .board {
+                max-width: 280px;
+            }
+            
+            .cell {
+                width: 18px;
+                height: 18px;
+            }
+            
+            .cell::after {
+                width: 12px;
+                height: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav class="w-full bg-white shadow mb-4 flex items-center px-4 py-2">
+  <div class="flex items-center gap-4">
+    <a href="https://www.ukhtml5games.com/" class="flex items-center" title="PlayHTML5 Home">
+      <picture>
+        <source srcset="/images/games/logo.webp" type="image/webp">
+        <picture>
+      <source srcset="/images/games/logo.webp" type="image/webp">
+      <img src="/images/games/logo.png" alt="HTML5 Game" title="HTML5 Game" loading="lazy">
+    </picture>
+      </picture>
+    </a>
+    <a href="https://www.ukhtml5games.com/" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+    <a href="https://www.ukhtml5games.com/" class="text-gray-700 hover:text-blue-600 font-medium">All Games</a>
+  </div>
+  <div class="flex-1"></div>
+</nav>
+
+    <!-- GDPR Notice -->
+    <div id="gdpr-notice" class="gdpr-notice">
+        This website uses cookies to enhance your gaming experience. By continuing to use this site, you consent to our use of cookies in accordance with our Privacy Policy.
+        <button onclick="acceptCookies()">Accept</button>
+    </div>
+
+    <div class="header">
+        <h1>🎯 British Gomoku Puzzle</h1>
+        <p>Classic Five-in-a-Row Strategy Game for UK Students</p>
+    </div>
+
+    <div class="game-container">
+        <div class="game-info">
+            <div class="current-player" id="current-player">Current Player: Black</div>
+            <div class="score">
+                <div class="score-item">
+                    <div class="score-label">Black</div>
+                    <div class="score-value" id="black-score">0</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-label">White</div>
+                    <div class="score-value" id="white-score">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="difficulty-selector">
+            <button class="difficulty-btn active" onclick="setDifficulty('easy')">Easy</button>
+            <button class="difficulty-btn" onclick="setDifficulty('medium')">Medium</button>
+            <button class="difficulty-btn" onclick="setDifficulty('hard')">Hard</button>
+        </div>
+
+        <div class="board" id="board"></div>
+
+        <div class="message" id="message" style="display: none;"></div>
+
+        <div class="controls">
+            <button class="btn btn-primary" onclick="newGame()">New Game</button>
+            <button class="btn btn-secondary" onclick="undoMove()">Undo</button>
+            <button class="btn btn-success" onclick="hint()">Hint</button>
+        </div>
+
+        <div class="game-features">
+            <div class="features-title">🎮 Game Features</div>
+            <ul class="features-list">
+                <li>Classic British Gomoku (Five-in-a-Row) gameplay</li>
+                <li>Three difficulty levels for all skill ranges</li>
+                <li>Smart AI opponent with strategic thinking</li>
+                <li>Undo and hint features for learning</li>
+                <li>Score tracking and statistics</li>
+                <li>Mobile-friendly responsive design</li>
+                <li>Perfect for UK students' brain training</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Game state
+        let board = [];
+        let currentPlayer = 'black';
+        let gameOver = false;
+        let moveHistory = [];
+        let difficulty = 'easy';
+        let blackScore = 0;
+        let whiteScore = 0;
+
+        // Initialize board
+        function initializeBoard() {
+            board = [];
+            for (let i = 0; i < 15; i++) {
+                board[i] = [];
+                for (let j = 0; j < 15; j++) {
+                    board[i][j] = '';
+                }
+            }
+        }
+
+        // Create board UI
+        function createBoard() {
+            const boardElement = document.getElementById('board');
+            boardElement.innerHTML = '';
+            
+            for (let i = 0; i < 15; i++) {
+                for (let j = 0; j < 15; j++) {
+                    const cell = document.createElement('div');
+                    cell.className = 'cell';
+                    cell.dataset.row = i;
+                    cell.dataset.col = j;
+                    cell.addEventListener('click', () => makeMove(i, j));
+                    boardElement.appendChild(cell);
+                }
+            }
+        }
+
+        // Make a move
+        function makeMove(row, col) {
+            if (gameOver || board[row][col] !== '') return;
+            
+            // Player move
+            board[row][col] = currentPlayer;
+            updateCell(row, col, currentPlayer);
+            moveHistory.push({row, col, player: currentPlayer});
+            
+            if (checkWin(row, col, currentPlayer)) {
+                endGame(currentPlayer);
+                return;
+            }
+            
+            if (checkDraw()) {
+                endGame('draw');
+                return;
+            }
+            
+            // Switch player
+            currentPlayer = currentPlayer === 'black' ? 'white' : 'black';
+            updateCurrentPlayer();
+            
+            // AI move if it's AI's turn
+            if (currentPlayer === 'white') {
+                setTimeout(() => {
+                    const aiMove = getAIMove();
+                    if (aiMove) {
+                        makeMove(aiMove.row, aiMove.col);
+                    }
+                }, 500);
+            }
+        }
+
+        // Update cell display
+        function updateCell(row, col, player) {
+            const cell = document.querySelector(`[data-row="${row}"][data-col="${col}"]`);
+            cell.className = `cell ${player}`;
+        }
+
+        // Check for win
+        function checkWin(row, col, player) {
+            const directions = [
+                [[0, 1], [0, -1]], // horizontal
+                [[1, 0], [-1, 0]], // vertical
+                [[1, 1], [-1, -1]], // diagonal
+                [[1, -1], [-1, 1]] // anti-diagonal
+            ];
+            
+            for (let direction of directions) {
+                let count = 1;
+                
+                for (let [dr, dc] of direction) {
+                    let r = row + dr;
+                    let c = col + dc;
+                    while (r >= 0 && r < 15 && c >= 0 && c < 15 && board[r][c] === player) {
+                        count++;
+                        r += dr;
+                        c += dc;
+                    }
+                }
+                
+                if (count >= 5) return true;
+            }
+            return false;
+        }
+
+        // Check for draw
+        function checkDraw() {
+            for (let i = 0; i < 15; i++) {
+                for (let j = 0; j < 15; j++) {
+                    if (board[i][j] === '') return false;
+                }
+            }
+            return true;
+        }
+
+        // AI move logic
+        function getAIMove() {
+            if (difficulty === 'easy') {
+                return getRandomMove();
+            } else if (difficulty === 'medium') {
+                return getMediumMove();
+            } else {
+                return getHardMove();
+            }
+        }
+
+        // Random move for easy difficulty
+        function getRandomMove() {
+            const emptyCells = [];
+            for (let i = 0; i < 15; i++) {
+                for (let j = 0; j < 15; j++) {
+                    if (board[i][j] === '') {
+                        emptyCells.push({row: i, col: j});
+                    }
+                }
+            }
+            return emptyCells[Math.floor(Math.random() * emptyCells.length)];
+        }
+
+        // Medium difficulty AI
+        function getMediumMove() {
+            // Try to win
+            for (let i = 0; i < 15; i++) {
+                for (let j = 0; j < 15; j++) {
+                    if (board[i][j] === '') {
+                        board[i][j] = 'white';
+                        if (checkWin(i, j, 'white')) {
+                            board[i][j] = '';
+                            return {row: i, col: j};
+                        }
+                        board[i][j] = '';
+                    }
+                }
+            }
+            
+            // Block opponent
+            for (let i = 0; i < 15; i++) {
+                for (let j = 0; j < 15; j++) {
+                    if (board[i][j] === '') {
+                        board[i][j] = 'black';
+                        if (checkWin(i, j, 'black')) {
+                            board[i][j] = '';
+                            return {row: i, col: j};
+                        }
+                        board[i][j] = '';
+                    }
+                }
+            }
+            
+            return getRandomMove();
+        }
+
+        // Hard difficulty AI
+        function getHardMove() {
+            // Try to win
+            for (let i = 0; i < 15; i++) {
+                for (let j = 0; j < 15; j++) {
+                    if (board[i][j] === '') {
+                        board[i][j] = 'white';
+                        if (checkWin(i, j, 'white')) {
+                            board[i][j] = '';
+                            return {row: i, col: j};
+                        }
+                        board[i][j] = '';
+                    }
+                }
+            }
+            
+            // Block opponent
+            for (let i = 0; i < 15; i++) {
+                for (let j = 0; j < 15; j++) {
+                    if (board[i][j] === '') {
+                        board[i][j] = 'black';
+                        if (checkWin(i, j, 'black')) {
+                            board[i][j] = '';
+                            return {row: i, col: j};
+                        }
+                        board[i][j] = '';
+                    }
+                }
+            }
+            
+            // Strategic move
+            return getStrategicMove();
+        }
+
+        // Strategic move for hard difficulty
+        function getStrategicMove() {
+            const center = 7;
+            if (board[center][center] === '') {
+                return {row: center, col: center};
+            }
+            
+            // Find best position near existing pieces
+            let bestScore = -Infinity;
+            let bestMove = null;
+            
+            for (let i = 0; i < 15; i++) {
+                for (let j = 0; j < 15; j++) {
+                    if (board[i][j] === '') {
+                        const score = evaluatePosition(i, j);
+                        if (score > bestScore) {
+                            bestScore = score;
+                            bestMove = {row: i, col: j};
+                        }
+                    }
+                }
+            }
+            
+            return bestMove || getRandomMove();
+        }
+
+        // Evaluate position score
+        function evaluatePosition(row, col) {
+            let score = 0;
+            
+            // Check if position is near existing pieces
+            for (let i = Math.max(0, row - 2); i <= Math.min(14, row + 2); i++) {
+                for (let j = Math.max(0, col - 2); j <= Math.min(14, col + 2); j++) {
+                    if (board[i][j] !== '') {
+                        score += 10;
+                    }
+                }
+            }
+            
+            // Bonus for center positions
+            const centerDistance = Math.abs(row - 7) + Math.abs(col - 7);
+            score += (14 - centerDistance) * 5;
+            
+            return score;
+        }
+
+        // End game
+        function endGame(winner) {
+            gameOver = true;
+            const messageElement = document.getElementById('message');
+            
+            if (winner === 'draw') {
+                messageElement.textContent = "It's a draw! Well played!";
+                messageElement.className = 'message draw';
+            } else {
+                const winnerName = winner === 'black' ? 'Black' : 'White';
+                messageElement.textContent = `${winnerName} wins! Congratulations!`;
+                messageElement.className = 'message win';
+                
+                if (winner === 'black') {
+                    blackScore++;
+                    document.getElementById('black-score').textContent = blackScore;
+                } else {
+                    whiteScore++;
+                    document.getElementById('white-score').textContent = whiteScore;
+                }
+            }
+            
+            messageElement.style.display = 'block';
+        }
+
+        // New game
+        function newGame() {
+            initializeBoard();
+            createBoard();
+            currentPlayer = 'black';
+            gameOver = false;
+            moveHistory = [];
+            updateCurrentPlayer();
+            document.getElementById('message').style.display = 'none';
+        }
+
+        // Undo move
+        function undoMove() {
+            if (moveHistory.length === 0 || gameOver) return;
+            
+            const lastMove = moveHistory.pop();
+            board[lastMove.row][lastMove.col] = '';
+            updateCell(lastMove.row, lastMove.col, '');
+            
+            currentPlayer = lastMove.player;
+            gameOver = false;
+            updateCurrentPlayer();
+            document.getElementById('message').style.display = 'none';
+        }
+
+        // Hint
+        function hint() {
+            if (gameOver || currentPlayer === 'white') return;
+            
+            const hintMove = getAIMove();
+            if (hintMove) {
+                const cell = document.querySelector(`[data-row="${hintMove.row}"][data-col="${hintMove.col}"]`);
+                cell.style.backgroundColor = '#ffeb3b';
+                setTimeout(() => {
+                    cell.style.backgroundColor = '';
+                }, 2000);
+            }
+        }
+
+        // Set difficulty
+        function setDifficulty(level) {
+            difficulty = level;
+            document.querySelectorAll('.difficulty-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        // Update current player display
+        function updateCurrentPlayer() {
+            const playerElement = document.getElementById('current-player');
+            playerElement.textContent = `Current Player: ${currentPlayer.charAt(0).toUpperCase() + currentPlayer.slice(1)}`;
+        }
+
+        // GDPR cookie acceptance
+        function acceptCookies() {
+            document.getElementById('gdpr-notice').style.display = 'none';
+            localStorage.setItem('cookiesAccepted', 'true');
+        }
+
+        // Check if cookies were already accepted
+        if (localStorage.getItem('cookiesAccepted')) {
+            document.getElementById('gdpr-notice').style.display = 'none';
+        }
+
+        // Initialize game
+        document.addEventListener('DOMContentLoaded', () => {
+            newGame();
+        });
+    </script>
+
+<div class="mt-8 w-full max-w-2xl mx-auto"><div class="bg-red-100 text-red-700 p-4 rounded text-center font-bold">No valid recommendations found. Please check category, image, and page data!</div></div>
+
+</body>
+</html> 

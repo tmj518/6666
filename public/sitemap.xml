@@ -107,6 +107,12 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://www.ukhtml5games.com/games/puzzle-game.html</loc>
+        <lastmod>2025-08-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
     
     <!-- 分类页面 -->

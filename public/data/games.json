@@ -350,6 +350,33 @@
       ],
       "url": "/games/puzzle-fixed.html",
       "id": 1014
+    },
+    {
+      "title": {
+        "en": "Puzzle Puzzle-Game Game",
+        "zh": "Puzzle Puzzle-Game Game",
+        "ja": "Puzzle Puzzle-Game Game",
+        "ko": "Puzzle Puzzle-Game Game"
+      },
+      "description": {
+        "en": "Play Puzzle-Game online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
+        "zh": "在线畅玩Puzzle-Game。本puzzle游戏包含：益智, 逻辑, 动脑。 免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
+        "ja": "Play Puzzle-Game online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
+        "ko": "Play Puzzle-Game online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download."
+      },
+      "image": "/images/games/puzzle-game.webp",
+      "category": [
+        "puzzle"
+      ],
+      "rating": 4.8,
+      "developer": "AutoSync",
+      "published": "2025-08-01",
+      "plays": "0+",
+      "regions": [
+        "global"
+      ],
+      "url": "/games/puzzle-game.html",
+      "id": 1015
     }
   ]
 }

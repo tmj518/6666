@@ -427,10 +427,42 @@
       "ogTitle": "Puzzle Fixed Game - PlayHTML5",
       "ogDescription": "Play Puzzle-Fixed online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
       "canonicalUrl": "https://www.ukhtml5games.com/games/puzzle-fixed.html"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Puzzle Puzzle-Game Game",
+      "description": "Play Puzzle-Game online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
+      "image": "https://www.ukhtml5games.com/images/games/puzzle-game.webp",
+      "imageAlt": "puzzle game html5 game, game online play, free puzzle game",
+      "imageTitle": "puzzle game html5 game, game online play, free puzzle game",
+      "url": "https://www.ukhtml5games.com/games/puzzle-game.html",
+      "genre": "puzzle",
+      "gamePlatform": "HTML5",
+      "applicationCategory": "Game",
+      "operatingSystem": "Web Browser",
+      "author": {
+        "@type": "Organization",
+        "name": "AutoSync"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PlayHTML5"
+      },
+      "datePublished": "2025-08-01",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.8,
+        "ratingCount": "0+"
+      },
+      "ogImage": "https://www.ukhtml5games.com/images/games/puzzle-game.webp",
+      "ogTitle": "Puzzle Puzzle-Game Game - PlayHTML5",
+      "ogDescription": "Play Puzzle-Game online. This puzzle game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
+      "canonicalUrl": "https://www.ukhtml5games.com/games/puzzle-game.html"
     }
   ],
-  "totalGames": 13,
-  "generatedAt": "2025-08-01T02:53:22.561Z",
+  "totalGames": 14,
+  "generatedAt": "2025-08-01T02:58:38.698Z",
   "metadata": {
     "altTitleConsistency": "All images have unique alt/title attributes",
     "ogImageConsistency": "All games have unique og:image URLs",
