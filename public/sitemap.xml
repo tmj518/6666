@@ -30,12 +30,6 @@
     
     <!-- 游戏页面 -->
         <url>
-        <loc>https://www.ukhtml5games.com/games/action-gameslike.html</loc>
-        <lastmod>2025-08-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://www.ukhtml5games.com/games/sports-london-flappy-bird-game-free.html</loc>
         <lastmod>2025-08-01</lastmod>
         <changefreq>weekly</changefreq>
@@ -109,6 +103,12 @@
     </url>
     <url>
         <loc>https://www.ukhtml5games.com/games/puzzle-game.html</loc>
+        <lastmod>2025-08-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.ukhtml5games.com/games/british-gomoku-puzzle-game.html</loc>
         <lastmod>2025-08-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>

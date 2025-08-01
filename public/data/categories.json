@@ -42,7 +42,7 @@
         "ko": "퍼즐"
       },
       "icon": "fa-puzzle-piece",
-      "count": 3
+      "count": 4
     },
     {
       "id": "action",
@@ -53,7 +53,7 @@
         "ko": "액션"
       },
       "icon": "fa-bolt",
-      "count": 2
+      "count": 1
     },
     {
       "id": "arcade",

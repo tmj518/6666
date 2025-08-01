@@ -2,33 +2,6 @@
   "games": [
     {
       "title": {
-        "en": "Action Gameslike Game",
-        "zh": "Action Gameslike Game",
-        "ja": "Action Gameslike Game",
-        "ko": "Action Gameslike Game"
-      },
-      "description": {
-        "en": "Fast-paced action game with exciting gameplay and challenging levels.",
-        "zh": "快节奏的动作游戏，具有刺激的游戏玩法和具有挑战性的关卡。",
-        "ja": "エキサイティングなゲームプレイと挑戦的なレベルを持つ高速アクションゲーム。",
-        "ko": "흥미진진한 게임플레이와 도전적인 레벨을 가진 빠른 속도의 액션 게임."
-      },
-      "image": "/images/games/action-gameslike.jpg",
-      "category": [
-        "action"
-      ],
-      "rating": 4.8,
-      "developer": "AutoSync",
-      "published": "2025-08-01",
-      "plays": 980000,
-      "regions": [
-        "global"
-      ],
-      "url": "/games/action-gameslike.html",
-      "id": 1001
-    },
-    {
-      "title": {
         "en": "Sports London-Flappy-Bird-Game-Free Game",
         "zh": "Sports London-Flappy-Bird-Game-Free Game",
         "ja": "Sports London-Flappy-Bird-Game-Free Game",
@@ -377,6 +350,33 @@
       ],
       "url": "/games/puzzle-game.html",
       "id": 1015
+    },
+    {
+      "title": {
+        "en": "British-Gomoku-Puzzle-Game Game",
+        "zh": "British-Gomoku-Puzzle-Game Game",
+        "ja": "British-Gomoku-Puzzle-Game Game",
+        "ko": "British-Gomoku-Puzzle-Game Game"
+      },
+      "description": {
+        "en": "Play British-Gomoku-Puzzle-Game online. This other game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
+        "zh": "在线畅玩British-Gomoku-Puzzle-Game。本other游戏包含：益智, 逻辑, 动脑。 免费HTML5小游戏，手机电脑均可畅玩，无需下载。",
+        "ja": "Play British-Gomoku-Puzzle-Game online. This other game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download.",
+        "ko": "Play British-Gomoku-Puzzle-Game online. This other game features: puzzle, logic, brain. Free HTML5 game, mobile-friendly, no download."
+      },
+      "image": "/images/games/british-gomoku-puzzle-game.webp",
+      "category": [
+        "other"
+      ],
+      "rating": 4.8,
+      "developer": "AutoSync",
+      "published": "2025-08-01",
+      "plays": "0+",
+      "regions": [
+        "global"
+      ],
+      "url": "/games/british-gomoku-puzzle-game.html",
+      "id": 1016
     }
   ]
 }
